@@ -124,10 +124,10 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 </div></div></section>
 
 <section class="section dictionary-section" id="dictionary"><div class="container">
- <div class="section-head"><div><span class="section-kicker">SHUSHTARI DICTIONARY</span><h2>فارسی به شوشتری</h2><p>یک واژهٔ فارسی بنویس تا برابر شوشتری آن را پیدا کنی.</p></div><span class="more">۱۰۰ واژهٔ آغازین</span></div>
+ <div class="section-head"><div><span class="section-kicker">SHUSHTARI DICTIONARY</span><h2>فارسی به شوشتری</h2><p>واژهٔ فارسی یا صورت شوشتری را جست‌وجو کن و برابر آن را ببین.</p></div><span class="more" id="dictionaryCountBadge">در حال شمارش واژه‌ها…</span></div>
  <div class="dictionary-box">
   <form class="dictionary-search" id="dictionaryForm"><input id="dictionaryInput" type="search" maxlength="80" autocomplete="off" placeholder="مثلاً: اکنون، گنجشک، پیرزن، شکستن…" aria-label="واژه فارسی"><button type="submit">ترجمه به شوشتری</button></form>
-  <p class="dictionary-hint">می‌توانی از فهرست واژه‌ها هم استفاده کنی. جست‌وجو با شکل‌های نزدیک نوشتاری فارسی انجام می‌شود.</p>
+  <p class="dictionary-hint">می‌توانی از فهرست واژه‌ها هم استفاده کنی. جست‌وجو هم از فارسی به شوشتری و هم از شوشتری به فارسی انجام می‌شود؛ شکل‌های نزدیک نوشتاری نیز پشتیبانی می‌شوند.</p>
   <div class="dictionary-result" id="dictionaryResult" aria-live="polite"></div>
   <div class="dictionary-list" id="dictionaryList"></div>
   <div class="dictionary-meta" id="dictionaryMeta">در حال بارگذاری واژه‌نامه…</div>
@@ -287,15 +287,17 @@ function showDictionaryEntry(entry){
  const s=document.createElement('div');s.className='d-shushtari';s.textContent=entry.shushtari;
  const c=document.createElement('div');c.className='d-note';c.textContent='دسته: '+entry.category+' · '+entry.note;
  box.append(p,s,c);
+ if(entry.needs_review){const w=document.createElement('div');w.className='d-note';w.textContent='یادداشت: این مدخل از منبع مشارکتی گردآوری شده و برای تثبیت صورت و معنی، نیازمند بررسی گویشوران بومی است.';w.style.color='#9b4c25';w.style.marginTop='7px';box.append(w);}
 }
 function searchShushtariDictionary(query){
  const q=dictNorm(query);if(!q)return [];
  const parts=q.split(' ').filter(Boolean);
  return shushtariDictionary.entries.map(e=>{
-  const p=dictNorm(e.persian),note=dictNorm(e.note||''),cat=dictNorm(e.category||'');
-  let score=p===q?100:p.includes(q)?65:q.includes(p)?55:0;
+  const p=dictNorm(e.persian),sh=dictNorm(e.shushtari||''),note=dictNorm(e.note||''),cat=dictNorm(e.category||'');
+  let score=p===q?110:p.includes(q)?75:q.includes(p)?60:0;
+  score=Math.max(score,sh===q?105:sh.includes(q)?72:q.includes(sh)?58:0);
   let hits=0;
-  for(const t of parts){if(p.includes(t)){score+=16;hits++}else if(note.includes(t)){score+=5;hits++}else if(cat.includes(t)){score+=2;hits++}}
+  for(const t of parts){if(p.includes(t)||sh.includes(t)){score+=16;hits++}else if(note.includes(t)){score+=5;hits++}else if(cat.includes(t)){score+=2;hits++}}
   if(parts.length>1&&hits===parts.length)score+=12;
   return {e,score};
  }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).map(x=>x.e);
@@ -304,11 +306,13 @@ function searchShushtariDictionary(query){
  const input=document.getElementById('dictionaryInput'),form=document.getElementById('dictionaryForm'),list=document.getElementById('dictionaryList'),result=document.getElementById('dictionaryResult'),meta=document.getElementById('dictionaryMeta');
  if(!input||!form)return;
  try{
-  await loadShushtariDictionary();meta.textContent='مجموعاً '+shushtariDictionary.entries.length+' مدخل · منابع در پایین فهرست واژه‌نامه ثبت شده‌اند.';
+  await loadShushtariDictionary();
+  const badge=document.getElementById('dictionaryCountBadge');if(badge)badge.textContent=shushtariDictionary.entries.length+' مدخل ثبت‌شده';
+  meta.textContent='مجموعاً '+shushtariDictionary.entries.length+' مدخل · نسخه '+(shushtariDictionary.version||'')+' · منابع پژوهشی و مردمی در فایل واژه‌نامه ثبت شده‌اند.';
   const renderList=(items)=>{list.innerHTML='';items.forEach(e=>{const b=document.createElement('button');b.type='button';b.className='dictionary-item';const a=document.createElement('span');a.textContent=e.persian;const z=document.createElement('span');z.textContent=e.shushtari;b.append(a,z);b.addEventListener('click',()=>{input.value=e.persian;showDictionaryEntry(e);});list.appendChild(b);});};
   renderList(shushtariDictionary.entries);
   form.addEventListener('submit',e=>{e.preventDefault();const matches=searchShushtariDictionary(input.value);if(matches.length){showDictionaryEntry(matches[0]);if(matches.length>1)renderList(matches);}else{result.classList.add('show');result.textContent='این واژه هنوز در واژه‌نامه ثبت نشده است.';renderList(shushtariDictionary.entries);}});
-  input.addEventListener('input',()=>{const q=input.value.trim();if(!q){result.classList.remove('show');renderList(shushtariDictionary.entries);return;}const matches=searchShushtariDictionary(q);renderList(matches.length?matches:[]);});
+  input.addEventListener('input',()=>{const q=input.value.trim();if(!q){result.classList.remove('show');renderList(shushtariDictionary.entries);return;}const matches=searchShushtariDictionary(q);renderList(matches.length?matches:[]);if(matches.length===1)showDictionaryEntry(matches[0]);else if(!matches.length){result.classList.remove('show');}});
  }catch(e){meta.textContent='بارگذاری واژه‌نامه انجام نشد؛ اتصال اینترنت را بررسی کن.';}
 })();
 
