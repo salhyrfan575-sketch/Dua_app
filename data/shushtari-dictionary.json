@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "updated": "2026-11-07",
-  "count": 100,
-  "description": "واژه‌نامهٔ فارسی به شوشتری بر پایهٔ منابع منتشرشده. صورت‌های آوانویسی‌شده برای کمک به تلفظ آمده‌اند؛ گونه‌های محلی و تلفظ نسل‌ها ممکن است تفاوت داشته باشند.",
+  "count": 161,
+  "description": "واژه‌نامه در حال گسترش فارسی به شوشتری؛ صورت‌های ثبت‌شده، اصطلاحات و داده‌های دستوری با ذکر مأخذ و یادداشت اطمینان از هم تفکیک می‌شوند. برخی مدخل‌ها نیازمند تأیید گویشور بومی‌اند.",
   "sources": [
     {
       "title": "گویش شوشتری، بخش واژگان و دستور",
@@ -15,6 +15,18 @@
     {
       "title": "فارسی شوشتری، عبدالله وزیری",
       "url": "https://www.ketabnak.com/book/113474/فارسی-شوشتری"
+    },
+    {
+      "title": "آموزش زبان شوشتری خوزستانی به روش ساده؛ واژگان، دستور و اصطلاح",
+      "url": "https://mehrparsi.ir/learn-shoushtary/"
+    },
+    {
+      "title": "کانال شوشتریها؛ واژگان ارسالی و سروده واژگانی محمدباقر نیرومند",
+      "url": "https://t.me/s/shoushtarihaa?before=7028&q=%23%DA%A9%D9%84%D9%85%D8%A7%D8%AA"
+    },
+    {
+      "title": "بازنشر سروده واژگانی محمدباقر نیرومند",
+      "url": "https://hidalo.blogfa.com/post/90"
     }
   ],
   "entries": [
@@ -717,6 +729,433 @@
       "shushtari": "نگفتُمَت (nagoftom-at)",
       "category": "عبارت فعلی",
       "note": "نمونهٔ پیوستن ضمیر مفعولی به پایان فعل"
+    },
+    {
+      "id": 101,
+      "persian": "لف",
+      "shushtari": "لِف (lef)",
+      "category": "صفت و تشبیه",
+      "note": "شبیه؛ مانند."
+    },
+    {
+      "id": 102,
+      "persian": "مرگویی",
+      "shushtari": "مَرگویی (marguyi)",
+      "category": "قید و تعبیر",
+      "note": "انگار که؛ گویی."
+    },
+    {
+      "id": 103,
+      "persian": "گشیدن",
+      "shushtari": "گِشیدن (gešidan)",
+      "category": "فعل",
+      "note": "گشودن؛ باز کردن."
+    },
+    {
+      "id": 104,
+      "persian": "برازیدن",
+      "shushtari": "بِرازیدن (berâzidan)",
+      "category": "فعل",
+      "note": "برازنده بودن؛ سزاوار بودن."
+    },
+    {
+      "id": 105,
+      "persian": "نمبرازد",
+      "shushtari": "نَمبِرازَد (namborâzad)",
+      "category": "عبارت فعلی",
+      "note": "برازنده نیست."
+    },
+    {
+      "id": 106,
+      "persian": "دونا",
+      "shushtari": "دونا (donâ)",
+      "category": "صفت",
+      "note": "دانا؛ فهمیده."
+    },
+    {
+      "id": 107,
+      "persian": "پی",
+      "shushtari": "پِی (pey)",
+      "category": "حرف اضافه و قید",
+      "note": "همراه؛ به دنبال."
+    },
+    {
+      "id": 108,
+      "persian": "ریمیز",
+      "shushtari": "ریمیز (rimiz)",
+      "category": "جانور",
+      "note": "موریانه."
+    },
+    {
+      "id": 109,
+      "persian": "گلوپ",
+      "shushtari": "گُلوپ (golup)",
+      "category": "بدن",
+      "note": "لپ؛ گونه."
+    },
+    {
+      "id": 110,
+      "persian": "ره",
+      "shushtari": "رَه (rah)",
+      "category": "اسم",
+      "note": "راه."
+    },
+    {
+      "id": 111,
+      "persian": "لیله",
+      "shushtari": "لیلَه (lile)",
+      "category": "طبیعت",
+      "note": "گردباد."
+    },
+    {
+      "id": 112,
+      "persian": "منجی",
+      "shushtari": "مَنجی (manji)",
+      "category": "اسم",
+      "note": "میانجی؛ میانه."
+    },
+    {
+      "id": 113,
+      "persian": "گرده",
+      "shushtari": "گِردَه (gerde)",
+      "category": "بدن",
+      "note": "کمر."
+    },
+    {
+      "id": 114,
+      "persian": "مفتلا",
+      "shushtari": "مُفتَلا (moftalâ)",
+      "category": "صفت",
+      "note": "مبتلا؛ گرفتار."
+    },
+    {
+      "id": 115,
+      "persian": "قصه",
+      "shushtari": "قِصّه (qesse)",
+      "category": "اسم",
+      "note": "سخن؛ گفتار."
+    },
+    {
+      "id": 116,
+      "persian": "گرختن",
+      "shushtari": "گُرُختن (gorox tan)",
+      "category": "فعل",
+      "note": "گریختن؛ فرار کردن."
+    },
+    {
+      "id": 117,
+      "persian": "اشکم",
+      "shushtari": "اِشکَم (eškam)",
+      "category": "بدن",
+      "note": "شکم."
+    },
+    {
+      "id": 118,
+      "persian": "ازمودن",
+      "shushtari": "اِزمودن (ezmudan)",
+      "category": "فعل",
+      "note": "آزمودن؛ امتحان کردن."
+    },
+    {
+      "id": 119,
+      "persian": "مغمین",
+      "shushtari": "مَغمین (maġmin)",
+      "category": "صفت و حالت",
+      "note": "پشیمان."
+    },
+    {
+      "id": 120,
+      "persian": "بهز",
+      "shushtari": "بَهَز (bahaz)",
+      "category": "صفت و قید",
+      "note": "بهتر؛ بهتر از."
+    },
+    {
+      "id": 121,
+      "persian": "پار",
+      "shushtari": "پار (pâr)",
+      "category": "قید زمان",
+      "note": "سال گذشته؛ پارسال."
+    },
+    {
+      "id": 122,
+      "persian": "بختر",
+      "shushtari": "بِختَر (bextar)",
+      "category": "صفت",
+      "note": "بهتر."
+    },
+    {
+      "id": 123,
+      "persian": "بوهی",
+      "shushtari": "بوهی (bohi)",
+      "category": "بدن",
+      "note": "بازو."
+    },
+    {
+      "id": 124,
+      "persian": "موال",
+      "shushtari": "مَوال (mavâl)",
+      "category": "خانه و بهداشت",
+      "note": "توالت؛ مستراح."
+    },
+    {
+      "id": 125,
+      "persian": "تولمه",
+      "shushtari": "تولمَه (tolma)",
+      "category": "طبیعت",
+      "note": "تنه درخت."
+    },
+    {
+      "id": 126,
+      "persian": "مق",
+      "shushtari": "مَق (meq)",
+      "category": "خوراک و اندازه",
+      "note": "جرعه؛ مقدار کمی نوشیدنی."
+    },
+    {
+      "id": 127,
+      "persian": "دوپلو",
+      "shushtari": "دوپِلو (dopalu)",
+      "category": "خوراک",
+      "note": "نیم‌کوب؛ نیم‌کوبیده."
+    },
+    {
+      "id": 128,
+      "persian": "لارمه",
+      "shushtari": "لارمَه (lârma)",
+      "category": "احساس و بدن",
+      "note": "احساس سرمای شدید."
+    },
+    {
+      "id": 129,
+      "persian": "خرتاس",
+      "shushtari": "خِرتاس (xertâs)",
+      "category": "فعل و حالت",
+      "note": "خفه کردن؛ در منبع به همین معنی ثبت شده است."
+    },
+    {
+      "id": 130,
+      "persian": "می‌لم",
+      "shushtari": "می‌لَم (milam)",
+      "category": "بدن",
+      "note": "لثه."
+    },
+    {
+      "id": 131,
+      "persian": "نالین",
+      "shushtari": "نالین (nâlin)",
+      "category": "خانه و ابزار",
+      "note": "تشک."
+    },
+    {
+      "id": 132,
+      "persian": "لوف",
+      "shushtari": "لوف (lof)",
+      "category": "طبیعت",
+      "note": "موج."
+    },
+    {
+      "id": 133,
+      "persian": "قِرزِلِنگ",
+      "shushtari": "قِرزِلِنگ (qerzeleng)",
+      "category": "جانور",
+      "note": "خرچنگ."
+    },
+    {
+      "id": 134,
+      "persian": "مِلِنگ",
+      "shushtari": "مِلِنگ (meleng)",
+      "category": "حالت جسمی",
+      "note": "بی‌حال؛ سست و ناتوان."
+    },
+    {
+      "id": 135,
+      "persian": "بُتُل",
+      "shushtari": "بُتُل (botol)",
+      "category": "جانور",
+      "note": "سوسک؛ در سروده در کنار پخشه آمده است."
+    },
+    {
+      "id": 136,
+      "persian": "پَخشَه",
+      "shushtari": "پَخشَه (paxše)",
+      "category": "جانور",
+      "note": "مگس."
+    },
+    {
+      "id": 137,
+      "persian": "پَخشه‌کورَک",
+      "shushtari": "پَخشه‌کورَک (paxše-kurak)",
+      "category": "جانور",
+      "note": "پشه."
+    },
+    {
+      "id": 138,
+      "persian": "سیخ‌چوله",
+      "shushtari": "سیخ‌چولَه (six-čule)",
+      "category": "جانور",
+      "note": "جوجه‌تیغی."
+    },
+    {
+      "id": 139,
+      "persian": "روله",
+      "shushtari": "رولَه (rule)",
+      "category": "خانواده",
+      "note": "فرزند؛ بچه."
+    },
+    {
+      "id": 140,
+      "persian": "لیقلو",
+      "shushtari": "لیقلو (liqalu)",
+      "category": "بدن",
+      "note": "روده."
+    },
+    {
+      "id": 141,
+      "persian": "گده",
+      "shushtari": "گَدَه (gade)",
+      "category": "بدن",
+      "note": "معده."
+    },
+    {
+      "id": 142,
+      "persian": "جعده",
+      "shushtari": "جَعدَه (ja'de)",
+      "category": "راه و جغرافیا",
+      "note": "جاده؛ راه."
+    },
+    {
+      "id": 143,
+      "persian": "چپل‌چپو",
+      "shushtari": "چَپِل‌چَپو (čapel-čapu)",
+      "category": "صفت و اصطلاح",
+      "note": "کارِ درهم و آشفته؛ بی‌سامان."
+    },
+    {
+      "id": 144,
+      "persian": "عسب",
+      "shushtari": "عَسب (asb)",
+      "category": "جانور",
+      "note": "اسب."
+    },
+    {
+      "id": 145,
+      "persian": "گو",
+      "shushtari": "گُو (gu)",
+      "category": "جانور",
+      "note": "گاو."
+    },
+    {
+      "id": 146,
+      "persian": "مجبره",
+      "shushtari": "مُجبِرَه (moǰbere)",
+      "category": "خانه و ابزار",
+      "note": "منقل گِلی."
+    },
+    {
+      "id": 147,
+      "persian": "زردلی",
+      "shushtari": "زَردَلی (zardali)",
+      "category": "خوراک",
+      "note": "زردآلو."
+    },
+    {
+      "id": 148,
+      "persian": "عفتووه",
+      "shushtari": "عَفتووَه (aftuve)",
+      "category": "خانه و ابزار",
+      "note": "آفتابه."
+    },
+    {
+      "id": 149,
+      "persian": "تووه",
+      "shushtari": "تووَه (tuve)",
+      "category": "خانه و ابزار",
+      "note": "ماهیتابه."
+    },
+    {
+      "id": 150,
+      "persian": "نیمبول",
+      "shushtari": "نیمبُول (nimbul)",
+      "category": "خوراک",
+      "note": "نوعی لیمو."
+    },
+    {
+      "id": 151,
+      "persian": "ترتول",
+      "shushtari": "تَرتول (tartul)",
+      "category": "خوراک",
+      "note": "سبزی خوردنی."
+    },
+    {
+      "id": 152,
+      "persian": "انگون",
+      "shushtari": "اَنگون (angun)",
+      "category": "خانه و ابزار",
+      "note": "ظرف خمیر."
+    },
+    {
+      "id": 153,
+      "persian": "ره‌بون",
+      "shushtari": "رُهِ‌بون (rohe-bun)",
+      "category": "خانه و معماری",
+      "note": "لبه بام."
+    },
+    {
+      "id": 154,
+      "persian": "ریه",
+      "shushtari": "ریَه (riye)",
+      "category": "خانه و معماری",
+      "note": "تیغه یا دیواره."
+    },
+    {
+      "id": 155,
+      "persian": "تلواره",
+      "shushtari": "تَلوارَه (talvâre)",
+      "category": "خوراک و ماهیگیری",
+      "note": "ماهی سیخ‌کشیده؛ صورت و کاربرد نیازمند بررسی گویشور."
+    },
+    {
+      "id": 156,
+      "persian": "قلون",
+      "shushtari": "قِلون (qelon)",
+      "category": "خانه و ابزار",
+      "note": "قلیان."
+    },
+    {
+      "id": 157,
+      "persian": "قحل",
+      "shushtari": "قَحل (qahl)",
+      "category": "صفت",
+      "note": "عمیق؛ گود."
+    },
+    {
+      "id": 158,
+      "persian": "قحلی",
+      "shushtari": "قَحلی (qahli)",
+      "category": "اسم",
+      "note": "گودی؛ چاله؛ گودال."
+    },
+    {
+      "id": 159,
+      "persian": "بناریدن",
+      "shushtari": "بِناریدن (benâridan)",
+      "category": "فعل",
+      "note": "تکیه دادن به جایی، معمولاً از ترس یا شگفتی."
+    },
+    {
+      "id": 160,
+      "persian": "بوئسن",
+      "shushtari": "بوئِسَّن (buessen)",
+      "category": "فعل",
+      "note": "شدن؛ صورت صرفی در شوشتری گزارش شده است."
+    },
+    {
+      "id": 161,
+      "persian": "بِگفت",
+      "shushtari": "بِگفت (begoft)",
+      "category": "فعل",
+      "note": "می‌گفت؛ نمونه گذشته استمراری در شوشتری."
     }
   ]
 }
