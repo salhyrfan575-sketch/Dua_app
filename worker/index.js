@@ -1,5 +1,6 @@
+const SITE_ORIGIN = "https://salhyrfan575-sketch.github.io";
 const cors = {
-  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Origin": SITE_ORIGIN,
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
   "Content-Type": "application/json; charset=utf-8"
@@ -17,7 +18,9 @@ const SYSTEM_RULES = `تو «راهنمای تاریخ و فرهنگ شوشتر�
 
 export default {
   async fetch(request, env) {
-    if (request.method === "OPTIONS") return new Response(null, { headers: cors });
+    const origin = request.headers.get("Origin");
+    if (origin && origin !== SITE_ORIGIN) return new Response(JSON.stringify({ error: "مبدأ درخواست مجاز نیست." }), { status: 403, headers: cors });
+    if (request.method === "OPTIONS") return new Response(null, { headers: { ...cors, "Access-Control-Allow-Origin": origin || SITE_ORIGIN } });
     if (request.method !== "POST") return new Response(JSON.stringify({ error: "فقط درخواست POST پذیرفته می‌شود." }), { status: 405, headers: cors });
     if (!env.GEMINI_API_KEY) return new Response(JSON.stringify({ error: "کلید امن مدل هنوز در تنظیمات سرویس ثبت نشده است." }), { status: 503, headers: cors });
     let body;
