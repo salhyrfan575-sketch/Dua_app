@@ -6,15 +6,35 @@ const ALLOWED_ORIGINS = new Set([
   "http://127.0.0.1:8788"
 ]);
 
+const RATE_BUCKETS = new Map();
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX_REQUESTS = 8;
+
 function cors(origin) {
-  const allowed = !origin || ALLOWED_ORIGINS.has(origin);
-  return {
-    "Access-Control-Allow-Origin": allowed ? (origin || "*") : "null",
+  const headers = {
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin"
   };
+  if (origin && ALLOWED_ORIGINS.has(origin)) headers["Access-Control-Allow-Origin"] = origin;
+  return headers;
+}
+function isRateLimited(request) {
+  const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+  const now = Date.now();
+  let bucket = RATE_BUCKETS.get(ip);
+  if (!bucket || now - bucket.startedAt >= RATE_WINDOW_MS) {
+    bucket = { startedAt: now, count: 0 };
+    RATE_BUCKETS.set(ip, bucket);
+  }
+  bucket.count++;
+  if (RATE_BUCKETS.size > 1000) {
+    for (const [key, value] of RATE_BUCKETS) {
+      if (now - value.startedAt >= RATE_WINDOW_MS) RATE_BUCKETS.delete(key);
+    }
+  }
+  return bucket.count > RATE_MAX_REQUESTS;
 }
 function json(data, status, origin) {
   return new Response(JSON.stringify(data), {
@@ -58,7 +78,7 @@ async function findLocalSources(question) {
       return { doc, score, coverage };
     }).filter(x => x.score >= 8 && x.coverage >= 0.25)
       .sort((a, b) => b.coverage - a.coverage || b.score - a.score)
-      .slice(0, 4).map(x => x.doc);
+      .slice(0, 3).map(x => x.doc);
   } catch (_) {
     return [];
   }
@@ -72,19 +92,23 @@ export default {
       return new Response(null, { status: 204, headers: cors(origin) });
     }
     if (origin && !ALLOWED_ORIGINS.has(origin)) return json({ error: "origin_not_allowed" }, 403, origin);
+    if (request.method === "GET" && new URL(request.url).pathname === "/health") {
+      return json({ service: "shoushtarjavan-ai", status: "ok", model: MODEL }, 200, origin);
+    }
     if (request.method !== "POST") return json({ error: "method_not_allowed" }, 405, origin);
+    if (isRateLimited(request)) return json({ error: "rate_limited", message: "تعداد درخواست‌ها در مدت کوتاه زیاد شده؛ یک دقیقه دیگر دوباره تلاش کن." }, 429, origin);
     if (!env.AI) return json({ error: "workers_ai_binding_missing", message: "اتصال مدل هوش مصنوعی هنوز در تنظیمات سرور فعال نشده است." }, 503, origin);
 
     let body;
     try { body = await request.json(); }
     catch (_) { return json({ error: "invalid_json" }, 400, origin); }
 
-    const messages = Array.isArray(body.messages) ? body.messages.slice(-10) : [];
+    const messages = Array.isArray(body.messages) ? body.messages.slice(-6) : [];
     if (!messages.length) return json({ error: "messages_required" }, 400, origin);
     const safeMessages = [];
     for (const item of messages) {
       if (!item || !["user", "assistant"].includes(item.role) || typeof item.content !== "string") continue;
-      const content = item.content.trim().slice(0, 3000);
+      const content = item.content.trim().slice(0, 1800);
       if (content) safeMessages.push({ role: item.role, content });
     }
     if (!safeMessages.length || safeMessages[safeMessages.length - 1].role !== "user") {
@@ -93,7 +117,7 @@ export default {
     const question = safeMessages[safeMessages.length - 1].content;
     const docs = await findLocalSources(question);
     const localContext = docs.length ? docs.map((d, i) =>
-      "[" + (i + 1) + "] " + d.title + "\n" + String(d.content || "").slice(0, 2200) +
+      "[" + (i + 1) + "] " + d.title + "\n" + String(d.content || "").slice(0, 1400) +
       "\nمنابع: " + (d.sources || []).map(s => s.label + " — " + s.url).join("؛")
     ).join("\n\n") : "برای این پرسش مدخل مرتبطی در دانشنامه اختصاصی شوشتر پیدا نشد.";
 
@@ -112,7 +136,7 @@ export default {
     try {
       const result = await env.AI.run(MODEL, {
         messages: [{ role: "system", content: system }, ...safeMessages],
-        max_tokens: 850,
+        max_tokens: 550,
         temperature: 0.35
       });
       const answer = typeof result === "string" ? result :
