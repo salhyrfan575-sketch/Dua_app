@@ -36,6 +36,29 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 @media(max-width:540px){.nav-wrap{position:sticky;top:0}.nav{gap:2px}.nav a{flex:0 0 auto}.nav .nav-cta{display:block}.nav{padding-top:2px;padding-bottom:2px}}
 @media(prefers-reduced-motion:reduce){.news-card,.lead-card,.feature-card,.heritage-card,.btn,.social-links a{transition:none}}
 
+
+/* Shushtar knowledge assistant */
+.ai-launch{position:fixed;right:18px;bottom:20px;z-index:40;border:0;border-radius:999px;padding:12px 18px;background:#17483e;color:#fffdf8;box-shadow:0 8px 28px #102f2a38;font-weight:800;cursor:pointer}
+.ai-launch:hover{background:#236557}
+.ai-panel{position:fixed;right:18px;bottom:82px;z-index:41;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 110px));background:#fffdf8;border:1px solid #e9e2d5;border-radius:18px;box-shadow:0 18px 55px #102f2a38;display:none;overflow:hidden}
+.ai-panel.open{display:flex;flex-direction:column}
+.ai-head{background:#17483e;color:#fffdf8;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.ai-head strong{display:block;font-size:15px}.ai-head small{color:#d6e2d8;font-size:11px}
+.ai-close{border:0;background:#ffffff20;color:white;border-radius:8px;width:34px;height:34px;font-size:20px;cursor:pointer}
+.ai-status{padding:8px 14px;background:#f4f0e6;color:#59645d;font-size:11px;border-bottom:1px solid #e9e2d5}
+.ai-messages{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+.ai-msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:13px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.ai-msg.bot{align-self:flex-start;background:#f0eee6;color:#26352e;border-bottom-right-radius:4px}
+.ai-msg.user{align-self:flex-end;background:#e1eee5;color:#17483e;border-bottom-left-radius:4px}
+.ai-msg a{color:#236557;text-decoration:underline}
+.ai-form{padding:12px;border-top:1px solid #e9e2d5;display:flex;gap:8px;background:#fff}
+.ai-form input{min-width:0;flex:1;border:1px solid #ddd6c8;border-radius:10px;padding:10px;font:inherit;font-size:13px;outline:none}
+.ai-form input:focus{border-color:#236557}
+.ai-form button{border:0;border-radius:10px;background:#c49a50;color:#20372f;padding:0 15px;font-weight:800;cursor:pointer}
+.ai-sources{font-size:11px;color:#69756c;margin-top:8px;border-top:1px solid #ddd;padding-top:7px}
+.ai-sources a{display:block;margin:3px 0}
+@media(max-width:540px){.ai-launch{right:12px;bottom:12px}.ai-panel{right:8px;bottom:68px;width:calc(100vw - 16px);height:min(570px,calc(100dvh - 82px))}}
+
 </style>
 </head>
 <body>
@@ -73,6 +96,15 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 <section class="about-band" id="about"><div class="container"><div><h2>شوشترجوان؛ رسانه‌ای برای شهر</h2><p>هدف این رسانه، بازتاب رویدادها و دغدغه‌های مردم، معرفی ظرفیت‌های فرهنگی و تاریخی شوشتر و تولید محتوای اختصاصی درباره شهر است.</p></div><a class="btn" href="#contact">راه‌های ارتباطی</a></div></section>
 </main>
 <footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
+
+<button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
+<section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
+  <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
+  <div class="ai-status" id="aiStatus">دانشنامه پژوهشی اولیه؛ پاسخ‌ها باید به اسناد متکی باشند.</div>
+  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام. درباره تاریخ، آثار تاریخی، سازه‌های آبی و فرهنگ شوشتر بپرسید. اگر در دانشنامه فعلی سند کافی نباشد، صریح می‌گویم.</div></div>
+  <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
+</section>
+
 <button id="backTop" aria-label="بازگشت به بالا">↑</button>
 <script>
 const slides=[...document.querySelectorAll('.hero-slides img')],dots=[...document.querySelectorAll('.hero-dots button')];
@@ -95,6 +127,55 @@ window.addEventListener('scroll',()=>{if(scrollTick)return;scrollTick=true;reque
 topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 document.getElementById('year').textContent=new Date().getFullYear();
 try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date())}catch(e){document.getElementById('today').textContent='شوشترجوان';}
+
+
+/* ShushtarJavan research assistant */
+const SHUSHTAR_AI_ENDPOINT = ""; // پس از Deploy کردن Cloudflare Worker، نشانی آن را اینجا قرار دهید.
+const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
+const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
+let shushtarDocs=null;
+function aiAddMessage(text,kind='bot',sources=[]){
+ const el=document.createElement('div');el.className='ai-msg '+kind;el.textContent=text;
+ if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='اسناد مرتبط:';
+  sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});
+  el.appendChild(box);
+ }
+ aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
+}
+function aiNorm(s){return String(s||'').toLowerCase().replace(/[\u0640\u064B-\u065F\u0670]/g,'').replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim()}
+function aiRetrieve(q){
+ const terms=aiNorm(q).split(' ').filter(w=>w.length>1);
+ return (shushtarDocs?.documents||[]).map(d=>{
+  const title=aiNorm(d.title), cat=aiNorm(d.category), body=aiNorm(d.content);
+  let score=0;for(const t of terms){if(title.includes(t))score+=5;if(cat.includes(t))score+=2;if(body.includes(t))score+=1}
+  return {d,score};
+ }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(x=>x.d);
+}
+async function aiLoadDocs(){
+ if(shushtarDocs)return shushtarDocs;
+ const res=await fetch('./data/shushtar-knowledge.json',{cache:'no-store'});
+ if(!res.ok)throw new Error('بارگیری دانشنامه ممکن نشد.');
+ shushtarDocs=await res.json();return shushtarDocs;
+}
+aiLaunch.addEventListener('click',()=>{const open=aiPanel.classList.toggle('open');aiLaunch.setAttribute('aria-expanded',String(open));if(open)aiInput.focus()});
+document.getElementById('aiClose').addEventListener('click',()=>{aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')});
+document.getElementById('aiForm').addEventListener('submit',async e=>{
+ e.preventDefault();const q=aiInput.value.trim();if(!q)return;aiInput.value='';aiAddMessage(q,'user');
+ const wait=aiAddMessage('در حال جست‌وجو در دانشنامه شوشتر…','bot');
+ try{
+  await aiLoadDocs();const docs=aiRetrieve(q);
+  if(!docs.length){wait.textContent='در دانشنامه فعلی سند مرتبط و کافی برای این پرسش پیدا نکردم. برای جلوگیری از اطلاعات ساختگی، پاسخ قطعی نمی‌دهم. می‌توانید پرسش را با نام اثر یا موضوع دقیق‌تر مطرح کنید.';return}
+  if(!SHUSHTAR_AI_ENDPOINT){
+   wait.textContent='اتصال مدل زبانی هنوز پیکربندی نشده است؛ بنابراین این پاسخ، پاسخ هوش مصنوعی نیست. فعلاً این اسناد مرتبط را در دانشنامه پیدا کردم:\n\n'+docs.slice(0,3).map(d=>'• '+d.title+'\n'+d.content.slice(0,360)+'…').join('\n\n')+'\n\nپس از راه‌اندازی امن سرویس Gemini، همین اسناد مبنای پاسخ گفت‌وگویی دستیار خواهند بود.';
+   const src=docs.flatMap(d=>d.sources||[]).slice(0,5);if(src.length){const b=document.createElement('div');b.className='ai-sources';b.textContent='منابع اسناد:';src.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label;b.appendChild(a)});wait.appendChild(b)}
+   return;
+  }
+  const res=await fetch(SHUSHTAR_AI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,documents:docs})});
+  const data=await res.json();if(!res.ok)throw new Error(data.error||'سرویس پاسخ نداد.');
+  wait.textContent=data.answer||'پاسخی دریافت نشد.';
+  const src=docs.flatMap(d=>d.sources||[]).slice(0,6);if(src.length){const b=document.createElement('div');b.className='ai-sources';b.textContent='منابع دانشنامه:';src.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label;b.appendChild(a)});wait.appendChild(b)}
+ }catch(err){wait.textContent='خطا: '+(err.message||'ارتباط برقرار نشد.')+' لطفاً کمی بعد دوباره تلاش کنید.'}
+});
 
 </script>
 </body></html>
