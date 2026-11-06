@@ -21,26 +21,43 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 @media(max-width:800px){.mast-note{display:none}.hero{min-height:400px}.hero-content{padding:70px 0}.news-layout{grid-template-columns:1fr}.feature-grid,.heritage-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
 @media(max-width:540px){.mast{padding:13px 0}.brand h1{font-size:22px}.brand-mark{width:48px;height:48px}.nav a{padding:11px 12px;font-size:12px}.nav .nav-cta{display:none}.hero{min-height:390px}.hero-content{padding:60px 0}.hero p{font-size:13px}.section{padding:39px 0}.section h2{font-size:21px}.section-head{align-items:start}.news-card{grid-template-columns:105px 1fr}.news-card h3{font-size:13px}.news-card .body{padding:10px}.lead-image{height:210px}.feature-grid,.heritage-grid{grid-template-columns:1fr}.feature-card img,.heritage-card img{height:205px}.about-band .container{display:block}.about-band .btn{margin-top:18px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.skip-link{position:absolute;top:-60px;right:12px;z-index:100;background:#fff;color:var(--green);padding:9px 14px;border-radius:8px;box-shadow:var(--shadow)}
+.skip-link:focus{top:12px}
+:focus-visible{outline:3px solid #d4a84f;outline-offset:3px}
+.nav-wrap{position:sticky;top:0;z-index:20;box-shadow:0 5px 18px #102f2a18}
+.nav{scrollbar-width:thin}
+.btn,.nav a,.social-links a,.more{transition:background-color .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px);background:#d7ad68}
+.social-links a:hover{transform:translateY(-2px)}
+.hero-content{padding-top:clamp(58px,8vw,82px)}
+.news-card,.lead-card,.feature-card,.heritage-card{transition:transform .22s ease,box-shadow .22s ease}
+.news-card:hover,.lead-card:hover,.feature-card:hover,.heritage-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px #20352b1c}
+@media(max-width:540px){.nav-wrap{position:sticky;top:0}.nav{gap:2px}.nav a{flex:0 0 auto}.nav .nav-cta{display:block}.nav{padding-top:2px;padding-bottom:2px}}
+@media(prefers-reduced-motion:reduce){.news-card,.lead-card,.feature-card,.heritage-card,.btn,.social-links a{transition:none}}
+
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
 <div class="topline"><div class="container"><span>رسانه خبری، فرهنگی و اختصاصی شوشتر</span><span id="today"></span></div></div>
 <header class="masthead"><div class="container mast"><a class="brand" href="#home"><span class="brand-mark">ش</span><span><h1>شوشترجوان</h1><small>روایت امروز، ریشه در تاریخ</small></span></a><div class="mast-note">صدای مردم؛ روایت شهر تاریخی شوشتر</div></div></header>
-<div class="nav-wrap"><nav class="container nav"><a class="active" href="#home">صفحه اصلی</a><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره ما</a><a class="nav-cta" href="#social">شبکه‌های اجتماعی</a></nav></div>
+<div class="nav-wrap"><nav class="container nav"><a class="active" href="#home">صفحه اصلی</a><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره ما</a><a class="nav-cta" href="#contact">ارتباط با ما</a></nav></div>
 <main id="home">
+<div id="main-content" tabindex="-1"></div>
 <section class="hero"><div class="hero-slides" aria-hidden="true">
 <img class="show" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=1800" alt="">
 <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=1800" alt="">
 <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=1800" alt="">
 </div><div class="container hero-content"><span class="eyebrow">شوشتر؛ شهر آب، تاریخ و زندگی</span><h2>شوشتر را<br>از نو روایت کنیم</h2><p>پنجره‌ای برای دنبال‌کردن خبرهای شهر، شناخت میراث تاریخی و دیدن روایت‌ها و تولیدات اختصاصی شوشترجوان.</p><a class="btn" href="#news">مشاهده تازه‌ترین مطالب <span>←</span></a><div class="hero-dots"><button class="on" aria-label="تصویر اول"></button><button aria-label="تصویر دوم"></button><button aria-label="تصویر سوم"></button></div></div></section>
 <div class="ticker"><div class="container ticker-inner"><span class="ticker-label">در شوشترجوان</span><div class="ticker-track"><span>اخبار شوشتر • فرهنگ و تاریخ • گزارش‌های مردمی • تولیدات اختصاصی • معرفی آثار تاریخی شوشتر</span></div></div></div>
-<section class="section" id="news"><div class="container"><div class="section-head"><div><span class="section-kicker">NEWSROOM</span><h2>آخرین اخبار شوشتر</h2><p>خبرها و گزارش‌های شهر را از این بخش دنبال کنید.</p></div><a class="more" href="#social">ارسال خبر و سوژه ←</a></div>
+<section class="section" id="news"><div class="container"><div class="section-head"><div><span class="section-kicker">NEWSROOM</span><h2>آخرین اخبار شوشتر</h2><p>خبرها و گزارش‌های شهر را از این بخش دنبال کنید.</p></div><a class="more" href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال خبر و سوژه ←</a></div>
 <div class="news-layout"><article class="lead-card"><div class="lead-image"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=1000" alt="سازه‌های آبی تاریخی شوشتر" loading="lazy"></div><div class="lead-body"><span class="tag">میراث شوشتر</span><h3>میراثی که هویت شوشتر را روایت می‌کند</h3><p>سازه‌های آبی تاریخی شوشتر، مجموعه‌ای کم‌نظیر از پل‌بندها، آسیاب‌ها، آبراهه‌ها و سازه‌های مهندسی است که پیوند دیرینه مردم این شهر با آب را نشان می‌دهد.</p><div class="meta">پرونده ویژه شوشترجوان · معرفی میراث تاریخی</div></div></article>
 <div class="side-news"><article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=500" alt="آبشارهای شوشتر" loading="lazy"><div class="body"><span class="tag">فرهنگ و گردشگری</span><h3>آبشارها و آسیاب‌های آبی؛ گنجینه‌ای در قلب شهر</h3><div class="meta">پرونده معرفی آثار</div></div></article>
 <article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=500" alt="سازه‌های تاریخی" loading="lazy"><div class="body"><span class="tag">تاریخ</span><h3>روایت تاریخ در کوچه‌ها و بناهای کهن شوشتر</h3><div class="meta">یادداشت فرهنگی</div></div></article>
 <article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=500" alt="میراث شوشتر" loading="lazy"><div class="body"><span class="tag">رسانه مردمی</span><h3>شما از شوشتر بگویید؛ سوژه‌های مردمی</h3><div class="meta">راه ارتباط با تحریریه</div></div></article></div></div>
 <p style="font-size:11px;color:#8b9189;margin-top:15px">توجه: مطالب این نسخه، نمونه‌های نمایشی برای تکمیل قالب هستند و خبر روز محسوب نمی‌شوند.</p></div></section>
-<section class="section features" id="exclusive"><div class="container"><div class="section-head"><div><span class="section-kicker">SHOUSHTAR JAVAN ORIGINALS</span><h2>تولیدات اختصاصی شوشترجوان</h2><p>مستند، گزارش تصویری، کلیپ و روایت‌های ویژه از شوشتر.</p></div><a class="more" href="#social">همکاری با ما ←</a></div><div class="feature-grid">
+<section class="section features" id="exclusive"><div class="container"><div class="section-head"><div><span class="section-kicker">SHOUSHTAR JAVAN ORIGINALS</span><h2>تولیدات اختصاصی شوشترجوان</h2><p>مستند، گزارش تصویری، کلیپ و روایت‌های ویژه از شوشتر.</p></div><a class="more" href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">همکاری با ما ←</a></div><div class="feature-grid">
 <article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=700" alt="مستند میراث شوشتر" loading="lazy"><div class="body"><span class="tag">مستند کوتاه</span><h3>قصه آب در شوشتر</h3><p>روایتی تصویری از سازه‌های آبی و پیوند آن‌ها با زندگی مردم.</p><div class="meta">جایگاه انتشار ویدئو در آینده</div></div></article>
 <article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=700" alt="گزارش تصویری" loading="lazy"><div class="body"><span class="tag">گزارش تصویری</span><h3>شوشتر از نگاه دوربین</h3><p>قاب‌هایی از محله‌ها، بناها، آیین‌ها و زندگی روزمره شهر.</p><div class="meta">جایگاه انتشار گالری در آینده</div></div></article>
 <article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=700" alt="روایت محلی" loading="lazy"><div class="body"><span class="tag">روایت محلی</span><h3>خاطره‌های شهر</h3><p>ثبت خاطرات، رسم‌ها و روایت‌های نسل‌های مختلف شوشتر.</p><div class="meta">جایگاه انتشار مجموعه در آینده</div></div></article>
@@ -53,18 +70,31 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 <article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kolah%20Farangi%20Tower%20Shushtar.jpg?width=800" alt="برج کلاه فرنگی" loading="lazy"><div class="body"><h3>برج کلاه‌فرنگی</h3><p>برجی تاریخی در نزدیکی مجموعه آب که در منظر شهری و روایت‌های مربوط به نظارت بر جریان آب شناخته می‌شود.</p><details><summary>معرفی بیشتر</summary><p>این برج از نشانه‌های شناخته‌شده محدوده تاریخی شوشتر است. شرح دقیق کارکرد و دوره ساخت آن در پرونده پژوهشی اثر تکمیل می‌شود.</p></details></div></article>
 <article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Band%20e%20Kaiser%20Shushtar.jpg?width=800" alt="بند قیصر" loading="lazy"><div class="body"><h3>بند قیصر و پل‌بند شادروان</h3><p>از سازه‌های تاریخی مرتبط با عبور، مهار و هدایت آب در محدوده رودخانه کارون.</p><details><summary>معرفی بیشتر</summary><p>بند قیصر از عناصر برجسته سامانه تاریخی آب شوشتر است. این سازه در کنار دیگر بندها و کانال‌ها بخشی از شبکه پیچیده مدیریت آب منطقه را شکل می‌داد.</p></details></div></article>
 </div><p style="font-size:11px;color:#8b9189;margin-top:18px">برای تصاویر آثار، منبع و مجوز هر فایل باید پیش از انتشار نهایی بررسی و اعتبار عکاس درج شود. برخی تصویرها از Wikimedia Commons بارگذاری می‌شوند.</p></div></section>
-<section class="about-band" id="about"><div class="container"><div><h2>شوشترجوان؛ رسانه‌ای برای شهر</h2><p>هدف این رسانه، بازتاب رویدادها و دغدغه‌های مردم، معرفی ظرفیت‌های فرهنگی و تاریخی شوشتر و تولید محتوای اختصاصی درباره شهر است.</p></div><a class="btn" href="#social">راه‌های ارتباطی</a></div></section>
+<section class="about-band" id="about"><div class="container"><div><h2>شوشترجوان؛ رسانه‌ای برای شهر</h2><p>هدف این رسانه، بازتاب رویدادها و دغدغه‌های مردم، معرفی ظرفیت‌های فرهنگی و تاریخی شوشتر و تولید محتوای اختصاصی درباره شهر است.</p></div><a class="btn" href="#contact">راه‌های ارتباطی</a></div></section>
 </main>
-<footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col"><h3>شبکه‌های اجتماعی</h3><div class="social-links"><a href="#" data-placeholder="instagram">اینستاگرام</a><a href="#" data-placeholder="eitaa">کانال ایتا</a><a href="#" data-placeholder="aparat">کانال آپارات</a></div><p style="font-size:11px;color:#aab8ae;margin-top:12px">آدرس شبکه‌ها پس از دریافت لینک‌ها در این قسمت قرار می‌گیرد.</p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
+<footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 <button id="backTop" aria-label="بازگشت به بالا">↑</button>
 <script>
-const slides=[...document.querySelectorAll('.hero-slides img')],dots=[...document.querySelectorAll('.hero-dots button')];let current=0;
-function showSlide(i){slides[current].classList.remove('show');dots[current].classList.remove('on');current=i%slides.length;slides[current].classList.add('show');dots[current].classList.add('on')}
-let timer=setInterval(()=>showSlide(current+1),6000);
-dots.forEach((d,i)=>d.addEventListener('click',()=>{clearInterval(timer);showSlide(i);timer=setInterval(()=>showSlide(current+1),6000)}));
-const topBtn=document.getElementById('backTop');window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>450?'block':'none'});topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const slides=[...document.querySelectorAll('.hero-slides img')],dots=[...document.querySelectorAll('.hero-dots button')];
+let current=0,timer=null;
+function showSlide(i){
+ if(!slides.length)return;
+ slides[current]?.classList.remove('show');dots[current]?.classList.remove('on');
+ current=((i%slides.length)+slides.length)%slides.length;
+ slides[current]?.classList.add('show');dots[current]?.classList.add('on');
+}
+function startCarousel(){
+ if(slides.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ timer=window.setInterval(()=>showSlide(current+1),6000);
+}
+dots.forEach((d,i)=>d.addEventListener('click',()=>{if(timer)clearInterval(timer);showSlide(i);startCarousel()}));
+startCarousel();
+const topBtn=document.getElementById('backTop');
+let scrollTick=false;
+window.addEventListener('scroll',()=>{if(scrollTick)return;scrollTick=true;requestAnimationFrame(()=>{topBtn.style.display=window.scrollY>450?'grid':'none';scrollTick=false})},{passive:true});
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date());
-document.querySelectorAll('[data-placeholder]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();alert('لینک این شبکه اجتماعی هنوز تنظیم نشده است. پس از دریافت آدرس، مقدار href همین پیوند را تغییر دهید.')}))
+try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date())}catch(e){document.getElementById('today').textContent='شوشترجوان';}
+
 </script>
 </body></html>
