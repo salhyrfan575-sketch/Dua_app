@@ -101,7 +101,7 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
   <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · جست‌وجو و پاسخ بر پایه اسناد ثبت‌شده</div>
-  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ و فرهنگ شوشتر، آثار تاریخی، محله‌ها و سازه‌های آبی سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند و منبعشان را هم می‌بینی.</div></div>
+  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ، فرهنگ عامه، اصطلاحات محلی، رسم‌ها، محله‌ها و آثار شوشتر سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند؛ روایت‌های شفاهی هم با برچسب جداگانه مشخص می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
 
@@ -134,6 +134,13 @@ const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementBy
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
 let shushtarDocs=null;
 const AI_ALIASES={
+ 'فرهنگ شوشتر':['فرهنگ عامه','گویش شوشتری','آداب و رسوم','خاطرات محلی','بازی‌های کودکانه','خوراک محلی'],
+ 'فرهنگ عامه':['بچه‌برک','دده‌زنان','روایت شفاهی','ضرب‌المثل','لالایی'],
+ 'بچه برک':['بچه‌برک','ترساندن کودکان','خواباندن بچه'],
+ 'دده زنان':['دده‌زنان','بند میزان','شستن رخت‌ولباس'],
+ 'گویش':['گویش شوشتری','واژه‌های محلی','اصطلاحات شوشتری'],
+ 'رسم و رسوم':['آیین محلی','آداب خانوادگی','فرهنگ عامه'],
+ 'محله':['نام محله‌ها','محله‌های قدیمی','گذرهای شوشتر'],
  'سازه های ابی':['سازه آبی','آبشار','آسیاب','بند میزان','گرگر','داریون'],
  'آبشار':['آبشارها','آسیاب','سیکا','گرگر'],
  'اسیاب':['آسیاب','آسیاب‌های آبی','سیکا'],
