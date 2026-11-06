@@ -76,7 +76,7 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 .dictionary-item{display:flex;justify-content:space-between;gap:10px;text-align:right;border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 11px;cursor:pointer;font:inherit}
 .dictionary-item span:first-child{font-size:12px;color:#59645d}
 .dictionary-item span:last-child{font-size:12px;color:var(--green);font-weight:800}
-.dictionary-meta{font-size:11px;color:var(--muted);margin-top:12px}
+ .dictionary-meta{font-size:11px;color:var(--muted);margin-top:12px}.dictionary-sources{margin-top:10px;border-top:1px solid var(--line);padding-top:9px;font-size:11px;color:var(--muted)}.dictionary-sources summary{cursor:pointer;font-weight:800;color:var(--green)}.dictionary-sources a{display:block;color:var(--green2);margin:6px 0;text-decoration:underline}
 @media(max-width:540px){.dictionary-box{padding:15px}.dictionary-search{flex-direction:column}.dictionary-search button{padding:11px}.dictionary-list{grid-template-columns:1fr}}
 
 
@@ -309,6 +309,7 @@ function searchShushtariDictionary(query){
   await loadShushtariDictionary();
   const badge=document.getElementById('dictionaryCountBadge');if(badge)badge.textContent=shushtariDictionary.entries.length+' مدخل ثبت‌شده';
   meta.textContent='مجموعاً '+shushtariDictionary.entries.length+' مدخل · نسخه '+(shushtariDictionary.version||'')+' · منابع پژوهشی و مردمی در فایل واژه‌نامه ثبت شده‌اند.';
+  const sourceBox=document.createElement('details');sourceBox.className='dictionary-sources';const sourceTitle=document.createElement('summary');sourceTitle.textContent='مشاهده منابع و مأخذ واژه‌نامه';sourceBox.append(sourceTitle);(shushtariDictionary.sources||[]).forEach(src=>{const a=document.createElement('a');a.href=src.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=src.title;sourceBox.append(a);});meta.after(sourceBox);
   const renderList=(items)=>{list.innerHTML='';items.forEach(e=>{const b=document.createElement('button');b.type='button';b.className='dictionary-item';const a=document.createElement('span');a.textContent=e.persian;const z=document.createElement('span');z.textContent=e.shushtari;b.append(a,z);b.addEventListener('click',()=>{input.value=e.persian;showDictionaryEntry(e);});list.appendChild(b);});};
   renderList(shushtariDictionary.entries);
   form.addEventListener('submit',e=>{e.preventDefault();const matches=searchShushtariDictionary(input.value);if(matches.length){showDictionaryEntry(matches[0]);if(matches.length>1)renderList(matches);}else{result.classList.add('show');result.textContent='این واژه هنوز در واژه‌نامه ثبت نشده است.';renderList(shushtariDictionary.entries);}});
