@@ -1,0 +1,722 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-11-07",
+  "count": 100,
+  "description": "واژه‌نامهٔ فارسی به شوشتری بر پایهٔ منابع منتشرشده. صورت‌های آوانویسی‌شده برای کمک به تلفظ آمده‌اند؛ گونه‌های محلی و تلفظ نسل‌ها ممکن است تفاوت داشته باشند.",
+  "sources": [
+    {
+      "title": "گویش شوشتری، بخش واژگان و دستور",
+      "url": "https://wikipedia.org/wiki/گویش_شوشتری"
+    },
+    {
+      "title": "واژه‌نامه‌ای از گویش شوشتری، محمدباقر نیرومند",
+      "url": "https://parsianjoman.org/10612/گویش-شوشتری/"
+    },
+    {
+      "title": "فارسی شوشتری، عبدالله وزیری",
+      "url": "https://www.ketabnak.com/book/113474/فارسی-شوشتری"
+    }
+  ],
+  "entries": [
+    {
+      "id": 1,
+      "persian": "امسال",
+      "shushtari": "اَمسال (amsâl)",
+      "category": "قید زمان",
+      "note": "امسال"
+    },
+    {
+      "id": 2,
+      "persian": "بادرنجبویه",
+      "shushtari": "بادِرِنگون (bâderengun)",
+      "category": "گیاه",
+      "note": "بادرنجبویه"
+    },
+    {
+      "id": 3,
+      "persian": "دستهٔ گندم دروشده",
+      "shushtari": "بافا (bâfa)",
+      "category": "کشاورزی",
+      "note": "دستهٔ گندم دروشده با ساقه"
+    },
+    {
+      "id": 4,
+      "persian": "خیار سبز",
+      "shushtari": "بالِنگ (bâleng)",
+      "category": "خوراک",
+      "note": "خیار سبز"
+    },
+    {
+      "id": 5,
+      "persian": "سنجاقک",
+      "shushtari": "بالونَک (bâlunak)",
+      "category": "جانور",
+      "note": "سنجاقک"
+    },
+    {
+      "id": 6,
+      "persian": "مرغ یا خروس بسیار جوان",
+      "shushtari": "بارنا (bârna)",
+      "category": "جانور",
+      "note": "مرغ یا خروس بسیار جوان"
+    },
+    {
+      "id": 7,
+      "persian": "خم کوچک ترشی",
+      "shushtari": "بَستوک (bastuk)",
+      "category": "خانه و ابزار",
+      "note": "خم کوچک نگهداری ترشی"
+    },
+    {
+      "id": 8,
+      "persian": "بدتر",
+      "shushtari": "بَتَر (batar)",
+      "category": "صفت",
+      "note": "بدتر"
+    },
+    {
+      "id": 9,
+      "persian": "مرغابی",
+      "shushtari": "بَت اووی (bat o:vi)",
+      "category": "جانور",
+      "note": "مرغابی"
+    },
+    {
+      "id": 10,
+      "persian": "سیاه‌بخت",
+      "shushtari": "بَخ‌حُرّاق (bax-ḥorrâq)",
+      "category": "اصطلاح",
+      "note": "سیاه‌بخت"
+    },
+    {
+      "id": 11,
+      "persian": "سیاه‌بخت",
+      "shushtari": "بَخ‌زغال (bax-zoγâl)",
+      "category": "اصطلاح",
+      "note": "سیاه‌بخت"
+    },
+    {
+      "id": 12,
+      "persian": "ساحل رود",
+      "shushtari": "بِندار (bendâr)",
+      "category": "جغرافیا",
+      "note": "ساحل رود"
+    },
+    {
+      "id": 13,
+      "persian": "اتاق نشیمن",
+      "shushtari": "بِنِشین (benešin)",
+      "category": "خانه",
+      "note": "اتاق نشیمن"
+    },
+    {
+      "id": 14,
+      "persian": "گنجشک",
+      "shushtari": "بِنگِشت (bengešt)",
+      "category": "جانور",
+      "note": "گنجشک"
+    },
+    {
+      "id": 15,
+      "persian": "رنگ بنفش",
+      "shushtari": "بِنووش (beno:š)",
+      "category": "رنگ",
+      "note": "رنگ بنفش"
+    },
+    {
+      "id": 16,
+      "persian": "برابر، روبه‌رو",
+      "shushtari": "بِرابر (berâbar)",
+      "category": "صفت و قید",
+      "note": "برابر، مقابل و روبه‌رو"
+    },
+    {
+      "id": 17,
+      "persian": "چمباتمه‌زده",
+      "shushtari": "چُمبا (čomba)",
+      "category": "حالت و حرکت",
+      "note": "به حالت چمباتمه‌زده"
+    },
+    {
+      "id": 18,
+      "persian": "چوب نیم‌سوز",
+      "shushtari": "چُموت (čomot)",
+      "category": "ابزار",
+      "note": "چوب نیم‌سوز"
+    },
+    {
+      "id": 19,
+      "persian": "چغندر",
+      "shushtari": "چُندُر (čondor)",
+      "category": "خوراک",
+      "note": "چغندر"
+    },
+    {
+      "id": 20,
+      "persian": "پیرزن",
+      "shushtari": "دالو (dâlu)",
+      "category": "مردم",
+      "note": "پیرزن"
+    },
+    {
+      "id": 21,
+      "persian": "ویران، خراب",
+      "shushtari": "دَمبَر (dambar)",
+      "category": "صفت",
+      "note": "برای شهر و خانه و ناحیهٔ ویران"
+    },
+    {
+      "id": 22,
+      "persian": "دَمَر",
+      "shushtari": "دَمبَری (dambari)",
+      "category": "حالت",
+      "note": "دَمَر"
+    },
+    {
+      "id": 23,
+      "persian": "دویدن",
+      "shushtari": "دَوِسّان (davessan)",
+      "category": "فعل",
+      "note": "دویدن"
+    },
+    {
+      "id": 24,
+      "persian": "پُر، لبریز",
+      "shushtari": "دِچ (deč)",
+      "category": "صفت",
+      "note": "پر و لبریز"
+    },
+    {
+      "id": 25,
+      "persian": "پُر کردن",
+      "shushtari": "دِچ کردن (deč kordan)",
+      "category": "فعل",
+      "note": "پر کردن"
+    },
+    {
+      "id": 26,
+      "persian": "از سرمای شدید لرزیدن",
+      "shushtari": "دِک زدن (dek zadan)",
+      "category": "فعل",
+      "note": "از سرمای شدید لرزیدن"
+    },
+    {
+      "id": 27,
+      "persian": "هوای گرمِ بی‌باد و ایستاده",
+      "shushtari": "دِپ (dep)",
+      "category": "هوا و طبیعت",
+      "note": "وصف هوای گرم ایستاده"
+    },
+    {
+      "id": 28,
+      "persian": "چرب و نوچ‌شده",
+      "shushtari": "دِقِن (deqen)",
+      "category": "صفت",
+      "note": "وصف چیزی که چرب و نوچ شده"
+    },
+    {
+      "id": 29,
+      "persian": "بشکهٔ فلزی",
+      "shushtari": "دِرام (derâm)",
+      "category": "ابزار",
+      "note": "بشکهٔ فلزی"
+    },
+    {
+      "id": 30,
+      "persian": "پاره‌شده",
+      "shushtari": "دِردَه (derda)",
+      "category": "صفت",
+      "note": "پاره‌شده"
+    },
+    {
+      "id": 31,
+      "persian": "درآوردن، بیرون آوردن",
+      "shushtari": "دَروُردَن (dervordan)",
+      "category": "فعل",
+      "note": "درآوردن و بیرون آوردن"
+    },
+    {
+      "id": 32,
+      "persian": "غده",
+      "shushtari": "دِشبول (dešbol)",
+      "category": "بدن",
+      "note": "غده"
+    },
+    {
+      "id": 33,
+      "persian": "دشمن",
+      "shushtari": "دِشمِن (dešmen)",
+      "category": "مردم",
+      "note": "دشمن"
+    },
+    {
+      "id": 34,
+      "persian": "دشنام، ناسزا",
+      "shushtari": "دِشمون (dešmun)",
+      "category": "گفتار",
+      "note": "دشنام و ناسزا"
+    },
+    {
+      "id": 35,
+      "persian": "شکستن، شکسته‌شدن",
+      "shushtari": "اِشکاسان (eška:san)",
+      "category": "فعل",
+      "note": "شکستن یا شکسته‌شدن"
+    },
+    {
+      "id": 36,
+      "persian": "شکسته",
+      "shushtari": "اِشکِنادَه (eškenâda)",
+      "category": "صفت",
+      "note": "شکسته"
+    },
+    {
+      "id": 37,
+      "persian": "شکاندن",
+      "shushtari": "اِشکِنادَن (eškenâdan)",
+      "category": "فعل",
+      "note": "شکاندن"
+    },
+    {
+      "id": 38,
+      "persian": "شناختن",
+      "shushtari": "اِشناختن (ešnâxtan)",
+      "category": "فعل",
+      "note": "شناختن"
+    },
+    {
+      "id": 39,
+      "persian": "بازی زو (کبدی)",
+      "shushtari": "اِشتی‌تی (eštiti)",
+      "category": "بازی",
+      "note": "بازی زو یا کبدی"
+    },
+    {
+      "id": 40,
+      "persian": "این‌قدر، این مقدار",
+      "shushtari": "اِغزا (eγza)",
+      "category": "قید مقدار",
+      "note": "این‌قدر و این مقدار"
+    },
+    {
+      "id": 41,
+      "persian": "این‌قدر، این مقدار",
+      "shushtari": "اِغزار (eγzar)",
+      "category": "قید مقدار",
+      "note": "این‌قدر و این مقدار"
+    },
+    {
+      "id": 42,
+      "persian": "این مقدار اندک",
+      "shushtari": "اِغزلوک (eγzeluk)",
+      "category": "قید مقدار",
+      "note": "این مقدار اندک"
+    },
+    {
+      "id": 43,
+      "persian": "ترس بسیار شدید",
+      "shushtari": "اِحراز (eḥrâz)",
+      "category": "احساس",
+      "note": "ترس بسیار شدید"
+    },
+    {
+      "id": 44,
+      "persian": "لاک‌پشت",
+      "shushtari": "گالا‌پُشت (gâla-pošt)",
+      "category": "جانور",
+      "note": "لاک‌پشت"
+    },
+    {
+      "id": 45,
+      "persian": "چراگاه گاوان",
+      "shushtari": "گامال (gâmâl)",
+      "category": "دامداری",
+      "note": "چراگاه گاوان"
+    },
+    {
+      "id": 46,
+      "persian": "گاومیش",
+      "shushtari": "گامیش (gâmiš)",
+      "category": "جانور",
+      "note": "گاومیش"
+    },
+    {
+      "id": 47,
+      "persian": "بز کوهی",
+      "shushtari": "گامور (gâmur)",
+      "category": "جانور",
+      "note": "بز کوهی"
+    },
+    {
+      "id": 48,
+      "persian": "گاوبان",
+      "shushtari": "گاپون (gâpun)",
+      "category": "شغل",
+      "note": "نگهدارندهٔ گاوها در چرا"
+    },
+    {
+      "id": 49,
+      "persian": "عقرب زردرنگ",
+      "shushtari": "گاردیم (gârdim)",
+      "category": "جانور",
+      "note": "عقرب زردرنگ"
+    },
+    {
+      "id": 50,
+      "persian": "آروغ",
+      "shushtari": "گارِشت (gârešt)",
+      "category": "بدن",
+      "note": "آروغ"
+    },
+    {
+      "id": 51,
+      "persian": "دم‌جنبانک",
+      "shushtari": "گازِرَک (gâzerak)",
+      "category": "جانور",
+      "note": "دم‌جنبانک"
+    },
+    {
+      "id": 52,
+      "persian": "تراشهٔ چوب",
+      "shushtari": "پِلیش (peliš)",
+      "category": "ابزار",
+      "note": "تراشهٔ چوب"
+    },
+    {
+      "id": 53,
+      "persian": "کورمال‌کورمال",
+      "shushtari": "پِلماپِلما (pelmâ-pelmâ)",
+      "category": "قید حالت",
+      "note": "کورمال‌کورمال"
+    },
+    {
+      "id": 54,
+      "persian": "تفالهٔ چای",
+      "shushtari": "پِلت (pelt)",
+      "category": "خوراک",
+      "note": "تفالهٔ چای"
+    },
+    {
+      "id": 55,
+      "persian": "کجاست؟",
+      "shushtari": "کُنی؟ (koni)",
+      "category": "پرسشی",
+      "note": "ادات پرسش به معنی کجاست"
+    },
+    {
+      "id": 56,
+      "persian": "کنجد",
+      "shushtari": "کُنجی (konǰi)",
+      "category": "خوراک",
+      "note": "کنجد"
+    },
+    {
+      "id": 57,
+      "persian": "کردن",
+      "shushtari": "کُردَن (kordan)",
+      "category": "فعل",
+      "note": "کردن"
+    },
+    {
+      "id": 58,
+      "persian": "من",
+      "shushtari": "مو (mo)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی اول‌شخص مفرد"
+    },
+    {
+      "id": 59,
+      "persian": "تو",
+      "shushtari": "تو (to)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی دوم‌شخص مفرد"
+    },
+    {
+      "id": 60,
+      "persian": "او",
+      "shushtari": "او (u)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی سوم‌شخص مفرد"
+    },
+    {
+      "id": 61,
+      "persian": "ما",
+      "shushtari": "اَما (amâ)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی اول‌شخص جمع"
+    },
+    {
+      "id": 62,
+      "persian": "شما",
+      "shushtari": "شَما (šamâ)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی دوم‌شخص جمع"
+    },
+    {
+      "id": 63,
+      "persian": "آن‌ها",
+      "shushtari": "اوشو (ušu)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی سوم‌شخص جمع"
+    },
+    {
+      "id": 64,
+      "persian": "اکنون، همین حالا",
+      "shushtari": "ایسون (isu(n))",
+      "category": "قید زمان",
+      "note": "اکنون"
+    },
+    {
+      "id": 65,
+      "persian": "آن‌گاه، در آن زمان",
+      "shushtari": "اوسون (usu(n))",
+      "category": "قید زمان",
+      "note": "آن‌گاه"
+    },
+    {
+      "id": 66,
+      "persian": "عقب",
+      "shushtari": "دُما (domâ)",
+      "category": "قید مکان",
+      "note": "عقب"
+    },
+    {
+      "id": 67,
+      "persian": "جلو",
+      "shushtari": "نُها (nohâ)",
+      "category": "قید مکان",
+      "note": "جلو"
+    },
+    {
+      "id": 68,
+      "persian": "پایین",
+      "shushtari": "دومِن (dume(n))",
+      "category": "قید مکان",
+      "note": "پایین"
+    },
+    {
+      "id": 69,
+      "persian": "پیوسته، مدام",
+      "shushtari": "یادانَر (ya:-danar)",
+      "category": "قید زمان",
+      "note": "پیوسته و مدام"
+    },
+    {
+      "id": 70,
+      "persian": "لحظاتی پیش",
+      "shushtari": "اَسکِه (aske:)",
+      "category": "قید زمان",
+      "note": "لحظاتی پیش"
+    },
+    {
+      "id": 71,
+      "persian": "زود",
+      "shushtari": "گا (ga:)",
+      "category": "قید زمان",
+      "note": "زود"
+    },
+    {
+      "id": 72,
+      "persian": "به‌قطع، حتماً",
+      "shushtari": "اِلّان (ellan)",
+      "category": "قید",
+      "note": "به‌قطع"
+    },
+    {
+      "id": 73,
+      "persian": "هنوز",
+      "shushtari": "هُلام (holam)",
+      "category": "قید زمان",
+      "note": "هنوز"
+    },
+    {
+      "id": 74,
+      "persian": "این",
+      "shushtari": "ای (i)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ نزدیک"
+    },
+    {
+      "id": 75,
+      "persian": "آن",
+      "shushtari": "او (u)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ دور"
+    },
+    {
+      "id": 76,
+      "persian": "این (گونهٔ دیگر)",
+      "shushtari": "هِ (he)",
+      "category": "ضمیر اشاره",
+      "note": "صورت دیگر اشارهٔ نزدیک"
+    },
+    {
+      "id": 77,
+      "persian": "آن (گونهٔ دیگر)",
+      "shushtari": "هو (hu)",
+      "category": "ضمیر اشاره",
+      "note": "صورت دیگر اشارهٔ دور"
+    },
+    {
+      "id": 78,
+      "persian": "این‌ها",
+      "shushtari": "هَنو (henu)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ جمع نزدیک"
+    },
+    {
+      "id": 79,
+      "persian": "آن‌ها (اشاره)",
+      "shushtari": "هونو (hunu)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ جمع دور"
+    },
+    {
+      "id": 80,
+      "persian": "رفتم",
+      "shushtari": "رفتُم (raftom)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، اول‌شخص مفرد"
+    },
+    {
+      "id": 81,
+      "persian": "رفتی",
+      "shushtari": "رفتی (rafti)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، دوم‌شخص مفرد"
+    },
+    {
+      "id": 82,
+      "persian": "رفت",
+      "shushtari": "رفت (raft)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، سوم‌شخص مفرد"
+    },
+    {
+      "id": 83,
+      "persian": "رفتیم",
+      "shushtari": "رفتیم (raftim)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، اول‌شخص جمع"
+    },
+    {
+      "id": 84,
+      "persian": "رفتید",
+      "shushtari": "رفتیت (raftit)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، دوم‌شخص جمع"
+    },
+    {
+      "id": 85,
+      "persian": "رفتند",
+      "shushtari": "رفتِن (ra ften)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، سوم‌شخص جمع"
+    },
+    {
+      "id": 86,
+      "persian": "رفته‌ام",
+      "shushtari": "رفتُما (raftoma)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 87,
+      "persian": "رفته‌ای",
+      "shushtari": "رفتِیا (raftiya)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 88,
+      "persian": "رفته است",
+      "shushtari": "رفتَه (rafta)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 89,
+      "persian": "رفته‌ایم",
+      "shushtari": "رفتیمَه (raftima)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 90,
+      "persian": "رفته‌اید",
+      "shushtari": "رفتیتَه (raftita)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 91,
+      "persian": "رفته‌اند",
+      "shushtari": "رفتِنَه (raftena)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 92,
+      "persian": "بروم",
+      "shushtari": "رَوُم (ravom)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 93,
+      "persian": "بگویم",
+      "shushtari": "گووُم (guvom)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 94,
+      "persian": "بنشینی",
+      "shushtari": "نِشینی (nešini)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 95,
+      "persian": "برو",
+      "shushtari": "رو (ro)",
+      "category": "فعل؛ امر",
+      "note": "صورت امر رفتن"
+    },
+    {
+      "id": 96,
+      "persian": "نرو",
+      "shushtari": "مَرو (maro)",
+      "category": "فعل؛ امر منفی",
+      "note": "صورت امر منفی رفتن"
+    },
+    {
+      "id": 97,
+      "persian": "بگو",
+      "shushtari": "گو (gu)",
+      "category": "فعل؛ امر",
+      "note": "صورت امر گفتن"
+    },
+    {
+      "id": 98,
+      "persian": "نگو",
+      "shushtari": "مَگو (magu)",
+      "category": "فعل؛ امر منفی",
+      "note": "صورت امر منفی گفتن"
+    },
+    {
+      "id": 99,
+      "persian": "می‌خواهم بروم",
+      "shushtari": "مُخُم رَوَم (mo xom rovam)",
+      "category": "عبارت فعلی",
+      "note": "نمونهٔ جمله در منبع دستور گویش"
+    },
+    {
+      "id": 100,
+      "persian": "به تو نگفتم",
+      "shushtari": "نگفتُمَت (nagoftom-at)",
+      "category": "عبارت فعلی",
+      "note": "نمونهٔ پیوستن ضمیر مفعولی به پایان فعل"
+    }
+  ]
+}
