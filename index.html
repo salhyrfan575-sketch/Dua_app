@@ -191,7 +191,7 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
-  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · بیش از ۲۰۰ مدخل موضوعی درباره تاریخ، فرهنگ و آثار شوشتر</div>
+
   <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ، فرهنگ عامه، اصطلاحات محلی، رسم‌ها، محله‌ها و آثار شوشتر سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند؛ روایت‌های شفاهی هم با برچسب جداگانه مشخص می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
@@ -268,55 +268,61 @@ function aiAddMessage(text,kind='bot',sources=[]){
  if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
  aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
 }
-async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/shushtar-knowledge.json');if(!res.ok)throw new Error('دانشنامه بارگیری نشد.');shushtarDocs=await res.json();const st=document.getElementById('aiStatus');if(st)st.textContent='دانشنامه آفلاینِ قابل جست‌وجو · '+(shushtarDocs.documents||[]).length+' مدخل موضوعی';return shushtarDocs}
+async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/shushtar-knowledge.json');if(!res.ok)throw new Error('دانشنامه بارگیری نشد.');shushtarDocs=await res.json();return shushtarDocs}
 function aiExpandTerms(q){
- const terms=aiTokens(q), expanded=new Set(terms);
- for(const [key,vals] of Object.entries(AI_ALIASES)){const k=aiTokens(key);if(k.some(t=>terms.includes(t))||aiNorm(q).includes(aiNorm(key)))vals.forEach(v=>aiTokens(v).forEach(t=>expanded.add(t)))}
+ const terms=aiTokens(q), expanded=new Set(terms), normalized=aiNorm(q);
+ for(const [key,vals] of Object.entries(AI_ALIASES)){
+  const keyNorm=aiNorm(key), keyTerms=aiTokens(key);
+  if(normalized.includes(keyNorm)||keyTerms.length>1&&keyTerms.every(t=>terms.includes(t)))
+   vals.forEach(v=>aiTokens(v).forEach(t=>expanded.add(t)));
+ }
  return [...expanded];
 }
 function aiRetrieve(q){
- const terms=aiExpandTerms(q).filter(t=>t.length>1);
- const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک']);
- const useful=terms.filter(t=>!stop.has(t));
+ const direct=aiTokens(q).filter(t=>!new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و']).has(t));
+ const expanded=aiExpandTerms(q).filter(t=>t.length>1);
+ if(!direct.length)return [];
  return (shushtarDocs?.documents||[]).map(d=>{
   const title=aiNorm(d.title),cat=aiNorm(d.category),body=aiNorm(d.content);
   const keys=aiNorm((d.keywords||[]).join(' '));
-  const all=title+' '+cat+' '+keys+' '+body;
   let score=0,matched=0;
-  for(const t of useful){
-   let hit=false;
-   if(title.includes(t)){score+=11;hit=true}
-   if(keys.includes(t)){score+=8;hit=true}
-   if(cat.includes(t)){score+=5;hit=true}
-   if(body.includes(t)){score+=1.5;hit=true}
-   if(hit)matched++;
+  for(const t of expanded){
+   const hitTitle=title.includes(t),hitKeys=keys.includes(t),hitCat=cat.includes(t),hitBody=body.includes(t);
+   if(hitTitle)score+=10;
+   if(hitKeys)score+=7;
+   if(hitCat)score+=3;
+   if(hitBody)score+=1;
   }
-  if(useful.length&&matched===useful.length)score+=7;
-  if(useful.length>1&&matched/useful.length>=.5)score+=3;
-  return {d,score,matched};
- }).filter(x=>x.score>=3).sort((a,b)=>b.score-a.score||b.matched-a.matched).slice(0,5);
+  for(const t of direct)if(title.includes(t)||keys.includes(t)||cat.includes(t)||body.includes(t))matched++;
+  const coverage=matched/direct.length;
+  if(coverage===1)score+=8;
+  else if(coverage>=.6)score+=3;
+  return {d,score,matched,coverage};
+ }).filter(x=>x.matched>0&&x.coverage>=.5&&x.score>=8)
+   .sort((a,b)=>b.coverage-a.coverage||b.score-a.score).slice(0,3);
+}
+function aiShortText(text,max=520){
+ const clean=String(text||'').replace(/\s+/g,' ').trim();
+ if(clean.length<=max)return clean;
+ const part=clean.slice(0,max);
+ const boundary=Math.max(part.lastIndexOf('۔'),part.lastIndexOf('.'),part.lastIndexOf('؛'),part.lastIndexOf('!'),part.lastIndexOf('؟'));
+ return boundary>220?part.slice(0,boundary+1):part.slice(0, max-1).trim()+'…';
 }
 function aiCompose(q,results){
- if(!results.length)return 'در دانشنامه فعلی شوشترجوان سند مرتبط و کافی برای این پرسش پیدا نکردم. برای جلوگیری از ساختن اطلاعات، پاسخ قطعی نمی‌دهم. اگر نام اثر، محله یا دوره تاریخی را دقیق‌تر بنویسی، دوباره جست‌وجو می‌کنم.';
+ if(!results.length)return '🤔 جواب دقیقی برای این سؤال در دانشنامه پیدا نکردم. نمی‌خوام چیزی رو حدس بزنم. اگر اسم اثر یا موضوع رو مشخص‌تر بنویسی، دوباره می‌گردم.';
  const top=results[0].d;
- const related=results.slice(1).filter(x=>x.score>=3).map(x=>x.d);
- const question=aiNorm(q);
- let lead='بر پایه اسناد موجود در دانشنامه شوشترجوان، ';
- if(question.includes('کی')||question.includes('چه سال')||question.includes('تاریخ ثبت'))lead='درباره زمان و تاریخ، سند دانشنامه چنین می‌گوید: ';
- else if(question.includes('کج')||question.includes('موقعیت')||question.includes('محل'))lead='درباره موقعیت، اطلاعات ثبت‌شده این است: ';
- else if(question.includes('چرا')||question.includes('اهمیت'))lead='اهمیت این موضوع در دانشنامه چنین توضیح داده شده است: ';
- let answer=lead+top.content;
- if(related.length)answer+='\n\nمطالب مرتبط:\n'+related.slice(0,2).map(d=>'• '+d.title+': '+d.content.slice(0,420)).join('\n\n');
- answer+='\n\nدرجه اتکا: '+(top.confidence||'درجه اطمینان برای این مدخل مشخص نشده است.');
- answer+='\n\nاین پاسخ خلاصه و ترکیبی از متن اسناد بالاست، نه ادعای دانستن همه تاریخ شوشتر. اگر جزئیات بیشتری می‌خواهی، سؤال دقیق‌تری بپرس.';
- return {answer,sources:[...new Map(results.flatMap(x=>x.d.sources||[]).map(s=>[s.url,s])).values()]};
+ let answer=aiShortText(top.content);
+ if(!/[.!؟۔]$/.test(answer))answer+='.';
+ answer='📚 '+answer;
+ const sources=[...new Map(results.flatMap(x=>x.d.sources||[]).filter(s=>s.url).map(s=>[s.url,s])).values()];
+ return {answer,sources};
 }
 aiLaunch.addEventListener('click',()=>{const open=aiPanel.classList.toggle('open');aiLaunch.setAttribute('aria-expanded',String(open));if(open)aiInput.focus()});
 document.getElementById('aiClose').addEventListener('click',()=>{aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')});
 document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();const q=aiInput.value.trim();if(!q)return;aiInput.value='';aiAddMessage(q,'user');
- const wait=aiAddMessage('در حال بررسی دانشنامه و پیدا کردن اسناد مرتبط…','bot');
- try{await aiLoadDocs();const result=aiCompose(q,aiRetrieve(q));if(typeof result==='string'){wait.textContent=result;return}wait.textContent=result.answer;const box=document.createElement('div');box.className='ai-sources';box.textContent='برای مطالعه بیشتر:';result.sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||'منبع';box.appendChild(a)});if(result.sources.length)wait.appendChild(box)}
+ const wait=aiAddMessage('🔎 یه لحظه، دارم می‌گردم…','bot');
+ try{await aiLoadDocs();const result=aiCompose(q,aiRetrieve(q));if(typeof result==='string'){wait.textContent=result;return}wait.textContent=result.answer;const box=document.createElement('div');box.className='ai-sources';box.textContent='🔗 منبع برای مطالعه بیشتر:';result.sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||'منبع';box.appendChild(a)});if(result.sources.length)wait.appendChild(box)}
  catch(err){wait.textContent='بارگیری دانشنامه با مشکل روبه‌رو شد. اتصال اینترنت یا فایل دانشنامه را بررسی کن.'}
 });
 
