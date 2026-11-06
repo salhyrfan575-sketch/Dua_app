@@ -60,6 +60,11 @@ const tests = [
     assert.ok(answer.answer.length <= 540);
     assert.ok(!answer.answer.includes('درجه اتکا'));
   }],
+  ['صحت نحوی اسکریپت مرورگر', () => {
+    const scripts = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)].map(m => m[1]);
+    assert.ok(scripts.length);
+    for (const script of scripts) new Function(script);
+  }],
   ['سلامت ساختار دانشنامه', () => {
     assert.equal(knowledge.documents.length, 58);
     const ids = knowledge.documents.map(d => d.id);
