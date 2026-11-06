@@ -191,7 +191,7 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
-  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · ۵۰ مدخل موضوعی با تطبیق هوشمند کلیدواژه‌ها</div>
+  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · بیش از ۲۰۰ مدخل موضوعی درباره تاریخ، فرهنگ و آثار شوشتر</div>
   <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ، فرهنگ عامه، اصطلاحات محلی، رسم‌ها، محله‌ها و آثار شوشتر سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند؛ روایت‌های شفاهی هم با برچسب جداگانه مشخص می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
@@ -252,7 +252,14 @@ const AI_ALIASES={
  'داریون':['نهر داریون','آبراهه تاریخی'],
  'میان اب':['میان‌آب','دشت حاصلخیز'],
  'ثبت جهانی':['یونسکو','۲۰۰۹','میراث جهانی'],
- 'یونسکو':['ثبت جهانی','سامانه آبی تاریخی']
+ 'یونسکو':['ثبت جهانی','سامانه آبی تاریخی'],
+ 'مسجد جامع':['مسجد جامع شوشتر','جامع تستر','کتیبه کوفی','شبستان'],
+ 'امامزاده عبدالله':['آرامگاه امامزاده عبدالله','گنبد مضرس','معماری آرامگاهی'],
+ 'خانه مستوفی':['مستوفی','خانه قاجاری','اندرونی','بیرونی'],
+ 'سرای افضل':['کاروانسرا','سرا','تجارت','قاجار'],
+ 'پل لشکر':['پل بند لشکر','لشگر','پل','بند'],
+ 'بند خاک':['داریون','رغّات','تقسیم آب','سیلاب'],
+ 'بافت تاریخی':['خانه تاریخی','مسجد','آرامگاه','محله قدیمی']
 };
 function aiNorm(s){return String(s||'').toLowerCase().replace(/[\u0640\u064B-\u065F\u0670]/g,'').replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[ۀة]/g,'ه').replace(/[‌ـ]/g,' ').replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim()}
 function aiTokens(s){return aiNorm(s).split(' ').filter(w=>w.length>1)}
