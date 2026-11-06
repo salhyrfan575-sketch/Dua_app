@@ -100,8 +100,8 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 <button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
-  <div class="ai-status" id="aiStatus">دانشنامه پژوهشی اولیه؛ پاسخ‌ها باید به اسناد متکی باشند.</div>
-  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام. درباره تاریخ، آثار تاریخی، سازه‌های آبی و فرهنگ شوشتر بپرسید. اگر در دانشنامه فعلی سند کافی نباشد، صریح می‌گویم.</div></div>
+  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · جست‌وجو و پاسخ بر پایه اسناد ثبت‌شده</div>
+  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ و فرهنگ شوشتر، آثار تاریخی، محله‌ها و سازه‌های آبی سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند و منبعشان را هم می‌بینی.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
 
@@ -129,53 +129,70 @@ document.getElementById('year').textContent=new Date().getFullYear();
 try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date())}catch(e){document.getElementById('today').textContent='شوشترجوان';}
 
 
-/* ShushtarJavan research assistant */
-const SHUSHTAR_AI_ENDPOINT = ""; // پس از Deploy کردن Cloudflare Worker، نشانی آن را اینجا قرار دهید.
+/* ShushtarJavan offline knowledge assistant — retrieval and evidence-based answer composition */
 const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
 let shushtarDocs=null;
+const AI_ALIASES={
+ 'سازه های ابی':['سازه آبی','آبشار','آسیاب','بند میزان','گرگر','داریون'],
+ 'آبشار':['آبشارها','آسیاب','سیکا','گرگر'],
+ 'اسیاب':['آسیاب','آسیاب‌های آبی','سیکا'],
+ 'قلعه':['قلعه سلاسل','سلاسل'],
+ 'سلاسل':['قلعه سلاسل','مرکز مدیریتی'],
+ 'میزان':['بند میزان','تقسیم آب'],
+ 'شادروان':['بند شادروان','پل‌بند شادروان'],
+ 'گرگر':['نهر گرگر','آبراهه مصنوعی'],
+ 'داریون':['نهر داریون','آبراهه تاریخی'],
+ 'میان اب':['میان‌آب','دشت حاصلخیز'],
+ 'ثبت جهانی':['یونسکو','۲۰۰۹','میراث جهانی'],
+ 'یونسکو':['ثبت جهانی','سامانه آبی تاریخی']
+};
+function aiNorm(s){return String(s||'').toLowerCase().replace(/[\u0640\u064B-\u065F\u0670]/g,'').replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[ۀة]/g,'ه').replace(/[‌ـ]/g,' ').replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim()}
+function aiTokens(s){return aiNorm(s).split(' ').filter(w=>w.length>1)}
 function aiAddMessage(text,kind='bot',sources=[]){
  const el=document.createElement('div');el.className='ai-msg '+kind;el.textContent=text;
- if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='اسناد مرتبط:';
-  sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});
-  el.appendChild(box);
- }
+ if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
  aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
 }
-function aiNorm(s){return String(s||'').toLowerCase().replace(/[\u0640\u064B-\u065F\u0670]/g,'').replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim()}
-function aiRetrieve(q){
- const terms=aiNorm(q).split(' ').filter(w=>w.length>1);
- return (shushtarDocs?.documents||[]).map(d=>{
-  const title=aiNorm(d.title), cat=aiNorm(d.category), body=aiNorm(d.content);
-  let score=0;for(const t of terms){if(title.includes(t))score+=5;if(cat.includes(t))score+=2;if(body.includes(t))score+=1}
-  return {d,score};
- }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,6).map(x=>x.d);
+async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/shushtar-knowledge.json');if(!res.ok)throw new Error('دانشنامه بارگیری نشد.');shushtarDocs=await res.json();return shushtarDocs}
+function aiExpandTerms(q){
+ const terms=aiTokens(q), expanded=new Set(terms);
+ for(const [key,vals] of Object.entries(AI_ALIASES)){const k=aiTokens(key);if(k.some(t=>terms.includes(t))||aiNorm(q).includes(aiNorm(key)))vals.forEach(v=>aiTokens(v).forEach(t=>expanded.add(t)))}
+ return [...expanded];
 }
-async function aiLoadDocs(){
- if(shushtarDocs)return shushtarDocs;
- const res=await fetch('./data/shushtar-knowledge.json',{cache:'no-store'});
- if(!res.ok)throw new Error('بارگیری دانشنامه ممکن نشد.');
- shushtarDocs=await res.json();return shushtarDocs;
+function aiRetrieve(q){
+ const terms=aiExpandTerms(q);
+ return (shushtarDocs?.documents||[]).map(d=>{
+  const title=aiNorm(d.title),cat=aiNorm(d.category),body=aiNorm(d.content),all=title+' '+cat+' '+body;
+  let score=0;for(const t of terms){if(title.includes(t))score+=8;if(cat.includes(t))score+=4;if(body.includes(t))score+=1.2}
+  if(terms.length&&terms.every(t=>all.includes(t)))score+=5;
+  return {d,score};
+ }).filter(x=>x.score>=2).sort((a,b)=>b.score-a.score).slice(0,4);
+}
+function aiCompose(q,results){
+ if(!results.length)return 'در دانشنامه فعلی شوشترجوان سند مرتبط و کافی برای این پرسش پیدا نکردم. برای جلوگیری از ساختن اطلاعات، پاسخ قطعی نمی‌دهم. اگر نام اثر، محله یا دوره تاریخی را دقیق‌تر بنویسی، دوباره جست‌وجو می‌کنم.';
+ const top=results[0].d;
+ const related=results.slice(1).filter(x=>x.score>=3).map(x=>x.d);
+ const question=aiNorm(q);
+ let lead='بر پایه اسناد موجود در دانشنامه شوشترجوان، ';
+ if(question.includes('کی')||question.includes('چه سال')||question.includes('تاریخ ثبت'))lead='درباره زمان و تاریخ، سند دانشنامه چنین می‌گوید: ';
+ else if(question.includes('کج')||question.includes('موقعیت')||question.includes('محل'))lead='درباره موقعیت، اطلاعات ثبت‌شده این است: ';
+ else if(question.includes('چرا')||question.includes('اهمیت'))lead='اهمیت این موضوع در دانشنامه چنین توضیح داده شده است: ';
+ let answer=lead+top.content;
+ if(related.length)answer+='\n\nمطالب مرتبط:\n'+related.slice(0,2).map(d=>'• '+d.title+': '+d.content.slice(0,420)).join('\n\n');
+ answer+='\n\nدرجه اتکا: '+(top.confidence||'درجه اطمینان برای این مدخل مشخص نشده است.');
+ answer+='\n\nاین پاسخ خلاصه و ترکیبی از متن اسناد بالاست، نه ادعای دانستن همه تاریخ شوشتر. اگر جزئیات بیشتری می‌خواهی، سؤال دقیق‌تری بپرس.';
+ return {answer,sources:[...new Map(results.flatMap(x=>x.d.sources||[]).map(s=>[s.url,s])).values()]};
 }
 aiLaunch.addEventListener('click',()=>{const open=aiPanel.classList.toggle('open');aiLaunch.setAttribute('aria-expanded',String(open));if(open)aiInput.focus()});
 document.getElementById('aiClose').addEventListener('click',()=>{aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')});
 document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();const q=aiInput.value.trim();if(!q)return;aiInput.value='';aiAddMessage(q,'user');
- const wait=aiAddMessage('در حال جست‌وجو در دانشنامه شوشتر…','bot');
- try{
-  await aiLoadDocs();const docs=aiRetrieve(q);
-  if(!docs.length){wait.textContent='در دانشنامه فعلی سند مرتبط و کافی برای این پرسش پیدا نکردم. برای جلوگیری از اطلاعات ساختگی، پاسخ قطعی نمی‌دهم. می‌توانید پرسش را با نام اثر یا موضوع دقیق‌تر مطرح کنید.';return}
-  if(!SHUSHTAR_AI_ENDPOINT){
-   wait.textContent='اتصال مدل زبانی هنوز پیکربندی نشده است؛ بنابراین این پاسخ، پاسخ هوش مصنوعی نیست. فعلاً این اسناد مرتبط را در دانشنامه پیدا کردم:\n\n'+docs.slice(0,3).map(d=>'• '+d.title+'\n'+d.content.slice(0,360)+'…').join('\n\n')+'\n\nپس از راه‌اندازی امن سرویس Gemini، همین اسناد مبنای پاسخ گفت‌وگویی دستیار خواهند بود.';
-   const src=docs.flatMap(d=>d.sources||[]).slice(0,5);if(src.length){const b=document.createElement('div');b.className='ai-sources';b.textContent='منابع اسناد:';src.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label;b.appendChild(a)});wait.appendChild(b)}
-   return;
-  }
-  const res=await fetch(SHUSHTAR_AI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,documents:docs})});
-  const data=await res.json();if(!res.ok)throw new Error(data.error||'سرویس پاسخ نداد.');
-  wait.textContent=data.answer||'پاسخی دریافت نشد.';
-  const src=docs.flatMap(d=>d.sources||[]).slice(0,6);if(src.length){const b=document.createElement('div');b.className='ai-sources';b.textContent='منابع دانشنامه:';src.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label;b.appendChild(a)});wait.appendChild(b)}
- }catch(err){wait.textContent='خطا: '+(err.message||'ارتباط برقرار نشد.')+' لطفاً کمی بعد دوباره تلاش کنید.'}
+ const wait=aiAddMessage('در حال بررسی دانشنامه و پیدا کردن اسناد مرتبط…','bot');
+ try{await aiLoadDocs();const result=aiCompose(q,aiRetrieve(q));if(typeof result==='string'){wait.textContent=result;return}wait.textContent=result.answer;const box=document.createElement('div');box.className='ai-sources';box.textContent='برای مطالعه بیشتر:';result.sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||'منبع';box.appendChild(a)});if(result.sources.length)wait.appendChild(box)}
+ catch(err){wait.textContent='بارگیری دانشنامه با مشکل روبه‌رو شد. اتصال اینترنت یا فایل دانشنامه را بررسی کن.'}
 });
+
 
 </script>
 </body></html>
