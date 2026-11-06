@@ -1,7 +1,7 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "updated": "2026-11-07",
-  "count": 188,
+  "count": 195,
   "description": "واژه‌نامه در حال گسترش فارسی به شوشتری؛ صورت‌های ثبت‌شده، اصطلاحات و داده‌های دستوری با ذکر مأخذ و یادداشت اطمینان از هم تفکیک می‌شوند. برخی مدخل‌ها نیازمند تأیید گویشور بومی‌اند.",
   "sources": [
     {
@@ -1356,6 +1356,76 @@
       "source": "کانال شوشتریها؛ پست واژگان و اصطلاحات شوشتری",
       "confidence": "community",
       "needs_review": true
+    },
+    {
+      "id": 189,
+      "persian": "چی شد؟",
+      "shushtari": "چه بووِس",
+      "category": "گفت‌وگوی روزمره",
+      "note": "معادل محاوره‌ای «چی شد؟»؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 190,
+      "persian": "گربه",
+      "shushtari": "گُروَه",
+      "category": "جانوران",
+      "note": "نام گربه در گویش شوشتری؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 191,
+      "persian": "آسیاب کردن",
+      "shushtari": "بیزنیدَن",
+      "category": "کار و پیشه",
+      "note": "فعل آسیاب کردن؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 192,
+      "persian": "مادر، مامان",
+      "shushtari": "مار، ننه",
+      "category": "خانواده",
+      "note": "دو صورت رایج برای مادر؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 193,
+      "persian": "پدر، بابا",
+      "shushtari": "بُوِه",
+      "category": "خانواده",
+      "note": "معادل پدر/بابا؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 194,
+      "persian": "سنگ",
+      "shushtari": "کُلُمتَه",
+      "category": "طبیعت",
+      "note": "نام سنگ؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 195,
+      "persian": "مادرشوهر",
+      "shushtari": "خَسی",
+      "category": "خانواده و خویشاوندی",
+      "note": "نام مادرشوهر؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
     }
   ]
 }
