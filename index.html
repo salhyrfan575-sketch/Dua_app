@@ -79,6 +79,23 @@ footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display
 .dictionary-meta{font-size:11px;color:var(--muted);margin-top:12px}
 @media(max-width:540px){.dictionary-box{padding:15px}.dictionary-search{flex-direction:column}.dictionary-search button{padding:11px}.dictionary-list{grid-template-columns:1fr}}
 
+
+/* 2026 editorial redesign — Shushtar Javan */
+:root{--green:#123f38;--green2:#287565;--cream:#f2eee4;--paper:#fffefa;--gold:#d0a45a;--red:#a6473d;--ink:#202d29;--muted:#737f78;--line:#e4ddcf;--shadow:0 16px 42px #1b382b12}
+body{background:#f2eee4;background-image:radial-gradient(#bba98212 .7px,transparent .7px);background-size:9px 9px}
+.topline{background:#0b2925;letter-spacing:.1px}.masthead{background:linear-gradient(120deg,#fffefa 0%,#f8f3e8 100%)}
+.brand-mark{border-radius:19px 19px 19px 5px;background:linear-gradient(145deg,#0e3a33,#347b68);box-shadow:0 10px 24px #123f3830;font-family:serif;font-size:31px}
+.brand h1{letter-spacing:-1px}.brand small{letter-spacing:.15px}
+.nav-wrap{background:linear-gradient(90deg,#0e342e,#1c5548);border-top:1px solid #ffffff12}.nav a{border-radius:8px;margin:5px 1px;padding:9px 13px}.nav a:hover,.nav a.active{background:#ffffff18;color:#f4d99d}
+.hero{min-height:485px;background:#0c332d}.hero:after{background:linear-gradient(90deg,#082923ed 0%,#0b3028a8 52%,#0b30282b 100%)}.hero-content{max-width:720px;padding-top:90px;padding-bottom:82px}.hero h2{font-size:clamp(34px,5.2vw,58px);letter-spacing:-1.2px;text-shadow:0 4px 25px #0005}.hero p{font-size:16px;line-height:2.1;color:#f1eee5}.eyebrow{background:#ffffff12;border:1px solid #ffffff24;border-radius:99px;padding:5px 13px}.eyebrow:before{display:none}.btn{border-radius:999px;padding:12px 23px;box-shadow:0 8px 22px #0002}
+.ticker{background:#fffaf0}.ticker-label{border-radius:99px}.section{padding:64px 0}.section-head{margin-bottom:27px}.section-kicker{letter-spacing:1.5px}.section h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.5px}.section-head>div:first-child{position:relative}.section-head>div:first-child:after{content:"";display:block;width:54px;height:3px;background:var(--gold);border-radius:3px;margin-top:12px}
+.lead-card,.news-card,.feature-card,.heritage-card{border-radius:19px;border-color:#e7dfd0;box-shadow:0 8px 28px #233d2e0b}.lead-image{height:300px}.lead-body{padding:23px}.lead-body h3{font-size:23px}.news-card{grid-template-columns:135px 1fr}.news-card h3{font-size:15px}.news-card img{min-height:145px}.features{background:linear-gradient(180deg,#e9e4d7,#f1ede3)}.feature-card img,.heritage-card img{filter:saturate(.9)}.feature-card .body,.heritage-card .body{padding:19px}.feature-card h3,.heritage-card h3{font-size:18px}.about-band{background:radial-gradient(circle at 85% 20%,#367d6a 0%,transparent 38%),linear-gradient(110deg,#103a32,#20584b);padding:48px 0}.about-band h2{font-size:26px}
+footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
+.dictionary-section{background:linear-gradient(180deg,#e8e4d8,#f6f2e8)}.dictionary-box{border-radius:22px;padding:28px;background:linear-gradient(145deg,#fffefa,#fbf7ed);box-shadow:0 20px 50px #20382b12}.dictionary-search input{border-radius:999px;padding:14px 19px}.dictionary-search button{border-radius:999px;padding:0 25px;background:linear-gradient(120deg,#123f38,#287565)}.dictionary-result{border-radius:17px;background:linear-gradient(120deg,#e8f1e9,#f5f2e7);border-color:#d6e3d6}.dictionary-result .d-shushtari{font-size:31px}.dictionary-item{border-radius:12px;padding:11px 13px;transition:.18s}.dictionary-item:hover{border-color:#b8cdbd;background:#f5f8f1;transform:translateY(-1px)}
+.ai-launch{background:linear-gradient(120deg,#103d35,#2b7664);box-shadow:0 12px 32px #102f2a40;border:1px solid #ffffff22}.ai-panel{border-radius:22px;box-shadow:0 24px 70px #102f2a45}.ai-head{background:linear-gradient(110deg,#103d35,#2b7664);padding:17px}.ai-status{background:#f4f0e6}
+@media(max-width:800px){.section{padding:48px 0}.hero{min-height:440px}.hero-content{padding:75px 0}.lead-image{height:250px}}
+@media(max-width:540px){.hero{min-height:405px}.hero-content{padding:62px 0}.hero h2{font-size:35px}.hero p{font-size:13px}.section{padding:42px 0}.section-head{gap:8px}.news-card{grid-template-columns:108px 1fr}.news-card img{min-height:125px}.lead-body h3{font-size:19px}.dictionary-box{padding:16px}.dictionary-search button{padding:12px}.dictionary-result .d-shushtari{font-size:26px}}
+
 </style>
 </head>
 <body>
@@ -165,6 +182,15 @@ const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementBy
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
 let shushtarDocs=null;
 const AI_ALIASES={
+ 'آب':['کارون','بند میزان','گرگر','داریون','شادروان','تونل','آسیاب','آبراهه','آبیاری'],
+ 'آسیاب آبی':['آسیاب','چرخ آسیاب','آبشارها','سیکا','تونل'],
+ 'میراث':['میراث جهانی','میراث ملموس','میراث ناملموس','یونسکو','ثبت جهانی'],
+ 'تاریخ شفاهی':['خاطره شفاهی','راوی','اعتبارسنجی','فرهنگ عامه'],
+ 'گویش شوشتری':['واژه','تلفظ','گویشور','واژه‌نامه','زبان محلی'],
+ 'بافت قدیمی':['محله','گذر','تاریخ شهری','جغرافیای شهری'],
+ 'پل':['شادروان','پل بند','بند میزان','سازه آبی'],
+ 'کشاورزی':['میان‌آب','آبیاری','دشت','باغداری'],
+ 'فرهنگ':['آداب','رسم','بچه‌برک','دده‌زنان','گویش','خاطره شفاهی'],
  'فرهنگ شوشتر':['فرهنگ عامه','گویش شوشتری','آداب و رسوم','خاطرات محلی','بازی‌های کودکانه','خوراک محلی'],
  'فرهنگ عامه':['بچه‌برک','دده‌زنان','روایت شفاهی','ضرب‌المثل','لالایی'],
  'بچه برک':['بچه‌برک','ترساندن کودکان','خواباندن بچه'],
@@ -199,13 +225,26 @@ function aiExpandTerms(q){
  return [...expanded];
 }
 function aiRetrieve(q){
- const terms=aiExpandTerms(q);
+ const terms=aiExpandTerms(q).filter(t=>t.length>1);
+ const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک']);
+ const useful=terms.filter(t=>!stop.has(t));
  return (shushtarDocs?.documents||[]).map(d=>{
-  const title=aiNorm(d.title),cat=aiNorm(d.category),body=aiNorm(d.content),all=title+' '+cat+' '+body;
-  let score=0;for(const t of terms){if(title.includes(t))score+=8;if(cat.includes(t))score+=4;if(body.includes(t))score+=1.2}
-  if(terms.length&&terms.every(t=>all.includes(t)))score+=5;
-  return {d,score};
- }).filter(x=>x.score>=2).sort((a,b)=>b.score-a.score).slice(0,4);
+  const title=aiNorm(d.title),cat=aiNorm(d.category),body=aiNorm(d.content);
+  const keys=aiNorm((d.keywords||[]).join(' '));
+  const all=title+' '+cat+' '+keys+' '+body;
+  let score=0,matched=0;
+  for(const t of useful){
+   let hit=false;
+   if(title.includes(t)){score+=11;hit=true}
+   if(keys.includes(t)){score+=8;hit=true}
+   if(cat.includes(t)){score+=5;hit=true}
+   if(body.includes(t)){score+=1.5;hit=true}
+   if(hit)matched++;
+  }
+  if(useful.length&&matched===useful.length)score+=7;
+  if(useful.length>1&&matched/useful.length>=.5)score+=3;
+  return {d,score,matched};
+ }).filter(x=>x.score>=3).sort((a,b)=>b.score-a.score||b.matched-a.matched).slice(0,5);
 }
 function aiCompose(q,results){
  if(!results.length)return 'در دانشنامه فعلی شوشترجوان سند مرتبط و کافی برای این پرسش پیدا نکردم. برای جلوگیری از ساختن اطلاعات، پاسخ قطعی نمی‌دهم. اگر نام اثر، محله یا دوره تاریخی را دقیق‌تر بنویسی، دوباره جست‌وجو می‌کنم.';
@@ -251,8 +290,15 @@ function showDictionaryEntry(entry){
 }
 function searchShushtariDictionary(query){
  const q=dictNorm(query);if(!q)return [];
- return shushtariDictionary.entries.map(e=>({e,score:dictNorm(e.persian)===q?100:dictNorm(e.persian).includes(q)?50:q.includes(dictNorm(e.persian))?30:0}))
- .filter(x=>x.score>0).sort((a,b)=>b.score-a.score).map(x=>x.e);
+ const parts=q.split(' ').filter(Boolean);
+ return shushtariDictionary.entries.map(e=>{
+  const p=dictNorm(e.persian),note=dictNorm(e.note||''),cat=dictNorm(e.category||'');
+  let score=p===q?100:p.includes(q)?65:q.includes(p)?55:0;
+  let hits=0;
+  for(const t of parts){if(p.includes(t)){score+=16;hits++}else if(note.includes(t)){score+=5;hits++}else if(cat.includes(t)){score+=2;hits++}}
+  if(parts.length>1&&hits===parts.length)score+=12;
+  return {e,score};
+ }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).map(x=>x.e);
 }
 (async()=>{
  const input=document.getElementById('dictionaryInput'),form=document.getElementById('dictionaryForm'),list=document.getElementById('dictionaryList'),result=document.getElementById('dictionaryResult'),meta=document.getElementById('dictionaryMeta');
