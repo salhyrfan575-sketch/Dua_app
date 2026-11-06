@@ -188,12 +188,12 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 </main>
 <footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 
-<button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
-<section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
-  <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
+<button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ دستیار هوشمند</button>
+<section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار هوشمند شوشترجوان" aria-modal="false">
+  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">پاسخ‌گویی عمومی و تخصصی درباره شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
 
-  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ، فرهنگ عامه، اصطلاحات محلی، رسم‌ها، محله‌ها و آثار شوشتر سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند؛ روایت‌های شفاهی هم با برچسب جداگانه مشخص می‌شوند.</div></div>
-  <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
+  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
+  <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="هر سؤالی به ذهنت می‌رسد بپرس..." aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
 
 <button id="backTop" aria-label="بازگشت به بالا">↑</button>
@@ -223,7 +223,7 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
 /* ShushtarJavan offline knowledge assistant — retrieval and evidence-based answer composition */
 const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
-let shushtarDocs=null;
+let shushtarDocs=null;\nlet aiApiUrl='';\nlet aiHistory=[];\nconst aiStatus=document.getElementById('aiStatus');\nfetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{if(typeof c.endpoint==='string'&&/^https:\\/\\//i.test(c.endpoint)){aiApiUrl=c.endpoint.replace(/\\/$/,'');aiStatus.textContent='هوش عمومی فعال · دانشنامه شوشتر متصل است';}else{aiStatus.textContent='حالت دانشنامه‌ای · اتصال مدل عمومی هنوز راه‌اندازی نشده';}}).catch(()=>{if(aiStatus)aiStatus.textContent='حالت دانشنامه‌ای فعال است';});
 const AI_ALIASES={
  'آب':['کارون','بند میزان','گرگر','داریون','شادروان','تونل','آسیاب','آبراهه','آبیاری'],
  'آسیاب آبی':['آسیاب','چرخ آسیاب','آبشارها','سیکا','تونل'],
@@ -326,11 +326,30 @@ function aiCompose(q,results){
 }
 aiLaunch.addEventListener('click',()=>{const open=aiPanel.classList.toggle('open');aiLaunch.setAttribute('aria-expanded',String(open));if(open)aiInput.focus()});
 document.getElementById('aiClose').addEventListener('click',()=>{aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')});
+function aiShowSources(target,sources){
+ if(!Array.isArray(sources)||!sources.length)return;
+ const box=document.createElement('div');box.className='ai-sources';box.textContent='🔗 منابع مرتبط:';
+ sources.forEach(source=>{if(!source.url)return;const a=document.createElement('a');a.href=source.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=source.label||'منبع';box.appendChild(a)});
+ target.appendChild(box);
+}
 document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();const q=aiInput.value.trim();if(!q)return;aiInput.value='';aiAddMessage(q,'user');
- const wait=aiAddMessage('🔎 یه لحظه، دارم می‌گردم…','bot');
- try{await aiLoadDocs();const result=aiCompose(q,aiRetrieve(q));if(typeof result==='string'){wait.textContent=result;return}wait.textContent=result.answer;const box=document.createElement('div');box.className='ai-sources';box.textContent='🔗 منبع برای مطالعه بیشتر:';result.sources.forEach(s=>{const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||'منبع';box.appendChild(a)});if(result.sources.length)wait.appendChild(box)}
- catch(err){wait.textContent='بارگیری دانشنامه با مشکل روبه‌رو شد. اتصال اینترنت یا فایل دانشنامه را بررسی کن.'}
+ const wait=aiAddMessage(aiApiUrl?'🧠 دارم پاسخ رو آماده می‌کنم…':'🔎 دارم در دانشنامه می‌گردم…','bot');
+ try{
+  if(aiApiUrl){
+   const history=[...aiHistory,{role:'user',content:q}].slice(-10);
+   const response=await fetch(aiApiUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history})});
+   const data=await response.json().catch(()=>({}));
+   if(!response.ok)throw new Error(data.message||'مدل هوش مصنوعی موقتاً در دسترس نیست.');
+   if(!data.answer)throw new Error('پاسخ معتبری از مدل دریافت نشد.');
+   wait.textContent=data.answer;aiShowSources(wait,data.sources);
+   aiHistory=[...history,{role:'assistant',content:data.answer}].slice(-10);
+  }else{
+   await aiLoadDocs();const result=aiCompose(q,aiRetrieve(q));
+   if(typeof result==='string'){wait.textContent=result;return}
+   wait.textContent=result.answer;aiShowSources(wait,result.sources);
+  }
+ }catch(err){wait.textContent=err.message||'ارتباط با دستیار برقرار نشد. کمی بعد دوباره تلاش کن.'}
 });
 
 
