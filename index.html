@@ -279,24 +279,28 @@ function aiExpandTerms(q){
  return [...expanded];
 }
 function aiRetrieve(q){
- const direct=aiTokens(q).filter(t=>!new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و']).has(t));
- const expanded=aiExpandTerms(q).filter(t=>t.length>1);
+ const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و','قدیما','قدیم','چطوری']);
+ const direct=aiTokens(q).filter(t=>!stop.has(t));
  if(!direct.length)return [];
+ const expanded=aiExpandTerms(q).filter(t=>t.length>1);
  return (shushtarDocs?.documents||[]).map(d=>{
-  const title=aiNorm(d.title),cat=aiNorm(d.category),body=aiNorm(d.content);
-  const keys=aiNorm((d.keywords||[]).join(' '));
+  const fields={
+   title:new Set(aiTokens(d.title)),
+   category:new Set(aiTokens(d.category)),
+   keywords:new Set(aiTokens((d.keywords||[]).join(' '))),
+   body:new Set(aiTokens(d.content))
+  };
   let score=0,matched=0;
   for(const t of expanded){
-   const hitTitle=title.includes(t),hitKeys=keys.includes(t),hitCat=cat.includes(t),hitBody=body.includes(t);
-   if(hitTitle)score+=10;
-   if(hitKeys)score+=7;
-   if(hitCat)score+=3;
-   if(hitBody)score+=1;
+   if(fields.title.has(t))score+=12;
+   if(fields.keywords.has(t))score+=8;
+   if(fields.category.has(t))score+=4;
+   if(fields.body.has(t))score+=1;
   }
-  for(const t of direct)if(title.includes(t)||keys.includes(t)||cat.includes(t)||body.includes(t))matched++;
+  for(const t of direct)if(fields.title.has(t)||fields.keywords.has(t)||fields.category.has(t)||fields.body.has(t))matched++;
   const coverage=matched/direct.length;
-  if(coverage===1)score+=8;
-  else if(coverage>=.6)score+=3;
+  if(coverage===1)score+=10;
+  else if(coverage>=.6)score+=4;
   return {d,score,matched,coverage};
  }).filter(x=>x.matched>0&&x.coverage>=.5&&x.score>=8)
    .sort((a,b)=>b.coverage-a.coverage||b.score-a.score).slice(0,3);
