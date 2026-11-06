@@ -148,7 +148,7 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ راهنمای تاریخ شوشتر</button>
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار تاریخ و فرهنگ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>راهنمای شوشترجوان</strong><small>تاریخ، فرهنگ و میراث شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
-  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · جست‌وجو و پاسخ بر پایه اسناد ثبت‌شده</div>
+  <div class="ai-status" id="aiStatus">دستیار دانشنامه‌ای شوشترجوان · ۵۰ مدخل موضوعی با تطبیق هوشمند کلیدواژه‌ها</div>
   <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! درباره تاریخ، فرهنگ عامه، اصطلاحات محلی، رسم‌ها، محله‌ها و آثار شوشتر سؤال کن. پاسخ‌ها از دانشنامه شوشترجوان استخراج می‌شوند؛ روایت‌های شفاهی هم با برچسب جداگانه مشخص می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="مثلاً تاریخچه بند میزان چیست؟" aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
@@ -218,7 +218,7 @@ function aiAddMessage(text,kind='bot',sources=[]){
  if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
  aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
 }
-async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/shushtar-knowledge.json');if(!res.ok)throw new Error('دانشنامه بارگیری نشد.');shushtarDocs=await res.json();return shushtarDocs}
+async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/shushtar-knowledge.json');if(!res.ok)throw new Error('دانشنامه بارگیری نشد.');shushtarDocs=await res.json();const st=document.getElementById('aiStatus');if(st)st.textContent='دانشنامه آفلاینِ قابل جست‌وجو · '+(shushtarDocs.documents||[]).length+' مدخل موضوعی';return shushtarDocs}
 function aiExpandTerms(q){
  const terms=aiTokens(q), expanded=new Set(terms);
  for(const [key,vals] of Object.entries(AI_ALIASES)){const k=aiTokens(key);if(k.some(t=>terms.includes(t))||aiNorm(q).includes(aiNorm(key)))vals.forEach(v=>aiTokens(v).forEach(t=>expanded.add(t)))}
