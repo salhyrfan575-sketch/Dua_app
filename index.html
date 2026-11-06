@@ -233,6 +233,7 @@ const AI_ALIASES={
  'بافت قدیمی':['محله','گذر','تاریخ شهری','جغرافیای شهری'],
  'پل':['شادروان','پل بند','بند میزان','سازه آبی'],
  'کشاورزی':['میان‌آب','آبیاری','دشت','باغداری'],
+ 'تقسیم آب':['بند میزان','انحراف و تقسیم آب','مدیریت آب','نهر گرگر'],
  'فرهنگ':['آداب','رسم','بچه‌برک','دده‌زنان','گویش','خاطره شفاهی'],
  'فرهنگ شوشتر':['فرهنگ عامه','گویش شوشتری','آداب و رسوم','خاطرات محلی','بازی‌های کودکانه','خوراک محلی'],
  'فرهنگ عامه':['بچه‌برک','دده‌زنان','روایت شفاهی','ضرب‌المثل','لالایی'],
@@ -279,7 +280,7 @@ function aiExpandTerms(q){
  return [...expanded];
 }
 function aiRetrieve(q){
- const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و','قدیما','قدیم','چطوری']);
+ const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و','قدیما','قدیم','چطوری','کردن','کردند','میکردن','میکردند','میکنند','شود','شدن']);
  const direct=aiTokens(q).filter(t=>!stop.has(t));
  if(!direct.length)return [];
  const expanded=aiExpandTerms(q).filter(t=>t.length>1);
@@ -291,6 +292,8 @@ function aiRetrieve(q){
    body:new Set(aiTokens(d.content))
   };
   let score=0,matched=0;
+  const phrase=aiNorm(q),titlePhrase=aiNorm(d.title);
+  if(phrase.length>2&&titlePhrase.includes(phrase))score+=24;
   for(const t of expanded){
    if(fields.title.has(t))score+=12;
    if(fields.keywords.has(t))score+=8;
@@ -303,7 +306,7 @@ function aiRetrieve(q){
   else if(coverage>=.6)score+=4;
   return {d,score,matched,coverage};
  }).filter(x=>x.matched>0&&x.coverage>=.5&&x.score>=8)
-   .sort((a,b)=>b.coverage-a.coverage||b.score-a.score).slice(0,3);
+   .sort((a,b)=>b.coverage-a.coverage||b.score-a.score||a.d.title.length-b.d.title.length).slice(0,3);
 }
 function aiShortText(text,max=520){
  const clean=String(text||'').replace(/\s+/g,' ').trim();
