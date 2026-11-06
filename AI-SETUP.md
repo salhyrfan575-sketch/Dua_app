@@ -12,7 +12,7 @@
 ۱. وارد داشبورد Cloudflare شو و یک حساب رایگان بساز یا وارد حساب شو.
 ۲. از بخش Workers & Pages گزینه Create application و سپس Import an existing Git repository را انتخاب کن.
 ۳. حساب GitHub را وصل کن و مخزن `salhyrfan575-sketch/Dua_app` را انتخاب کن.
-۴. اگر تنظیمات ساخت نمایش داده شد، پوشه اصلی مخزن را انتخاب کن؛ فایل `wrangler.toml` در همان پوشه است. فرمان انتشار `npx wrangler deploy) است. سپس Deploy را بزن.
+۴. اگر تنظیمات ساخت نمایش داده شد، پوشه اصلی مخزن را انتخاب کن؛ فایل `wrangler.toml` در همان پوشه است. فرمان انتشار `npx wrangler deploy` است. سپس Deploy را بزن.
 ۵. بعد از انتشار، آدرس Worker با پسوند `.workers.dev` نمایش داده می‌شود. آن را کپی کن.
 
 فایل `wrangler.toml` از قبل اتصال Workers AI با نام `AI` را تعریف کرده است؛ اگر داشبورد درخواست افزودن Binding کرد، نوع Workers AI و نام متغیر `AI` را انتخاب کن.
