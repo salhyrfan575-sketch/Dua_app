@@ -6,7 +6,7 @@ const assert = require('node:assert/strict');
 const html = fs.readFileSync('index.html', 'utf8');
 const knowledge = JSON.parse(fs.readFileSync('data/shushtar-knowledge.json', 'utf8'));
 
-function extractObject(marker) {
+function extractBlock(marker, isFunction = false) {
   const p = html.indexOf(marker);
   assert.notEqual(p, -1, 'missing ' + marker);
   const start = html.indexOf('{', p);
@@ -15,41 +15,21 @@ function extractObject(marker) {
     const c = html[i];
     if (quote) {
       if (escaped) escaped = false;
-      else if (c === '\\\\') escaped = true;
+      else if (c === '\\') escaped = true;
       else if (c === quote) quote = null;
       continue;
     }
-    if (c === '"' || c === "'" || c === '`') { quote = c; continue; }
+    if (c === '"' || c === "'") { quote = c; continue; }
     if (c === '{') depth++;
-    else if (c === '}' && --depth === 0) return html.slice(start, i + 1);
+    else if (c === '}' && --depth === 0) return html.slice(isFunction ? p : start, i + 1);
   }
-  throw new Error('unclosed object: ' + marker);
-}
-
-function extractFunction(name) {
-  const p = html.indexOf('function ' + name + '(');
-  assert.notEqual(p, -1, 'missing function ' + name);
-  const start = html.indexOf('{', p);
-  let depth = 0, quote = null, escaped = false;
-  for (let i = start; i < html.length; i++) {
-    const c = html[i];
-    if (quote) {
-      if (escaped) escaped = false;
-      else if (c === '\\\\') escaped = true;
-      else if (c === quote) quote = null;
-      continue;
-    }
-    if (c === '"' || c === "'" || c === '`') { quote = c; continue; }
-    if (c === '{') depth++;
-    else if (c === '}' && --depth === 0) return html.slice(p, i + 1);
-  }
-  throw new Error('unclosed function: ' + name);
+  throw new Error('unclosed block: ' + marker);
 }
 
 const names = ['aiNorm', 'aiTokens', 'aiExpandTerms', 'aiRetrieve', 'aiShortText', 'aiCompose'];
-const source = 'const AI_ALIASES = ' + extractObject('const AI_ALIASES=') + ';\\n' +
-  names.map(extractFunction).join('\\n') +
-  '\\nglobalThis.assistant = { aiRetrieve, aiCompose };';
+const source = 'const AI_ALIASES = ' + extractBlock('const AI_ALIASES=') + ';\n' +
+  names.map(name => extractBlock('function ' + name + '(', true)).join('\n') +
+  '\nglobalThis.assistant = { aiRetrieve, aiCompose };';
 const context = { shushtarDocs: knowledge };
 vm.runInNewContext(source, context);
 const { aiRetrieve, aiCompose } = context.assistant;
@@ -75,8 +55,7 @@ const tests = [
     assert.equal(aiRetrieve('نتیجه بازی فوتبال دیشب چی شد؟').length, 0);
   }],
   ['پاسخ کوتاه و بدون متن اضافه', () => {
-    const r = aiRetrieve('بند میزان');
-    const answer = aiCompose('بند میزان', r);
+    const answer = aiCompose('بند میزان', aiRetrieve('بند میزان'));
     assert.ok(answer && typeof answer.answer === 'string');
     assert.ok(answer.answer.length <= 540);
     assert.ok(!answer.answer.includes('درجه اتکا'));
@@ -94,5 +73,5 @@ for (const [name, run] of tests) {
   try { run(); console.log('PASS ' + name); }
   catch (error) { failed++; console.error('FAIL ' + name + ': ' + error.message); }
 }
-console.log('\\nنتیجه: ' + (tests.length - failed) + '/' + tests.length + ' آزمون موفق');
+console.log('\nنتیجه: ' + (tests.length - failed) + '/' + tests.length + ' آزمون موفق');
 if (failed) process.exitCode = 1;
