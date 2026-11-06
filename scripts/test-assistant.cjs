@@ -61,7 +61,7 @@ const tests = [
     assert.ok(!answer.answer.includes('درجه اتکا'));
   }],
   ['صحت نحوی اسکریپت مرورگر', () => {
-    const scripts = [...html.matchAll(/<script>([\\s\\S]*?)<\\/script>/g)].map(m => m[1]);
+    const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
     assert.ok(scripts.length);
     for (const script of scripts) new Function(script);
   }],
