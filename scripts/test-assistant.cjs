@@ -70,6 +70,18 @@ const tests = [
     const ids = knowledge.documents.map(d => d.id);
     assert.equal(new Set(ids).size, ids.length);
     assert.ok(knowledge.documents.every(d => d.title && d.content));
+  }],
+  ['صحت نحوی بک‌اند هوش مصنوعی', () => {
+    const workerSource = fs.readFileSync('worker.js', 'utf8');
+    const handler = new Function(workerSource.replace('export default', 'return'))();
+    assert.equal(typeof handler.fetch, 'function');
+    assert.ok(workerSource.includes('env.AI.run'));
+  }],
+  ['پیکربندی امن و بدون کلید عمومی', () => {
+    const config = JSON.parse(fs.readFileSync('data/ai-config.json', 'utf8'));
+    assert.equal(config.endpoint, '');
+    assert.ok(!html.includes('sk_'));
+    assert.ok(fs.readFileSync('wrangler.toml', 'utf8').includes('binding = "AI"'));
   }]
 ];
 
