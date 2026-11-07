@@ -64,7 +64,7 @@
   words.forEach((w,i)=>{
    const row=document.createElement('div');row.className='wg-target'+(found.has(w.key)?' solved':'');
    const blanks=document.createElement('div');blanks.className='wg-blanks';
-   for(let k=0;k<[...w.key].length;k++){const cell=document.createElement('i');cell.textContent=found.has(w.key)?[...w.sh.replace(/\s/g,'')][k]||'✓':'';blanks.appendChild(cell);}
+   for(let k=0;k<[...w.key].length;k++){const cell=document.createElement('i');cell.textContent=found.has(w.key)?[...w.key][k]||'✓':'';blanks.appendChild(cell);}
    const label=document.createElement('span');label.className='wg-target-label';label.textContent=found.has(w.key)?w.sh:'واژهٔ '+fa(i+1);
    const meaning=document.createElement('small');meaning.textContent=found.has(w.key)?w.fa:'';
    row.append(blanks,label,meaning);wrap.appendChild(row);
