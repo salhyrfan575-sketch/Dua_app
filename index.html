@@ -644,6 +644,7 @@ async function aiSearchWeb(q){
 async function aiAnswer(q){
  try{
   await aiLoadDocs();
+   await aiConfigPromise;
   const matches=aiRetrieve(q);
   const webResults=await aiSearchWeb(q);
   const localContext=matches.slice(0,6).map((x,i)=>{
