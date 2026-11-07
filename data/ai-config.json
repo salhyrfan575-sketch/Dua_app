@@ -1,4 +1,4 @@
 {
-  "endpoint": "",
-  "mode": "knowledge-fallback"
+  "endpoint": "https://vireonix.ai/v1/chat/completions",
+  "mode": "openai-compatible"
 }
