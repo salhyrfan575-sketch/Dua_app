@@ -668,10 +668,16 @@ async function aiAnswer(q){
   if(matches.some(x=>x.doc.sourceType==='واژه‌نامه'))localSources.push(...(shushtarDocs.dictionarySources||[]));
   const sources=[...new Map(localSources.filter(s=>s&&s.url).map(s=>[s.url,{url:s.url,label:s.label||s.title||'دانشنامه شوشترجوان'}])).values()];
   webResults.forEach(x=>sources.push({url:x.url,label:'ویکی‌پدیا: '+x.title}));
+  if(aiStatus)aiStatus.textContent='اتصال آنلاین برقرار است · پاسخ از مدل هوش مصنوعی دریافت شد';
   return {text:answer,sources:sources.slice(0,6)};
  }catch(err){
   console.error('Online assistant error:',err);
-  const message=err.name==='AbortError'?'زمان پاسخ‌گویی سرویس تمام شد.':(String(err.message||'').includes('Failed to fetch')?'ارتباط با سرویس هوش مصنوعی برقرار نشد.':'سرویس هوش مصنوعی موقتاً پاسخ نداد: '+String(err.message||'خطای ناشناخته').slice(0,150));
+  const raw=String(err&&err.message||err||'خطای ناشناخته');
+  const message=err.name==='AbortError'?'مهلت پاسخ‌گویی سرویس تمام شد (۳۵ ثانیه).':
+   (err instanceof TypeError||/failed to fetch|load failed|networkerror/i.test(raw)
+    ?'مرورگر نتوانست به سرویس آنلاین وصل شود. احتمال محدودیت شبکه یا CORS وجود دارد. جزئیات فنی: '+raw.slice(0,100)
+    :'سرویس آنلاین خطا داد: '+raw.slice(0,180));
+  if(aiStatus)aiStatus.textContent='اتصال آنلاین ناموفق بود؛ پاسخ محلی در صورت وجود نمایش داده می‌شود';
   const local=typeof shushtarDocs!=='undefined'&&shushtarDocs?aiRetrieve(q):[];
   if(local.length){
    const best=local[0].doc;
