@@ -31,7 +31,7 @@ jobs:
           find /tmp/book/pages -name '*.jpg' -print0 | xargs -0 -P 2 -I{} bash -c '
             f="$1"
             b=$(basename "$f" .jpg)
-            magick "$f" -crop 50%x100% +repage "/tmp/book/ocr/${b}-col-%d.jpg"
+            convert "$f" -crop 50%x100% +repage "/tmp/book/ocr/${b}-col-%d.jpg"
             for c in 1 0; do
               tesseract "/tmp/book/ocr/${b}-col-${c}.jpg" "/tmp/book/ocr/${b}-col-${c}" -l fas+ara --psm 6 2>/dev/null || true
             done
@@ -72,4 +72,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/shushtari-book-ocr.json
           git commit -m "Add searchable OCR text for Shushtari dictionary"
+          git pull --rebase origin main
           git push
