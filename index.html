@@ -604,7 +604,7 @@ async function aiAnswer(q){
   const matches=aiRetrieve(q);
   if(!matches.length)return {text:'در اطلاعات فعلی سایت و واژه‌نامه، مدخل مرتبطی برای این پرسش پیدا نکردم. می‌توانی واژه را با املای دیگری وارد کنی یا پرسشت را دقیق‌تر بنویسی.',sources:[]};
   const best=matches[0].doc;
-  const sources=[...new Map(matches.flatMap(x=>x.doc.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s])).values()].slice(0,5);
+  const allSources=matches.flatMap(x=>x.doc.sources||[]);if(best.sourceType==='واژه‌نامه')allSources.push(...(shushtarDocs.dictionarySources||[]));const sources=[...new Map(allSources.filter(s=>s&&s.url).map(s=>[s.url,s])).values()].slice(0,5);
   const related=matches.slice(1,4).filter(x=>x.doc.title!==best.title).map(x=>'• '+x.doc.title);
   const extra=related.length?'\n\nمطالب مرتبط:\n'+related.join('\n'):'';
   return {text:best.content+extra+'\n\nدرجه اطمینان: '+(best.confidence||'در حال بررسی')+'\n\nمنبع داده: '+(best.sourceType||'دانشنامه شوشترجوان')+'؛ مدخل «'+best.title+'».',sources};
