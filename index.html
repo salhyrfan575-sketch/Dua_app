@@ -390,9 +390,9 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 <footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><span class="social-placeholder" aria-label="نشانی اینستاگرام به‌زودی">اینستاگرام · به‌زودی</span><span class="social-placeholder" aria-label="نشانی آپارات به‌زودی">آپارات · به‌زودی</span><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="گفت‌وگو با هوش مصنوعی تاریخ شوشتر" aria-modal="false">
-  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">پاسخ‌گویی عمومی و تخصصی درباره شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
+  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">هوش مصنوعی آنلاین · دانشنامه شوشترجوان + جست‌وجوی وب</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
 
-  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
+  <div class="ai-privacy" style="padding:7px 12px;font-size:11px;line-height:1.7;color:#806b4c;background:#fff8e9;border-bottom:1px solid #eadfc9">برای تولید پاسخ، متن پرسش به سرویس هوش مصنوعی Vireonix ارسال می‌شود و طبق سیاست آن ممکن است نگهداری و برای بهبود مدل استفاده شود؛ اطلاعات شخصی یا محرمانه وارد نکنید.</div>\n  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="هر سؤالی به ذهنت می‌رسد بپرس..." aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
 
@@ -506,7 +506,7 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
 const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
 let shushtarDocs=null;
-let aiApiUrl='';
+let aiApiUrl='https://vireonix.ai/v1/chat/completions';
 let aiHistory=[];
 const aiStatus=document.getElementById('aiStatus');
 fetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{
@@ -598,18 +598,54 @@ function aiClosePanel(){aiPanel.classList.remove('open');aiLaunch.setAttribute('
 aiLaunch.addEventListener('click',()=>aiPanel.classList.contains('open')?aiClosePanel():aiOpen());
 document.getElementById('aiClose').addEventListener('click',aiClosePanel);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')aiClosePanel()});
+async function aiSearchWeb(q){
+ try{
+  const url='https://fa.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent(q)+'&gsrlimit=3&prop=extracts&exintro=1&explaintext=1&format=json&origin=*';
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
+  const res=await fetch(url,{signal:controller.signal});clearTimeout(timer);
+  if(!res.ok)return [];
+  const data=await res.json();const pages=Object.values(data.query?.pages||{});
+  return pages.filter(p=>p.extract).slice(0,3).map(p=>({title:p.title,content:p.extract.slice(0,1400),url:'https://fa.wikipedia.org/wiki/'+encodeURIComponent(p.title)}));
+ }catch(e){console.warn('Web lookup unavailable:',e);return []}
+}
 async function aiAnswer(q){
  try{
   await aiLoadDocs();
-  await new Promise(resolve=>setTimeout(resolve,10000));
   const matches=aiRetrieve(q);
-  if(!matches.length)return {text:'در اطلاعات فعلی سایت و واژه‌نامه، مدخل مرتبطی برای این پرسش پیدا نکردم. می‌توانی واژه را با املای دیگری وارد کنی یا پرسشت را دقیق‌تر بنویسی.',sources:[]};
-  const best=matches[0].doc;
-  const allSources=matches.flatMap(x=>x.doc.sources||[]);if(best.sourceType==='واژه‌نامه')allSources.push(...(shushtarDocs.dictionarySources||[]));const sources=[...new Map(allSources.filter(s=>s&&s.url).map(s=>[s.url,s])).values()].slice(0,5);
-  const related=matches.slice(1,4).filter(x=>x.doc.title!==best.title).map(x=>'• '+x.doc.title);
-  const extra=related.length?'\n\nمطالب مرتبط:\n'+related.join('\n'):'';
-  return {text:best.content+extra+'\n\nدرجه اطمینان: '+(best.confidence||'در حال بررسی')+'\n\nمنبع داده: '+(best.sourceType||'دانشنامه شوشترجوان')+'؛ مدخل «'+best.title+'».',sources};
- }catch(err){console.error('Shushtar assistant corpus error:',err);return {text:'بارگذاری اطلاعات یکپارچه دستیار با مشکل روبه‌رو شد. صفحه را تازه‌سازی کن و دوباره تلاش کن.',sources:[]}}
+  const webResults=await aiSearchWeb(q);
+  const localContext=matches.slice(0,6).map((x,i)=>{
+   const d=x.doc;return '[سند '+(i+1)+'] عنوان: '+(d.title||'بدون عنوان')+'؛ نوع: '+(d.sourceType||'دانشنامه')+'؛ محتوا: '+String(d.content||'').slice(0,2200);
+  }).join('\n\n');
+  const webContext=webResults.map((x,i)=>'[نتیجه وب '+(i+1)+'] '+x.title+'\n'+x.content).join('\n\n');
+  const systemPrompt='تو دستیار هوشمند رسمی شوشترجوان هستی. به فارسی روان و طبیعی پاسخ بده و لحن محاوره‌ای محترمانه کاربر را بفهم. پرسش را مستقیم جواب بده؛ اگر لازم است از چند سند ترکیب و نتیجه‌گیری کن. اطلاعات دانشنامه شوشترجوان و نتایج جست‌وجوی وب در پیام کاربر به‌عنوان منابع زمینه‌ای آمده‌اند. هیچ واقعیت تاریخی، تاریخ، نام، نقل‌قول یا منبعی را جعل نکن. اگر منابع کافی نیستند، روشن بگو چه چیزی قطعی نیست و از حدس‌زدن خودداری کن. اگر منابع با هم تعارض دارند، تعارض را توضیح بده. در موضوعات تاریخی، میان واقعیت مستند، روایت مشهور و احتمال تمایز بگذار. برای پرسش‌های غیرمرتبط با شوشتر نیز پاسخ عمومی بده. پاسخ را منظم و نه بیش از حد طولانی بنویس. در پایان پاسخ‌های تاریخی/محلی، در صورت استفاده از منابع، نام منبع یا عنوان سند را ذکر کن.';
+  const context='پرسش کاربر: '+q+'\n\nاسناد دانشنامه اختصاصی شوشترجوان:\n'+(localContext||'سند محلی مرتبطی پیدا نشد.')+'\n\nنتایج جست‌وجوی زنده وب از ویکی‌پدیای فارسی (در صورت وجود):\n'+(webContext||'نتیجه وبی در دسترس نبود.');
+  const messages=[{role:'system',content:systemPrompt},...aiHistory.slice(-8),{role:'user',content:context}];
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),35000);
+  const response=await fetch('https://vireonix.ai/v1/chat/completions',{
+   method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({model:'auto',messages,temperature:0.35,max_tokens:900,stream:false}),
+   signal:controller.signal
+  });
+  clearTimeout(timer);
+  if(!response.ok){
+   const detail=await response.text().catch(()=> '');
+   throw new Error('سرویس هوش مصنوعی پاسخ '+response.status+' داد. '+detail.slice(0,180));
+  }
+  const data=await response.json();
+  const answer=data.choices?.[0]?.message?.content?.trim();
+  if(!answer)throw new Error('پاسخ معتبری از مدل دریافت نشد.');
+  aiHistory.push({role:'user',content:q},{role:'assistant',content:answer});
+  if(aiHistory.length>12)aiHistory=aiHistory.slice(-12);
+  const localSources=matches.flatMap(x=>x.doc.sources||[]);
+  if(matches.some(x=>x.doc.sourceType==='واژه‌نامه'))localSources.push(...(shushtarDocs.dictionarySources||[]));
+  const sources=[...new Map(localSources.filter(s=>s&&s.url).map(s=>[s.url,{url:s.url,label:s.label||s.title||'دانشنامه شوشترجوان'}])).values()];
+  webResults.forEach(x=>sources.push({url:x.url,label:'ویکی‌پدیا: '+x.title}));
+  return {text:answer,sources:sources.slice(0,6)};
+ }catch(err){
+  console.error('Online assistant error:',err);
+  const message=err.name==='AbortError'?'زمان پاسخ‌گویی سرویس تمام شد. دوباره تلاش کن.':(String(err.message||'').includes('Failed to fetch')?'ارتباط با سرویس هوش مصنوعی برقرار نشد؛ ممکن است سرویس یا دسترسی مرورگر موقتاً در دسترس نباشد.':'اتصال دستیار آنلاین با مشکل روبه‌رو شد: '+String(err.message||'خطای ناشناخته').slice(0,180));
+  return {text:message+'\n\nدر صورت تداوم مشکل، پاسخ‌گویی آفلاین فعلی در این نسخه غیرفعال نشده است؛ لطفاً بعداً دوباره امتحان کن.',sources:[]};
+ }
 }
 
 aiLoadDocs().catch(err=>{if(aiStatus)aiStatus.textContent='بارگذاری پیکره با مشکل روبه‌رو شد';console.error(err)});
@@ -617,7 +653,7 @@ document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();
  const q=aiInput.value.trim();if(!q)return;
  aiAddMessage(q,'user');aiInput.value='';
- const pending=aiAddMessage('در حال بررسی منابع، فهم پرسش و تطبیق با دانسته‌ها… (حدود ۱۰ ثانیه)','bot');
+ const pending=aiAddMessage('در حال جست‌وجوی دانشنامه و وب و آماده‌سازی پاسخ هوشمند…','bot');
  const answer=await aiAnswer(q);
  pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
 });
