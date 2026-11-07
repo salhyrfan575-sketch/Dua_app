@@ -685,6 +685,27 @@ async function aiLoadDocs(){
    shushtarDocs=corpus;
   }catch(err){console.warn('Assistant corpus unavailable:',err);}
   try{
+   const dictionaryRes=await fetch('./data/shushtari-dictionary.json',{cache:'no-cache'});
+   if(dictionaryRes.ok){
+    const dictionaryData=await dictionaryRes.json();
+    const dictionaryEntries=Array.isArray(dictionaryData.entries)?dictionaryData.entries:[];
+    const known=new Set(shushtarDocs.documents.map(d=>d.id));
+    const dictionaryDocs=dictionaryEntries.map((entry,index)=>({
+     id:'shushtari-dictionary-'+(entry.id||index+1),
+     title:String(entry.persian||entry.shushtari||'مدخل واژه‌نامه'),
+     category:entry.category||'واژه شوشتری',
+     keywords:[entry.persian||'',entry.shushtari||'',entry.category||'',entry.note||''],
+     persian:entry.persian||'',
+     shushtari:entry.shushtari||'',
+     content:'معادل فارسی: '+(entry.persian||'ثبت نشده')+'؛ صورت شوشتری: '+(entry.shushtari||'ثبت نشده')+'؛ دسته: '+(entry.category||'نامشخص')+'؛ یادداشت: '+(entry.note||'ندارد'),
+     sourceType:'واژه‌نامه',
+     sources:[{title:'واژه‌نامه فارسی به گویش شوشتری؛ مدخل ثبت‌شده در پایگاه واژه‌شناس شوشترجوان'}]
+    })).filter(d=>!known.has(d.id));
+    shushtarDocs.documents.push(...dictionaryDocs);
+    shushtarDocs.dictionarySources=[{title:'واژه‌نامه‌ای از گویش شوشتری، گردآوری محمدباقر نیرومند (نسخه اسکن‌شده ارسالی کاربر)'}];
+   }
+  }catch(err){console.warn('Shushtari dictionary unavailable:',err);}
+  try{
    const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
    if(monumentRes.ok){
     const monumentData=await monumentRes.json();
