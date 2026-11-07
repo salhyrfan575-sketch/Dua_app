@@ -417,3 +417,37 @@ function aiRetrieve(q){
    title:new Set(aiTokens(d.title)),
    category:new Set(aiTokens(d.category)),
    keywords:new Set(aiTokens((d.keywords||[]).join(' '))),
+   content:new Set(aiTokens(d.content))
+  };
+  let score=0;
+  for(const t of direct){if(fields.title.has(t))score+=7;if(fields.category.has(t))score+=3;if(fields.keywords.has(t))score+=4;if(fields.content.has(t))score+=1}
+  for(const t of expanded){if(!direct.includes(t)){if(fields.title.has(t))score+=2;if(fields.keywords.has(t))score+=2}}
+  return {doc:d,score};
+ }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,4);
+}
+function aiOpen(){aiPanel.classList.add('open');aiLaunch.setAttribute('aria-expanded','true');setTimeout(()=>aiInput.focus(),80)}
+function aiClosePanel(){aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')}
+aiLaunch.addEventListener('click',()=>aiPanel.classList.contains('open')?aiClosePanel():aiOpen());
+document.getElementById('aiClose').addEventListener('click',aiClosePanel);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')aiClosePanel()});
+async function aiAnswer(q){
+ try{
+  await aiLoadDocs();
+  const matches=aiRetrieve(q);
+  if(!matches.length)return {text:'در دانشنامه فعلی مطلب مستند و مرتبطی برای این پرسش پیدا نکردم. اگر جزئیات بیشتری بدهی، دقیق‌تر جست‌وجو می‌کنم.',sources:[]};
+  const best=matches[0].doc;
+  const sources=(best.sources||[]).slice(0,3);
+  return {text:best.content+'\n\nدرجه اطمینان: '+(best.confidence||'در حال بررسی')+'\n\nاین پاسخ بر پایه مدخل «'+best.title+'» از دانشنامه شوشترجوان است.',sources};
+ }catch(err){return {text:'بارگذاری دانشنامه با مشکل روبه‌رو شد. لطفاً اتصال اینترنت را بررسی و دوباره تلاش کن.',sources:[]}}
+}
+document.getElementById('aiForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const q=aiInput.value.trim();if(!q)return;
+ aiAddMessage(q,'user');aiInput.value='';
+ const pending=aiAddMessage('در حال جست‌وجو در دانشنامه شوشتر…','bot');
+ const answer=await aiAnswer(q);
+ pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
+});
+</script>
+</body>
+</html>
