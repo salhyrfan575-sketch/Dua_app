@@ -201,6 +201,51 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 @media(max-width:700px){.about-layout{grid-template-columns:1fr;padding:20px;gap:16px}.about-mark{min-height:100px;flex-direction:row;gap:12px}.about-mark span{font-size:54px}.profession-grid{grid-template-columns:1fr}.ai-history-card{display:block;padding:22px}.ai-history-card .ai-launch{margin-top:17px;white-space:normal}.about-copy h2{font-size:23px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
+
+/* Navigation stability fix: preserve the original single-row menu position */
+.nav-wrap{
+  position:sticky;
+  top:0;
+  z-index:30;
+  isolation:isolate;
+  overflow:visible;
+}
+.nav{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  min-height:66px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+  scrollbar-width:thin;
+  overscroll-behavior-x:contain;
+}
+.nav>a,.nav>.nav-menu-btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.menu-layer{
+  position:absolute;
+  top:100%;
+  right:0;
+  left:0;
+  z-index:31;
+  width:min(1160px,92%);
+  margin:0 auto;
+  pointer-events:none;
+}
+.menu-panel{
+  top:8px;
+  pointer-events:auto;
+}
+@media(max-width:700px){
+  .nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-height:58px;padding:7px 0;gap:6px}
+  .nav>a,.nav>.nav-menu-btn{flex:0 0 auto;white-space:nowrap}
+  .nav .nav-contact{margin-right:0}
+  .menu-layer{width:92%}
+}
+
 </style>
 </head>
 <body>
