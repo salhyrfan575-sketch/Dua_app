@@ -43,7 +43,7 @@ jobs:
           pages=[]
           for f in sorted(glob.glob('/tmp/book/pages/p-*.jpg')):
               base=os.path.basename(f)[:-4]
-              m=re.search(r'p-(\\d+)',base)
+              m=re.search(r'p-(\d+)',base)
               if not m: continue
               pdfp=int(m.group(1))
               parts=[]
@@ -52,7 +52,7 @@ jobs:
                   if os.path.exists(p):
                       t=open(p,encoding='utf-8',errors='replace').read().strip()
                       if t: parts.append(t)
-              pages.append({'page':pdfp-5,'pdfPage':pdfp,'text':'\\n'.join(parts).strip()})
+              pages.append({'page':pdfp-5,'pdfPage':pdfp,'text':'\n'.join(parts).strip()})
           out={
             'title':'واژه‌نامه‌ای از گویش شوشتری',
             'author':'محمدباقر نیرومند',
