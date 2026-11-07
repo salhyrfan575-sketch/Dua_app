@@ -9,7 +9,8 @@ on:
 permissions:
   contents: read
 jobs:
-  test-ai:
+  test-cors:
+    name: Check browser CORS
     runs-on: ubuntu-latest
     steps:
       - name: Verify browser CORS preflight
@@ -32,6 +33,10 @@ jobs:
             throw new Error('Browser CORS preflight is not allowed for the published site.');
           }
           NODE
+  test-api:
+    name: Test actual AI completion independently of CORS
+    runs-on: ubuntu-latest
+    steps:
       - name: Send a real AI completion request
         run: |
           node --input-type=module <<'NODE'
@@ -56,8 +61,5 @@ jobs:
           const answer = data?.choices?.[0]?.message?.content?.trim();
           if (!answer) throw new Error('AI API response has no choices[0].message.content: ' + raw.slice(0, 500));
           console.log('AI answer:', answer);
-          if (!['*', origin].includes(r.headers.get('access-control-allow-origin'))) {
-            throw new Error('API generated an answer but does not authorize browser CORS from the website.');
-          }
-          console.log('PASS: AI API response and browser CORS are both verified.');
+          console.log('PASS: API itself accepts a real completion request.');
           NODE
