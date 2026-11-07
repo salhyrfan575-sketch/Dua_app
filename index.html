@@ -148,6 +148,59 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 @media(prefers-reduced-motion:reduce){.menu-panel{animation:none}}
  .social-placeholder{display:inline-flex;align-items:center;border:1px dashed #ffffff55;border-radius:8px;padding:7px 12px;color:#c8d2ca;font-size:13px;opacity:.9}
 .brand-mark{padding:0;object-fit:contain;background:transparent;border:0;border-radius:50%;box-shadow:0 8px 24px #102f2a30}
+
+/* Refined Iranian heritage palette and layout corrections */
+:root{--green:#123f46;--green2:#247b78;--cream:#f3ecdc;--paper:#fffaf0;--gold:#c99a3b;--red:#9f3b32;--ink:#263238;--muted:#6f7775;--line:#e2d5bd;--shadow:0 14px 38px #183b3a16}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transparent .8px);background-size:12px 12px}
+.topline{background:#142f3b;color:#f5e8c9}
+.masthead{background:linear-gradient(120deg,#fffaf0,#f0e5cf)}
+.brand h1{color:#123f46}
+.nav-wrap{background:linear-gradient(90deg,#123f46,#1b6664)}
+.nav a:hover,.nav a.active{color:#f3d18b}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#142f3b;min-height:470px}
+.hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-slides img{inset:0}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#102d39ed 0%,#123f46a8 54%,#123f4620 100%)}
+.hero-content{position:relative;z-index:2}
+.hero h2{color:#fff9ed}
+.eyebrow{color:#f2d18c}
+.btn,.dictionary-search button{background:linear-gradient(120deg,#c99a3b,#e0b85e);color:#23343a}
+.section h2{color:#123f46}
+.section-kicker{color:#9f3b32}
+.ticker-label{background:#9f3b32}
+.features{background:linear-gradient(180deg,#e9e0cd,#f3ecdc)}
+.about-section{background:linear-gradient(135deg,#eee3ce,#fbf7ed)}
+.about-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:35px;align-items:start;background:#fffaf0;border:1px solid #e2d5bd;border-radius:24px;padding:34px;box-shadow:var(--shadow)}
+.about-mark{min-height:180px;border-radius:18px;background:linear-gradient(145deg,#123f46,#247b78);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f4d99b}
+.about-mark span{font-family:serif;font-size:86px;line-height:1}
+.about-mark small{font-size:13px;margin-top:12px}
+.about-copy h2{font-size:28px;margin:2px 0 16px}
+.about-copy p{margin:0 0 13px;font-size:14px;line-height:2.2;color:#39464a}
+.professions-section{background:#f7f1e5}
+.professions-intro{background:linear-gradient(110deg,#123f46,#247b78);color:#f9f1df;border-radius:16px;padding:18px 22px;margin-bottom:20px;line-height:2;font-size:13px}
+.profession-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.profession-card{position:relative;background:#fffaf0;border:1px solid #e5dac6;border-radius:15px;padding:18px 20px;min-height:138px;box-shadow:0 7px 22px #183b3a0a}
+.profession-card b{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#f1e3c4;color:#9f3b32;font-size:12px}
+.profession-card h3{display:inline-block;margin:0 0 7px 9px;color:#123f46;font-size:17px}
+.profession-card p{margin:4px 0 0;color:#65706e;font-size:12px;line-height:2}
+.professions-note{margin-top:18px;padding:14px 17px;background:#f0e6d2;border-right:4px solid #c99a3b;border-radius:9px;color:#515d5e;font-size:12px;line-height:2}
+.professions-sources{margin-top:15px;font-size:12px;line-height:2.2;color:#6b7471}
+.professions-sources a{color:#247b78;text-decoration:underline;text-underline-offset:3px}
+.ai-history-section{background:linear-gradient(135deg,#e8dfcb,#f6f0e4);padding-top:44px;padding-bottom:44px}
+.ai-history-card{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:26px 30px;background:linear-gradient(110deg,#123f46,#247b78);border-radius:22px;color:#fffaf0;box-shadow:0 16px 40px #123f4625}
+.ai-history-card h2{color:#fff4d9;margin:3px 0 7px;font-size:25px}
+.ai-history-card p{margin:0;max-width:700px;color:#e6eee8;font-size:13px;line-height:2}
+.ai-history-card .section-kicker{color:#f2d18c}
+.ai-launch{position:static;flex:0 0 auto;white-space:nowrap;border:1px solid #f4d99b55;border-radius:999px;padding:13px 20px;background:#d1a34a;color:#20343a;box-shadow:0 8px 22px #102f2a30}
+.ai-launch:hover{background:#e2ba69}
+.ai-panel{z-index:60}
+.menu-panel{max-height:min(70vh,520px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.nav-wrap{z-index:30}
+#about,#professions,#ai-history{scroll-margin-top:90px}
+@media(max-width:700px){.about-layout{grid-template-columns:1fr;padding:20px;gap:16px}.about-mark{min-height:100px;flex-direction:row;gap:12px}.about-mark span{font-size:54px}.profession-grid{grid-template-columns:1fr}.ai-history-card{display:block;padding:22px}.ai-history-card .ai-launch{margin-top:17px;white-space:normal}.about-copy h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
 </style>
 </head>
 <body>
@@ -163,14 +216,8 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 </nav>
 <div class="menu-layer container" id="siteMenuLayer">
 <section class="menu-panel" id="newsMenu" hidden><h3>رسانه و خبر</h3><a href="#news">آخرین اخبار و گزارش‌ها</a><a href="#exclusive">تولیدات اختصاصی</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال سوژه و خبر</a></section>
-<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
-<section class="menu-panel about-panel" id="aboutMenu" hidden><h3>درباره ما</h3>
-<p>سلام! ما پیش از راه‌اندازی رسانهٔ شوشترجوان، چند دوست بودیم. بعد از جنگ رمضان و اتفاقاتی که پیش آمد، وقتی ضعف پوشش رسانه‌ای در شهر خودمان را دیدیم، تصمیم گرفتیم خودمان دست به کار شویم؛ و این‌گونه شوشترجوان متولد شد.</p>
-<p>این مسیر هیچ‌وقت آسان نبوده است؛ فراز و فرودهای زیادی داشته، دارد و خواهد داشت. اما آنچه برای ما اهمیت دارد، همراهی رفقایی است که هرکدام در این مسیر نقش خودشان را ایفا کرده‌اند.</p>
-<p>چند ماه بعد تصمیم گرفتیم مجموعه‌مان را گسترش دهیم. امروز در آپارات و اینستاگرام نیز فعالیت می‌کنیم؛ فعالیت ما در این دو بستر بیشتر فرهنگی و تولیدمحتوامحور است و در آن‌ها فعالیت خبری نداریم.</p>
-<p>و امروز، ۱۶ آبان ۱۴۰۵، این وب‌سایت را راه‌اندازی کرده‌ایم تا هویت رسانه‌ای شوشترجوان را کامل‌تر کنیم.</p>
-<p>هدف ما ایجاد رسانه‌ای مردمی و فرهنگی است؛ رسانه‌ای برای جبران خلأهای رسانه‌ای شهرستان شوشتر و پرداختن به موضوعات فرهنگی و رسانه‌ای ایران. امیدواریم این مجموعه در پناه آقا صاحب‌الزمان (عج) هر روز پخته‌تر و کامل‌تر شود و در آینده به رسانه‌ای معتبر در سطح بین‌المللی تبدیل شود.</p>
-</section>
+<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
+<section class="menu-panel about-panel" id="aboutMenu" hidden><h3>درباره ما</h3><p>داستان شکل‌گیری شوشترجوان و مسیر فعالیت رسانه‌ای ما.</p><a href="#about">مطالعه کامل درباره ما ←</a></section>
 <section class="menu-panel" id="contactMenu" hidden><h3>راه‌های ارتباطی</h3><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم و ارسال سوژه</a></section>
 </div></div>
 <main id="home">
@@ -200,6 +247,7 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=700" alt="روایت محلی" loading="lazy"><div class="body"><span class="tag">روایت محلی</span><h3>خاطره‌های شهر</h3><p>ثبت خاطرات، رسم‌ها و روایت‌های نسل‌های مختلف شوشتر.</p><div class="meta">جایگاه انتشار مجموعه در آینده</div></div></article>
 </div></div></section>
 
+<section class="section ai-history-section" id="ai-history"><div class="container ai-history-card"><div><span class="section-kicker">ASK SHUSHTAR</span><h2>هوش مصنوعی تاریخ شوشتر</h2><p>درباره تاریخ، محله‌ها، سازه‌های آبی، فرهنگ و شخصیت‌های تاریخی شوشتر سؤال بپرس؛ دستیار از دانشنامه اختصاصی سایت برای پیدا کردن پاسخ کمک می‌گیرد.</p></div><button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ گفت‌وگو با دستیار تاریخ شوشتر</button></div></section>
 <section class="section dictionary-section" id="dictionary"><div class="container">
  <div class="section-head"><div><span class="section-kicker">SHUSHTARI DICTIONARY</span><h2>فارسی به شوشتری</h2><p>واژهٔ فارسی یا صورت شوشتری را جست‌وجو کن و برابر آن را ببین.</p></div><span class="more" id="dictionaryCountBadge">در حال شمارش واژه‌ها…</span></div>
  <div class="dictionary-box">
@@ -232,12 +280,23 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <div class="heritage-research-note"><strong>یادداشت پژوهشی:</strong> فهرست آثار تاریخی شوشتر به این چند نمونه محدود نیست. در پژوهش‌های مربوط به بافت تاریخی شهر از صدها اثر، از جمله سازه‌های آبی، خانه‌ها، مسجدها و آرامگاه‌ها یاد شده است. این بخش به‌تدریج با پرونده‌های مستقل، عکس‌های دارای منبع و اطلاعات ثبتی تکمیل می‌شود. تاریخ‌گذاری و کارکردهایی که هنوز سند کافی ندارند، با احتیاط بیان شده‌اند.</div>
 <div class="heritage-sources"><strong>منابع پایه:</strong> <a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">مرکز میراث جهانی یونسکو</a> · <a href="https://www.icid-ciid.org/award/his_details/115" target="_blank" rel="noopener noreferrer">کمیسیون بین‌المللی آبیاری و زهکشی</a> · <a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">فهرست آثار شوشتر در ToIran</a> · <a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">نشریه معماری و شهرسازی ایران</a> · <a href="https://www.tasnimnews.ir/en/news/2019/01/26/1929550/the-great-mosque-of-shushtar-iran" target="_blank" rel="noopener noreferrer">گزارش مسجد جامع شوشتر</a></div>
 </div></section>
-
+<section class="section professions-section" id="professions"><div class="container"><div class="section-head"><div><span class="section-kicker">SHUSHTAR'S TRADITIONAL OCCUPATIONS</span><h2>مشاغل اصیل شوشتری</h2><p>نگاهی به حرفه‌هایی که در گذشته بخشی از زندگی و اقتصاد شوشتر را می‌ساختند.</p></div><span class="more">۱۰ حرفه و پیشه</span></div><div class="professions-intro">شوشتر در گذشته تنها به سازه‌های آبی‌اش شناخته نمی‌شد؛ بازارها، کارگاه‌ها و پیشه‌وران آن نیز در رونق شهر نقش داشتند. فهرست زیر بر پایه گزارش‌های محلی و معرفی صنایع‌دستی و مشاغل قدیمی شهر گردآوری شده است.</div><div class="profession-grid">
+<article class="profession-card"><b>۰۱</b><h3>آسیابانی</h3><p>گرداندن آسیاب‌های آبی و تبدیل غلات به آرد؛ حرفه‌ای پیوندخورده با شبکه تاریخی آب شوشتر.</p></article>
+<article class="profession-card"><b>۰۲</b><h3>عصاری</h3><p>استخراج روغن از دانه‌ها و مواد گیاهی با ابزارهای سنتی و دستگاه‌های فشاری.</p></article>
+<article class="profession-card"><b>۰۳</b><h3>حجاری و سنگ‌تراشی</h3><p>تراش و آماده‌سازی سنگ برای ساخت‌وساز، تزئین بناها و تولید قطعات موردنیاز شهر.</p></article>
+<article class="profession-card"><b>۰۴</b><h3>دیبابافی و ابریشم‌بافی</h3><p>بافت پارچه‌های ظریف و ارزشمند؛ دیبا و پرند شوشتری از بافته‌های نام‌آشنای منطقه بوده‌اند.</p></article>
+<article class="profession-card"><b>۰۵</b><h3>احرامی‌بافی</h3><p>بافت دست‌بافته‌های هندسی از الیاف پشم و پنبه؛ هنری که شوشتر امروز نیز با آن شناخته می‌شود.</p></article>
+<article class="profession-card"><b>۰۶</b><h3>موج‌بافی و ملحفه‌بافی</h3><p>تولید پارچه‌ها و رواندازهای سنتی در کارگاه‌های بافندگی و خانه‌های پیشه‌وران.</p></article>
+<article class="profession-card"><b>۰۷</b><h3>چوقابافی</h3><p>بافت پارچه و پوشاک سنتی، از جمله چوقا؛ با پیوندهایی به پوشش محلی و منطقه‌ای.</p></article>
+<article class="profession-card"><b>۰۸</b><h3>زرگری و طلاسازی</h3><p>ساخت و تعمیر زیورآلات و مصنوعات فلزی ظریف برای بازار و خانواده‌های شهر.</p></article>
+<article class="profession-card"><b>۰۹</b><h3>آهنگری و چلنگری</h3><p>ساخت ابزار، یراق و قطعات فلزی موردنیاز کشاورزی، ساختمان و زندگی روزمره.</p></article>
+<article class="profession-card"><b>۱۰</b><h3>سفالگری</h3><p>ساخت ظروف و ابزارهای سفالی با استفاده از خاک و فنون شکل‌دهی و پخت سنتی.</p></article>
+</div><div class="professions-note">یادداشت: این فهرست گزیده‌ای از مشاغل گزارش‌شده در شوشتر است، نه رتبه‌بندی میزان رواج آن‌ها. در منابع محلی از حرفه‌های دیگری مانند مشک‌دوزی، نمدمالی، گیوه‌دوزی، سازسازی و کپوبافی نیز نام برده شده است.</div><div class="professions-sources"><strong>برای مطالعه بیشتر:</strong> <a href="https://shoushtar.ir/2021/09/20/%D8%AA%D8%B9%D8%A7%D9%85%D9%84-%D8%AA%D9%86%DA%AF%D8%A7%D8%AA%D9%86%DA%AF-%D9%85%DB%8C%D8%B1%D8%A7%D8%AB-%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C-%D9%88-%D8%B4%D9%87%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C-%D9%85/" target="_blank" rel="noopener noreferrer">شهرداری شوشتر؛ مشاغل قدیمی شهر</a> · <a href="https://www.tasnimnews.ir/fa/news/1396/05/25/1489482/%D9%85%D9%86%D8%A7%D8%B8%D8%B1-%D8%A8%DB%8C-%D9%86%D8%B8%DB%8C%D8%B1-%D8%B4%D9%88%D8%B4%D8%AA%D8%B1-%D8%AD%D8%A7%D8%B5%D9%84-%D8%AA%D9%84%D9%81%DB%8C%D9%82-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D9%88-%D8%AF%D8%A7%D9%86%D8%B4-%D8%AB%D8%B1%DB%8C%D8%A7%DB%8C%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C%D8%A7%D9%86-%D9%81%DB%8C%D9%84%D9%85/" target="_blank" rel="noopener noreferrer">تسنیم؛ صنایع دستی و بافته‌های شوشتر</a> · <a href="https://parandngo.blogfa.com/" target="_blank" rel="noopener noreferrer">مؤسسه میراث‌داران پرند شوشتر</a></div></div></section>
+<section class="section about-section" id="about"><div class="container about-layout"><div class="about-mark"><span>ش</span><small>شوشترجوان</small></div><div class="about-copy"><span class="section-kicker">OUR STORY</span><h2>درباره شوشترجوان</h2><p>سلام! ما پیش از راه‌اندازی رسانهٔ شوشترجوان، چند دوست بودیم. بعد از جنگ رمضان و اتفاقاتی که پیش آمد، وقتی ضعف پوشش رسانه‌ای در شهر خودمان را دیدیم، تصمیم گرفتیم خودمان دست به کار شویم؛ و این‌گونه شوشترجوان متولد شد.</p><p>این مسیر هیچ‌وقت آسان نبوده است؛ فراز و فرودهای زیادی داشته، دارد و خواهد داشت. اما آنچه برای ما اهمیت دارد، همراهی رفقایی است که هرکدام در این مسیر نقش خودشان را ایفا کرده‌اند.</p><p>چند ماه بعد تصمیم گرفتیم مجموعه‌مان را گسترش دهیم. امروز در آپارات و اینستاگرام نیز فعالیت می‌کنیم؛ فعالیت ما در این دو بستر بیشتر فرهنگی و تولیدمحتوامحور است و در آن‌ها فعالیت خبری نداریم.</p><p>و امروز، ۱۶ آبان ۱۴۰۵، این وب‌سایت را راه‌اندازی کرده‌ایم تا هویت رسانه‌ای شوشترجوان را کامل‌تر کنیم.</p><p>هدف ما ایجاد رسانه‌ای مردمی و فرهنگی است؛ رسانه‌ای برای جبران خلأهای رسانه‌ای شهرستان شوشتر و پرداختن به موضوعات فرهنگی و رسانه‌ای ایران. امیدواریم این مجموعه در پناه آقا صاحب‌الزمان (عج) هر روز پخته‌تر و کامل‌تر شود و در آینده به رسانه‌ای معتبر در سطح بین‌المللی تبدیل شود.</p></div></div></section>
 </main>
-<footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><span class="social-placeholder" aria-label="نشانی اینستاگرام به‌زودی">اینستاگرام · به‌زودی</span><span class="social-placeholder" aria-label="نشانی آپارات به‌زودی">آپارات · به‌زودی</span><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
+<footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><span class="social-placeholder" aria-label="نشانی اینستاگرام به‌زودی">اینستاگرام · به‌زودی</span><span class="social-placeholder" aria-label="نشانی آپارات به‌زودی">آپارات · به‌زودی</span><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 
-<button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ دستیار هوشمند</button>
-<section class="ai-panel" id="aiPanel" role="dialog" aria-label="دستیار هوشمند شوشترجوان" aria-modal="false">
+<section class="ai-panel" id="aiPanel" role="dialog" aria-label="گفت‌وگو با هوش مصنوعی تاریخ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">پاسخ‌گویی عمومی و تخصصی درباره شوشتر</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
 
   <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
