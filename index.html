@@ -323,6 +323,51 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 .wg-done h3{font-size:25px;color:#17483e;margin:7px}.wg-done p{color:#68766d;font-size:13px}
 @media(max-width:540px){.wg-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.wg-stage{padding:10px 4px}.wg-stage strong{font-size:19px}.wg-slot{width:30px;height:39px}.wg-tile{width:39px;height:44px}.word-game-card{padding:14px}}
 
+
+/* Polished A Sheikh word game */
+.word-game-section{padding-top:20px;background:#f3efe5}
+.wg-entry{display:flex;align-items:center;gap:18px;margin:22px 0 6px;padding:15px 20px;border:1px solid #e4d7bd;border-radius:20px;background:linear-gradient(110deg,#fffdf7,#f4ead5);box-shadow:0 10px 28px #293a2e0d;transition:.2s}
+.wg-entry:hover{transform:translateY(-2px);box-shadow:0 15px 32px #293a2e18}
+.wg-entry-art{width:112px;min-width:112px;height:92px;border-radius:15px;background:#17483e;display:grid;place-items:center;overflow:hidden}
+.wg-entry-copy{flex:1}.wg-entry-copy small{color:#9b773e;font-size:11px;font-weight:900;letter-spacing:.5px}.wg-entry-copy strong{display:block;color:#17483e;font-size:22px;line-height:1.5}.wg-entry-copy span{display:block;color:#72796f;font-size:12px}
+.wg-entry-arrow{font-size:25px;color:#b58b48}
+.word-game-section .section-head{margin-bottom:20px}
+.word-game-card{max-width:850px;margin:auto;padding:clamp(16px,3vw,28px);border:1px solid #e7dfd0;border-radius:24px;background:#fffefa;box-shadow:0 18px 45px #26382b10}
+.wg-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.wg-badge{padding:7px 13px;border-radius:99px;background:#eaf1e9;color:#245344;font-size:11px;font-weight:900}
+.wg-loading{text-align:center;padding:28px;color:#6d796f}
+.wg-stage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.wg-stage{display:grid;gap:3px;padding:13px 7px;border:1px solid #e8e1d4;border-radius:15px;background:linear-gradient(160deg,#fff,#f7f4eb);color:#17483e;cursor:pointer;transition:.18s}
+.wg-stage strong{font-size:22px}.wg-stage small{font-size:10px;color:#8a806e}.wg-stage:disabled{opacity:.35;cursor:not-allowed;filter:grayscale(1)}
+.wg-stage:not(:disabled):hover{border-color:#c49a50;transform:translateY(-2px)}
+.wg-play{max-width:650px;margin:auto;text-align:center}
+.wg-play-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:16px;color:#6e7b71;font-size:12px;font-weight:800}
+.wg-game-panel{padding:18px 15px;border-radius:19px;background:linear-gradient(135deg,#123c35,#27695a);color:white}
+.wg-game-panel small{color:#d4e2d7;font-size:12px}
+.wg-remaining{display:inline-block;margin-top:7px;padding:5px 12px;border-radius:99px;background:#ffffff19;color:#fff;font-size:11px}
+.wg-targets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:17px 0}
+.wg-target{display:flex;align-items:center;gap:8px;min-height:52px;padding:8px 10px;border:1px solid #e9e3d7;border-radius:12px;background:#fbfaf5;text-align:right}
+.wg-blanks{display:flex;gap:3px;direction:rtl}
+.wg-blanks i{display:grid;place-items:center;width:17px;height:22px;border-bottom:2px solid #c7b99e;font-style:normal;font-size:12px;font-weight:900;color:#245344}
+.wg-target-label{font-size:10px;color:#8a806e;white-space:nowrap}
+.wg-target small{margin-right:auto;color:#29734f;font-size:10px}
+.wg-target.solved{border-color:#cfe0d0;background:#eff6ed}
+.wg-target.solved .wg-blanks i{border-color:#9fc6a4;color:#1c6746}
+.wg-picked{display:flex;justify-content:center;align-items:center;gap:7px;min-height:52px;margin:12px auto}
+.wg-picked-letter{display:grid;place-items:center;width:39px;height:43px;border:1px solid #d7c49f;border-bottom:3px solid #b18c4d;border-radius:10px;background:#fffaf0;color:#17483e;font-size:21px;font-weight:900}
+.wg-letter-tray{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px auto 16px}
+.wg-letter{width:49px;height:51px;border:1px solid #e1d7c3;border-bottom:4px solid #c7ad7e;border-radius:13px;background:linear-gradient(#fff,#f6efdf);color:#17483e;font-size:24px;font-weight:900;cursor:pointer;transition:.15s}
+.wg-letter:active{transform:translateY(2px);border-bottom-width:2px}
+.wg-letter.used{opacity:.22;transform:scale(.9);pointer-events:none}
+.wg-message{min-height:29px;margin:8px 0;color:#748075;font-size:12px}
+.wg-message.good{color:#26764d;font-weight:900}.wg-message.wrong{color:#a4443a;font-weight:800}
+.wg-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.wg-action{padding:9px 16px;border:0;border-radius:99px;background:#edf0e9;color:#285244;font-size:11px;font-weight:900;cursor:pointer}
+.wg-action.primary{background:#c49a50;color:#20382f}
+.wg-done{text-align:center;padding:28px 10px}.wg-done-mark{display:grid;place-items:center;width:68px;height:68px;margin:auto;border-radius:50%;background:#eaf3e8;color:#27734e;font-size:32px}
+.wg-done h3{color:#17483e;font-size:24px}.wg-done p{color:#6f7b71;font-size:13px}
+@media(max-width:540px){.wg-entry{gap:12px;padding:12px}.wg-entry-art{width:88px;min-width:88px;height:82px}.wg-entry-copy strong{font-size:18px}.wg-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.wg-stage{padding:10px 4px}.wg-targets{gap:6px}.wg-target{padding:7px 6px;gap:5px}.wg-blanks i{width:14px}.wg-letter{width:44px;height:47px}}
+
 </style>
 </head>
 <body>
@@ -382,31 +427,39 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
   <div class="dictionary-meta" id="dictionaryMeta">در حال بارگذاری واژه‌نامه…</div>
  </div>
 </div></section>
-
-<section class="section word-game-section" id="word-game">
- <div class="container">
-  <div class="section-head"><div><span class="section-kicker">SHUSHTARI WORD CHALLENGE</span><h2>واژه‌شناس شوشتری؛ بازی ۲۰ مرحله‌ای</h2><p>معنی فارسی را بخوان، حروف به‌هم‌ریخته را مرتب کن و واژهٔ شوشتری را کشف کن.</p></div><span class="more">۱۰۰ واژه · ۲۰ مرحله</span></div>
-  <div class="word-game-card" id="shushtariGame">
-   <div class="wg-top"><span class="wg-badge">بازی واژه‌شناس شوشتری</span><span class="wg-badge" id="wgStatus">در حال آماده‌سازی</span></div>
-   <div class="wg-loading" id="wgLoading">در حال دریافت واژه‌ها از واژه‌نامهٔ شوشتری…</div>
-   <div id="wgStageScreen" hidden>
-    <div class="wg-top"><strong>مرحله‌ات را انتخاب کن</strong><span class="wg-badge" id="wgProgress">۰ از ۲۰</span></div>
-    <div class="wg-stage-grid" id="wgStages"></div>
-    <p class="dictionary-meta" id="wgTotal"></p>
-   </div>
-   <div id="wgPlayScreen" class="wg-play" hidden>
-    <div class="wg-play-head"><span id="wgStageLabel"></span><span id="wgQuestionLabel"></span></div>
-    <div class="wg-clue"><small>معنی فارسی این واژه چیست؟</small><h3 id="wgMeaning"></h3><small id="wgShushtariHint"></small></div>
-    <div class="wg-answer" id="wgAnswer" aria-label="حروف انتخاب‌شده"></div>
-    <div class="wg-tiles" id="wgTiles" aria-label="حروف درهم‌ریخته"></div>
-    <div class="wg-feedback" id="wgFeedback" aria-live="polite">حروف را به ترتیب کنار هم بچین.</div>
-    <div class="wg-stats"><span id="wgMistakes">اشتباه‌ها: ۰ / ۳</span><span id="wgHints">راهنما: ۲</span><span id="wgScore">امتیاز: ۰</span></div>
-    <div class="wg-actions"><button class="wg-action" id="wgUndoBtn" type="button">↶ حذف حرف آخر</button><button class="wg-action" id="wgClearBtn" type="button">پاک‌کردن</button><button class="wg-action primary" id="wgHintBtn" type="button">راهنما</button><button class="wg-action" id="wgBackBtn" type="button">بازگشت به مراحل</button></div>
-   </div>
-   <div id="wgDoneScreen" class="wg-done" hidden><div class="wg-done-mark">✓</div><h3 id="wgDoneTitle">مرحله تمام شد!</h3><p id="wgDoneText"></p><button class="btn" id="wgNextBtn" type="button">ادامه</button></div>
-  </div>
+<a class="wg-entry" href="#word-game" aria-label="ورود به بازی آ شیخ">
+ <div class="wg-entry-art" role="img" aria-label="تصویر حروف بازی آ شیخ">
+  <svg viewBox="0 0 150 110" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+   <path d="M0 83 Q40 62 78 82 T150 72 V110 H0Z" fill="#0e342e"/>
+   <g transform="translate(21 15) rotate(-9 25 25)"><rect width="43" height="43" rx="8" fill="#f8edcf"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#17483e">ش</text></g>
+   <g transform="translate(67 8) rotate(8 25 25)"><rect width="43" height="43" rx="8" fill="#d9b66e"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#173d35">و</text></g>
+   <g transform="translate(48 57) rotate(3 25 25)"><rect width="43" height="43" rx="8" fill="#fffaf0"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#17483e">ت</text></g>
+   <circle cx="128" cy="20" r="4" fill="#d9b66e"/><circle cx="15" cy="60" r="3" fill="#d9b66e"/>
+  </svg>
  </div>
-</section>
+ <div class="wg-entry-copy"><small>بازی واژه‌سازی شوشتری</small><strong>بازی آ شیخ</strong><span>حروف را بچین، واژه‌های شوشتری را پیدا کن!</span></div>
+ <span class="wg-entry-arrow">←</span>
+</a>
+
+<section class="section word-game-section" id="word-game"><div class="container">
+ <div class="section-head"><div><span class="section-kicker">A SHEIKH · SHUSHTARI WORD GAME</span><h2>بازی آ شیخ</h2><p>با پنج حرف، واژه‌های شوشتری این مرحله را پیدا کن؛ درست مثل بازی‌های واژه‌سازی.</p></div><span class="more">۲۰ مرحله</span></div>
+ <div class="word-game-card" id="shushtariGame">
+  <div class="wg-top"><span class="wg-badge">چالش واژه‌های شوشتری</span><span class="wg-badge" id="wgStatus">آماده بازی</span></div>
+  <div class="wg-loading" id="wgLoading">در حال بارگذاری واژه‌های شوشتری…</div>
+  <div id="wgStageScreen" hidden><div class="wg-top"><strong>مرحله‌ای را انتخاب کن</strong><span class="wg-badge" id="wgProgress">۰ از ۲۰</span></div><div class="wg-stage-grid" id="wgStages"></div><p class="dictionary-meta" id="wgTotal"></p></div>
+  <div id="wgPlayScreen" class="wg-play" hidden>
+   <div class="wg-play-head"><span id="wgStageLabel"></span><span id="wgPoints">امتیاز ۰</span></div>
+   <div class="wg-game-panel"><small>با این پنج حرف، واژه‌های شوشتری را بساز</small><div class="wg-remaining" id="wgRemaining">۵ واژه باقی مانده</div></div>
+   <div class="wg-targets" id="wgTargets"></div>
+   <div class="wg-picked" id="wgPicked" aria-label="واژه ساخته‌شده"></div>
+   <div class="wg-letter-tray" id="wgLetterTray" aria-label="حروف بازی"></div>
+   <div class="wg-message" id="wgMessage" aria-live="polite">حروف را انتخاب کن و واژه را بساز.</div>
+   <div class="wg-actions"><button class="wg-action" id="wgUndoBtn" type="button">⌫ حذف حرف</button><button class="wg-action primary" id="wgSubmitBtn" type="button">ثبت واژه</button><button class="wg-action" id="wgHintBtn" type="button">راهنما</button><button class="wg-action" id="wgBackBtn" type="button">مراحل</button></div>
+   <div class="wg-top" style="justify-content:center;margin:14px 0 0"><span class="wg-badge" id="wgHints">راهنما ۲</span></div>
+  </div>
+  <div id="wgDoneScreen" class="wg-done" hidden><div class="wg-done-mark">✓</div><h3 id="wgDoneTitle"></h3><p id="wgDoneText"></p><button class="btn" id="wgNextBtn" type="button">ادامه</button></div>
+ </div>
+</div></section>
 <section class="section heritage-section" id="heritage"><div class="container">
 <div class="section-head"><div><span class="section-kicker">SHUSHTAR HERITAGE ARCHIVE</span><h2>گنجینه آثار تاریخی شوشتر</h2><p>از شاهکار مهندسی آب تا مسجدها، پل‌ها، خانه‌ها و آرامگاه‌های تاریخی؛ هر اثر با معرفی، کارکرد، ویژگی‌های معماری و منبع پژوهشی.</p></div><span class="more">پرونده تصویری و پژوهشی</span></div>
 <div class="heritage-intro"><strong>شوشتر فقط یک مجموعه آبشار و آسیاب نیست.</strong><p>بافت تاریخی شهر، حاصل کنار هم قرار گرفتن سازه‌های آبی، راه‌ها و پل‌ها، دژها، مسجدها، آرامگاه‌ها و خانه‌های تاریخی است. در این پرونده میان اطلاعات مستند، برداشت‌های پژوهشی و روایت‌های نیازمند بررسی تفاوت گذاشته‌ایم.</p></div>
