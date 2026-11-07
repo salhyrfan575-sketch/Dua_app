@@ -292,6 +292,37 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 .top-news-section .breaking-news{min-height:190px;border-right:5px solid #a52e2a}
 .top-news-section .breaking-news .lead-body{padding:20px 26px}
 @media(max-width:600px){.breaking-ticker .ticker-label{padding:0 11px;font-size:11px}.breaking-ticker .ticker-marquee span{font-size:12px}.top-news-section{padding:20px 0 25px}.top-news-section .breaking-news .lead-body{padding:17px}}
+
+/* 20-stage Shushtari word puzzle */
+.word-game-section{background:linear-gradient(180deg,#f4efe3,#e8e4d8)}
+.word-game-card{background:#fffefa;border:1px solid #e4ddcf;border-radius:22px;padding:clamp(16px,3vw,28px);box-shadow:0 18px 48px #20382b12}
+.wg-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.wg-badge{background:#e8f0e9;color:#17483e;border-radius:99px;padding:6px 13px;font-size:12px;font-weight:800}
+.wg-loading{padding:30px;text-align:center;color:#68766d}
+.wg-stage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.wg-stage{border:1px solid #e5dfd2;background:#fff;border-radius:14px;padding:14px 7px;display:grid;gap:3px;color:#17483e;cursor:pointer;box-shadow:0 4px 12px #20382b08}
+.wg-stage strong{font-size:22px}.wg-stage small{font-size:10px;color:#77847b}.wg-stage:disabled{opacity:.42;cursor:not-allowed;background:#f1eee7}
+.wg-stage:not(:disabled):hover{border-color:#c49a50;transform:translateY(-2px)}
+.wg-play{max-width:720px;margin:auto;text-align:center}
+.wg-play-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#6c786f;font-size:12px;margin-bottom:18px}
+.wg-clue{background:linear-gradient(130deg,#123f38,#287565);color:#fff;border-radius:18px;padding:22px 15px;margin-bottom:18px}
+.wg-clue small{color:#d9e8df;font-size:12px}.wg-clue h3{font-size:clamp(22px,5vw,31px);margin:5px 0 0;color:#fff}
+.wg-answer{display:flex;direction:rtl;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;min-height:54px;margin:16px 0}
+.wg-slot{width:36px;height:43px;border:1.5px dashed #c8cfc5;border-radius:9px;background:#f7f6f0;display:grid;place-items:center;font-size:20px;font-weight:900;color:#17483e}
+.wg-slot.filled{border-style:solid;border-color:#b9cbbd;background:#eaf2e9}
+.wg-tiles{display:flex;direction:rtl;justify-content:center;gap:8px;flex-wrap:wrap;margin:16px auto;min-height:52px}
+.wg-tile{width:43px;height:47px;border:1px solid #d9d2c4;border-bottom-width:3px;border-radius:11px;background:#fff;color:#17483e;font-size:22px;font-weight:900;cursor:pointer}
+.wg-tile:disabled{opacity:.25;transform:scale(.92);cursor:default}
+.wg-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0}
+.wg-action{border:0;border-radius:99px;padding:9px 16px;background:#e9eee7;color:#17483e;font-size:12px;font-weight:800;cursor:pointer}
+.wg-action.primary{background:#c49a50;color:#20372f}.wg-action:disabled{opacity:.45;cursor:not-allowed}
+.wg-feedback{min-height:31px;font-size:13px;color:#68766d;margin:8px 0}
+.wg-feedback.good{color:#24734e;font-weight:800}.wg-feedback.bad{color:#a6473d;font-weight:700}
+.wg-stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:#68766d;font-size:11px}
+.wg-done{text-align:center;padding:28px 12px}.wg-done-mark{width:70px;height:70px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:#e9f2e7;color:#287565;font-size:34px}
+.wg-done h3{font-size:25px;color:#17483e;margin:7px}.wg-done p{color:#68766d;font-size:13px}
+@media(max-width:540px){.wg-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.wg-stage{padding:10px 4px}.wg-stage strong{font-size:19px}.wg-slot{width:30px;height:39px}.wg-tile{width:39px;height:44px}.word-game-card{padding:14px}}
+
 </style>
 </head>
 <body>
@@ -307,7 +338,7 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 </nav>
 <div class="menu-layer container" id="siteMenuLayer">
 <section class="menu-panel" id="newsMenu" hidden><h3>رسانه و خبر</h3><a href="#news">آخرین اخبار و گزارش‌ها</a><a href="#exclusive">تولیدات اختصاصی</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال سوژه و خبر</a></section>
-<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
+<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#word-game">بازی واژه‌شناس شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
 <section class="menu-panel about-panel" id="aboutMenu" hidden><h3>درباره ما</h3><p>داستان شکل‌گیری شوشترجوان و مسیر فعالیت رسانه‌ای ما.</p><a href="#about">مطالعه کامل درباره ما ←</a></section>
 <section class="menu-panel" id="contactMenu" hidden><h3>راه‌های ارتباطی</h3><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم و ارسال سوژه</a></section>
 </div></div>
@@ -351,6 +382,31 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
   <div class="dictionary-meta" id="dictionaryMeta">در حال بارگذاری واژه‌نامه…</div>
  </div>
 </div></section>
+
+<section class="section word-game-section" id="word-game">
+ <div class="container">
+  <div class="section-head"><div><span class="section-kicker">SHUSHTARI WORD CHALLENGE</span><h2>واژه‌شناس شوشتری؛ بازی ۲۰ مرحله‌ای</h2><p>معنی فارسی را بخوان، حروف به‌هم‌ریخته را مرتب کن و واژهٔ شوشتری را کشف کن.</p></div><span class="more">۱۰۰ واژه · ۲۰ مرحله</span></div>
+  <div class="word-game-card" id="shushtariGame">
+   <div class="wg-top"><span class="wg-badge">بازی واژه‌شناس شوشتری</span><span class="wg-badge" id="wgStatus">در حال آماده‌سازی</span></div>
+   <div class="wg-loading" id="wgLoading">در حال دریافت واژه‌ها از واژه‌نامهٔ شوشتری…</div>
+   <div id="wgStageScreen" hidden>
+    <div class="wg-top"><strong>مرحله‌ات را انتخاب کن</strong><span class="wg-badge" id="wgProgress">۰ از ۲۰</span></div>
+    <div class="wg-stage-grid" id="wgStages"></div>
+    <p class="dictionary-meta" id="wgTotal"></p>
+   </div>
+   <div id="wgPlayScreen" class="wg-play" hidden>
+    <div class="wg-play-head"><span id="wgStageLabel"></span><span id="wgQuestionLabel"></span></div>
+    <div class="wg-clue"><small>معنی فارسی این واژه چیست؟</small><h3 id="wgMeaning"></h3><small id="wgShushtariHint"></small></div>
+    <div class="wg-answer" id="wgAnswer" aria-label="حروف انتخاب‌شده"></div>
+    <div class="wg-tiles" id="wgTiles" aria-label="حروف درهم‌ریخته"></div>
+    <div class="wg-feedback" id="wgFeedback" aria-live="polite">حروف را به ترتیب کنار هم بچین.</div>
+    <div class="wg-stats"><span id="wgMistakes">اشتباه‌ها: ۰ / ۳</span><span id="wgHints">راهنما: ۲</span><span id="wgScore">امتیاز: ۰</span></div>
+    <div class="wg-actions"><button class="wg-action" id="wgUndoBtn" type="button">↶ حذف حرف آخر</button><button class="wg-action" id="wgClearBtn" type="button">پاک‌کردن</button><button class="wg-action primary" id="wgHintBtn" type="button">راهنما</button><button class="wg-action" id="wgBackBtn" type="button">بازگشت به مراحل</button></div>
+   </div>
+   <div id="wgDoneScreen" class="wg-done" hidden><div class="wg-done-mark">✓</div><h3 id="wgDoneTitle">مرحله تمام شد!</h3><p id="wgDoneText"></p><button class="btn" id="wgNextBtn" type="button">ادامه</button></div>
+  </div>
+ </div>
+</section>
 <section class="section heritage-section" id="heritage"><div class="container">
 <div class="section-head"><div><span class="section-kicker">SHUSHTAR HERITAGE ARCHIVE</span><h2>گنجینه آثار تاریخی شوشتر</h2><p>از شاهکار مهندسی آب تا مسجدها، پل‌ها، خانه‌ها و آرامگاه‌های تاریخی؛ هر اثر با معرفی، کارکرد، ویژگی‌های معماری و منبع پژوهشی.</p></div><span class="more">پرونده تصویری و پژوهشی</span></div>
 <div class="heritage-intro"><strong>شوشتر فقط یک مجموعه آبشار و آسیاب نیست.</strong><p>بافت تاریخی شهر، حاصل کنار هم قرار گرفتن سازه‌های آبی، راه‌ها و پل‌ها، دژها، مسجدها، آرامگاه‌ها و خانه‌های تاریخی است. در این پرونده میان اطلاعات مستند، برداشت‌های پژوهشی و روایت‌های نیازمند بررسی تفاوت گذاشته‌ایم.</p></div>
@@ -721,5 +777,6 @@ aiForm.addEventListener('submit',async e=>{
  }
 });
 </script>
+<script src="./shushtari-word-game.js" defer></script>
 </body>
 </html>
