@@ -1,0 +1,1 @@
+Start OCR import for the verified Shushtari dialect dictionary scan.
