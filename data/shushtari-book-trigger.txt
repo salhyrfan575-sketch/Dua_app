@@ -1,3 +1,5 @@
 Start OCR import for the verified Shushtari dialect dictionary scan.
 
 Retry OCR with corrected page parsing.
+
+Retry OCR with ImageMagick convert command.
