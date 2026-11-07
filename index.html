@@ -550,6 +550,7 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
  const badge=document.getElementById('dictionaryCountBadge');
  if(!form||!input||!result||!list||!meta||!badge)return;
  let entries=[];
+ let bookPages=[];
  const norm=value=>String(value||'').toLocaleLowerCase('fa')
   .replace(/[\u064b-\u065f\u0670\u0640]/g,'')
   .replace(/[يى]/g,'ی').replace(/ك/g,'ک')
@@ -589,7 +590,22 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
    return {entry,score};
   }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.entry.persian.localeCompare(b.entry.persian,'fa'));
   if(found.length){showResult(found[0].entry);renderList(found.slice(0,40).map(x=>x.entry));meta.textContent=found.length+' نتیجه پیدا شد؛ برای دیدن هر مدخل روی آن بزن.';}
-  else{result.replaceChildren();const msg=document.createElement('div');msg.className='d-note';msg.textContent='این واژه در نسخه فعلی واژه‌نامه پیدا نشد. املای دیگری را امتحان کن.';result.appendChild(msg);result.classList.add('show');list.replaceChildren();meta.textContent='نتیجه‌ای پیدا نشد.';}
+  else{
+   const hits=bookPages.map(p=>({page:p.page,text:String(p.text||''),at:norm(p.text||'').indexOf(q)})).filter(x=>x.at>=0).slice(0,5);
+   result.replaceChildren();list.replaceChildren();
+   if(hits.length){
+    const warn=document.createElement('div');warn.className='d-note';warn.textContent='این واژه در متن اسکن‌شدهٔ کتاب پیدا شد؛ متن زیر با OCR استخراج شده و برای املای دقیق باید با تصویر صفحه مقابله شود.';result.appendChild(warn);
+    hits.forEach(hit=>{
+     const card=document.createElement('div');card.className='d-note';card.style.marginTop='10px';
+     const label=document.createElement('strong');label.textContent='صفحه '+hit.page+' کتاب: ';
+     const snippet=document.createElement('span');snippet.textContent=hit.text.slice(Math.max(0,hit.at-140),Math.min(hit.text.length,hit.at+260)).replace(/\\s+/g,' ');
+     card.append(label,snippet);result.appendChild(card);
+    });
+    result.classList.add('show');meta.textContent=hits.length+' اشاره در متن کتاب پیدا شد؛ این‌ها مدخل تأییدشده نیستند.';
+   }else{
+    const msg=document.createElement('div');msg.className='d-note';msg.textContent='این واژه در مدخل‌های تأییدشده و متن OCR فعلی پیدا نشد. املای دیگری را امتحان کن.';result.appendChild(msg);result.classList.add('show');meta.textContent='نتیجه‌ای پیدا نشد.';
+   }
+  }
  };
  form.addEventListener('submit',e=>{e.preventDefault();search();});
  input.addEventListener('input',()=>{if(!input.value.trim()){result.classList.remove('show');result.replaceChildren();renderList(entries);meta.textContent=entries.length+' مدخل در واژه‌نامه ثبت شده است.';}});
@@ -608,6 +624,10 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
    meta.textContent='بارگذاری واژه‌نامه با مشکل روبه‌رو شد. صفحه را تازه‌سازی کن.';
    console.error('Shushtari dictionary load error:',error);
   });
+ fetch('./data/shushtari-book-ocr.json',{cache:'no-cache'})
+  .then(response=>response.ok?response.json():null)
+  .then(data=>{if(data&&Array.isArray(data.pages)){bookPages=data.pages;meta.textContent=entries.length.toLocaleString('fa-IR')+' مدخل تأییدشده؛ متن کتاب نیز در '+bookPages.length.toLocaleString('fa-IR')+' صفحه قابل جست‌وجو است.';if(input.value.trim())search();}})
+  .catch(error=>console.warn('Shushtari book OCR unavailable:',error));
 })();
  
 
