@@ -118,13 +118,58 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 @media(max-width:850px){.heritage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.heritage-grid{grid-template-columns:1fr}.heritage-card img{height:230px}.heritage-intro{padding:18px}.heritage-intro strong{font-size:17px}}
 
+
+/* Navigation panels + liquid glass visual system */
+:root{--glass:rgba(255,255,255,.72);--glass-line:rgba(255,255,255,.68);--glass-shadow:0 18px 55px rgba(20,48,40,.14)}
+.brand-mark{width:66px;height:66px;border-radius:50%;background:#111;color:#fff;padding:5px;box-shadow:0 8px 24px #102f2a30}
+.brand-mark svg{width:100%;height:100%;display:block}
+.nav-wrap{background:rgba(12,48,41,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #ffffff24}
+.nav{min-height:66px;gap:9px;overflow:visible;white-space:normal}
+.nav a,.nav-menu-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 19px;border:1px solid #ffffff25;border-radius:14px;background:#ffffff0d;color:#fff;font:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:.2s}
+.nav a:hover,.nav-menu-btn:hover,.nav-menu-btn[aria-expanded=true]{background:#ffffff25;border-color:#ffffff65;color:#f7dca5;transform:translateY(-1px)}
+.nav a.active{background:#ffffff1b;color:#f7dca5}
+.nav .nav-contact{margin-right:auto;background:linear-gradient(135deg,#e2bd78,#c79748);color:#18382f;border:0}
+.menu-layer{position:relative;z-index:22}
+.menu-panel{position:absolute;top:10px;right:0;left:0;max-width:760px;margin:0 auto;padding:24px 26px;border:1px solid var(--glass-line);border-radius:24px;background:rgba(255,255,255,.86);color:#23352e;box-shadow:var(--glass-shadow);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);animation:menuIn .2s ease}
+.menu-panel[hidden]{display:none}
+.menu-panel h3{margin:0 0 14px;color:#123f38;font-size:20px}
+.menu-panel>a{display:inline-flex;margin:5px;padding:10px 15px;border-radius:13px;background:rgba(20,73,61,.07);border:1px solid rgba(20,73,61,.1);color:#17483e;font-weight:700;font-size:13px}
+.menu-panel>a:hover{background:#dcebe2}
+.menu-panel p{margin:10px 0;color:#34443c;font-size:14px;line-height:2.15}
+.about-panel{max-width:850px}
+.hero,.lead-card,.news-card,.feature-card,.heritage-card,.dictionary-box,.heritage-intro{border-radius:24px}
+.lead-card,.news-card,.feature-card,.heritage-card,.dictionary-box{background:rgba(255,255,255,.76);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);box-shadow:0 12px 34px rgba(24,54,43,.08)}
+.section{position:relative}
+.ticker{background:rgba(255,250,240,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.about-band{display:none}
+@keyframes menuIn{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.nav{padding:9px 0;gap:6px}.nav a,.nav-menu-btn{font-size:12px;padding:8px 11px;min-height:42px}.nav .nav-contact{margin-right:0}.menu-panel{top:5px;padding:18px;border-radius:19px}.menu-panel p{font-size:13px}.brand-mark{width:56px;height:56px}}
+@media(prefers-reduced-motion:reduce){.menu-panel{animation:none}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
 <div class="topline"><div class="container"><span>رسانه خبری، فرهنگی و اختصاصی شوشتر</span><span id="today"></span></div></div>
-<header class="masthead"><div class="container mast"><a class="brand" href="#home"><span class="brand-mark">ش</span><span><h1>شوشترجوان</h1><small>روایت امروز، ریشه در تاریخ</small></span></a><div class="mast-note">صدای مردم؛ روایت شهر تاریخی شوشتر</div></div></header>
-<div class="nav-wrap"><nav class="container nav"><a class="active" href="#home">صفحه اصلی</a><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#dictionary">واژه‌نامه شوشتری</a><a href="#about">درباره ما</a><a class="nav-cta" href="#contact">ارتباط با ما</a></nav></div>
+<header class="masthead"><div class="container mast"><a class="brand" href="#home"><span class="brand-mark" aria-label="نشان شوشترجوان"><svg viewBox="0 0 100 100" role="img" aria-hidden="true"><circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 48H88M18 52V67H82V52M23 52V64M37 52V64M50 52V64M63 52V64M77 52V64M35 43L50 34L65 43M39 42V31H61V42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 72H80V88H20Z" fill="currentColor"/><text x="50" y="84" text-anchor="middle" font-size="13" font-family="Tahoma" font-weight="bold" fill="#123f38">شوشتر</text></svg></span><span><h1>شوشترجوان</h1><small>روایت امروز، ریشه در تاریخ</small></span></a><div class="mast-note">صدای مردم؛ روایت شهر تاریخی شوشتر</div></div></header>
+<div class="nav-wrap"><nav class="container nav" aria-label="منوی اصلی">
+<a class="active" href="#home">صفحه اصلی</a>
+<button class="nav-menu-btn" type="button" data-menu="newsMenu" aria-expanded="false">رسانه و خبر ▾</button>
+<button class="nav-menu-btn" type="button" data-menu="cultureMenu" aria-expanded="false">فرهنگ و میراث ▾</button>
+<button class="nav-menu-btn" type="button" data-menu="aboutMenu" aria-expanded="false">درباره شوشترجوان ▾</button>
+<button class="nav-menu-btn nav-contact" type="button" data-menu="contactMenu" aria-expanded="false">ارتباط با ما</button>
+</nav>
+<div class="menu-layer container" id="siteMenuLayer">
+<section class="menu-panel" id="newsMenu" hidden><h3>رسانه و خبر</h3><a href="#news">آخرین اخبار و گزارش‌ها</a><a href="#exclusive">تولیدات اختصاصی</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال سوژه و خبر</a></section>
+<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
+<section class="menu-panel about-panel" id="aboutMenu" hidden><h3>درباره ما</h3>
+<p>سلام! ما پیش از شکل‌گیری رسانهٔ شوشترجوان، چند دوست بودیم که پس از جنگ رمضان و اتفاقاتی که در پی آن رخ داد، با دیدن ضعف پوشش رسانه‌ای در شهر خودمان تصمیم گرفتیم دست به کار شویم؛ و شوشترجوان متولد شد.</p>
+<p>این مسیر هیچ‌وقت آسان نبوده است؛ فراز و فرودهای زیادی داشته، دارد و خواهد داشت. اما آنچه برای ما اهمیت دارد، همراهی رفقایی است که هرکدام در این مسیر نقش خودشان را ایفا کرده‌اند.</p>
+<p>چند ماه بعد تصمیم گرفتیم مجموعه‌مان را گسترش دهیم. امروز در آپارات و اینستاگرام نیز فعالیت می‌کنیم؛ فعالیت ما در این دو بستر بیشتر فرهنگی و تولیدمحتوامحور است و در آن‌ها فعالیت خبری نداریم.</p>
+<p>و امروز، ۱۶ آبان ۱۴۰۵، این وب‌سایت را راه‌اندازی کرده‌ایم تا هویت رسانه‌ای شوشترجوان را کامل‌تر کنیم.</p>
+<p>هدف ما ایجاد رسانه‌ای مردمی و فرهنگی است؛ رسانه‌ای برای جبران خلأهای رسانه‌ای شهرستان شوشتر و پرداختن به موضوعات فرهنگی و رسانه‌ای ایران. امیدواریم این مجموعه در پناه آقا صاحب‌الزمان (عج) هر روز پخته‌تر و کامل‌تر شود و در آینده به رسانه‌ای معتبر در سطح بین‌المللی تبدیل شود.</p>
+</section>
+<section class="menu-panel" id="contactMenu" hidden><h3>راه‌های ارتباطی</h3><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم و ارسال سوژه</a></section>
+</div></div>
 <main id="home">
 <div id="main-content" tabindex="-1"></div>
 <section class="hero"><div class="hero-slides" aria-hidden="true">
@@ -184,7 +229,7 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 <div class="heritage-research-note"><strong>یادداشت پژوهشی:</strong> فهرست آثار تاریخی شوشتر به این چند نمونه محدود نیست. در پژوهش‌های مربوط به بافت تاریخی شهر از صدها اثر، از جمله سازه‌های آبی، خانه‌ها، مسجدها و آرامگاه‌ها یاد شده است. این بخش به‌تدریج با پرونده‌های مستقل، عکس‌های دارای منبع و اطلاعات ثبتی تکمیل می‌شود. تاریخ‌گذاری و کارکردهایی که هنوز سند کافی ندارند، با احتیاط بیان شده‌اند.</div>
 <div class="heritage-sources"><strong>منابع پایه:</strong> <a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">مرکز میراث جهانی یونسکو</a> · <a href="https://www.icid-ciid.org/award/his_details/115" target="_blank" rel="noopener noreferrer">کمیسیون بین‌المللی آبیاری و زهکشی</a> · <a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">فهرست آثار شوشتر در ToIran</a> · <a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">نشریه معماری و شهرسازی ایران</a> · <a href="https://www.tasnimnews.ir/en/news/2019/01/26/1929550/the-great-mosque-of-shushtar-iran" target="_blank" rel="noopener noreferrer">گزارش مسجد جامع شوشتر</a></div>
 </div></section>
-<section class="about-band" id="about"><div class="container"><div><h2>شوشترجوان؛ رسانه‌ای برای شهر</h2><p>هدف این رسانه، بازتاب رویدادها و دغدغه‌های مردم، معرفی ظرفیت‌های فرهنگی و تاریخی شوشتر و تولید محتوای اختصاصی درباره شهر است.</p></div><a class="btn" href="#contact">راه‌های ارتباطی</a></div></section>
+
 </main>
 <footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 
@@ -198,6 +243,16 @@ footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
 
 <button id="backTop" aria-label="بازگشت به بالا">↑</button>
 <script>
+
+/* Accessible, exclusive navigation panels */
+(()=>{const buttons=[...document.querySelectorAll('.nav-menu-btn')],panels=[...document.querySelectorAll('.menu-panel')];
+function closeAll(){panels.forEach(p=>p.hidden=true);buttons.forEach(b=>b.setAttribute('aria-expanded','false'))}
+buttons.forEach(b=>b.addEventListener('click',()=>{const panel=document.getElementById(b.dataset.menu),wasOpen=panel&&!panel.hidden;closeAll();if(panel&&!wasOpen){panel.hidden=false;b.setAttribute('aria-expanded','true')}}));
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-wrap')&&!e.target.closest('#siteMenuLayer'))closeAll()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+panels.forEach(p=>p.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeAll)));
+})();
+
 const slides=[...document.querySelectorAll('.hero-slides img')],dots=[...document.querySelectorAll('.hero-dots button')];
 let current=0,timer=null;
 function showSlide(i){
