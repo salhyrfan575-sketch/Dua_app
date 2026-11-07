@@ -4,12 +4,12 @@
  if(!root)return;
  const $=id=>root.querySelector('#'+id);
  const norm=s=>String(s||'').toLocaleLowerCase('fa')
-  .replace(/[\\u064b-\\u065f\\u0670\\u0640]/g,'')
+  .replace(/[\u064b-\u065f\u0670\u0640]/g,'')
   .replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[ۀة]/g,'ه')
   .replace(/[ؤ]/g,'و').replace(/[أإ]/g,'ا')
-  .replace(/\\([^)]*\\)/g,'')
-  .replace(/[^\\p{L}\\p{N}]/gu,'');
- const cleanWord=s=>String(s||'').replace(/\\([^)]*\\)/g,'').replace(/[\\u064b-\\u065f\\u0670\\u0640]/g,'').trim();
+  .replace(/\([^)]*\)/g,'')
+  .replace(/[^\p{L}\p{N}]/gu,'');
+ const cleanWord=s=>String(s||'').replace(/\([^)]*\)/g,'').replace(/[\u064b-\u065f\u0670\u0640]/g,'').trim();
  const shuffle=a=>{const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;};
  const stateKey='shoushtarjavan_wordgame_v1';
  let saved={unlocked:1,best:{},total:0};
