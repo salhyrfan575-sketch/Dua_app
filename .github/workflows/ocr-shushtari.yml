@@ -1,0 +1,75 @@
+name: Build Shushtari dictionary OCR
+on:
+  push:
+    paths:
+      - ".github/workflows/ocr-shushtari.yml"
+      - "data/shushtari-book-trigger.txt"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OCR tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils tesseract-ocr-fas tesseract-ocr-ara imagemagick
+      - name: Download and verify the exact scanned source
+        run: |
+          curl -fL --retry 4 --retry-delay 3 -A "Mozilla/5.0" "https://parsianjoman.org/wp-content/uploads/2025/08/Shushtari-dialect.pdf" -o /tmp/Shushtari_dialect.pdf
+          echo "762c5b05c6fcc4b715c9b7d47a6d85714d511a7f7e83b81f5d61090b1fe18759  /tmp/Shushtari_dialect.pdf" | sha256sum -c -
+          pdfinfo /tmp/Shushtari_dialect.pdf | grep Pages
+      - name: Render pages
+        run: |
+          mkdir -p /tmp/book/pages /tmp/book/ocr
+          pdftoppm -f 7 -l 516 -jpeg -gray -r 140 -jpegopt quality=82 /tmp/Shushtari_dialect.pdf /tmp/book/pages/p
+      - name: OCR both dictionary columns
+        run: |
+          find /tmp/book/pages -name '*.jpg' -print0 | xargs -0 -P 2 -I{} bash -c '
+            f="$1"
+            b=$(basename "$f" .jpg)
+            magick "$f" -crop 50%x100% +repage "/tmp/book/ocr/${b}-col-%d.jpg"
+            for c in 1 0; do
+              tesseract "/tmp/book/ocr/${b}-col-${c}.jpg" "/tmp/book/ocr/${b}-col-${c}" -l fas+ara --psm 6 2>/dev/null || true
+            done
+          ' _ {}
+      - name: Build searchable page database
+        run: |
+          python3 - <<'PY'
+          import json,glob,os,re
+          pages=[]
+          for f in sorted(glob.glob('/tmp/book/pages/p-*.jpg')):
+              base=os.path.basename(f)[:-4]
+              m=re.search(r'p-(\\d+)',base)
+              if not m: continue
+              pdfp=int(m.group(1))
+              parts=[]
+              for c in (1,0):
+                  p=f'/tmp/book/ocr/{base}-col-{c}.txt'
+                  if os.path.exists(p):
+                      t=open(p,encoding='utf-8',errors='replace').read().strip()
+                      if t: parts.append(t)
+              pages.append({'page':pdfp-5,'pdfPage':pdfp,'text':'\\n'.join(parts).strip()})
+          out={
+            'title':'واژه‌نامه‌ای از گویش شوشتری',
+            'author':'محمدباقر نیرومند',
+            'source':'نسخه اسکن‌شده ارسالی کاربر؛ تطبیق هش فایل با نسخه منتشرشده در پارسی‌انجمن',
+            'totalPdfPages':516,
+            'ocrPages':len(pages),
+            'note':'متن OCR است و برای ثبت مدخل قطعی باید با تصویر صفحه مقابله شود. page شماره چاپی تقریبی کتاب و pdfPage شماره صفحه فایل PDF است.',
+            'pages':pages
+          }
+          with open('data/shushtari-book-ocr.json','w',encoding='utf-8') as f:
+              json.dump(out,f,ensure_ascii=False,separators=(',',':'))
+          print('Pages:',len(pages),'non-empty:',sum(bool(p['text']) for p in pages),'bytes:',os.path.getsize('data/shushtari-book-ocr.json'))
+          PY
+      - name: Commit OCR database
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shushtari-book-ocr.json
+          git commit -m "Add searchable OCR text for Shushtari dictionary"
+          git push
