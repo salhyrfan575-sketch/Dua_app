@@ -512,11 +512,11 @@ const aiStatus=document.getElementById('aiStatus');
 fetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{
  if(typeof c.endpoint==='string'&&c.endpoint.startsWith('https://')){
   aiApiUrl=c.endpoint.replace(/\/$/,'');
-  aiStatus.textContent='هوش عمومی فعال · دانشنامه شوشتر متصل است';
+  if(!shushtarDocs)aiStatus.textContent='سرویس بیرونی پیکربندی شده است';
  }else{
-  aiStatus.textContent='حالت دانشنامه‌ای · اتصال مدل عمومی هنوز راه‌اندازی نشده';
+  if(!shushtarDocs)aiStatus.textContent='در حال آماده‌سازی دانشنامه و واژه‌نامه…';
  }
-}).catch(()=>{if(aiStatus)aiStatus.textContent='حالت دانشنامه‌ای فعال است';});
+}).catch(()=>{if(aiStatus&&!shushtarDocs)aiStatus.textContent='دانشنامه آفلاین در دسترس است';});
 const AI_ALIASES={
  'آب':['کارون','بند میزان','گرگر','داریون','شادروان','تونل','آسیاب','آبراهه','آبیاری'],
  'آسیاب آبی':['آسیاب','چرخ آسیاب','آبشارها','سیکا','تونل'],
@@ -611,6 +611,7 @@ async function aiAnswer(q){
  }catch(err){console.error('Shushtar assistant corpus error:',err);return {text:'بارگذاری اطلاعات یکپارچه دستیار با مشکل روبه‌رو شد. صفحه را تازه‌سازی کن و دوباره تلاش کن.',sources:[]}}
 }
 
+aiLoadDocs().catch(err=>{if(aiStatus)aiStatus.textContent='بارگذاری پیکره با مشکل روبه‌رو شد';console.error(err)});
 document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();
  const q=aiInput.value.trim();if(!q)return;
