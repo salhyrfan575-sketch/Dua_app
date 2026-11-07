@@ -390,7 +390,7 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 <footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><span class="social-placeholder" aria-label="نشانی اینستاگرام به‌زودی">اینستاگرام · به‌زودی</span><span class="social-placeholder" aria-label="نشانی آپارات به‌زودی">آپارات · به‌زودی</span><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
 
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="گفت‌وگو با هوش مصنوعی تاریخ شوشتر" aria-modal="false">
-  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">هوش مصنوعی آنلاین · دانشنامه شوشترجوان + جست‌وجوی وب</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
+  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">دستیار هوشمند · اتصال آنلاین هنگام ارسال آزمایش می‌شود</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
 
   <div class="ai-privacy" style="padding:7px 12px;font-size:11px;line-height:1.7;color:#806b4c;background:#fff8e9;border-bottom:1px solid #eadfc9">پرسش، بخشی از دانشنامه مرتبط و ردّ گفت‌وگو برای تولید پاسخ به سرویس Vireonix ارسال می‌شود. طبق شرایط این سرویس، داده‌ها و گفت‌وگوها ممکن است ذخیره، تحلیل و برای آموزش و بهبود مدل استفاده شوند و مجوز استفاده گسترده‌ای به سرویس داده می‌شود. اطلاعات شخصی، محرمانه یا حساس وارد نکنید.</div>\n  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="هر سؤالی به ذهنت می‌رسد بپرس..." aria-label="پرسش شما"><button type="submit">ارسال</button></form>
@@ -506,10 +506,11 @@ try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR'
 const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
 let shushtarDocs=null;
+let aiDocsPromise=null;
 let aiApiUrl='https://vireonix.ai/v1/chat/completions';
 let aiHistory=[];
 const aiStatus=document.getElementById('aiStatus');
-fetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{
+const aiConfigPromise=fetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{
  if(typeof c.endpoint==='string'&&c.endpoint.startsWith('https://')){
   aiApiUrl=c.endpoint.replace(/\/$/,'');
   if(!shushtarDocs)aiStatus.textContent='سرویس بیرونی پیکربندی شده است';
@@ -564,30 +565,34 @@ function aiAddMessage(text,kind='bot',sources=[]){
 }
 async function aiLoadDocs(){
  if(shushtarDocs)return shushtarDocs;
- shushtarDocs={documents:[],stats:{totalDocuments:0}};
- try{
-  const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});
-  if(!res.ok)throw new Error('HTTP '+res.status);
-  const corpus=await res.json();
-  if(!corpus||!Array.isArray(corpus.documents))throw new Error('ساختار پیکره معتبر نیست');
-  shushtarDocs=corpus;
- }catch(err){console.warn('Assistant corpus unavailable:',err);}
- try{
-  const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
-  if(monumentRes.ok){
-   const monumentData=await monumentRes.json();
-   if(Array.isArray(monumentData.documents)){
-    const known=new Set(shushtarDocs.documents.map(d=>d.id));
-    shushtarDocs.documents.push(...monumentData.documents.filter(d=>!known.has(d.id)));
+ if(aiDocsPromise)return aiDocsPromise;
+ aiDocsPromise=(async()=>{
+  shushtarDocs={documents:[],stats:{totalDocuments:0}};
+  try{
+   const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});
+   if(!res.ok)throw new Error('HTTP '+res.status);
+   const corpus=await res.json();
+   if(!corpus||!Array.isArray(corpus.documents))throw new Error('ساختار پیکره معتبر نیست');
+   shushtarDocs=corpus;
+  }catch(err){console.warn('Assistant corpus unavailable:',err);}
+  try{
+   const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
+   if(monumentRes.ok){
+    const monumentData=await monumentRes.json();
+    if(Array.isArray(monumentData.documents)){
+     const known=new Set(shushtarDocs.documents.map(d=>d.id));
+     shushtarDocs.documents.push(...monumentData.documents.filter(d=>!known.has(d.id)));
+    }
    }
-  }
- }catch(err){console.warn('Monument dossiers unavailable:',err);}
- shushtarDocs.stats=shushtarDocs.stats||{};
- shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;
- if(aiStatus)aiStatus.textContent=shushtarDocs.documents.length
-  ?'دانشنامه آماده · '+shushtarDocs.documents.length.toLocaleString('fa-IR')+' سند؛ اتصال آنلاین هنگام پرسش آزمایش می‌شود'
-  :'دانشنامه محلی بارگذاری نشد؛ دستیار آنلاین همچنان قابل آزمایش است';
- return shushtarDocs;
+  }catch(err){console.warn('Monument dossiers unavailable:',err);}
+  shushtarDocs.stats=shushtarDocs.stats||{};
+  shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;
+  if(aiStatus)aiStatus.textContent=shushtarDocs.documents.length
+   ?'دانشنامه آماده · '+shushtarDocs.documents.length.toLocaleString('fa-IR')+' سند؛ اتصال آنلاین هنگام پرسش آزمایش می‌شود'
+   :'دانشنامه محلی بارگذاری نشد؛ دستیار آنلاین همچنان قابل آزمایش است';
+  return shushtarDocs;
+ })();
+ return aiDocsPromise;
 }
 
 function aiExpandTerms(q){
