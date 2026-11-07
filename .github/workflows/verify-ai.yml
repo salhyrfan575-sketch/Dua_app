@@ -1,0 +1,63 @@
+name: Verify ShoushtarJavan AI connection
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/ai-config.json'
+      - '.github/workflows/verify-ai.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-ai:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify browser CORS preflight
+        run: |
+          node --input-type=module <<'NODE'
+          const endpoint = 'https://vireonix.ai/v1/chat/completions';
+          const origin = 'https://salhyrfan575-sketch.github.io';
+          const r = await fetch(endpoint, {
+            method: 'OPTIONS',
+            headers: {
+              Origin: origin,
+              'Access-Control-Request-Method': 'POST',
+              'Access-Control-Request-Headers': 'content-type'
+            }
+          });
+          const allow = r.headers.get('access-control-allow-origin');
+          console.log('OPTIONS status:', r.status);
+          console.log('Access-Control-Allow-Origin:', allow);
+          if (!r.ok || (allow !== '*' && allow !== origin)) {
+            throw new Error('Browser CORS preflight is not allowed for the published site.');
+          }
+          NODE
+      - name: Send a real AI completion request
+        run: |
+          node --input-type=module <<'NODE'
+          const endpoint = 'https://vireonix.ai/v1/chat/completions';
+          const origin = 'https://salhyrfan575-sketch.github.io';
+          const r = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Origin: origin },
+            body: JSON.stringify({
+              model: 'auto',
+              messages: [{ role: 'user', content: 'Reply with exactly: SHUSHTARJAVAN_AI_CONNECTED' }],
+              temperature: 0,
+              max_tokens: 30,
+              stream: false
+            })
+          });
+          const raw = await r.text();
+          console.log('POST status:', r.status);
+          console.log('Access-Control-Allow-Origin:', r.headers.get('access-control-allow-origin'));
+          if (!r.ok) throw new Error('AI API returned HTTP ' + r.status + ': ' + raw.slice(0, 500));
+          const data = JSON.parse(raw);
+          const answer = data?.choices?.[0]?.message?.content?.trim();
+          if (!answer) throw new Error('AI API response has no choices[0].message.content: ' + raw.slice(0, 500));
+          console.log('AI answer:', answer);
+          if (!['*', origin].includes(r.headers.get('access-control-allow-origin'))) {
+            throw new Error('API generated an answer but does not authorize browser CORS from the website.');
+          }
+          console.log('PASS: AI API response and browser CORS are both verified.');
+          NODE
