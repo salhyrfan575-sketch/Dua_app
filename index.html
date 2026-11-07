@@ -276,14 +276,14 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 }
 
 \n/* Breaking news headline card */\n.breaking-news{min-height:100%;display:flex;align-items:center;background:linear-gradient(135deg,#fffefa 0%,#f7f0e4 100%);border-right:5px solid #a6473d}\n.breaking-news .lead-body{padding:clamp(22px,4vw,38px)}\n.breaking-news .lead-body h3{font-size:clamp(22px,3vw,30px);line-height:1.8;margin:14px 0}\n.breaking-news .lead-body p{font-size:15px;line-height:2.2;color:#46554d}\n.breaking-tag{background:#a6473d;color:#fff}\n
-/* Top headline and live-style news ticker */
-.breaking-ticker{background:#8f211f;border-bottom:3px solid #d8b56f;color:#fff}
+/* زیرنویس خبری با زمینه سفید و نوشته مشکی؛ حرکت از چپ به راست */
+.breaking-ticker{background:#fff;border-bottom:3px solid #b52b2b;color:#111}
 .breaking-ticker .ticker-inner{min-height:48px;gap:0}
-.breaking-ticker .ticker-label{align-self:stretch;display:flex;align-items:center;border-radius:0;background:#f2c66d;color:#3a2116;padding:0 17px;font-size:13px}
+.breaking-ticker .ticker-label{align-self:stretch;display:flex;align-items:center;border-radius:0;background:#b52b2b;color:#fff;padding:0 17px;font-size:13px}
 .breaking-ticker .ticker-track{direction:ltr;min-width:0}
 .breaking-ticker .ticker-marquee{display:flex;width:max-content;white-space:nowrap;animation:breakingMarquee 34s linear infinite}
-.breaking-ticker .ticker-marquee span{display:block;flex:none;padding:0 12px;font-size:14px;line-height:48px;color:#fff;font-weight:700}
-@keyframes breakingMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.breaking-ticker .ticker-marquee span{display:block;flex:none;padding:0 12px;font-size:14px;line-height:48px;color:#111;font-weight:700}
+@keyframes breakingMarquee{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .breaking-ticker:hover .ticker-marquee{animation-play-state:paused}
 .top-news-section{padding:26px 0 34px;background:linear-gradient(180deg,#f7f2e8 0%,#fffdf8 100%);border-bottom:1px solid #e7dfd0}
 .top-news-section .section-head{margin-bottom:15px}
