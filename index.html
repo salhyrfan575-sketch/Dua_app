@@ -392,7 +392,7 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
 <section class="ai-panel" id="aiPanel" role="dialog" aria-label="گفت‌وگو با هوش مصنوعی تاریخ شوشتر" aria-modal="false">
   <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">هوش مصنوعی آنلاین · دانشنامه شوشترجوان + جست‌وجوی وب</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
 
-  <div class="ai-privacy" style="padding:7px 12px;font-size:11px;line-height:1.7;color:#806b4c;background:#fff8e9;border-bottom:1px solid #eadfc9">برای تولید پاسخ، متن پرسش به سرویس هوش مصنوعی Vireonix ارسال می‌شود و طبق سیاست آن ممکن است نگهداری و برای بهبود مدل استفاده شود؛ اطلاعات شخصی یا محرمانه وارد نکنید.</div>\n  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
+  <div class="ai-privacy" style="padding:7px 12px;font-size:11px;line-height:1.7;color:#806b4c;background:#fff8e9;border-bottom:1px solid #eadfc9">پرسش، بخشی از دانشنامه مرتبط و ردّ گفت‌وگو برای تولید پاسخ به سرویس Vireonix ارسال می‌شود. طبق شرایط این سرویس، داده‌ها و گفت‌وگوها ممکن است ذخیره، تحلیل و برای آموزش و بهبود مدل استفاده شوند و مجوز استفاده گسترده‌ای به سرویس داده می‌شود. اطلاعات شخصی، محرمانه یا حساس وارد نکنید.</div>\n  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
   <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="هر سؤالی به ذهنت می‌رسد بپرس..." aria-label="پرسش شما"><button type="submit">ارسال</button></form>
 </section>
 
@@ -643,8 +643,16 @@ async function aiAnswer(q){
   return {text:answer,sources:sources.slice(0,6)};
  }catch(err){
   console.error('Online assistant error:',err);
-  const message=err.name==='AbortError'?'زمان پاسخ‌گویی سرویس تمام شد. دوباره تلاش کن.':(String(err.message||'').includes('Failed to fetch')?'ارتباط با سرویس هوش مصنوعی برقرار نشد؛ ممکن است سرویس یا دسترسی مرورگر موقتاً در دسترس نباشد.':'اتصال دستیار آنلاین با مشکل روبه‌رو شد: '+String(err.message||'خطای ناشناخته').slice(0,180));
-  return {text:message+'\n\nدر صورت تداوم مشکل، پاسخ‌گویی آفلاین فعلی در این نسخه غیرفعال نشده است؛ لطفاً بعداً دوباره امتحان کن.',sources:[]};
+  const message=err.name==='AbortError'?'زمان پاسخ‌گویی سرویس تمام شد.':(String(err.message||'').includes('Failed to fetch')?'ارتباط با سرویس هوش مصنوعی برقرار نشد.':'سرویس هوش مصنوعی موقتاً پاسخ نداد: '+String(err.message||'خطای ناشناخته').slice(0,150));
+  const local=typeof shushtarDocs!=='undefined'&&shushtarDocs?aiRetrieve(q):[];
+  if(local.length){
+   const best=local[0].doc;
+   const related=local.slice(1,4).map(x=>'• '+x.doc.title);
+   const text='پاسخ هوشمند آنلاین در دسترس نبود؛ این پاسخ از دانشنامه محلی سایت تهیه شده است.\n\n'+String(best.content||'')+(related.length?'\n\nمطالب مرتبط:\n'+related.join('\n'):'')+'\n\n'+message;
+   const sources=[...new Map(local.flatMap(x=>x.doc.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s])).values()].slice(0,5);
+   return {text,sources};
+  }
+  return {text:message+'\n\nدر حال حاضر پاسخ مستندی در دانشنامه محلی برای این پرسش پیدا نشد. کمی بعد دوباره تلاش کن.',sources:[]};
  }
 }
 
