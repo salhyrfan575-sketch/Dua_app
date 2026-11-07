@@ -562,7 +562,33 @@ function aiAddMessage(text,kind='bot',sources=[]){
  if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
  aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
 }
-async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});if(!res.ok)throw new Error('پیکره یکپارچه دستیار بارگیری نشد.');shushtarDocs=await res.json();if(!Array.isArray(shushtarDocs.documents))throw new Error('ساختار پیکره معتبر نیست.');const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});if(monumentRes.ok){const monumentData=await monumentRes.json();if(Array.isArray(monumentData.documents)){shushtarDocs.documents.push(...monumentData.documents);shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;shushtarDocs.stats.monumentDossiers=monumentData.documents.length;}}if(aiStatus&&shushtarDocs.stats)aiStatus.textContent='آماده · '+(shushtarDocs.stats.totalDocuments||shushtarDocs.documents.length).toLocaleString('fa-IR')+' مدخل از دانشنامه، سایت و واژه‌نامه';return shushtarDocs}
+async function aiLoadDocs(){
+ if(shushtarDocs)return shushtarDocs;
+ shushtarDocs={documents:[],stats:{totalDocuments:0}};
+ try{
+  const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});
+  if(!res.ok)throw new Error('HTTP '+res.status);
+  const corpus=await res.json();
+  if(!corpus||!Array.isArray(corpus.documents))throw new Error('ساختار پیکره معتبر نیست');
+  shushtarDocs=corpus;
+ }catch(err){console.warn('Assistant corpus unavailable:',err);}
+ try{
+  const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
+  if(monumentRes.ok){
+   const monumentData=await monumentRes.json();
+   if(Array.isArray(monumentData.documents)){
+    const known=new Set(shushtarDocs.documents.map(d=>d.id));
+    shushtarDocs.documents.push(...monumentData.documents.filter(d=>!known.has(d.id)));
+   }
+  }
+ }catch(err){console.warn('Monument dossiers unavailable:',err);}
+ shushtarDocs.stats=shushtarDocs.stats||{};
+ shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;
+ if(aiStatus)aiStatus.textContent=shushtarDocs.documents.length
+  ?'دانشنامه آماده · '+shushtarDocs.documents.length.toLocaleString('fa-IR')+' سند؛ اتصال آنلاین هنگام پرسش آزمایش می‌شود'
+  :'دانشنامه محلی بارگذاری نشد؛ دستیار آنلاین همچنان قابل آزمایش است';
+ return shushtarDocs;
+}
 
 function aiExpandTerms(q){
  const terms=aiTokens(q), expanded=new Set(terms), normalized=aiNorm(q);
@@ -656,14 +682,29 @@ async function aiAnswer(q){
  }
 }
 
-aiLoadDocs().catch(err=>{if(aiStatus)aiStatus.textContent='بارگذاری پیکره با مشکل روبه‌رو شد';console.error(err)});
-document.getElementById('aiForm').addEventListener('submit',async e=>{
+aiLoadDocs().catch(err=>{if(aiStatus)aiStatus.textContent='بارگذاری دانشنامه با مشکل روبه‌رو شد';console.error(err)});
+const aiForm=document.getElementById('aiForm');
+let aiRequestBusy=false;
+aiForm.addEventListener('submit',async e=>{
  e.preventDefault();
- const q=aiInput.value.trim();if(!q)return;
+ const q=aiInput.value.trim();
+ if(!q||aiRequestBusy)return;
+ aiRequestBusy=true;
+ const submit=aiForm.querySelector('button[type="submit"]');
+ if(submit){submit.disabled=true;submit.textContent='در حال پاسخ…';}
  aiAddMessage(q,'user');aiInput.value='';
- const pending=aiAddMessage('در حال جست‌وجوی دانشنامه و وب و آماده‌سازی پاسخ هوشمند…','bot');
- const answer=await aiAnswer(q);
- pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
+ const pending=aiAddMessage('در حال جست‌وجوی دانشنامه و وب و آزمایش اتصال هوش مصنوعی…','bot');
+ try{
+  const answer=await aiAnswer(q);
+  pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
+ }catch(err){
+  pending.remove();
+  aiAddMessage('در پردازش پرسش خطای پیش‌بینی‌نشده رخ داد: '+String(err.message||err),'bot');
+  console.error('Assistant submit error:',err);
+ }finally{
+  aiRequestBusy=false;
+  if(submit){submit.disabled=false;submit.textContent='ارسال';}
+ }
 });
 </script>
 </body>
