@@ -246,6 +246,35 @@ body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transpar
   .menu-layer{width:92%}
 }
 
+
+/* Keep the main navigation in the document flow: no sticky or horizontal movement */
+.nav-wrap{
+  position:relative !important;
+  top:auto !important;
+  overflow:visible !important;
+}
+.nav{
+  position:relative !important;
+  overflow:visible !important;
+  overflow-x:visible !important;
+  overflow-y:visible !important;
+  scroll-behavior:auto !important;
+  overscroll-behavior:auto !important;
+  scrollbar-width:none !important;
+  flex-wrap:nowrap;
+}
+@media(max-width:700px){
+  .nav{
+    flex-wrap:wrap;
+    overflow:visible !important;
+    white-space:normal;
+  }
+  .nav>a,.nav>.nav-menu-btn{
+    flex:0 1 auto;
+    white-space:normal;
+  }
+}
+
 </style>
 </head>
 <body>
