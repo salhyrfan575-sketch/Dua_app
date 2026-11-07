@@ -54,7 +54,7 @@
   $('wgLetterTray').replaceChildren();
   tiles.forEach((letter,i)=>{
    const b=document.createElement('button');b.type='button';b.className='wg-letter';b.textContent=letter;b.dataset.i=i;
-   b.addEventListener('click',()=>choose(i));$('wgLetterTray').appendChild(b);
+   $('wgLetterTray').appendChild(b);
   });
   drawTargets();drawPicked();updateStats();
  }
