@@ -562,7 +562,7 @@ function aiAddMessage(text,kind='bot',sources=[]){
  if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
  aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
 }
-async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});if(!res.ok)throw new Error('پیکره یکپارچه دستیار بارگیری نشد.');shushtarDocs=await res.json();if(!Array.isArray(shushtarDocs.documents))throw new Error('ساختار پیکره معتبر نیست.');if(aiStatus&&shushtarDocs.stats)aiStatus.textContent='آماده · '+(shushtarDocs.stats.totalDocuments||shushtarDocs.documents.length).toLocaleString('fa-IR')+' مدخل از دانشنامه، سایت و واژه‌نامه';return shushtarDocs}
+async function aiLoadDocs(){if(shushtarDocs)return shushtarDocs;const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});if(!res.ok)throw new Error('پیکره یکپارچه دستیار بارگیری نشد.');shushtarDocs=await res.json();if(!Array.isArray(shushtarDocs.documents))throw new Error('ساختار پیکره معتبر نیست.');const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});if(monumentRes.ok){const monumentData=await monumentRes.json();if(Array.isArray(monumentData.documents)){shushtarDocs.documents.push(...monumentData.documents);shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;shushtarDocs.stats.monumentDossiers=monumentData.documents.length;}}if(aiStatus&&shushtarDocs.stats)aiStatus.textContent='آماده · '+(shushtarDocs.stats.totalDocuments||shushtarDocs.documents.length).toLocaleString('fa-IR')+' مدخل از دانشنامه، سایت و واژه‌نامه';return shushtarDocs}
 
 function aiExpandTerms(q){
  const terms=aiTokens(q), expanded=new Set(terms), normalized=aiNorm(q);
@@ -601,6 +601,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')aiClosePanel()});
 async function aiAnswer(q){
  try{
   await aiLoadDocs();
+  await new Promise(resolve=>setTimeout(resolve,10000));
   const matches=aiRetrieve(q);
   if(!matches.length)return {text:'در اطلاعات فعلی سایت و واژه‌نامه، مدخل مرتبطی برای این پرسش پیدا نکردم. می‌توانی واژه را با املای دیگری وارد کنی یا پرسشت را دقیق‌تر بنویسی.',sources:[]};
   const best=matches[0].doc;
@@ -616,7 +617,7 @@ document.getElementById('aiForm').addEventListener('submit',async e=>{
  e.preventDefault();
  const q=aiInput.value.trim();if(!q)return;
  aiAddMessage(q,'user');aiInput.value='';
- const pending=aiAddMessage('در حال جست‌وجو در دانشنامه شوشتر…','bot');
+ const pending=aiAddMessage('در حال بررسی منابع، فهم پرسش و تطبیق با دانسته‌ها… (حدود ۱۰ ثانیه)','bot');
  const answer=await aiAnswer(q);
  pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
 });
