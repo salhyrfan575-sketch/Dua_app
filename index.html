@@ -430,6 +430,78 @@ document.getElementById('year').textContent=new Date().getFullYear();
 try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date())}catch(e){document.getElementById('today').textContent='شوشترجوان';}
 
 
+
+/* Shushtari dictionary: load, search both directions, and render safely */
+(()=>{
+ const form=document.getElementById('dictionaryForm');
+ const input=document.getElementById('dictionaryInput');
+ const result=document.getElementById('dictionaryResult');
+ const list=document.getElementById('dictionaryList');
+ const meta=document.getElementById('dictionaryMeta');
+ const badge=document.getElementById('dictionaryCountBadge');
+ if(!form||!input||!result||!list||!meta||!badge)return;
+ let entries=[];
+ const norm=value=>String(value||'').toLocaleLowerCase('fa')
+  .replace(/[\u064b-\u065f\u0670\u0640]/g,'')
+  .replace(/[يى]/g,'ی').replace(/ك/g,'ک')
+  .replace(/[ۀة]/g,'ه').replace(/[ؤ]/g,'و')
+  .replace(/[أإ]/g,'ا').replace(/[‌ـ]/g,' ')
+  .replace(/[^\p{L}\p{N}\s]/gu,' ')
+  .replace(/\s+/g,' ').trim();
+ const showResult=entry=>{
+  result.replaceChildren();
+  const add=(cls,text)=>{const el=document.createElement('div');el.className=cls;el.textContent=text;result.appendChild(el)};
+  add('d-persian','فارسی: '+entry.persian);
+  add('d-shushtari',entry.shushtari);
+  if(entry.category)add('d-note','دسته: '+entry.category);
+  if(entry.note&&norm(entry.note)!==norm(entry.persian))add('d-note','یادداشت: '+entry.note);
+  result.classList.add('show');
+ };
+ const renderList=items=>{
+  list.replaceChildren();
+  items.forEach(entry=>{
+   const button=document.createElement('button');button.type='button';button.className='dictionary-item';
+   const a=document.createElement('span'),b=document.createElement('span');
+   a.textContent=entry.persian;b.textContent=entry.shushtari;
+   button.append(a,b);button.addEventListener('click',()=>{input.value=entry.persian;showResult(entry);meta.textContent='مدخل انتخاب‌شده از واژه‌نامه';});
+   list.appendChild(button);
+  });
+ };
+ const search=()=>{
+  const q=norm(input.value);
+  if(!q){result.classList.remove('show');result.replaceChildren();renderList(entries);meta.textContent='برای جست‌وجو، یک واژه فارسی یا شوشتری وارد کن.';return;}
+  const found=entries.map(entry=>{
+   const fa=norm(entry.persian),sh=norm(entry.shushtari),note=norm(entry.note),cat=norm(entry.category);
+   let score=0;
+   if(fa===q||sh===q)score=100;
+   else if(fa.startsWith(q)||sh.startsWith(q))score=65;
+   else if(fa.includes(q)||sh.includes(q))score=45;
+   else if(note.includes(q)||cat.includes(q))score=12;
+   return {entry,score};
+  }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.entry.persian.localeCompare(b.entry.persian,'fa'));
+  if(found.length){showResult(found[0].entry);renderList(found.slice(0,40).map(x=>x.entry));meta.textContent=found.length+' نتیجه پیدا شد؛ برای دیدن هر مدخل روی آن بزن.';}
+  else{result.replaceChildren();const msg=document.createElement('div');msg.className='d-note';msg.textContent='این واژه در نسخه فعلی واژه‌نامه پیدا نشد. املای دیگری را امتحان کن.';result.appendChild(msg);result.classList.add('show');list.replaceChildren();meta.textContent='نتیجه‌ای پیدا نشد.';}
+ };
+ form.addEventListener('submit',e=>{e.preventDefault();search();});
+ input.addEventListener('input',()=>{if(!input.value.trim()){result.classList.remove('show');result.replaceChildren();renderList(entries);meta.textContent=entries.length+' مدخل در واژه‌نامه ثبت شده است.';}});
+ fetch('./data/shushtari-dictionary.json',{cache:'no-cache'})
+  .then(response=>{if(!response.ok)throw new Error('HTTP '+response.status);return response.json();})
+  .then(data=>{
+   if(!data||!Array.isArray(data.entries))throw new Error('ساختار فایل واژه‌نامه معتبر نیست');
+   entries=data.entries.filter(x=>x&&x.persian&&x.shushtari);
+   badge.textContent=entries.length.toLocaleString('fa-IR')+' واژه';
+   meta.textContent=entries.length.toLocaleString('fa-IR')+' مدخل بارگذاری شد. جست‌وجو از هر دو زبان پشتیبانی می‌شود.';
+   renderList(entries);
+   if(input.value.trim())search();
+  })
+  .catch(error=>{
+   badge.textContent='واژه‌نامه در دسترس نیست';
+   meta.textContent='بارگذاری واژه‌نامه با مشکل روبه‌رو شد. صفحه را تازه‌سازی کن.';
+   console.error('Shushtari dictionary load error:',error);
+  });
+})();
+ 
+
 /* ShushtarJavan offline knowledge assistant — retrieval and evidence-based answer composition */
 const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
 const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
