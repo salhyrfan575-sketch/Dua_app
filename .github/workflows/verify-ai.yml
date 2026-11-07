@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/ai-config.json'
       - '.github/workflows/verify-ai.yml'
+      - 'ai-proxy/**'
   workflow_dispatch:
 permissions:
   contents: read
@@ -63,3 +64,15 @@ jobs:
           console.log('AI answer:', answer);
           console.log('PASS: API itself accepts a real completion request.');
           NODE
+
+  test-proxy-code:
+    name: Validate proxy source code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check proxy JavaScript syntax
+        working-directory: ai-proxy
+        run: npm run check
