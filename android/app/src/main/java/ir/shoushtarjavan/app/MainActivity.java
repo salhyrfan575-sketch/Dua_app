@@ -2,164 +2,58 @@ package ir.shoushtarjavan.app;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.net.ConnectivityManager;
-import android.net.Network;
-import android.net.NetworkCapabilities;
+import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.View;
-import android.view.Window;
-import android.webkit.CookieManager;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.content.Intent;
 import android.net.Uri;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.view.Gravity;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.content.Context;
+import android.widget.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.io.*;
+import java.text.Normalizer;
+import java.util.*;
 
 public class MainActivity extends Activity {
-    private static final String HOME = "https://salhyrfan575-sketch.github.io/Dua_app/";
-    private WebView webView;
-    private FrameLayout root;
-    private ProgressBar progress;
-    private View offlineView;
+    private static final int GREEN=Color.rgb(18,63,53), DARK=Color.rgb(12,43,38), CREAM=Color.rgb(248,244,233), GOLD=Color.rgb(196,151,75), INK=Color.rgb(38,48,43);
+    private static final String HOME="https://salhyrfan575-sketch.github.io/Dua_app/";
+    private LinearLayout page, body;
+    private JSONArray words, articles;
+    private android.content.SharedPreferences prefs;
 
-    @Override
-    protected void onCreate(Bundle state) {
-        super.onCreate(state);
-        getWindow().setStatusBarColor(Color.rgb(16,47,42));
-        getWindow().setNavigationBarColor(Color.rgb(16,47,42));
-        root = new FrameLayout(this);
-        setContentView(root);
-
-        webView = new WebView(this);
-        root.addView(webView, new FrameLayout.LayoutParams(-1, -1));
-        progress = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
-        progress.setMax(100);
-        FrameLayout.LayoutParams pp = new FrameLayout.LayoutParams(-1, dp(3), Gravity.TOP);
-        root.addView(progress, pp);
-
-        WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(true);
-        settings.setDatabaseEnabled(true);
-        settings.setLoadsImagesAutomatically(true);
-        settings.setSupportZoom(false);
-        settings.setBuiltInZoomControls(false);
-        settings.setDisplayZoomControls(false);
-        settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
-        settings.setAllowFileAccess(false);
-        settings.setAllowContentAccess(false);
-        settings.setJavaScriptCanOpenWindowsAutomatically(false);
-        settings.setSafeBrowsingEnabled(true);
-        CookieManager.getInstance().setAcceptCookie(true);
-        CookieManager.getInstance().setAcceptThirdPartyCookies(webView, false);
-
-        webView.setBackgroundColor(Color.rgb(245,240,229));
-        webView.setWebChromeClient(new WebChromeClient() {
-            @Override public void onProgressChanged(WebView view, int value) {
-                progress.setProgress(value);
-                progress.setVisibility(value >= 100 ? View.GONE : View.VISIBLE);
-            }
-        });
-        webView.setWebViewClient(new WebViewClient() {
-            @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                Uri uri = request.getUrl();
-                String host = uri.getHost() == null ? "" : uri.getHost();
-                if (host.equals("salhyrfan575-sketch.github.io")) return false;
-                if (uri.getScheme().equals("https") || uri.getScheme().equals("http")) {
-                    try { startActivity(new Intent(Intent.ACTION_VIEW, uri)); } catch (Exception ignored) {}
-                    return true;
-                }
-                return true;
-            }
-            @Override public void onPageFinished(WebView view, String url) {
-                progress.setVisibility(View.GONE);
-                hideOffline();
-            }
-            @Override public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-                if (request.isForMainFrame() && !isOnline()) showOffline();
-            }
-        });
-
-        if (state == null) webView.loadUrl(HOME);
-        else webView.restoreState(state);
-    }
-
-    private boolean isOnline() {
-        try {
-            ConnectivityManager cm = (ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);
-            Network n = cm.getActiveNetwork();
-            NetworkCapabilities c = cm.getNetworkCapabilities(n);
-            return c != null && c.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
-        } catch (Exception e) { return true; }
-    }
-
-    private void showOffline() {
-        if (offlineView != null) return;
-        LinearLayout box = new LinearLayout(this);
-        box.setOrientation(LinearLayout.VERTICAL);
-        box.setGravity(Gravity.CENTER);
-        box.setPadding(dp(28), dp(28), dp(28), dp(28));
-        box.setBackgroundColor(Color.rgb(245,240,229));
-        TextView title = new TextView(this);
-        title.setText("اتصال اینترنت برقرار نیست");
-        title.setTextColor(Color.rgb(23,72,62));
-        title.setTextSize(22);
-        title.setGravity(Gravity.CENTER);
-        TextView detail = new TextView(this);
-        detail.setText("برای مشاهده خبرها و امکانات شوشترجوان، اینترنت را وصل کنید و دوباره تلاش کنید.");
-        detail.setTextColor(Color.rgb(60,70,64));
-        detail.setTextSize(15);
-        detail.setGravity(Gravity.CENTER);
-        detail.setPadding(0, dp(12), 0, dp(18));
-        Button retry = new Button(this);
-        retry.setText("تلاش دوباره");
-        retry.setOnClickListener(v -> {
-            hideOffline();
-            webView.loadUrl(HOME);
-        });
-        box.addView(title);
-        box.addView(detail);
-        box.addView(retry);
-        offlineView = box;
-        root.addView(offlineView, new FrameLayout.LayoutParams(-1,-1));
-    }
-
-    private void hideOffline() {
-        if (offlineView != null) {
-            root.removeView(offlineView);
-            offlineView = null;
-        }
-    }
-
-    private int dp(int value) {
-        return (int)(value * getResources().getDisplayMetrics().density + 0.5f);
-    }
-
-    @Override protected void onSaveInstanceState(Bundle out) {
-        if (webView != null) webView.saveState(out);
-        super.onSaveInstanceState(out);
-    }
-
-    @Override public void onBackPressed() {
-        if (webView != null && webView.canGoBack()) webView.goBack();
-        else super.onBackPressed();
-    }
-
-    @Override protected void onDestroy() {
-        if (webView != null) {
-            webView.stopLoading();
-            webView.setWebViewClient(null);
-            webView.destroy();
-        }
-        super.onDestroy();
-    }
+    @Override public void onCreate(Bundle state){super.onCreate(state);getWindow().setStatusBarColor(DARK);getWindow().setNavigationBarColor(DARK);prefs=getSharedPreferences("shoushtarjavan",MODE_PRIVATE);loadData();home();}
+    private void loadData(){try{words=new JSONObject(readAsset("shushtari-dictionary.json")).getJSONArray("entries");articles=new JSONObject(readAsset("shushtar-knowledge.json")).getJSONArray("documents");}catch(Exception e){words=new JSONArray();articles=new JSONArray();}}
+    private String readAsset(String name)throws Exception{InputStream in=getAssets().open(name);ByteArrayOutputStream out=new ByteArrayOutputStream();byte[] b=new byte[8192];int n;while((n=in.read(b))>0)out.write(b,0,n);in.close();return out.toString("UTF-8");}
+    private String norm(String s){String x=Normalizer.normalize(s==null?"":s,Normalizer.Form.NFD).replaceAll("[\\u0640\\u064B-\\u065F\\u0670]","").replace('ي','ی').replace('ى','ی').replace('ك','ک').replace('ۀ','ه').replace('ة','ه').replace('‌',' ');return x.toLowerCase(Locale.ROOT).replaceAll("[^\\p{L}\\p{N} ]"," ").replaceAll("\\s+"," ").trim();}
+    private GradientDrawable bg(int color,int radius,int stroke){GradientDrawable d=new GradientDrawable();d.setColor(color);d.setCornerRadius(dp(radius));if(stroke!=0)d.setStroke(dp(1),stroke);return d;}
+    private int dp(int v){return (int)(v*getResources().getDisplayMetrics().density+.5f);}
+    private TextView text(String s,int size,int color,boolean bold){TextView t=new TextView(this);t.setText(s);t.setTextSize(size);t.setTextColor(color);t.setGravity(Gravity.RIGHT);t.setTextDirection(View.TEXT_DIRECTION_RTL);if(bold)t.setTypeface(Typeface.DEFAULT,Typeface.BOLD);t.setLineSpacing(dp(3),1f);return t;}
+    private LinearLayout vertical(){LinearLayout l=new LinearLayout(this);l.setOrientation(LinearLayout.VERTICAL);return l;}
+    private LinearLayout horizontal(){LinearLayout l=new LinearLayout(this);l.setOrientation(LinearLayout.HORIZONTAL);l.setGravity(Gravity.CENTER_VERTICAL);return l;}
+    private void base(String title,String subtitle){page=vertical();page.setBackgroundColor(CREAM);ScrollView scroll=new ScrollView(this);body=vertical();body.setPadding(dp(18),dp(18),dp(18),dp(26));scroll.addView(body);page.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));TextView brand=text("شوشترجوان  •  "+title,22,Color.WHITE,true);brand.setPadding(dp(18),dp(20),dp(18),dp(6));brand.setBackgroundColor(GREEN);brand.setGravity(Gravity.RIGHT);page.addView(brand);TextView sub=text(subtitle,12,Color.rgb(223,215,192),false);sub.setPadding(dp(18),0,dp(18),dp(16));sub.setBackgroundColor(GREEN);page.addView(sub);setContentView(page);}
+    private void card(String title,String detail,String icon,Runnable action){LinearLayout c=vertical();c.setPadding(dp(16),dp(14),dp(16),dp(14));c.setBackground(bg(Color.WHITE,17,Color.rgb(231,224,207)));LinearLayout.LayoutParams cp=new LinearLayout.LayoutParams(-1,-2);cp.bottomMargin=dp(11);body.addView(c,cp);TextView h=text(icon+"   "+title,18,GREEN,true);c.addView(h);TextView d=text(detail,13,INK,false);d.setPadding(0,dp(7),0,0);c.addView(d);c.setOnClickListener(v->action.run());c.setClickable(true);}
+    private void heading(String s){TextView h=text(s,17,GREEN,true);h.setPadding(0,dp(8),0,dp(12));body.addView(h);}
+    private void home(){base("خانه","رسانه و دانشنامه محلی شوشتر • بخشی از امکانات بدون اینترنت هم کار می‌کند");LinearLayout hero=vertical();hero.setPadding(dp(18),dp(20),dp(18),dp(20));hero.setBackground(bg(DARK,20,0));body.addView(hero);TextView h=text("شهرِ ما، روایتِ ما",25,Color.WHITE,true);hero.addView(h);TextView p=text("دانش، واژه‌ها و خاطره‌های شوشتر را همیشه همراه داشته باش.",14,Color.rgb(235,226,205),false);p.setPadding(0,dp(7),0,0);hero.addView(p);heading("دانشنامه آفلاین");card("واژه‌شناس شوشتری","جست‌وجوی ۵۴۷ واژه محلی؛ بدون نیاز به اینترنت","آ",()->dictionary());card("تاریخ شوشتر","جست‌وجو در "+articles.length()+" مدخل تاریخی و فرهنگی ذخیره‌شده","⌂",()->history());card("راهنمای هوشمند برنامه","پرسش و پاسخ درباره امکانات و روش استفاده؛ کاملاً آفلاین","؟",()->guide());heading("امکانات بیشتر");card("واژه روز","نمایش یک واژه شوشتری و معنی آن","✦",()->dailyWord());card("یک روایت تصادفی","هر بار یک مدخل از تاریخ و فرهنگ شوشتر","◈",()->randomArticle());card("وب‌سایت شوشترجوان","خبرها و مطالب تازه؛ با ظاهر و منوی جداگانه در برنامه","↗",()->website());card("اشتراک‌گذاری برنامه","معرفی شوشترجوان برای دوستان","➤",()->share("شوشترجوان؛ رسانه و دانشنامه محلی شوشتر\n"+HOME));TextView foot=text("نسخه آفلاین • داده‌ها در حافظه برنامه ذخیره شده‌اند",11,Color.GRAY,false);foot.setGravity(Gravity.CENTER);foot.setPadding(0,dp(12),0,0);body.addView(foot);}
+    private EditText searchBox(String hint){EditText e=new EditText(this);e.setSingleLine(true);e.setTextSize(16);e.setTextColor(INK);e.setHint(hint);e.setPadding(dp(14),dp(11),dp(14),dp(11));e.setBackground(bg(Color.WHITE,14,Color.rgb(221,213,194)));body.addView(e,new LinearLayout.LayoutParams(-1,-2));return e;}
+    private void dictionary(){base("واژه‌شناس آفلاین","جست‌وجو در واژه‌نامه ذخیره‌شده؛ اینترنت لازم نیست");TextView count=text("۵۴۷ مدخل واژگانی آماده جست‌وجو",13,GREEN,true);body.addView(count);EditText input=searchBox("فارسی یا واژه شوشتری را بنویس…");LinearLayout results=vertical();body.addView(results);input.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int st,int c,int a){}public void onTextChanged(CharSequence s,int st,int before,int count){showWords(results,s.toString());}public void afterTextChanged(android.text.Editable e){}});showWords(results,"");}
+    private void showWords(LinearLayout target,String query){target.removeAllViews();String q=norm(query);int shown=0;for(int i=0;i<words.length()&&shown<70;i++){JSONObject w=words.optJSONObject(i);if(w==null)continue;String fa=w.optString("persian"),sh=w.optString("shushtari"),note=w.optString("note"),cat=w.optString("category");if(q.isEmpty()||norm(fa).contains(q)||norm(sh).contains(q)||norm(note).contains(q)){entryCard(target,sh,fa+"  •  "+cat+(note.isEmpty()?"":"\n"+note),()->bookmark(sh+" — "+fa));shown++;}}if(shown==0)empty(target,"واژه‌ای پیدا نشد. املای دیگری را امتحان کن.");}
+    private void entryCard(LinearLayout target,String title,String detail,Runnable action){LinearLayout c=vertical();c.setPadding(dp(14),dp(12),dp(14),dp(12));c.setBackground(bg(Color.WHITE,14,Color.rgb(231,224,207)));LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.bottomMargin=dp(8);target.addView(c,p);c.addView(text(title,18,GREEN,true));TextView d=text(detail,13,INK,false);d.setPadding(0,dp(5),0,0);c.addView(d);c.setOnClickListener(v->action.run());}
+    private void bookmark(String value){String old=prefs.getString("saved","");JSONArray a;try{a=new JSONArray(old);}catch(Exception e){a=new JSONArray();}for(int i=0;i<a.length();i++)if(value.equals(a.optString(i))){Toast.makeText(this,"قبلاً ذخیره شده است",Toast.LENGTH_SHORT).show();return;}a.put(value);prefs.edit().putString("saved",a.toString()).apply();Toast.makeText(this,"به نشان‌شده‌ها اضافه شد",Toast.LENGTH_SHORT).show();}
+    private void history(){base("تاریخ شوشتر","دانشنامه آفلاین • "+articles.length()+" مدخل؛ جست‌وجو بر اساس عنوان، موضوع و متن");EditText input=searchBox("مثلاً سلاسل، میان‌آب، احرام‌بافی…");LinearLayout results=vertical();body.addView(results);input.addTextChangedListener(new android.text.TextWatcher(){public void beforeTextChanged(CharSequence s,int st,int c,int a){}public void onTextChanged(CharSequence s,int st,int b,int c){showArticles(results,s.toString());}public void afterTextChanged(android.text.Editable e){}});showArticles(results,"");}
+    private void showArticles(LinearLayout target,String query){target.removeAllViews();String q=norm(query);int n=0;for(int i=0;i<articles.length()&&n<60;i++){JSONObject a=articles.optJSONObject(i);if(a==null)continue;String title=a.optString("title"),content=a.optString("content"),cat=a.optString("category"),keys=a.optJSONArray("keywords")==null?"":a.optJSONArray("keywords").toString();if(q.isEmpty()||norm(title+" "+cat+" "+keys+" "+content).contains(q)){entryCard(target,title,cat+"\n"+content,()->{bookmark(title);share(title+"\n"+content);});n++;}}if(n==0)empty(target,"مدخل مرتبطی پیدا نشد.");}
+    private void guide(){base("راهنمای هوشمند","دستیار راهنمایی آفلاین؛ پاسخ‌ها از راهنمای داخلی برنامه هستند");TextView intro=text("سؤالت را بنویس؛ یا یکی از موضوع‌های آماده را انتخاب کن.",14,INK,false);body.addView(intro);EditText input=searchBox("مثلاً چطور واژه‌ای را ذخیره کنم؟");Button ask=button("پاسخ بده");body.addView(ask);TextView answer=text("راهنما آماده است.",15,GREEN,false);answer.setPadding(dp(14),dp(15),dp(14),dp(15));answer.setBackground(bg(Color.WHITE,14,0));body.addView(answer);ask.setOnClickListener(v->answer.setText(help(input.getText().toString())));String[] qs={"برنامه بدون اینترنت چه بخش‌هایی دارد؟","چطور واژه شوشتری پیدا کنم؟","چطور یک مدخل تاریخی را ذخیره کنم؟","چطور خبرهای جدید را ببینم؟","چطور مطلبی را برای دیگران بفرستم؟","چرا بعضی اطلاعات تاریخی نیازمند بررسی‌اند؟"};for(String q:qs){Button b=button(q);body.addView(b);b.setOnClickListener(v->{input.setText(q);answer.setText(help(q));});}}
+    private String help(String q){String s=norm(q);if(s.contains("اینترنت")||s.contains("افلاین")||s.contains("آفلاین"))return "واژه‌شناس، دانشنامه تاریخ شوشتر، واژه روز، روایت تصادفی و این راهنما در خود برنامه ذخیره شده‌اند و بدون اینترنت کار می‌کنند. برای خبرهای تازه و بخش وب‌سایت اتصال اینترنت لازم است.";if(s.contains("واژه")||s.contains("لغت")||s.contains("جستجو"))return "از صفحه اصلی «واژه‌شناس شوشتری» را باز کن. می‌توانی معنی فارسی یا صورت شوشتری واژه را در کادر جست‌وجو وارد کنی. روی نتیجه بزن تا آن را به نشان‌شده‌ها اضافه کنی.";if(s.contains("تاریخ")||s.contains("مدخل")||s.contains("مطلب"))return "بخش «تاریخ شوشتر» را باز کن و عنوان، موضوع یا کلمه‌ای از متن را جست‌وجو کن. با لمس مدخل، آن را ذخیره می‌کنی و متنش برای اشتراک‌گذاری آماده می‌شود.";if(s.contains("خبر")||s.contains("سایت")||s.contains("وب"))return "از صفحه اصلی گزینه «وب‌سایت شوشترجوان» را بزن. صفحه وب با طراحی و منوی خودش درون برنامه باز می‌شود و برای دریافت خبرهای تازه به اینترنت نیاز دارد.";if(s.contains("ذخیره")||s.contains("نشان"))return "در واژه‌شناس روی نتیجه یا در دانشنامه روی مدخل بزن؛ برنامه آن را در حافظه داخلی ذخیره می‌کند. اطلاعات ذخیره‌شده با بستن برنامه پاک نمی‌شود.";if(s.contains("ارسال")||s.contains("اشتراک")||s.contains("فرست"))return "در صفحه اصلی گزینه اشتراک‌گذاری برنامه را انتخاب کن. در دانشنامه هم با لمس مدخل، متن آن برای ارسال یا کپی در برنامه‌های دیگر باز می‌شود.";if(s.contains("اطمینان")||s.contains("منبع")||s.contains("روایت"))return "تاریخ محلی گاهی با روایت‌های شفاهی و منابع مکتوب متفاوت روبه‌روست. مدخل‌هایی که نیازمند بررسی‌اند با درجه اطمینان یا یادداشت پژوهشی مشخص شده‌اند؛ روایت شفاهی را نباید بدون سند، واقعیت قطعی دانست.";return "برای استفاده از برنامه، از صفحه اصلی یکی از بخش‌های واژه‌شناس، تاریخ شوشتر، راهنما یا وب‌سایت را انتخاب کن. بخش‌های دانشنامه و واژه‌نامه آفلاین‌اند؛ محتوای خبری سایت به اینترنت نیاز دارد. اگر پرسش دقیق‌تری بنویسی، راهنمای مرتبط‌تری نمایش داده می‌شود.";}
+    private Button button(String label){Button b=new Button(this);b.setText(label);b.setTextSize(13);b.setTextColor(GREEN);b.setAllCaps(false);b.setBackground(bg(Color.WHITE,13,Color.rgb(226,217,196)));LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.topMargin=dp(7);b.setLayoutParams(p);return b;}
+    private void dailyWord(){if(words.length()==0)return;int day=Calendar.getInstance().get(Calendar.DAY_OF_YEAR);JSONObject w=words.optJSONObject(day%words.length());if(w==null)return;new android.app.AlertDialog.Builder(this).setTitle("واژه امروز • "+w.optString("shushtari")).setMessage(w.optString("persian")+"\n"+w.optString("note")).setPositiveButton("ذخیره", (d,x)->bookmark(w.optString("shushtari")+" — "+w.optString("persian"))).setNegativeButton("بستن",null).show();}
+    private void randomArticle(){if(articles.length()==0)return;JSONObject a=articles.optJSONObject(new Random().nextInt(articles.length()));if(a!=null)new android.app.AlertDialog.Builder(this).setTitle(a.optString("title")).setMessage(a.optString("content")).setPositiveButton("ذخیره", (d,x)->bookmark(a.optString("title"))).setNeutralButton("اشتراک", (d,x)->share(a.optString("title")+"\n"+a.optString("content"))).setNegativeButton("بستن",null).show();}
+    private void website(){base("وب‌سایت","خبرها و تولیدات تازه شوشترجوان");WebView w=new WebView(this);w.getSettings().setJavaScriptEnabled(true);w.getSettings().setDomStorageEnabled(true);w.setWebViewClient(new WebViewClient());body.addView(w,new LinearLayout.LayoutParams(-1,dp(600)));w.loadUrl(HOME);}
+    private void empty(LinearLayout target,String msg){TextView t=text(msg,14,Color.GRAY,false);t.setPadding(dp(12),dp(20),dp(12),dp(20));target.addView(t);}
+    private void share(String s){Intent i=new Intent(Intent.ACTION_SEND);i.setType("text/plain");i.putExtra(Intent.EXTRA_TEXT,s);startActivity(Intent.createChooser(i,"اشتراک‌گذاری"));}
+    @Override public void onBackPressed(){home();}
 }

@@ -1,0 +1,4974 @@
+{
+  "version": "2.4.0",
+  "updated": "2026-11-07",
+  "count": 547,
+  "description": "واژه‌نامه در حال گسترش فارسی به شوشتری؛ صورت‌های ثبت‌شده، اصطلاحات و داده‌های دستوری با ذکر مأخذ و یادداشت اطمینان از هم تفکیک می‌شوند. برخی مدخل‌ها نیازمند تأیید گویشور بومی‌اند.",
+  "sources": [
+    {
+      "title": "گویش شوشتری، بخش واژگان و دستور",
+      "url": "https://wikipedia.org/wiki/گویش_شوشتری"
+    },
+    {
+      "title": "واژه‌نامه‌ای از گویش شوشتری، محمدباقر نیرومند",
+      "url": "https://parsianjoman.org/10612/گویش-شوشتری/"
+    },
+    {
+      "title": "فارسی شوشتری، عبدالله وزیری",
+      "url": "https://www.ketabnak.com/book/113474/فارسی-شوشتری"
+    },
+    {
+      "title": "آموزش زبان شوشتری خوزستانی به روش ساده؛ واژگان، دستور و اصطلاح",
+      "url": "https://mehrparsi.ir/learn-shoushtary/"
+    },
+    {
+      "title": "کانال شوشتریها؛ واژگان ارسالی و سروده واژگانی محمدباقر نیرومند",
+      "url": "https://t.me/s/shoushtarihaa?before=7028&q=%23%DA%A9%D9%84%D9%85%D8%A7%D8%AA"
+    },
+    {
+      "title": "بازنشر سروده واژگانی محمدباقر نیرومند",
+      "url": "https://hidalo.blogfa.com/post/90"
+    },
+    {
+      "title": "لغت محلی شوشتر؛ مؤلف ناشناخته، تصحیح و تحقیق مهدی کدخدای طراحی، انتشارات دکتر محمود افشار، ۱۴۰۱",
+      "url": "https://t.me/s/afsharfoundation?after=2623"
+    },
+    {
+      "title": "ویراست تازه واژه‌نامه محمدباقر نیرومند؛ گزارش رونمایی و معرفی بیش از ۵۰۰۰ سرواژه، امرداد، ۱۵ دی ۱۴۰۴",
+      "url": "https://amordadnews.com/292896/"
+    },
+    {
+      "title": "واژه‌نامه آزاد واژه‌یاب؛ مدخل‌های دده و فهرست واژگان محلی خویشاوندی، جانوران و ظروف",
+      "url": "https://vajehyab.com/?d=wiki&f=t&q=%D8%AE%D9%88%D8%A7%D9%87%D8%B1+%D8%A8%D8%B2%D8%B1%DA%AF&s=text"
+    },
+    {
+      "title": "لغت‌نامه دهخدا، مدخل‌های شوشتری و ششتری (واژه‌یاب)",
+      "url": "https://vajehyab.com/dehkhoda/شوشتری-3"
+    },
+    {
+      "title": "شهرداری شوشتر؛ ثبت ملی احرام‌بافی، ۱۳ دی ۱۴۰۰",
+      "url": "https://shoushtar.ir/2022/01/03/کهن-شهر-شوشتر-در-حوزه-صنایع-دستی-به-عنوان/"
+    },
+    {
+      "title": "ماهیت دیبای شوشتر از منظر منابع مکتوب؛ خاستگاه، مراکز تولید، نقش و کاربرد",
+      "url": "https://elmnet.ir/doc/1170921-24821"
+    },
+    {
+      "title": "صنایع دستی و پارچه‌بافی شوشتر؛ معرفی دیبا و پرند شوشتری",
+      "url": "https://str-shoshtar.blogfa.com/1394/09"
+    }
+  ],
+  "entries": [
+    {
+      "id": 1,
+      "persian": "امسال",
+      "shushtari": "اَمسال (amsâl)",
+      "category": "قید زمان",
+      "note": "امسال"
+    },
+    {
+      "id": 2,
+      "persian": "بادرنجبویه",
+      "shushtari": "بادِرِنگون (bâderengun)",
+      "category": "گیاه",
+      "note": "بادرنجبویه"
+    },
+    {
+      "id": 3,
+      "persian": "دستهٔ گندم دروشده",
+      "shushtari": "بافا (bâfa)",
+      "category": "کشاورزی",
+      "note": "دستهٔ گندم دروشده با ساقه"
+    },
+    {
+      "id": 4,
+      "persian": "خیار سبز",
+      "shushtari": "بالِنگ (bâleng)",
+      "category": "خوراک",
+      "note": "خیار سبز"
+    },
+    {
+      "id": 5,
+      "persian": "سنجاقک",
+      "shushtari": "بالونَک (bâlunak)",
+      "category": "جانور",
+      "note": "سنجاقک"
+    },
+    {
+      "id": 6,
+      "persian": "مرغ یا خروس بسیار جوان",
+      "shushtari": "بارنا (bârna)",
+      "category": "جانور",
+      "note": "مرغ یا خروس بسیار جوان"
+    },
+    {
+      "id": 7,
+      "persian": "خم کوچک ترشی",
+      "shushtari": "بَستوک (bastuk)",
+      "category": "خانه و ابزار",
+      "note": "خم کوچک نگهداری ترشی"
+    },
+    {
+      "id": 8,
+      "persian": "بدتر",
+      "shushtari": "بَتَر (batar)",
+      "category": "صفت",
+      "note": "بدتر"
+    },
+    {
+      "id": 9,
+      "persian": "مرغابی",
+      "shushtari": "بَت اووی (bat o:vi)",
+      "category": "جانور",
+      "note": "مرغابی"
+    },
+    {
+      "id": 10,
+      "persian": "سیاه‌بخت",
+      "shushtari": "بَخ‌حُرّاق (bax-ḥorrâq)",
+      "category": "اصطلاح",
+      "note": "سیاه‌بخت"
+    },
+    {
+      "id": 11,
+      "persian": "سیاه‌بخت",
+      "shushtari": "بَخ‌زغال (bax-zoγâl)",
+      "category": "اصطلاح",
+      "note": "سیاه‌بخت"
+    },
+    {
+      "id": 12,
+      "persian": "ساحل رود",
+      "shushtari": "بِندار (bendâr)",
+      "category": "جغرافیا",
+      "note": "ساحل رود"
+    },
+    {
+      "id": 13,
+      "persian": "اتاق نشیمن",
+      "shushtari": "بِنِشین (benešin)",
+      "category": "خانه",
+      "note": "اتاق نشیمن"
+    },
+    {
+      "id": 14,
+      "persian": "گنجشک",
+      "shushtari": "بِنگِشت (bengešt)",
+      "category": "جانور",
+      "note": "گنجشک"
+    },
+    {
+      "id": 15,
+      "persian": "رنگ بنفش",
+      "shushtari": "بِنووش (beno:š)",
+      "category": "رنگ",
+      "note": "رنگ بنفش"
+    },
+    {
+      "id": 16,
+      "persian": "برابر، روبه‌رو",
+      "shushtari": "بِرابر (berâbar)",
+      "category": "صفت و قید",
+      "note": "برابر، مقابل و روبه‌رو"
+    },
+    {
+      "id": 17,
+      "persian": "چمباتمه‌زده",
+      "shushtari": "چُمبا (čomba)",
+      "category": "حالت و حرکت",
+      "note": "به حالت چمباتمه‌زده"
+    },
+    {
+      "id": 18,
+      "persian": "چوب نیم‌سوز",
+      "shushtari": "چُموت (čomot)",
+      "category": "ابزار",
+      "note": "چوب نیم‌سوز"
+    },
+    {
+      "id": 19,
+      "persian": "چغندر",
+      "shushtari": "چُندُر (čondor)",
+      "category": "خوراک",
+      "note": "چغندر"
+    },
+    {
+      "id": 20,
+      "persian": "پیرزن",
+      "shushtari": "دالو (dâlu)",
+      "category": "مردم",
+      "note": "پیرزن"
+    },
+    {
+      "id": 21,
+      "persian": "ویران، خراب",
+      "shushtari": "دَمبَر (dambar)",
+      "category": "صفت",
+      "note": "برای شهر و خانه و ناحیهٔ ویران"
+    },
+    {
+      "id": 22,
+      "persian": "دَمَر",
+      "shushtari": "دَمبَری (dambari)",
+      "category": "حالت",
+      "note": "دَمَر"
+    },
+    {
+      "id": 23,
+      "persian": "دویدن",
+      "shushtari": "دَوِسّان (davessan)",
+      "category": "فعل",
+      "note": "دویدن"
+    },
+    {
+      "id": 24,
+      "persian": "پُر، لبریز",
+      "shushtari": "دِچ (deč)",
+      "category": "صفت",
+      "note": "پر و لبریز"
+    },
+    {
+      "id": 25,
+      "persian": "پُر کردن",
+      "shushtari": "دِچ کردن (deč kordan)",
+      "category": "فعل",
+      "note": "پر کردن"
+    },
+    {
+      "id": 26,
+      "persian": "از سرمای شدید لرزیدن",
+      "shushtari": "دِک زدن (dek zadan)",
+      "category": "فعل",
+      "note": "از سرمای شدید لرزیدن"
+    },
+    {
+      "id": 27,
+      "persian": "هوای گرمِ بی‌باد و ایستاده",
+      "shushtari": "دِپ (dep)",
+      "category": "هوا و طبیعت",
+      "note": "وصف هوای گرم ایستاده"
+    },
+    {
+      "id": 28,
+      "persian": "چرب و نوچ‌شده",
+      "shushtari": "دِقِن (deqen)",
+      "category": "صفت",
+      "note": "وصف چیزی که چرب و نوچ شده"
+    },
+    {
+      "id": 29,
+      "persian": "بشکهٔ فلزی",
+      "shushtari": "دِرام (derâm)",
+      "category": "ابزار",
+      "note": "بشکهٔ فلزی"
+    },
+    {
+      "id": 30,
+      "persian": "پاره‌شده",
+      "shushtari": "دِردَه (derda)",
+      "category": "صفت",
+      "note": "پاره‌شده"
+    },
+    {
+      "id": 31,
+      "persian": "درآوردن، بیرون آوردن",
+      "shushtari": "دَروُردَن (dervordan)",
+      "category": "فعل",
+      "note": "درآوردن و بیرون آوردن"
+    },
+    {
+      "id": 32,
+      "persian": "غده",
+      "shushtari": "دِشبول (dešbol)",
+      "category": "بدن",
+      "note": "غده"
+    },
+    {
+      "id": 33,
+      "persian": "دشمن",
+      "shushtari": "دِشمِن (dešmen)",
+      "category": "مردم",
+      "note": "دشمن"
+    },
+    {
+      "id": 34,
+      "persian": "دشنام، ناسزا",
+      "shushtari": "دِشمون (dešmun)",
+      "category": "گفتار",
+      "note": "دشنام و ناسزا"
+    },
+    {
+      "id": 35,
+      "persian": "شکستن، شکسته‌شدن",
+      "shushtari": "اِشکاسان (eška:san)",
+      "category": "فعل",
+      "note": "شکستن یا شکسته‌شدن"
+    },
+    {
+      "id": 36,
+      "persian": "شکسته",
+      "shushtari": "اِشکِنادَه (eškenâda)",
+      "category": "صفت",
+      "note": "شکسته"
+    },
+    {
+      "id": 37,
+      "persian": "شکاندن",
+      "shushtari": "اِشکِنادَن (eškenâdan)",
+      "category": "فعل",
+      "note": "شکاندن"
+    },
+    {
+      "id": 38,
+      "persian": "شناختن",
+      "shushtari": "اِشناختن (ešnâxtan)",
+      "category": "فعل",
+      "note": "شناختن"
+    },
+    {
+      "id": 39,
+      "persian": "بازی زو (کبدی)",
+      "shushtari": "اِشتی‌تی (eštiti)",
+      "category": "بازی",
+      "note": "بازی زو یا کبدی"
+    },
+    {
+      "id": 40,
+      "persian": "این‌قدر، این مقدار",
+      "shushtari": "اِغزا (eγza)",
+      "category": "قید مقدار",
+      "note": "این‌قدر و این مقدار"
+    },
+    {
+      "id": 41,
+      "persian": "این‌قدر، این مقدار",
+      "shushtari": "اِغزار (eγzar)",
+      "category": "قید مقدار",
+      "note": "این‌قدر و این مقدار"
+    },
+    {
+      "id": 42,
+      "persian": "این مقدار اندک",
+      "shushtari": "اِغزلوک (eγzeluk)",
+      "category": "قید مقدار",
+      "note": "این مقدار اندک"
+    },
+    {
+      "id": 43,
+      "persian": "ترس بسیار شدید",
+      "shushtari": "اِحراز (eḥrâz)",
+      "category": "احساس",
+      "note": "ترس بسیار شدید"
+    },
+    {
+      "id": 44,
+      "persian": "لاک‌پشت",
+      "shushtari": "گالا‌پُشت (gâla-pošt)",
+      "category": "جانور",
+      "note": "لاک‌پشت"
+    },
+    {
+      "id": 45,
+      "persian": "چراگاه گاوان",
+      "shushtari": "گامال (gâmâl)",
+      "category": "دامداری",
+      "note": "چراگاه گاوان"
+    },
+    {
+      "id": 46,
+      "persian": "گاومیش",
+      "shushtari": "گامیش (gâmiš)",
+      "category": "جانور",
+      "note": "گاومیش"
+    },
+    {
+      "id": 47,
+      "persian": "بز کوهی",
+      "shushtari": "گامور (gâmur)",
+      "category": "جانور",
+      "note": "بز کوهی"
+    },
+    {
+      "id": 48,
+      "persian": "گاوبان",
+      "shushtari": "گاپون (gâpun)",
+      "category": "شغل",
+      "note": "نگهدارندهٔ گاوها در چرا"
+    },
+    {
+      "id": 49,
+      "persian": "عقرب زردرنگ",
+      "shushtari": "گاردیم (gârdim)",
+      "category": "جانور",
+      "note": "عقرب زردرنگ"
+    },
+    {
+      "id": 50,
+      "persian": "آروغ",
+      "shushtari": "گارِشت (gârešt)",
+      "category": "بدن",
+      "note": "آروغ"
+    },
+    {
+      "id": 51,
+      "persian": "دم‌جنبانک",
+      "shushtari": "گازِرَک (gâzerak)",
+      "category": "جانور",
+      "note": "دم‌جنبانک"
+    },
+    {
+      "id": 52,
+      "persian": "تراشهٔ چوب",
+      "shushtari": "پِلیش (peliš)",
+      "category": "ابزار",
+      "note": "تراشهٔ چوب"
+    },
+    {
+      "id": 53,
+      "persian": "کورمال‌کورمال",
+      "shushtari": "پِلماپِلما (pelmâ-pelmâ)",
+      "category": "قید حالت",
+      "note": "کورمال‌کورمال"
+    },
+    {
+      "id": 54,
+      "persian": "تفالهٔ چای",
+      "shushtari": "پِلت (pelt)",
+      "category": "خوراک",
+      "note": "تفالهٔ چای"
+    },
+    {
+      "id": 55,
+      "persian": "کجاست؟",
+      "shushtari": "کُنی؟ (koni)",
+      "category": "پرسشی",
+      "note": "ادات پرسش به معنی کجاست"
+    },
+    {
+      "id": 56,
+      "persian": "کنجد",
+      "shushtari": "کُنجی (konǰi)",
+      "category": "خوراک",
+      "note": "کنجد"
+    },
+    {
+      "id": 57,
+      "persian": "کردن",
+      "shushtari": "کُردَن (kordan)",
+      "category": "فعل",
+      "note": "کردن"
+    },
+    {
+      "id": 58,
+      "persian": "من",
+      "shushtari": "مو (mo)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی اول‌شخص مفرد"
+    },
+    {
+      "id": 59,
+      "persian": "تو",
+      "shushtari": "تو (to)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی دوم‌شخص مفرد"
+    },
+    {
+      "id": 60,
+      "persian": "او",
+      "shushtari": "او (u)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی سوم‌شخص مفرد"
+    },
+    {
+      "id": 61,
+      "persian": "ما",
+      "shushtari": "اَما (amâ)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی اول‌شخص جمع"
+    },
+    {
+      "id": 62,
+      "persian": "شما",
+      "shushtari": "شَما (šamâ)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی دوم‌شخص جمع"
+    },
+    {
+      "id": 63,
+      "persian": "آن‌ها",
+      "shushtari": "اوشو (ušu)",
+      "category": "ضمیر",
+      "note": "ضمیر شخصی سوم‌شخص جمع"
+    },
+    {
+      "id": 64,
+      "persian": "اکنون، همین حالا",
+      "shushtari": "ایسون (isu(n))",
+      "category": "قید زمان",
+      "note": "اکنون"
+    },
+    {
+      "id": 65,
+      "persian": "آن‌گاه، در آن زمان",
+      "shushtari": "اوسون (usu(n))",
+      "category": "قید زمان",
+      "note": "آن‌گاه"
+    },
+    {
+      "id": 66,
+      "persian": "عقب",
+      "shushtari": "دُما (domâ)",
+      "category": "قید مکان",
+      "note": "عقب"
+    },
+    {
+      "id": 67,
+      "persian": "جلو",
+      "shushtari": "نُها (nohâ)",
+      "category": "قید مکان",
+      "note": "جلو"
+    },
+    {
+      "id": 68,
+      "persian": "پایین",
+      "shushtari": "دومِن (dume(n))",
+      "category": "قید مکان",
+      "note": "پایین"
+    },
+    {
+      "id": 69,
+      "persian": "پیوسته، مدام",
+      "shushtari": "یادانَر (ya:-danar)",
+      "category": "قید زمان",
+      "note": "پیوسته و مدام"
+    },
+    {
+      "id": 70,
+      "persian": "لحظاتی پیش",
+      "shushtari": "اَسکِه (aske:)",
+      "category": "قید زمان",
+      "note": "لحظاتی پیش"
+    },
+    {
+      "id": 71,
+      "persian": "زود",
+      "shushtari": "گا (ga:)",
+      "category": "قید زمان",
+      "note": "زود"
+    },
+    {
+      "id": 72,
+      "persian": "به‌قطع، حتماً",
+      "shushtari": "اِلّان (ellan)",
+      "category": "قید",
+      "note": "به‌قطع"
+    },
+    {
+      "id": 73,
+      "persian": "هنوز",
+      "shushtari": "هُلام (holam)",
+      "category": "قید زمان",
+      "note": "هنوز"
+    },
+    {
+      "id": 74,
+      "persian": "این",
+      "shushtari": "ای (i)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ نزدیک"
+    },
+    {
+      "id": 75,
+      "persian": "آن",
+      "shushtari": "او (u)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ دور"
+    },
+    {
+      "id": 76,
+      "persian": "این (گونهٔ دیگر)",
+      "shushtari": "هِ (he)",
+      "category": "ضمیر اشاره",
+      "note": "صورت دیگر اشارهٔ نزدیک"
+    },
+    {
+      "id": 77,
+      "persian": "آن (گونهٔ دیگر)",
+      "shushtari": "هو (hu)",
+      "category": "ضمیر اشاره",
+      "note": "صورت دیگر اشارهٔ دور"
+    },
+    {
+      "id": 78,
+      "persian": "این‌ها",
+      "shushtari": "هَنو (henu)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ جمع نزدیک"
+    },
+    {
+      "id": 79,
+      "persian": "آن‌ها (اشاره)",
+      "shushtari": "هونو (hunu)",
+      "category": "ضمیر اشاره",
+      "note": "اشارهٔ جمع دور"
+    },
+    {
+      "id": 80,
+      "persian": "رفتم",
+      "shushtari": "رفتُم (raftom)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، اول‌شخص مفرد"
+    },
+    {
+      "id": 81,
+      "persian": "رفتی",
+      "shushtari": "رفتی (rafti)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، دوم‌شخص مفرد"
+    },
+    {
+      "id": 82,
+      "persian": "رفت",
+      "shushtari": "رفت (raft)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، سوم‌شخص مفرد"
+    },
+    {
+      "id": 83,
+      "persian": "رفتیم",
+      "shushtari": "رفتیم (raftim)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، اول‌شخص جمع"
+    },
+    {
+      "id": 84,
+      "persian": "رفتید",
+      "shushtari": "رفتیت (raftit)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، دوم‌شخص جمع"
+    },
+    {
+      "id": 85,
+      "persian": "رفتند",
+      "shushtari": "رفتِن (raften)",
+      "category": "فعل؛ گذشته",
+      "note": "صرف فعل رفتن، سوم‌شخص جمع"
+    },
+    {
+      "id": 86,
+      "persian": "رفته‌ام",
+      "shushtari": "رفتُما (raftoma)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 87,
+      "persian": "رفته‌ای",
+      "shushtari": "رفتِیا (raftiya)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 88,
+      "persian": "رفته است",
+      "shushtari": "رفتَه (rafta)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 89,
+      "persian": "رفته‌ایم",
+      "shushtari": "رفتیمَه (raftima)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 90,
+      "persian": "رفته‌اید",
+      "shushtari": "رفتیتَه (raftita)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 91,
+      "persian": "رفته‌اند",
+      "shushtari": "رفتِنَه (raftena)",
+      "category": "فعل؛ ماضی نقلی",
+      "note": "نمونهٔ ماضی نقلی رفتن"
+    },
+    {
+      "id": 92,
+      "persian": "بروم",
+      "shushtari": "رَوُم (ravom)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 93,
+      "persian": "بگویم",
+      "shushtari": "گووُم (guvom)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 94,
+      "persian": "بنشینی",
+      "shushtari": "نِشینی (nešini)",
+      "category": "فعل؛ التزامی",
+      "note": "نمونهٔ مضارع التزامی"
+    },
+    {
+      "id": 95,
+      "persian": "برو",
+      "shushtari": "رو (ro)",
+      "category": "فعل؛ امر",
+      "note": "صورت امر رفتن"
+    },
+    {
+      "id": 96,
+      "persian": "نرو",
+      "shushtari": "مَرو (maro)",
+      "category": "فعل؛ امر منفی",
+      "note": "صورت امر منفی رفتن"
+    },
+    {
+      "id": 97,
+      "persian": "بگو",
+      "shushtari": "گو (gu)",
+      "category": "فعل؛ امر",
+      "note": "صورت امر گفتن"
+    },
+    {
+      "id": 98,
+      "persian": "نگو",
+      "shushtari": "مَگو (magu)",
+      "category": "فعل؛ امر منفی",
+      "note": "صورت امر منفی گفتن"
+    },
+    {
+      "id": 99,
+      "persian": "می‌خواهم بروم",
+      "shushtari": "مُخُم رَوَم (mo xom rovam)",
+      "category": "عبارت فعلی",
+      "note": "نمونهٔ جمله در منبع دستور گویش"
+    },
+    {
+      "id": 100,
+      "persian": "به تو نگفتم",
+      "shushtari": "نگفتُمَت (nagoftom-at)",
+      "category": "عبارت فعلی",
+      "note": "نمونهٔ پیوستن ضمیر مفعولی به پایان فعل"
+    },
+    {
+      "id": 101,
+      "persian": "لف",
+      "shushtari": "لِف (lef)",
+      "category": "صفت و تشبیه",
+      "note": "شبیه؛ مانند."
+    },
+    {
+      "id": 102,
+      "persian": "مرگویی",
+      "shushtari": "مَرگویی (marguyi)",
+      "category": "قید و تعبیر",
+      "note": "انگار که؛ گویی."
+    },
+    {
+      "id": 103,
+      "persian": "گشیدن",
+      "shushtari": "گِشیدن (gešidan)",
+      "category": "فعل",
+      "note": "گشودن؛ باز کردن."
+    },
+    {
+      "id": 104,
+      "persian": "برازیدن",
+      "shushtari": "بِرازیدن (berâzidan)",
+      "category": "فعل",
+      "note": "برازنده بودن؛ سزاوار بودن. صورت «برازیدن» نیز در رونویسی صفحه‌های ۲۹ تا ۳۴ با معنی «برازندگی، شایستگی» آمده است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر"
+    },
+    {
+      "id": 105,
+      "persian": "نمبرازد",
+      "shushtari": "نَمبِرازَد (namborâzad)",
+      "category": "عبارت فعلی",
+      "note": "برازنده نیست."
+    },
+    {
+      "id": 106,
+      "persian": "دونا",
+      "shushtari": "دونا (donâ)",
+      "category": "صفت",
+      "note": "دانا؛ فهمیده."
+    },
+    {
+      "id": 107,
+      "persian": "پی",
+      "shushtari": "پِی (pey)",
+      "category": "حرف اضافه و قید",
+      "note": "همراه؛ به دنبال."
+    },
+    {
+      "id": 108,
+      "persian": "ریمیز",
+      "shushtari": "ریمیز (rimiz)",
+      "category": "جانور",
+      "note": "موریانه."
+    },
+    {
+      "id": 109,
+      "persian": "گلوپ",
+      "shushtari": "گُلوپ (golup)",
+      "category": "بدن",
+      "note": "لپ؛ گونه."
+    },
+    {
+      "id": 110,
+      "persian": "ره",
+      "shushtari": "رَه (rah)",
+      "category": "اسم",
+      "note": "راه."
+    },
+    {
+      "id": 111,
+      "persian": "لیله",
+      "shushtari": "لیلَه (lile)",
+      "category": "طبیعت",
+      "note": "گردباد."
+    },
+    {
+      "id": 112,
+      "persian": "منجی",
+      "shushtari": "مَنجی (manji)",
+      "category": "اسم",
+      "note": "میانجی؛ میانه."
+    },
+    {
+      "id": 113,
+      "persian": "گرده",
+      "shushtari": "گِردَه (gerde)",
+      "category": "بدن",
+      "note": "کمر."
+    },
+    {
+      "id": 114,
+      "persian": "مفتلا",
+      "shushtari": "مُفتَلا (moftalâ)",
+      "category": "صفت",
+      "note": "مبتلا؛ گرفتار."
+    },
+    {
+      "id": 115,
+      "persian": "قصه",
+      "shushtari": "قِصّه (qesse)",
+      "category": "اسم",
+      "note": "سخن؛ گفتار."
+    },
+    {
+      "id": 116,
+      "persian": "گرختن",
+      "shushtari": "گُرُختن (gorox tan)",
+      "category": "فعل",
+      "note": "گریختن؛ فرار کردن."
+    },
+    {
+      "id": 117,
+      "persian": "اشکم",
+      "shushtari": "اِشکَم (eškam)",
+      "category": "بدن",
+      "note": "شکم."
+    },
+    {
+      "id": 118,
+      "persian": "ازمودن",
+      "shushtari": "اِزمودن (ezmudan)",
+      "category": "فعل",
+      "note": "آزمودن؛ امتحان کردن."
+    },
+    {
+      "id": 119,
+      "persian": "مغمین",
+      "shushtari": "مَغمین (maġmin)",
+      "category": "صفت و حالت",
+      "note": "پشیمان."
+    },
+    {
+      "id": 120,
+      "persian": "بهز",
+      "shushtari": "بَهَز (bahaz)",
+      "category": "صفت و قید",
+      "note": "بهتر؛ بهتر از."
+    },
+    {
+      "id": 121,
+      "persian": "پار",
+      "shushtari": "پار (pâr)",
+      "category": "قید زمان",
+      "note": "سال گذشته؛ پارسال."
+    },
+    {
+      "id": 122,
+      "persian": "بختر",
+      "shushtari": "بِختَر (bextar)",
+      "category": "صفت",
+      "note": "بهتر."
+    },
+    {
+      "id": 123,
+      "persian": "بوهی",
+      "shushtari": "بوهی (bohi)",
+      "category": "بدن",
+      "note": "بازو."
+    },
+    {
+      "id": 124,
+      "persian": "موال",
+      "shushtari": "مَوال (mavâl)",
+      "category": "خانه و بهداشت",
+      "note": "توالت؛ مستراح."
+    },
+    {
+      "id": 125,
+      "persian": "تولمه",
+      "shushtari": "تولمَه (tolma)",
+      "category": "طبیعت",
+      "note": "تنه درخت."
+    },
+    {
+      "id": 126,
+      "persian": "مق",
+      "shushtari": "مَق (meq)",
+      "category": "خوراک و اندازه",
+      "note": "جرعه؛ مقدار کمی نوشیدنی."
+    },
+    {
+      "id": 127,
+      "persian": "دوپلو",
+      "shushtari": "دوپِلو (dopalu)",
+      "category": "خوراک",
+      "note": "نیم‌کوب؛ نیم‌کوبیده."
+    },
+    {
+      "id": 128,
+      "persian": "لارمه",
+      "shushtari": "لارمَه (lârma)",
+      "category": "احساس و بدن",
+      "note": "احساس سرمای شدید."
+    },
+    {
+      "id": 129,
+      "persian": "خرتاس",
+      "shushtari": "خِرتاس (xertâs)",
+      "category": "فعل و حالت",
+      "note": "خفه کردن؛ در منبع به همین معنی ثبت شده است."
+    },
+    {
+      "id": 130,
+      "persian": "می‌لم",
+      "shushtari": "می‌لَم (milam)",
+      "category": "بدن",
+      "note": "لثه."
+    },
+    {
+      "id": 131,
+      "persian": "نالین",
+      "shushtari": "نالین (nâlin)",
+      "category": "خانه و ابزار",
+      "note": "تشک."
+    },
+    {
+      "id": 132,
+      "persian": "لوف",
+      "shushtari": "لوف (lof)",
+      "category": "طبیعت",
+      "note": "موج."
+    },
+    {
+      "id": 133,
+      "persian": "قِرزِلِنگ",
+      "shushtari": "قِرزِلِنگ (qerzeleng)",
+      "category": "جانور",
+      "note": "خرچنگ."
+    },
+    {
+      "id": 134,
+      "persian": "مِلِنگ",
+      "shushtari": "مِلِنگ (meleng)",
+      "category": "حالت جسمی",
+      "note": "بی‌حال؛ سست و ناتوان."
+    },
+    {
+      "id": 135,
+      "persian": "بُتُل",
+      "shushtari": "بُتُل (botol)",
+      "category": "جانور",
+      "note": "سوسک؛ در سروده در کنار پخشه آمده است."
+    },
+    {
+      "id": 136,
+      "persian": "پَخشَه",
+      "shushtari": "پَخشَه (paxše)",
+      "category": "جانور",
+      "note": "مگس."
+    },
+    {
+      "id": 137,
+      "persian": "پَخشه‌کورَک",
+      "shushtari": "پَخشه‌کورَک (paxše-kurak)",
+      "category": "جانور",
+      "note": "پشه."
+    },
+    {
+      "id": 138,
+      "persian": "سیخ‌چوله",
+      "shushtari": "سیخ‌چولَه (six-čule)",
+      "category": "جانور",
+      "note": "جوجه‌تیغی."
+    },
+    {
+      "id": 139,
+      "persian": "روله",
+      "shushtari": "رولَه (rule)",
+      "category": "خانواده",
+      "note": "فرزند؛ بچه."
+    },
+    {
+      "id": 140,
+      "persian": "لیقلو",
+      "shushtari": "لیقلو (liqalu)",
+      "category": "بدن",
+      "note": "روده."
+    },
+    {
+      "id": 141,
+      "persian": "گده",
+      "shushtari": "گَدَه (gade)",
+      "category": "بدن",
+      "note": "معده."
+    },
+    {
+      "id": 142,
+      "persian": "جعده",
+      "shushtari": "جَعدَه (ja'de)",
+      "category": "راه و جغرافیا",
+      "note": "جاده؛ راه."
+    },
+    {
+      "id": 143,
+      "persian": "چپل‌چپو",
+      "shushtari": "چَپِل‌چَپو (čapel-čapu)",
+      "category": "صفت و اصطلاح",
+      "note": "کارِ درهم و آشفته؛ بی‌سامان."
+    },
+    {
+      "id": 144,
+      "persian": "عسب",
+      "shushtari": "عَسب (asb)",
+      "category": "جانور",
+      "note": "اسب."
+    },
+    {
+      "id": 145,
+      "persian": "گو",
+      "shushtari": "گُو (gu)",
+      "category": "جانور",
+      "note": "گاو."
+    },
+    {
+      "id": 146,
+      "persian": "مجبره",
+      "shushtari": "مُجبِرَه (moǰbere)",
+      "category": "خانه و ابزار",
+      "note": "منقل گِلی."
+    },
+    {
+      "id": 147,
+      "persian": "زردلی",
+      "shushtari": "زَردَلی (zardali)",
+      "category": "خوراک",
+      "note": "زردآلو."
+    },
+    {
+      "id": 148,
+      "persian": "عفتووه",
+      "shushtari": "عَفتووَه (aftuve)",
+      "category": "خانه و ابزار",
+      "note": "آفتابه."
+    },
+    {
+      "id": 149,
+      "persian": "تووه",
+      "shushtari": "تووَه (tuve)",
+      "category": "خانه و ابزار",
+      "note": "ماهیتابه."
+    },
+    {
+      "id": 150,
+      "persian": "نیمبول",
+      "shushtari": "نیمبُول (nimbul)",
+      "category": "خوراک",
+      "note": "نوعی لیمو."
+    },
+    {
+      "id": 151,
+      "persian": "ترتول",
+      "shushtari": "تَرتول (tartul)",
+      "category": "خوراک",
+      "note": "سبزی خوردنی."
+    },
+    {
+      "id": 152,
+      "persian": "انگون",
+      "shushtari": "اَنگون (angun)",
+      "category": "خانه و ابزار",
+      "note": "ظرف خمیر."
+    },
+    {
+      "id": 153,
+      "persian": "ره‌بون",
+      "shushtari": "رُهِ‌بون (rohe-bun)",
+      "category": "خانه و معماری",
+      "note": "لبه بام."
+    },
+    {
+      "id": 154,
+      "persian": "ریه",
+      "shushtari": "ریَه (riye)",
+      "category": "خانه و معماری",
+      "note": "تیغه یا دیواره."
+    },
+    {
+      "id": 155,
+      "persian": "تلواره",
+      "shushtari": "تَلوارَه (talvâre)",
+      "category": "خوراک و ماهیگیری",
+      "note": "ماهی سیخ‌کشیده؛ صورت و کاربرد نیازمند بررسی گویشور."
+    },
+    {
+      "id": 156,
+      "persian": "قلون",
+      "shushtari": "قِلون (qelon)",
+      "category": "خانه و ابزار",
+      "note": "قلیان."
+    },
+    {
+      "id": 157,
+      "persian": "قحل",
+      "shushtari": "قَحل (qahl)",
+      "category": "صفت",
+      "note": "عمیق؛ گود."
+    },
+    {
+      "id": 158,
+      "persian": "قحلی",
+      "shushtari": "قَحلی (qahli)",
+      "category": "اسم",
+      "note": "گودی؛ چاله؛ گودال."
+    },
+    {
+      "id": 159,
+      "persian": "بناریدن",
+      "shushtari": "بِناریدن (benâridan)",
+      "category": "فعل",
+      "note": "تکیه دادن به جایی، معمولاً از ترس یا شگفتی."
+    },
+    {
+      "id": 160,
+      "persian": "بوئسن",
+      "shushtari": "بوئِسَّن (buessen)",
+      "category": "فعل",
+      "note": "شدن؛ صورت صرفی در شوشتری گزارش شده است."
+    },
+    {
+      "id": 161,
+      "persian": "بِگفت",
+      "shushtari": "بِگفت (begoft)",
+      "category": "فعل",
+      "note": "می‌گفت؛ نمونه گذشته استمراری در شوشتری."
+    },
+    {
+      "id": 162,
+      "persian": "آل",
+      "shushtari": "آل (âl)",
+      "category": "رنگ",
+      "note": "رنگ سرخ یا صورتی؛ در ثبت پیشین فقط صورتی آمده بود. این توضیح از رونویسی صفحه‌های ۳ تا ۱۶ افزوده شد.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "needs_review": true
+    },
+    {
+      "id": 163,
+      "persian": "ابلقه",
+      "shushtari": "اَبلَقَه (ablaqe)",
+      "category": "گفتار",
+      "note": "دروغ مصلحتی."
+    },
+    {
+      "id": 164,
+      "persian": "اِدبیر",
+      "shushtari": "اِدبیر (edbir)",
+      "category": "صفت و توصیف",
+      "note": "بدبخت؛ دست‌وپاچلفتی."
+    },
+    {
+      "id": 165,
+      "persian": "اِژگل",
+      "shushtari": "اِژگِل (ežgel)",
+      "category": "طبیعت",
+      "note": "اخگر؛ زغال گداخته."
+    },
+    {
+      "id": 166,
+      "persian": "اَش‌اَش",
+      "shushtari": "اَش‌اَش (aš-aš)",
+      "category": "توصیف اشخاص",
+      "note": "لقبی برای مردی با چهره ناخوشایند؛ کاربرد توهین‌آمیز دارد."
+    },
+    {
+      "id": 167,
+      "persian": "اِشکفت",
+      "shushtari": "اِشکَفت (ešk aft)",
+      "category": "طبیعت و جغرافیا",
+      "note": "غار."
+    },
+    {
+      "id": 168,
+      "persian": "اُریت",
+      "shushtari": "اُریت (orit)",
+      "category": "خوراک",
+      "note": "آب برنج پس از آبکش کردن."
+    },
+    {
+      "id": 169,
+      "persian": "بُشوش",
+      "shushtari": "بُشوش (bošuš)",
+      "category": "جانور",
+      "note": "مرغابی."
+    },
+    {
+      "id": 170,
+      "persian": "بایُم",
+      "shushtari": "بایُم (bâyom)",
+      "category": "طبیعت",
+      "note": "بادم؛ صورت واژه در منبع به همین شکل آمده است."
+    },
+    {
+      "id": 171,
+      "persian": "بارنه",
+      "shushtari": "بارنَه (bârne)",
+      "category": "جانور",
+      "note": "مرغی که هنوز به سن تخم‌گذاری نرسیده است."
+    },
+    {
+      "id": 172,
+      "persian": "بُرییه",
+      "shushtari": "بُرییَه (boriye)",
+      "category": "خانه و ابزار",
+      "note": "حصیر."
+    },
+    {
+      "id": 173,
+      "persian": "بِزاشتن",
+      "shushtari": "بِزاشتن (bezâštan)",
+      "category": "فعل",
+      "note": "شانه زدن مو."
+    },
+    {
+      "id": 174,
+      "persian": "بُق",
+      "shushtari": "بُق (boq)",
+      "category": "طبیعت",
+      "note": "حباب روی آب."
+    },
+    {
+      "id": 175,
+      "persian": "بَق",
+      "shushtari": "بَق (baq)",
+      "category": "جانور",
+      "note": "قورباغه."
+    },
+    {
+      "id": 176,
+      "persian": "بِلس",
+      "shushtari": "بِلس (bels)",
+      "category": "اندازه و شمار",
+      "note": "وجب؛ فاصله میان انگشتان بازشده دست."
+    },
+    {
+      "id": 177,
+      "persian": "بُلُوسی",
+      "shushtari": "بُلُوسی (bolusi)",
+      "category": "بدن",
+      "note": "حنجره."
+    },
+    {
+      "id": 178,
+      "persian": "بُن‌فِلاق",
+      "shushtari": "بُن‌فِلاق (bon-felâq)",
+      "category": "رفتار و اجتماع",
+      "note": "فتنه‌گری."
+    },
+    {
+      "id": 179,
+      "persian": "بُنگون",
+      "shushtari": "بُنگون (bongun)",
+      "category": "خوراک",
+      "note": "بادمجان."
+    },
+    {
+      "id": 180,
+      "persian": "بی‌بی",
+      "shushtari": "بی‌بی (bibi)",
+      "category": "خانواده و خطاب",
+      "note": "بانو؛ خانم خانه."
+    },
+    {
+      "id": 181,
+      "persian": "پَرپِلِنگ",
+      "shushtari": "پَرپِلِنگ (parpeleng)",
+      "category": "فعل و کار",
+      "note": "کندن پرهای پرنده."
+    },
+    {
+      "id": 182,
+      "persian": "پِردِنگی",
+      "shushtari": "پِردِنگی (perdengi)",
+      "category": "گفتار",
+      "note": "سخن بیهوده و بی‌اساس."
+    },
+    {
+      "id": 183,
+      "persian": "تیرفرنگ",
+      "shushtari": "تیرفرنگ (tirfarang)",
+      "category": "بازی و ابزار",
+      "note": "تیروکمان."
+    },
+    {
+      "id": 184,
+      "persian": "کَرتِلَه",
+      "shushtari": "کَرتِلَه (kartela)",
+      "category": "خانه و ابزار",
+      "note": "سبد کوچک چوبیِ بافته‌شده."
+    },
+    {
+      "id": 185,
+      "persian": "چِچُولک‌باز",
+      "shushtari": "چِچُولک‌باز (čečulak-bâz)",
+      "category": "توصیف اشخاص",
+      "note": "آدم حقه‌باز و کلک‌زن."
+    },
+    {
+      "id": 186,
+      "persian": "چُل‌سیه",
+      "shushtari": "چُل‌سیه (čol-siye)",
+      "category": "اصطلاح",
+      "note": "تعبیر برای نهایت بیچارگی؛ معنی دقیق نیازمند تأیید بومی."
+    },
+    {
+      "id": 187,
+      "persian": "گیجند",
+      "shushtari": "گیجِند (gijend)",
+      "category": "خانه و ابزار",
+      "note": "لولای در."
+    },
+    {
+      "id": 188,
+      "persian": "سرکشیدن مایعات",
+      "shushtari": "آسِنوفیدن (âsenufidan)",
+      "category": "کنش و حرکت",
+      "note": "سرکشیدن یا یک‌نفس نوشیدن مایعات؛ این مدخل از فهرست ارسالی کاربران کانال شوشتریها استخراج شده و نیازمند تأیید گویشوران است.",
+      "source": "کانال شوشتریها؛ پست واژگان و اصطلاحات شوشتری",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 189,
+      "persian": "چی شد؟",
+      "shushtari": "چه بووِس",
+      "category": "گفت‌وگوی روزمره",
+      "note": "معادل محاوره‌ای «چی شد؟»؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 190,
+      "persian": "گربه",
+      "shushtari": "گُروَه",
+      "category": "جانوران",
+      "note": "نام گربه در گویش شوشتری؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 191,
+      "persian": "آسیاب کردن",
+      "shushtari": "بیزنیدَن",
+      "category": "کار و پیشه",
+      "note": "فعل آسیاب کردن؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 192,
+      "persian": "مادر، مامان",
+      "shushtari": "مار، ننه",
+      "category": "خانواده",
+      "note": "دو صورت رایج برای مادر؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 193,
+      "persian": "پدر، بابا",
+      "shushtari": "بُوِه",
+      "category": "خانواده",
+      "note": "معادل پدر/بابا؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 194,
+      "persian": "سنگ",
+      "shushtari": "کُلُمتَه",
+      "category": "طبیعت",
+      "note": "نام سنگ؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 195,
+      "persian": "مادرشوهر",
+      "shushtari": "خَسی",
+      "category": "خانواده و خویشاوندی",
+      "note": "نام مادرشوهر؛ بر پایه واژه‌نگاری ارسالی کاربر.",
+      "source": "واژه‌نگاری مستقیم کاربر",
+      "confidence": "user_contributed",
+      "needs_review": false
+    },
+    {
+      "id": 196,
+      "persian": "خواهر",
+      "shushtari": "دَدِه",
+      "category": "خانواده",
+      "note": "در واژه‌نامه آزاد واژه‌یاب صریحاً به‌عنوان صورت شوشتریِ خواهر ثبت شده است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل دده",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 197,
+      "persian": "خواهر",
+      "shushtari": "خار",
+      "category": "خانواده و خویشاوندی",
+      "note": "در یک فهرست واژگانی محلی همراه با بووه، مار و برار آمده؛ انتساب دقیق به شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 198,
+      "persian": "برادر",
+      "shushtari": "بِرار",
+      "category": "خانواده و خویشاوندی",
+      "note": "در فهرست واژگانی محلی آمده؛ صورت دقیق شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 199,
+      "persian": "دایی",
+      "shushtari": "خولو",
+      "category": "خانواده و خویشاوندی",
+      "note": "در فهرست واژگانی محلی آمده؛ انتساب دقیق به شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 200,
+      "persian": "عمو",
+      "shushtari": "آمو",
+      "category": "خانواده و خویشاوندی",
+      "note": "در فهرست واژگانی محلی آمده؛ انتساب دقیق به شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 201,
+      "persian": "زندایی؛ زنِ دایی",
+      "shushtari": "زوخولو",
+      "category": "خانواده و خویشاوندی",
+      "note": "در فهرست واژگانی محلی آمده؛ معنی و تلفظ دقیق نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 202,
+      "persian": "مارمولک",
+      "shushtari": "لیله",
+      "category": "جانوران",
+      "note": "در فهرست واژگانی محلی همراه با نام‌های خویشاوندی آمده؛ انتساب دقیق به شوشتری نیازمند تأیید است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 203,
+      "persian": "تار عنکبوت",
+      "shushtari": "کاربِفَک",
+      "category": "جانوران و طبیعت",
+      "note": "در فهرست واژگانی محلی آمده؛ صورت و انتساب دقیق به شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 204,
+      "persian": "بشقاب",
+      "shushtari": "لوتَخته",
+      "category": "خانه و ظروف",
+      "note": "در فهرست واژگانی محلی آمده؛ انتساب دقیق به شوشتری نیازمند تأیید گویشور است.",
+      "source": "واژه‌نامه آزاد واژه‌یاب؛ مدخل بووه",
+      "confidence": "community",
+      "needs_review": true
+    },
+    {
+      "id": 205,
+      "persian": "کبود؛ سیاه",
+      "shushtari": "کَلون",
+      "category": "رنگ",
+      "note": "در سروده واژگانی منسوب به محمدباقر نیرومند آمده است.",
+      "source": "کانال شوشتریها؛ سروده واژگانی محمدباقر نیرومند",
+      "confidence": "community",
+      "needs_review": false
+    },
+    {
+      "persian": "دیبا (پارچهٔ شوشتری)",
+      "shushtari": "دیبای شوشتری",
+      "category": "پارچه و نساجی",
+      "note": "پارچهٔ ابریشمیِ نفیس و گران‌بهای منسوب به شوشتر؛ در منابع تاریخی با رنگ‌های گوناگون و بافت زربفت توصیف شده است. این نام، نام تاریخی پارچه است و نه لزوماً صورت گویشی روزمره.",
+      "source": "لغت‌نامه دهخدا، مدخل شوشتری؛ پژوهش «ماهیت دیبای شوشتر از منظر منابع مکتوب»",
+      "confidence": "documented_historical",
+      "needs_review": false,
+      "id": 206
+    },
+    {
+      "persian": "پرند شوشتری",
+      "shushtari": "پرند",
+      "category": "پارچه و نساجی",
+      "note": "از بافته‌های مشهور تاریخی شوشتر؛ در منابع محلی در کنار دیبای شوشتری نام برده شده است. جنس و فن بافت دقیق آن در منابع در دسترس نیازمند بررسی بیشتر است.",
+      "source": "معرفی صنایع دستی شوشتر؛ شهرستان شوشتر، آذر ۱۳۹۴",
+      "confidence": "documented_local",
+      "needs_review": false,
+      "id": 207
+    },
+    {
+      "persian": "احرامی (پارچه)",
+      "shushtari": "اِحرامی",
+      "category": "پارچه و نساجی",
+      "note": "پارچهٔ سنتی بافته‌شده در شوشتر، با تار پنبه‌ای و پود پشمی و طرح‌های سادهٔ هندسی؛ شوشتر از مراکز مهم بافت آن معرفی شده است.",
+      "source": "شهرداری شوشتر، «کهن شهر شوشتر در حوزه صنایع دستی به عنوان شهر ملی احرام‌بافی ثبت گردید»، ۱۳ دی ۱۴۰۰",
+      "confidence": "documented_official",
+      "needs_review": false,
+      "id": 208
+    },
+    {
+      "persian": "ششتری؛ شوشتری (جامه)",
+      "shushtari": "شُشتَری / شوشتری",
+      "category": "پارچه و نساجی",
+      "note": "نام تاریخی جامه یا پارچهٔ منسوب به شوشتر؛ دهخدا آن را قسمی جامه و نیز قسمی فرش دانسته و برای آن شواهدی از متون کهن آورده است.",
+      "source": "لغت‌نامه دهخدا، مدخل‌های «ششتری» و «شوشتری»",
+      "confidence": "documented_historical",
+      "needs_review": false,
+      "id": 209
+    },
+    {
+      "persian": "چوقا (پارچه و بافتهٔ پوشاک)",
+      "shushtari": "چوقا",
+      "category": "پارچه و نساجی",
+      "note": "در گزارش صنایع بافندگی قدیم شوشتر از چوقابافی برای تهیهٔ پوشاک مردانهٔ بختیاری نام برده شده است؛ این مدخل نام بافته/فن بافت است، نه لزوماً واژه‌ای ویژه در گویش شوشتری.",
+      "source": "کانال شوشتریها، گزارش صنایع دستی و بافندگی شوشتر",
+      "confidence": "documented_local",
+      "needs_review": false,
+      "id": 210
+    },
+    {
+      "id": 211,
+      "persian": "ستاره",
+      "shushtari": "آساره",
+      "category": "اسم",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 212,
+      "persian": "سرکشیدن؛ یک‌نفس نوشیدن",
+      "shushtari": "آسفنیدن / آسفیدن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 213,
+      "persian": "آستر",
+      "shushtari": "آسِر",
+      "category": "خانه و پوشاک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 214,
+      "persian": "آسودگی",
+      "shushtari": "آسودیی",
+      "category": "حالت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 215,
+      "persian": "برنج دم‌کرده؛ پلو",
+      "shushtari": "آش",
+      "category": "خوراک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 216,
+      "persian": "آهار",
+      "shushtari": "آش",
+      "category": "نساجی",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 217,
+      "persian": "آقا",
+      "shushtari": "آغا",
+      "category": "خطاب",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 218,
+      "persian": "آقایان",
+      "shushtari": "آغوهون / آغاوات",
+      "category": "خانواده و خطاب",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 219,
+      "persian": "آقایی",
+      "shushtari": "آغوهی",
+      "category": "مردم و خطاب",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 220,
+      "persian": "عوض‌کردن لباس",
+      "shushtari": "آلش",
+      "category": "پوشاک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 221,
+      "persian": "آموخته؛ عادت‌کرده",
+      "shushtari": "آخته",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 222,
+      "persian": "تار عنکبوت",
+      "shushtari": "آقبیق",
+      "category": "طبیعت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 223,
+      "persian": "شخص پرطمطراق",
+      "shushtari": "اُبوتی",
+      "category": "توصیف اشخاص",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 224,
+      "persian": "از پس",
+      "shushtari": "اِبس",
+      "category": "حرف و قید",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 225,
+      "persian": "آدم دمدمی‌مزاج",
+      "shushtari": "آدی‌بودی",
+      "category": "توصیف اشخاص",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 226,
+      "persian": "آهسته",
+      "shushtari": "آهسِر",
+      "category": "قید حالت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 227,
+      "persian": "ایراد؛ خرده‌گیری",
+      "shushtari": "اَتب",
+      "category": "گفتار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 228,
+      "persian": "چرا؟",
+      "shushtari": "اَچِر",
+      "category": "پرسشی",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 229,
+      "persian": "لبریز شدن؛ سرریز شدن",
+      "shushtari": "اَسرفتن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 230,
+      "persian": "پارچهٔ ابریشمی نازک",
+      "shushtari": "اِسمبلی",
+      "category": "پارچه و نساجی",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 231,
+      "persian": "شایسته؛ سزاوار",
+      "shushtari": "اِساهل / اِستاهل",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 232,
+      "persian": "آهسته؛ بی‌صدا",
+      "shushtari": "اُسناک",
+      "category": "قید حالت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 233,
+      "persian": "آهستگی",
+      "shushtari": "اُسناکلی",
+      "category": "حالت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 234,
+      "persian": "ستدن؛ گرفتن",
+      "shushtari": "اِسدَن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 235,
+      "persian": "اندکی بیشتر",
+      "shushtari": "اِسکی",
+      "category": "قید مقدار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 236,
+      "persian": "استاد",
+      "shushtari": "اُسا",
+      "category": "مردم و خطاب",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 237,
+      "persian": "استحقاق",
+      "shushtari": "اِسقال",
+      "category": "اسم",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 238,
+      "persian": "شتاب؛ عجله",
+      "shushtari": "اِشتو",
+      "category": "حالت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 239,
+      "persian": "عطسه",
+      "shushtari": "اَشَل",
+      "category": "بدن",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 240,
+      "persian": "هرجایی؛ بی‌تربیت (دربارهٔ زن)",
+      "shushtari": "اِشفرتی",
+      "category": "توصیف اشخاص",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 241,
+      "persian": "شکستن",
+      "shushtari": "اِشکستن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 242,
+      "persian": "شکستنِ چیزی؛ شکاندن",
+      "shushtari": "اِشکنادن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 243,
+      "persian": "شکم",
+      "shushtari": "اِشکم",
+      "category": "بدن",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 244,
+      "persian": "اسهال",
+      "shushtari": "اِشکم‌زدن",
+      "category": "بدن و بیماری",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 245,
+      "persian": "ترساندن؛ وحشت‌کردن",
+      "shushtari": "اِعراض",
+      "category": "فعل و احساس",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 246,
+      "persian": "این‌قدر",
+      "shushtari": "اِغذه / اِغذر",
+      "category": "قید مقدار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 247,
+      "persian": "کمی؛ اندکی",
+      "shushtari": "اِغذلوک",
+      "category": "قید مقدار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 248,
+      "persian": "آستین",
+      "shushtari": "اُفتین",
+      "category": "پوشاک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 249,
+      "persian": "از لج؛ علی‌رغم",
+      "shushtari": "اَقهر",
+      "category": "قید",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 250,
+      "persian": "خیلی ترش",
+      "shushtari": "اِلال",
+      "category": "مزه",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 251,
+      "persian": "بلکه؛ شاید",
+      "shushtari": "اَلبَه",
+      "category": "قید و پیوند",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 252,
+      "persian": "قطعاً؛ حتماً",
+      "shushtari": "اَلَن",
+      "category": "قید",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 253,
+      "persian": "جا؛ محل",
+      "shushtari": "اُلگ",
+      "category": "مکان",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 254,
+      "persian": "گرفتار",
+      "shushtari": "اِلنگار",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 255,
+      "persian": "بی‌ارزش؛ بی‌مقدار",
+      "shushtari": "اَلَنگی",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 256,
+      "persian": "شعلهٔ آتش",
+      "shushtari": "اَلو",
+      "category": "طبیعت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 257,
+      "persian": "قشنگ و زیبا",
+      "shushtari": "الوس‌ملوس",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 258,
+      "persian": "امروز (در ترکیب‌هایی مانند امشب و امسال)",
+      "shushtari": "اَم",
+      "category": "زمان",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 259,
+      "persian": "جستن کودک از بلندی",
+      "shushtari": "اَمبلو",
+      "category": "حرکت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 260,
+      "persian": "از میان",
+      "shushtari": "اَمین",
+      "category": "حرف و قید",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 261,
+      "persian": "نیشگون",
+      "shushtari": "اِمبر",
+      "category": "کنش",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 262,
+      "persian": "آوار",
+      "shushtari": "اَمبارته",
+      "category": "طبیعت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 263,
+      "persian": "ریز کردن سبزی",
+      "shushtari": "اَنجینیدن",
+      "category": "فعل و آشپزی",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 264,
+      "persian": "انجیر",
+      "shushtari": "اَنجیل",
+      "category": "گیاه و خوراک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 265,
+      "persian": "انار",
+      "shushtari": "اِنار",
+      "category": "گیاه و خوراک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 266,
+      "persian": "ایراد؛ خرده‌گیری",
+      "shushtari": "اِند",
+      "category": "گفتار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 267,
+      "persian": "از دست دادن",
+      "shushtari": "اَندرونَدن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 268,
+      "persian": "خیلی کوچک؛ حقیر",
+      "shushtari": "اِندلک",
+      "category": "صفت",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 269,
+      "persian": "مقدمه‌چینی",
+      "shushtari": "اَنگاره",
+      "category": "رفتار",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 270,
+      "persian": "انگشت",
+      "shushtari": "اَنگُس",
+      "category": "بدن",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 271,
+      "persian": "انگشتانه",
+      "shushtari": "اَنگونَر",
+      "category": "ابزار و پوشاک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 272,
+      "persian": "اندودن",
+      "shushtari": "اَندوهیدن",
+      "category": "فعل",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 273,
+      "persian": "درون خانه",
+      "shushtari": "اَندرونی",
+      "category": "خانه",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 274,
+      "persian": "انگور",
+      "shushtari": "اَنگیر",
+      "category": "گیاه و خوراک",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 275,
+      "persian": "نفس",
+      "shushtari": "اَنَر",
+      "category": "بدن",
+      "note": "استخراج‌شده از صفحه‌های ۳ تا ۱۶ کتاب واژه‌نامهٔ گویش شوشتری (حرف الف) بر اساس خوانش تصویری؛ به‌دلیل ریز و دست‌نویس‌مانند بودن چاپ، صورت واژه نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳ تا ۱۶؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 276,
+      "persian": "آویزان کردن",
+      "shushtari": "اوزبیدن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 277,
+      "persian": "سیلاب",
+      "shushtari": "اوزیاد",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 278,
+      "persian": "افسار؛ اختیار",
+      "shushtari": "اوسار",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 279,
+      "persian": "آب‌شور",
+      "shushtari": "اوسور",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 280,
+      "persian": "ابزار",
+      "shushtari": "اوزار",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 281,
+      "persian": "خونابه",
+      "shushtari": "اوخین",
+      "category": "بدن",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 282,
+      "persian": "سرازیری؛ سراشیبی",
+      "shushtari": "اوراز",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 283,
+      "persian": "آبکی",
+      "shushtari": "اوتلیق",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 284,
+      "persian": "آرایش و اصلاح ابرو",
+      "shushtari": "اورووُن",
+      "category": "پوشاک و آرایش",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 285,
+      "persian": "جوان نادان و بی‌اطلاع",
+      "shushtari": "جامل‌جیمبو",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 286,
+      "persian": "جایگیری",
+      "shushtari": "جاگری",
+      "category": "مکان و جایگاه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 287,
+      "persian": "جوان",
+      "shushtari": "جُون",
+      "category": "انسان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 288,
+      "persian": "جدا",
+      "shushtari": "جُد",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 289,
+      "persian": "دعوا و نزاع",
+      "shushtari": "جَر",
+      "category": "رفتار و روابط",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 290,
+      "persian": "خشم؛ اخم",
+      "shushtari": "جَر",
+      "category": "حالت و احساس",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 291,
+      "persian": "بند مشک بافته‌شده از الیاف گیاهی",
+      "shushtari": "جَر",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 292,
+      "persian": "زودرنج؛ همیشه ناراحت",
+      "shushtari": "جرجو",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 293,
+      "persian": "سفت و محکم",
+      "shushtari": "جَرد",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 294,
+      "persian": "عطسه",
+      "shushtari": "جخت",
+      "category": "بدن",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۷ و ۱۸ (حرف الف) و ۱۱۵ و ۱۱۶ (حرف ج)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 295,
+      "persian": "آغوش؛ بغل",
+      "shushtari": "اوش",
+      "category": "بدن و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 296,
+      "persian": "آب گندیده؛ گنداب",
+      "shushtari": "اوگنده",
+      "category": "آب و طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 297,
+      "persian": "آبگوشت",
+      "shushtari": "اوگوشت",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 298,
+      "persian": "آب شست‌وشو",
+      "shushtari": "اوشوشور",
+      "category": "آب و نظافت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 299,
+      "persian": "آب یخ",
+      "shushtari": "اوبرفو",
+      "category": "آب و نوشیدنی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 300,
+      "persian": "آن‌سو؛ آن‌طرف",
+      "shushtari": "اُوت",
+      "category": "قید مکان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 301,
+      "persian": "آن‌طرف‌تر",
+      "shushtari": "اوت‌تر",
+      "category": "قید مکان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 302,
+      "persian": "از برم؛ از نزد من",
+      "shushtari": "اَورُم",
+      "category": "ضمیر و عبارت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 303,
+      "persian": "آن را",
+      "shushtari": "اوهو",
+      "category": "ضمیر",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 304,
+      "persian": "آنها",
+      "shushtari": "اوهونو",
+      "category": "ضمیر",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 305,
+      "persian": "ابر سیاه",
+      "shushtari": "اورسیر",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 306,
+      "persian": "میراب",
+      "shushtari": "اُومال",
+      "category": "شغل و پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 307,
+      "persian": "آویختن",
+      "shushtari": "اووُختن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 308,
+      "persian": "آوردن",
+      "shushtari": "اووردن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 309,
+      "persian": "از وصف؛ دربارهٔ",
+      "shushtari": "اوصل",
+      "category": "عبارت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 310,
+      "persian": "ریختن برگ",
+      "shushtari": "اوشِنیدن",
+      "category": "فعل و طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 311,
+      "persian": "آهک‌فروش",
+      "shushtari": "آهکی",
+      "category": "شغل و پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 312,
+      "persian": "این",
+      "shushtari": "اِهن",
+      "category": "ضمیر اشاره",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 313,
+      "persian": "اگر",
+      "shushtari": "ای",
+      "category": "حرف ربط",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 314,
+      "persian": "آخ",
+      "shushtari": "ای",
+      "category": "ندا و صوت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 315,
+      "persian": "فلان",
+      "shushtari": "این",
+      "category": "ضمیر و اشاره",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 316,
+      "persian": "فلانی",
+      "shushtari": "اینی",
+      "category": "ضمیر و اشاره",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 317,
+      "persian": "آینه",
+      "shushtari": "اُینَر",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 318,
+      "persian": "ای عجب؛ شگفتا",
+      "shushtari": "ایما",
+      "category": "ندا و صوت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 319,
+      "persian": "عجبا",
+      "shushtari": "ایعزی",
+      "category": "ندا و صوت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 320,
+      "persian": "آواره",
+      "shushtari": "ایلواره",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 321,
+      "persian": "اینها",
+      "shushtari": "ایهنو",
+      "category": "ضمیر اشاره",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 322,
+      "persian": "پاره‌شدن از سستی",
+      "shushtari": "ایرفتن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 323,
+      "persian": "الولو",
+      "shushtari": "بابالولو",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 324,
+      "persian": "جد؛ پدربزرگ",
+      "shushtari": "بابِگی",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 325,
+      "persian": "بابونه",
+      "shushtari": "بابینر",
+      "category": "گیاه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 326,
+      "persian": "بادزن",
+      "shushtari": "بابزن",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 327,
+      "persian": "بواسیر",
+      "shushtari": "باب‌سیل",
+      "category": "بدن",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۱۹ تا ۲۳ (پایان حرف الف و آغاز حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 328,
+      "persian": "بادآور",
+      "shushtari": "بادلو",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 329,
+      "persian": "بادرنجبویه",
+      "shushtari": "بادرنگ",
+      "category": "گیاهان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 330,
+      "persian": "هواکش بام",
+      "shushtari": "بادگیر",
+      "category": "خانه و ساختمان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 331,
+      "persian": "بادمجان",
+      "shushtari": "بادنجون",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 332,
+      "persian": "آشنایی به چگونگی کار",
+      "shushtari": "بارت",
+      "category": "دانش و مهارت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 333,
+      "persian": "تاب و توان دل",
+      "shushtari": "باردل",
+      "category": "بدن و ویژگی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 334,
+      "persian": "باران",
+      "shushtari": "بارون",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 335,
+      "persian": "زاییدن؛ وضع حمل",
+      "shushtari": "باروندن",
+      "category": "خانواده و بدن",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 336,
+      "persian": "فریب دادن",
+      "shushtari": "بازی‌دادن",
+      "category": "رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 337,
+      "persian": "فریب‌دهنده",
+      "shushtari": "بازی‌دهک",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 338,
+      "persian": "باغبان",
+      "shushtari": "باغون",
+      "category": "پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 339,
+      "persian": "منسوب به باغ",
+      "shushtari": "باغی",
+      "category": "نسبت و صفت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 340,
+      "persian": "پریدن؛ پرواز کردن",
+      "shushtari": "بال‌گفتن",
+      "category": "حرکت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 341,
+      "persian": "خیار سبز",
+      "shushtari": "بالنگ",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 342,
+      "persian": "پرنده",
+      "shushtari": "باهنده",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 343,
+      "persian": "بترس؛ حذر باش",
+      "shushtari": "بالک",
+      "category": "گفتار و هشدار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 344,
+      "persian": "بالش",
+      "shushtari": "بالشت",
+      "category": "اشیا و لوازم خانه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 345,
+      "persian": "مشک آبی که در آفتاب خشک شده",
+      "shushtari": "باهوش",
+      "category": "اشیا و ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 346,
+      "persian": "سست",
+      "shushtari": "بایافت",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 347,
+      "persian": "بادام",
+      "shushtari": "بایم",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 348,
+      "persian": "بادام کوهی",
+      "shushtari": "بایم‌سور",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 349,
+      "persian": "بادام شیرین",
+      "shushtari": "بایم‌شرین",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 350,
+      "persian": "بادام‌فروش",
+      "shushtari": "بایمی",
+      "category": "پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 351,
+      "persian": "بابا؛ پدر",
+      "shushtari": "ببی / ببَر",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 352,
+      "persian": "بدتر",
+      "shushtari": "بتر",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۴ تا ۲۸ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 353,
+      "persian": "سوسک",
+      "shushtari": "بُتل",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 354,
+      "persian": "بوتهٔ کوچک",
+      "shushtari": "بُتیله",
+      "category": "گیاهان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 355,
+      "persian": "جوجه",
+      "shushtari": "بِچ",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 356,
+      "persian": "ناهمواری و برآمدگی چوب",
+      "shushtari": "بُج",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 357,
+      "persian": "جوانهٔ درخت",
+      "shushtari": "بُج",
+      "category": "گیاهان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 358,
+      "persian": "ناهموار",
+      "shushtari": "بُجدار",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 359,
+      "persian": "جوجه (مرغ خانگی)",
+      "shushtari": "بجیله",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 360,
+      "persian": "سوسک کوچک سیاه",
+      "shushtari": "بجه‌بتل",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 361,
+      "persian": "بچه‌ها؛ کودکان",
+      "shushtari": "بچه‌ملون",
+      "category": "خانواده",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 362,
+      "persian": "شیربرنج",
+      "shushtari": "بختیر",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 363,
+      "persian": "خوش‌بخت",
+      "shushtari": "بخ‌سفید",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 364,
+      "persian": "خوش‌بخت",
+      "shushtari": "بخ‌سوز",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 365,
+      "persian": "بدبخت",
+      "shushtari": "بخ‌سیر",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 366,
+      "persian": "سیاه‌بخت؛ بدبخت",
+      "shushtari": "بخ‌زغال",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 367,
+      "persian": "بهتر",
+      "shushtari": "بختر",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 368,
+      "persian": "بیختن (الک‌کردن)",
+      "shushtari": "بختن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 369,
+      "persian": "بقچه",
+      "shushtari": "بخچه",
+      "category": "اشیا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 370,
+      "persian": "پرخور؛ پراشتها",
+      "shushtari": "بخور",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 371,
+      "persian": "بدخو؛ بداخلاق",
+      "shushtari": "بدغُر",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 372,
+      "persian": "بدقیافه؛ عبوس",
+      "shushtari": "بدپک‌پوز",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 373,
+      "persian": "خودخواه؛ خودپسند",
+      "shushtari": "بددماغ",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 374,
+      "persian": "اخمو؛ عبوس",
+      "shushtari": "بدعبوس",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 375,
+      "persian": "خودپسند",
+      "shushtari": "بدکله",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 376,
+      "persian": "متکبر",
+      "shushtari": "بدعنف",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 377,
+      "persian": "بهانه‌جو؛ مشکل‌پسند",
+      "shushtari": "بددنگ",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 378,
+      "persian": "بدرو؛ بدشکل",
+      "shushtari": "بدری",
+      "category": "ویژگی انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 379,
+      "persian": "آتش گرفتن",
+      "shushtari": "برگرفتن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 380,
+      "persian": "فرصت",
+      "shushtari": "بُر",
+      "category": "زمان و نوبت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 381,
+      "persian": "نوبت",
+      "shushtari": "بُر",
+      "category": "زمان و نوبت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 382,
+      "persian": "برادر",
+      "shushtari": "برار",
+      "category": "خویشاوندی",
+      "note": "صورت ثبت‌شده در رونویسی کتاب؛ در واژه‌نامه صورت نزدیک «بِرار» نیز برای برادر آمده است. نیازمند بررسی تفاوت تلفظی/املایی.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 383,
+      "persian": "برادرزن",
+      "shushtari": "برارزونه",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 384,
+      "persian": "برادرشوهر",
+      "shushtari": "برارمرد",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 385,
+      "persian": "برادرم",
+      "shushtari": "برام",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 386,
+      "persian": "میل‌کردن جوان به همسرگیری",
+      "shushtari": "براومدن",
+      "category": "رفتار و خانواده",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 387,
+      "persian": "درخشش؛ براق بودن",
+      "shushtari": "برقشت",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 388,
+      "persian": "خیلی تلخ",
+      "shushtari": "بُراده",
+      "category": "خوراک و مزه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 389,
+      "persian": "بریان کردن",
+      "shushtari": "برشتن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 390,
+      "persian": "رشوه",
+      "shushtari": "برتیل",
+      "category": "رفتار و اجتماع",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 391,
+      "persian": "درخشش",
+      "shushtari": "برچ",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 392,
+      "persian": "کسی که لکنت زبان دارد",
+      "shushtari": "بربو",
+      "category": "ویژگی گفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 393,
+      "persian": "ابرو",
+      "shushtari": "بُرگ",
+      "category": "بدن",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 394,
+      "persian": "چشمک زدن",
+      "shushtari": "بُرگک",
+      "category": "فعل و رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 395,
+      "persian": "موج آب",
+      "shushtari": "بُروم",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 396,
+      "persian": "صدای افتادن چیزی",
+      "shushtari": "برمبه",
+      "category": "صدا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 397,
+      "persian": "برقع",
+      "shushtari": "بُرقر",
+      "category": "پوشاک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 398,
+      "persian": "بورانی",
+      "shushtari": "بُرونی",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 399,
+      "persian": "بره",
+      "shushtari": "بُره",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ به‌دلیل احتمال خطای خوانش تصویر، نیازمند مقابله و بازبینی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۲۹ تا ۳۴ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 400,
+      "persian": "قطعه؛ تکه",
+      "shushtari": "بُرّه",
+      "category": "اشیا و اندازه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 401,
+      "persian": "پاره‌شدن؛ بریده‌شدن",
+      "shushtari": "برهستن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 402,
+      "persian": "برآورد؛ تخمین؛ پیش‌بینی",
+      "shushtari": "بروود",
+      "category": "دانش و سنجش",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 403,
+      "persian": "بوریا",
+      "shushtari": "بوریر",
+      "category": "اشیا و بافته‌ها",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 404,
+      "persian": "مقاطعه؛ قرارداد",
+      "shushtari": "بُری",
+      "category": "معاملات",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 405,
+      "persian": "شانه‌کردن مو",
+      "shushtari": "بزاشتن",
+      "category": "آرایش",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 406,
+      "persian": "دستچین‌کردن؛ گزینش",
+      "shushtari": "بزنیدن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 407,
+      "persian": "بست‌نشستن؛ پناه‌بردن",
+      "shushtari": "بِس",
+      "category": "فعل و رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 408,
+      "persian": "انداختن؛ پرت‌کردن",
+      "shushtari": "بسّن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 409,
+      "persian": "بسته؛ بستر",
+      "shushtari": "بسّه",
+      "category": "اشیا و لوازم",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 410,
+      "persian": "بستهٔ کوچک لباس",
+      "shushtari": "بسیکن",
+      "category": "پوشاک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 411,
+      "persian": "بستن",
+      "shushtari": "بسن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 412,
+      "persian": "بستنی",
+      "shushtari": "بسنی",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 413,
+      "persian": "دختر",
+      "shushtari": "بُبی",
+      "category": "خویشاوندی و انسان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 414,
+      "persian": "صدای گوسفند",
+      "shushtari": "بعبع",
+      "category": "صدا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 415,
+      "persian": "بازمانده؛ میراث",
+      "shushtari": "بعدگشت",
+      "category": "خانواده و ارث",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 416,
+      "persian": "بازمانده؛ میراثی",
+      "shushtari": "بعدی",
+      "category": "خانواده و ارث",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 417,
+      "persian": "برهٔ کوچک",
+      "shushtari": "بعک",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 418,
+      "persian": "دری‌وری؛ چرندگویی",
+      "shushtari": "بفبوف",
+      "category": "گفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 419,
+      "persian": "بافتن",
+      "shushtari": "بفتن",
+      "category": "فعل و بافته‌ها",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 420,
+      "persian": "قورباغه",
+      "shushtari": "بق",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 421,
+      "persian": "حباب روی آب",
+      "shushtari": "بُق",
+      "category": "طبیعت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 422,
+      "persian": "صدای کبوتر",
+      "shushtari": "بغبغو",
+      "category": "صدا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 423,
+      "persian": "چوب قرمزِ رنگرزی",
+      "shushtari": "بقم",
+      "category": "مواد و رنگرزی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 424,
+      "persian": "باقلافروش",
+      "shushtari": "بقلیمی",
+      "category": "پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 425,
+      "persian": "ناراحتی",
+      "shushtari": "بقجوش",
+      "category": "حالت و احساس",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 426,
+      "persian": "صدای حباب هوا",
+      "shushtari": "بُقبُق",
+      "category": "صدا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 427,
+      "persian": "کارآمد؛ زحمتکش",
+      "shushtari": "بِکار",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 428,
+      "persian": "چرخ چاه",
+      "shushtari": "بکره",
+      "category": "ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 429,
+      "persian": "ثروتمند؛ پولدار",
+      "shushtari": "بِکَک",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 430,
+      "persian": "می‌گویید",
+      "shushtari": "بگوو",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 431,
+      "persian": "بگویم",
+      "shushtari": "بِگم",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 432,
+      "persian": "مفت؛ مجانی",
+      "shushtari": "بلاش",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 433,
+      "persian": "شعله‌ورشدن آتش",
+      "shushtari": "بلاز",
+      "category": "طبیعت و آتش",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 434,
+      "persian": "حصیر",
+      "shushtari": "بَل",
+      "category": "اشیا و بافته‌ها",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 435,
+      "persian": "زل‌زدن",
+      "shushtari": "بَل",
+      "category": "فعل و رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 436,
+      "persian": "سرسخت؛ لجوج",
+      "shushtari": "بلعز",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 437,
+      "persian": "بلکه؛ شاید",
+      "shushtari": "بلکت",
+      "category": "قید و پیوند",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 438,
+      "persian": "برگ",
+      "shushtari": "بلگ",
+      "category": "گیاهان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 439,
+      "persian": "بلور",
+      "shushtari": "بلول",
+      "category": "مواد",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 440,
+      "persian": "لوله‌کردن",
+      "shushtari": "بلول‌کودن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 441,
+      "persian": "دردسر؛ گرفتاری",
+      "shushtari": "بلیش",
+      "category": "حالت و وضعیت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 442,
+      "persian": "سوسوزدن چراغ",
+      "shushtari": "بلیک‌بلیک",
+      "category": "فعل و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 443,
+      "persian": "بلوط",
+      "shushtari": "بلیط",
+      "category": "گیاهان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 444,
+      "persian": "غول؛ موجود ترسناک افسانه‌ای",
+      "shushtari": "بمبره",
+      "category": "باور عامه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 445,
+      "persian": "کتک‌کاری",
+      "shushtari": "بمبرباف",
+      "category": "رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 446,
+      "persian": "کوسه؛ ریش کوسه",
+      "shushtari": "بمبک",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 447,
+      "persian": "بیرون‌ریختن آب با فشار",
+      "shushtari": "بمبنیدن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 448,
+      "persian": "بندباز",
+      "shushtari": "بمباز",
+      "category": "پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 449,
+      "persian": "تلمبهٔ دستی کوچک",
+      "shushtari": "بمبو",
+      "category": "ابزار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۳۵ تا ۴۳ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 450,
+      "persian": "من",
+      "shushtari": "بمو",
+      "category": "ضمیر",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 451,
+      "persian": "دوام",
+      "shushtari": "بنار",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 452,
+      "persian": "تکیه‌دادن",
+      "shushtari": "بناشتن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 453,
+      "persian": "شروع‌کردن",
+      "shushtari": "بناوندن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 454,
+      "persian": "اصل؛ تبار",
+      "shushtari": "بنچاق",
+      "category": "خانواده و تبار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 455,
+      "persian": "حوصله؛ طاقت",
+      "shushtari": "بن‌چلق",
+      "category": "حالت و توان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 456,
+      "persian": "کنار رودخانه؛ ساحل",
+      "shushtari": "بندار",
+      "category": "جغرافیا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 457,
+      "persian": "سست و شل",
+      "shushtari": "بنتمبونی",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 458,
+      "persian": "منتظر",
+      "shushtari": "بندیر",
+      "category": "حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 459,
+      "persian": "مسکن؛ اتاق نشیمن",
+      "shushtari": "بنشین",
+      "category": "خانه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 460,
+      "persian": "بهانه",
+      "shushtari": "بنفلاق",
+      "category": "رفتار و گفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 461,
+      "persian": "بانک",
+      "shushtari": "بنگ",
+      "category": "مکان و نهاد",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 462,
+      "persian": "اذان صبح",
+      "shushtari": "بنگروز",
+      "category": "زمان و آیین",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 463,
+      "persian": "بندکشی",
+      "shushtari": "بنگری",
+      "category": "ساختمان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 464,
+      "persian": "گنجشک",
+      "shushtari": "بنگشت",
+      "category": "جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 465,
+      "persian": "بادمجان",
+      "shushtari": "بنگون",
+      "category": "گیاهان و خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 466,
+      "persian": "ماست‌خیار",
+      "shushtari": "بنگو",
+      "category": "خوراک",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 467,
+      "persian": "بدعت",
+      "shushtari": "بنعت",
+      "category": "مفهوم",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 468,
+      "persian": "جماعت",
+      "shushtari": "بنکو",
+      "category": "اجتماع",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 469,
+      "persian": "اذان مغرب",
+      "shushtari": "بنگ‌شوم",
+      "category": "زمان و آیین",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 470,
+      "persian": "مایه؛ ریشه؛ اساس",
+      "shushtari": "بُنَر",
+      "category": "مفهوم",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 471,
+      "persian": "مجلس؛ محفل؛ بزم",
+      "shushtari": "بُنَر",
+      "category": "اجتماع",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 472,
+      "persian": "ده؛ آبادی؛ قریه",
+      "shushtari": "بُنَر",
+      "category": "جغرافیا",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 473,
+      "persian": "پاک‌کردن صورت زن با نخ",
+      "shushtari": "بندوندن",
+      "category": "آرایش",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 474,
+      "persian": "زن آرایشگر",
+      "shushtari": "بندون",
+      "category": "پیشه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 475,
+      "persian": "کوچ‌کردن",
+      "shushtari": "بنکون",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 476,
+      "persian": "بنفش",
+      "shushtari": "بنوش",
+      "category": "رنگ",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 477,
+      "persian": "فروکش‌کردن؛ کم‌شدن",
+      "shushtari": "بلنشین",
+      "category": "فعل و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 478,
+      "persian": "بوی روغن فاسد",
+      "shushtari": "بوسک",
+      "category": "بو",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 479,
+      "persian": "بوی سوختگی",
+      "shushtari": "بوسوز",
+      "category": "بو",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 480,
+      "persian": "بوسیدن",
+      "shushtari": "بوسلپس",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 481,
+      "persian": "بوشهر",
+      "shushtari": "بوشر",
+      "category": "نام مکان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 482,
+      "persian": "پدرش",
+      "shushtari": "بوش",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 483,
+      "persian": "خرطوم",
+      "shushtari": "بوع",
+      "category": "بدن جانوران",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 484,
+      "persian": "بوی کهنگی",
+      "shushtari": "بوکم",
+      "category": "بو",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 485,
+      "persian": "تشویق؛ تحریک‌کردن",
+      "shushtari": "بولک‌دادن",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 486,
+      "persian": "تلقیح نخل",
+      "shushtari": "بودادن",
+      "category": "کشاورزی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 487,
+      "persian": "بام",
+      "shushtari": "بون",
+      "category": "خانه",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 488,
+      "persian": "بام‌اندود",
+      "shushtari": "بوناندا",
+      "category": "ساختمان",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 489,
+      "persian": "بهانه",
+      "shushtari": "بونر",
+      "category": "گفتار و رفتار",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 490,
+      "persian": "بهانه‌گیر",
+      "shushtari": "بونرگیر",
+      "category": "ویژگی‌های انسانی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 491,
+      "persian": "برادر",
+      "shushtari": "بوور",
+      "category": "خویشاوندی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 492,
+      "persian": "شد؛ می‌شد",
+      "shushtari": "بوس",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 493,
+      "persian": "بینداز",
+      "shushtari": "بهر",
+      "category": "فعل",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 494,
+      "persian": "بهتر",
+      "shushtari": "بز",
+      "category": "ویژگی و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 495,
+      "persian": "سیاه‌چادر",
+      "shushtari": "بهون",
+      "category": "پوشاک و سکونت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 496,
+      "persian": "عروس",
+      "shushtari": "بی",
+      "category": "خانواده",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 497,
+      "persian": "عروسک",
+      "shushtari": "بیک",
+      "category": "اشیا و اسباب‌بازی",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 498,
+      "persian": "بی‌صدا؛ یواشکی",
+      "shushtari": "بیدنگ",
+      "category": "قید و حالت",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 499,
+      "persian": "بی‌تاب؛ بی‌صبر",
+      "shushtari": "بی‌تاشون",
+      "category": "حالت و احساس",
+      "note": "رونویسی‌شده از صفحه‌های کتاب؛ صورت واژه و معنی نیازمند مقابله و بازبینی با متن چاپی است.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۴۴ تا ۵۱ (حرف ب)؛ رونویسی تصویری ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 500,
+      "persian": "خانهٔ مخصوص مهمانان مرد (در برابر اندرونی)",
+      "shushtari": "بیرونی",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 501,
+      "persian": "خوش‌خو، بی‌غم",
+      "shushtari": "بیغمک",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 502,
+      "persian": "غافل، غافل‌گیر",
+      "shushtari": "بیغور",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 503,
+      "persian": "محفوظ (در دعا: خدا بی‌قضا)",
+      "shushtari": "بی‌قضا",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 504,
+      "persian": "گمنام، ناشناخته",
+      "shushtari": "بی‌نشون",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 505,
+      "persian": "تماشا، مشاهده",
+      "shushtari": "بینت",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 506,
+      "persian": "بزغاله",
+      "shushtari": "بیگ",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 507,
+      "persian": "رونق، رواج",
+      "shushtari": "بیم",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 508,
+      "persian": "بودن",
+      "shushtari": "بیدن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 509,
+      "persian": "قطع‌کردن، قطع رابطه",
+      "shushtari": "پابریدن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 510,
+      "persian": "گام‌زدن کودک نوپا",
+      "shushtari": "پاپاکودن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 511,
+      "persian": "پابرهنه",
+      "shushtari": "پاپتی",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 512,
+      "persian": "کبوتری که پاهایش پر دارد",
+      "shushtari": "پاپر",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 513,
+      "persian": "نوعی کوزهٔ دهن‌گشاد یک‌دسته",
+      "shushtari": "پاج",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 514,
+      "persian": "کج‌پا",
+      "shushtari": "پاچول",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 515,
+      "persian": "همراهی، پیروی",
+      "shushtari": "پایوندن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 516,
+      "persian": "گودال زیر دنگ برنج‌کوبی",
+      "shushtari": "پادنگ",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 517,
+      "persian": "رودخانه",
+      "shushtari": "پاروت",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 518,
+      "persian": "پایمال",
+      "shushtari": "پاسا",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 519,
+      "persian": "تراشهٔ چوب",
+      "shushtari": "پاس‌پاس",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 520,
+      "persian": "پیش‌آمدن، فراهم‌آمدن",
+      "shushtari": "پاافتادن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 521,
+      "persian": "بزکوهی",
+      "shushtari": "پازن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 522,
+      "persian": "زمین زراعتی که با آب نهر آبیاری می‌شود (فاریاب)",
+      "shushtari": "پاریو",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 523,
+      "persian": "ماما، زنی که زائو را کمک می‌کند",
+      "shushtari": "پاشون",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 524,
+      "persian": "ورود، آمدن",
+      "shushtari": "پاقدم",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 525,
+      "persian": "تمام",
+      "shushtari": "پاک",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 526,
+      "persian": "پی، بنیاد، اساس",
+      "shushtari": "پاکار",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 527,
+      "persian": "پاک و تمیز",
+      "shushtari": "پاکپوچ",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 528,
+      "persian": "رشدکردن، زنده‌ماندن",
+      "shushtari": "پاگرفتن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 529,
+      "persian": "اولین مهمانی عروس در خانهٔ پدر",
+      "shushtari": "پاگشون",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 530,
+      "persian": "پالودن، صاف‌کردن",
+      "shushtari": "پالودن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 531,
+      "persian": "گام‌نهادن",
+      "shushtari": "پاوندن",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 532,
+      "persian": "کوتاه‌پا",
+      "shushtari": "پاکوتا",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 533,
+      "persian": "سنگ ترازو",
+      "shushtari": "پاسنگ",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 534,
+      "persian": "دنبال‌کردن، پیروی",
+      "shushtari": "پابسبا",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 535,
+      "persian": "قشنگ، خوب (زبان کودکان)",
+      "shushtari": "پپر",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 536,
+      "persian": "بینی",
+      "shushtari": "پت",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 537,
+      "persian": "رفت‌وآمد، تردد",
+      "shushtari": "پتار",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 538,
+      "persian": "صدای شعلهٔ چراغ",
+      "shushtari": "پت‌پت",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 539,
+      "persian": "وصله‌زدن پارچه",
+      "shushtari": "پتپرو",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 540,
+      "persian": "هول‌شدن",
+      "shushtari": "پتول",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 541,
+      "persian": "خالی، برهنه",
+      "shushtari": "پتی",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 542,
+      "persian": "لایهٔ گِل",
+      "shushtari": "پج",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 543,
+      "persian": "نشستن",
+      "shushtari": "پج",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 544,
+      "persian": "درگوشی حرف‌زدن",
+      "shushtari": "پچ‌پچ",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 545,
+      "persian": "وجین‌کردن علف هرز",
+      "shushtari": "پختار",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 546,
+      "persian": "پهن (تحریف)",
+      "shushtari": "پحم",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    },
+    {
+      "id": 547,
+      "persian": "پهنا (تحریف)",
+      "shushtari": "پحنا",
+      "category": "واژگان",
+      "note": "رونویسی از مدخل کتاب؛ صورت و معنی مطابق متن ارسالی کاربر.",
+      "source": "واژه‌نامهٔ گویش شوشتری، صفحه‌های ۵۲ تا ۶۰؛ رونویسی ارسالی کاربر",
+      "confidence": "user_transcribed",
+      "needs_review": true
+    }
+  ]
+}
