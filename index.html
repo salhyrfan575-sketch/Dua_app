@@ -706,6 +706,28 @@ async function aiLoadDocs(){
    }
   }catch(err){console.warn('Shushtari dictionary unavailable:',err);}
   try{
+   const bookRes=await fetch('./data/shushtari-book-ocr.json',{cache:'no-cache'});
+   if(bookRes.ok){
+    const book=await bookRes.json();
+    const known=new Set(shushtarDocs.documents.map(d=>d.id));
+    const bookDocs=(Array.isArray(book.pages)?book.pages:[]).filter(p=>p.text&&p.text.trim()).map(p=>{
+     const words=[...new Set(String(p.text).match(/[آ-یءئؤإأۀ‌]{2,}/g)||[])].slice(0,180);
+     return {
+      id:'shushtari-book-page-'+p.page,
+      title:'واژه‌نامه گویش شوشتری، صفحه '+p.page,
+      category:'منبع کتاب واژگان شوشتری',
+      keywords:['محمدباقر نیرومند','واژه‌نامه شوشتری','گویش شوشتری',...words],
+      content:String(p.text).slice(0,6000),
+      sourceType:'واژه‌نامه',
+      sourcePage:p.page,
+      sources:[{title:'واژه‌نامه‌ای از گویش شوشتری، گردآوری محمدباقر نیرومند؛ صفحه '+p.page}]
+     };
+    }).filter(d=>!known.has(d.id));
+    shushtarDocs.documents.push(...bookDocs);
+    shushtarDocs.bookPageCount=bookDocs.length;
+   }
+  }catch(err){console.warn('Shushtari scanned book OCR unavailable:',err);}
+  try{
    const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
    if(monumentRes.ok){
     const monumentData=await monumentRes.json();
