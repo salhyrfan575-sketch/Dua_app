@@ -5,7 +5,7 @@ import android.os.*;
 import android.content.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
-import android.net.Uri;
+import android.net.Uri;\nimport android.net.ConnectivityManager;\nimport android.net.NetworkInfo;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.*;
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     private Typeface iranFont;
     private JSONArray words=new JSONArray(), articles=new JSONArray();
     private android.content.SharedPreferences prefs;
-    private String pendingAnchor=null, currentPage="home";
+    private String pendingAnchor=null, currentPage="home";\n    private static final String LOCAL_HOME="https://appassets.androidplatform.net/assets/site/index.html";\n    private boolean usingLocalSite=false;
     private int textScale=100;
 
     @Override public void onCreate(Bundle state){
@@ -99,15 +99,29 @@ public class MainActivity extends Activity {
     private void save(String value){JSONArray a;try{a=new JSONArray(prefs.getString("saved","[]"));}catch(Exception e){a=new JSONArray();}for(int i=0;i<a.length();i++)if(value.equals(a.optString(i))){Toast.makeText(this,"قبلاً ذخیره شده است",Toast.LENGTH_SHORT).show();return;}a.put(value);prefs.edit().putString("saved",a.toString()).apply();Toast.makeText(this,"به نشان‌شده‌ها اضافه شد",Toast.LENGTH_SHORT).show();}
     private void empty(LinearLayout b,String message){TextView t=centerLabel(message,13,MUTED,false);t.setPadding(dp(15),dp(24),dp(15),dp(24));b.addView(t);}
     private void share(String s){Intent i=new Intent(Intent.ACTION_SEND);i.setType("text/plain");i.putExtra(Intent.EXTRA_TEXT,s);startActivity(Intent.createChooser(i,"اشتراک‌گذاری"));}
+    private boolean hasNetwork(){try{ConnectivityManager cm=(ConnectivityManager)getSystemService(CONNECTIVITY_SERVICE);NetworkInfo n=cm==null?null:cm.getActiveNetworkInfo();return n!=null&&n.isConnected();}catch(Exception e){return false;}}
+    private String mime(String path){String p=path.toLowerCase(Locale.ROOT);if(p.endsWith(".html"))return "text/html";if(p.endsWith(".js"))return "application/javascript";if(p.endsWith(".json"))return "application/json";if(p.endsWith(".css"))return "text/css";if(p.endsWith(".svg"))return "image/svg+xml";if(p.endsWith(".png"))return "image/png";if(p.endsWith(".jpg")||p.endsWith(".jpeg"))return "image/jpeg";if(p.endsWith(".webp"))return "image/webp";if(p.endsWith(".ttf"))return "font/ttf";return "application/octet-stream";}
     private void openSite(String anchor){
         pendingAnchor=anchor;
-        if(web==null){web=new WebView(this);web.setBackgroundColor(Color.WHITE);WebSettings st=web.getSettings();st.setJavaScriptEnabled(true);st.setDomStorageEnabled(true);st.setDatabaseEnabled(true);st.setLoadsImagesAutomatically(true);st.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);st.setSupportZoom(false);st.setBuiltInZoomControls(false);web.setWebViewClient(new WebViewClient(){
-            @Override public void onPageFinished(WebView view,String url){injectFont(view);if(pendingAnchor!=null){String a=pendingAnchor;pendingAnchor=null;view.evaluateJavascript("(function(){var e=document.getElementById('"+a+"');if(e){e.scrollIntoView({behavior:'smooth',block:'start'});}else{window.scrollTo(0,0);}})();",null);}}
-            @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest request){Uri u=request.getUrl();if("http".equals(u.getScheme())||"https".equals(u.getScheme())){String host=u.getHost();if(host!=null&&!host.endsWith("github.io")&&!host.equals("eitaa.com")&&!host.equals("instagram.com")&&!host.equals("aparat.com")){try{startActivity(new Intent(Intent.ACTION_VIEW,u));}catch(Exception ignored){}return true;}}return false;}
-            @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame())Toast.makeText(MainActivity.this,"برای نمایش محتوای زنده سایت، اتصال اینترنت را بررسی کن.",Toast.LENGTH_LONG).show();}
-        });web.setDownloadListener((url,ua,cd,mime,len)->{try{startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(url)));}catch(Exception ignored){}});}
+        if(web==null){
+            web=new WebView(this);web.setBackgroundColor(Color.WHITE);
+            WebSettings st=web.getSettings();st.setJavaScriptEnabled(true);st.setDomStorageEnabled(true);st.setDatabaseEnabled(true);st.setLoadsImagesAutomatically(true);st.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);st.setSupportZoom(false);st.setBuiltInZoomControls(false);st.setAllowFileAccess(true);
+            web.setWebViewClient(new WebViewClient(){
+                @Override public WebResourceResponse shouldInterceptRequest(WebView view,WebResourceRequest request){
+                    Uri u=request.getUrl();if("appassets.androidplatform.net".equals(u.getHost())&&u.getPath()!=null&&u.getPath().startsWith("/assets/")){
+                        String path=u.getPath().substring("/assets/".length());try{InputStream in=getAssets().open(path);return new WebResourceResponse(mime(path),"UTF-8",200,"OK",new HashMap<String,String>(),in);}catch(Exception e){return new WebResourceResponse("text/plain","UTF-8",404,"Not Found",new HashMap<String,String>(),new ByteArrayInputStream(new byte[0]));}
+                    }return super.shouldInterceptRequest(view,request);
+                }
+                @Override public void onPageFinished(WebView view,String url){injectFont(view);if(pendingAnchor!=null){String a=pendingAnchor;pendingAnchor=null;if(a.isEmpty())view.evaluateJavascript("window.scrollTo({top:0,behavior:'smooth'});",null);else view.evaluateJavascript("(function(){var e=document.getElementById('"+a+"');if(e){e.scrollIntoView({behavior:'smooth',block:'start'});}})();",null);}}
+                @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest request){Uri u=request.getUrl();String host=u.getHost();if("appassets.androidplatform.net".equals(host)||"salhyrfan575-sketch.github.io".equals(host))return false;if("http".equals(u.getScheme())||"https".equals(u.getScheme())){try{startActivity(new Intent(Intent.ACTION_VIEW,u));}catch(Exception ignored){}return true;}return false;}
+                @Override public void onReceivedError(WebView view,WebResourceRequest request,WebResourceError error){if(request.isForMainFrame()&&!usingLocalSite){usingLocalSite=true;pendingAnchor=null;view.loadUrl(LOCAL_HOME);}else if(request.isForMainFrame())Toast.makeText(MainActivity.this,"نسخهٔ آفلاین سایت هم بارگذاری نشد.",Toast.LENGTH_LONG).show();}
+            });
+            web.setDownloadListener((url,ua,cd,mime,len)->{try{startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(url)));}catch(Exception ignored){}});
+        }
         show(web,"site","site");
-        if(web.getUrl()==null||!web.getUrl().startsWith(HOME)){web.loadUrl(HOME);}else if(anchor!=null){String a=anchor;pendingAnchor=null;web.evaluateJavascript("(function(){var e=document.getElementById('"+a+"');if(e)e.scrollIntoView({behavior:'smooth',block:'start'});})();",null);}
+        if(web.getUrl()==null){usingLocalSite=!hasNetwork();web.loadUrl(usingLocalSite?LOCAL_HOME:HOME);}
+        else if(anchor!=null){String a=anchor;pendingAnchor=null;web.evaluateJavascript("(function(){var e=document.getElementById('"+a+"');if(e)e.scrollIntoView({behavior:'smooth',block:'start'});})();",null);}
+        else{pendingAnchor=null;web.evaluateJavascript("window.scrollTo({top:0,behavior:'smooth'});",null);}
     }
     private void injectFont(WebView view){try{InputStream in=getAssets().open("fonts/IRAmir.ttf");ByteArrayOutputStream out=new ByteArrayOutputStream();byte[] buf=new byte[8192];int n;while((n=in.read(buf))>0)out.write(buf,0,n);in.close();String base=android.util.Base64.encodeToString(out.toByteArray(),android.util.Base64.NO_WRAP);String css="@font-face{font-family:IRAmir;src:url(data:font/ttf;base64,"+base+") format('truetype');font-weight:100 900}html,body,button,input,textarea,select,*{font-family:IRAmir,Tahoma,sans-serif!important}";String js="(function(){var s=document.getElementById('sj-app-font');if(!s){s=document.createElement('style');s.id='sj-app-font';document.head.appendChild(s);}s.textContent="+JSONObject.quote(css)+";})();";view.evaluateJavascript(js,null);}catch(Exception ignored){}}
     @Override public void onBackPressed(){if(web!=null&&web.getParent()!=null&&web.canGoBack()){web.goBack();return;}if(!"home".equals(currentPage)){showHome();return;}super.onBackPressed();}
