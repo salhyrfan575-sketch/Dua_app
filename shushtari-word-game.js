@@ -136,8 +136,9 @@
  function choose(i){
   if(locked||picked.includes(i)||picked.length>=tiles.length)return;
   picked.push(i);drawPicked();
-  const guess=picked.map(j=>tiles[j]).join('');
-  if(stages[stage-1].words.some(w=>w.key===guess))submitWord();
+  // Do not auto-submit short words: the player may be building a longer answer.
+  $('wgMessage').textContent='وقتی واژه کامل شد، دکمهٔ «ثبت واژه» را بزن.';
+  $('wgMessage').className='wg-message';
  }
  function undo(){if(locked||!picked.length)return;picked.pop();drawPicked();}
  function submitWord(){
