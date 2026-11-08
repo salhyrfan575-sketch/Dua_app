@@ -5,10 +5,10 @@
  root.dataset.initialized='yes';
  const $=id=>root.querySelector('#'+id);
  const norm=s=>String(s||'').toLocaleLowerCase('fa')
-  .replace(/\\([^)]*\\)/g,'').replace(/[\\u064b-\\u065f\\u0670\\u0640]/g,'')
+  .replace(/\([^)]*\)/g,'').replace(/[\u064b-\u065f\u0670\u0640]/g,'')
   .replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[ۀة]/g,'ه')
   .replace(/[ؤ]/g,'و').replace(/[أإ]/g,'ا').replace(/[^ء-ی]/g,'');
- const clean=s=>String(s||'').replace(/\\([^)]*\\)/g,'').replace(/[\\u064b-\\u065f\\u0670\\u0640]/g,'').trim();
+ const clean=s=>String(s||'').replace(/\([^)]*\)/g,'').replace(/[\u064b-\u065f\u0670\u0640]/g,'').trim();
  const freq=s=>{const o={};for(const c of s)o[c]=(o[c]||0)+1;return o;};
  const fits=(word,bag)=>Object.entries(freq(word)).every(([c,n])=>(bag[c]||0)>=n);
  const shuffle=a=>{const x=[...a];for(let i=x.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]];}return x;};
