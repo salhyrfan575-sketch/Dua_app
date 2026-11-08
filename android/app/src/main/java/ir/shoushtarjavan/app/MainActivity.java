@@ -120,6 +120,7 @@ public class MainActivity extends Activity {
         }
         show(web,"site","site");
         if(web.getUrl()==null){usingLocalSite=!hasNetwork();web.loadUrl(usingLocalSite?LOCAL_HOME:HOME);}
+        else if(usingLocalSite&&hasNetwork()&&anchor==null){usingLocalSite=false;web.loadUrl(HOME);}
         else if(anchor!=null){String a=anchor;pendingAnchor=null;web.evaluateJavascript("(function(){var e=document.getElementById('"+a+"');if(e)e.scrollIntoView({behavior:'smooth',block:'start'});})();",null);}
         else{pendingAnchor=null;web.evaluateJavascript("window.scrollTo({top:0,behavior:'smooth'});",null);}
     }
