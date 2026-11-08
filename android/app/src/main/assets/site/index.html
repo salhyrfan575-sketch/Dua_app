@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b35"><meta name="description" content="شوشترجوان؛ رسانه خبری، فرهنگی و اختصاصی شوشتر">
+<title>شوشترجوان | رسانه مردم شوشتر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--green:#17483e;--green2:#236557;--cream:#f5f0e5;--paper:#fffdf8;--gold:#c49a50;--red:#9c3d36;--ink:#24312d;--muted:#78827b;--line:#e9e2d5;--shadow:0 12px 35px #20352b12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(1160px,92%);margin:auto}
+.topline{background:#102f2a;color:#e9e2d5;font-size:12px;padding:7px 0}.topline .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.masthead{background:var(--paper);border-bottom:1px solid var(--line)}.mast{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}.brand{display:flex;align-items:center;gap:13px}.brand-mark{width:56px;height:56px;border-radius:17px;background:linear-gradient(145deg,var(--green),#286b5b);color:#f4d99d;display:grid;place-items:center;font-size:27px;box-shadow:0 7px 18px #17483e2b}.brand h1{font-size:26px;line-height:1.2;margin:0;color:var(--green);font-weight:900}.brand small{color:var(--muted);font-size:12px}.mast-note{color:var(--muted);font-size:13px;text-align:left}.nav-wrap{background:var(--green);color:#fff}.nav{display:flex;align-items:center;gap:4px;overflow:auto;white-space:nowrap}.nav a{padding:12px 15px;font-size:13px;transition:.2s}.nav a:hover,.nav a.active{background:#ffffff17;color:#f4d99d}.nav .nav-cta{margin-right:auto;background:var(--gold);color:#1b332d;border-radius:8px;padding:7px 15px;font-weight:800}
+.hero{position:relative;min-height:440px;overflow:hidden;background:#183d35;color:white;isolation:isolate}.hero-slides,.hero-slides:after{position:absolute;inset:0}.hero-slides img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease;filter:brightness(.56) saturate(.82)}.hero-slides img.show{opacity:1}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#102e2ad9 0%,#102e2a8c 48%,#102e2a25 100%);z-index:-1}.hero-content{position:relative;z-index:2;padding:82px 0 72px;max-width:690px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#f0d49b;font-size:13px;font-weight:700}.eyebrow:before{content:"";width:24px;height:2px;background:var(--gold)}.hero h2{font-size:clamp(30px,5vw,52px);line-height:1.35;margin:12px 0 14px;font-weight:900}.hero p{max-width:560px;color:#f2eee4;margin:0 0 24px;font-size:15px}.btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:9px;padding:11px 20px;background:var(--gold);color:#20372f;font-weight:800;cursor:pointer}.hero-dots{display:flex;gap:7px;margin-top:27px}.hero-dots button{width:8px;height:8px;border:0;border-radius:9px;background:#ffffff70;padding:0}.hero-dots button.on{width:26px;background:#e3bd78}
+.ticker{background:#fffaf0;border-bottom:1px solid var(--line);overflow:hidden}.ticker-inner{display:flex;align-items:center;gap:18px;min-height:47px}.ticker-label{background:var(--red);color:white;padding:5px 13px;border-radius:5px;font-size:12px;white-space:nowrap;font-weight:800}.ticker-track{overflow:hidden;white-space:nowrap;flex:1}.ticker-track span{display:inline-block;padding-right:100%;animation:ticker 26s linear infinite;font-size:13px;color:#4d5b54}@keyframes ticker{to{transform:translateX(100%)}}
+.section{padding:54px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.section-kicker{font-size:11px;color:var(--red);font-weight:800;letter-spacing:.5px}.section h2{margin:0;color:var(--green);font-size:25px;font-weight:900}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.more{color:var(--green2);font-weight:800;font-size:13px}.news-layout{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}.lead-card,.news-card,.feature-card,.heritage-card{background:var(--paper);border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}.lead-image{height:270px;position:relative}.lead-image img,.news-card img,.feature-card img,.heritage-card img{width:100%;height:100%;object-fit:cover;display:block}.lead-body{padding:20px}.tag{display:inline-block;background:#e8f0e9;color:var(--green2);border-radius:5px;padding:3px 9px;font-size:11px;font-weight:800}.lead-body h3{font-size:21px;margin:9px 0;color:var(--ink);line-height:1.6}.lead-body p,.news-card p,.feature-card p,.heritage-card p{font-size:13px;color:var(--muted);margin:0}.meta{font-size:11px;color:#929990;margin-top:12px}.side-news{display:grid;gap:14px}.news-card{display:grid;grid-template-columns:125px 1fr;min-height:130px}.news-card img{min-height:130px}.news-card .body{padding:13px}.news-card h3{font-size:14px;line-height:1.7;margin:7px 0;color:var(--ink)}
+.features{background:#eae6da}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature-card img{height:175px}.feature-card .body{padding:16px}.feature-card h3{margin:7px 0;font-size:17px;color:var(--green)}.feature-card .meta{margin-top:9px}
+.heritage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.heritage-card img{height:190px}.heritage-card .body{padding:16px}.heritage-card h3{margin:0 0 6px;color:var(--green);font-size:17px}.heritage-card p{min-height:68px}.heritage-card details{margin-top:10px;border-top:1px solid var(--line);padding-top:10px;font-size:12px;color:#59645d}.heritage-card summary{cursor:pointer;color:var(--red);font-weight:800}
+.about-band{background:linear-gradient(110deg,#173e35,#245e50);color:#f8f2e7;padding:38px 0}.about-band .container{display:flex;justify-content:space-between;align-items:center;gap:25px}.about-band h2{margin:0 0 7px;font-size:23px}.about-band p{margin:0;color:#d7e0d8;font-size:13px;max-width:700px}
+footer{background:#102f2a;color:#e9e4d9;padding:42px 0 18px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}.footer-brand{font-size:23px;font-weight:900;color:#f0d49b}.footer-col h3{font-size:15px;margin:0 0 13px;color:#f0d49b}.footer-col p,.footer-col a{display:block;color:#d0d8d1;font-size:13px;margin:6px 0}.social-links{display:flex;flex-wrap:wrap;gap:9px}.social-links a{border:1px solid #ffffff35;border-radius:8px;padding:7px 12px}.social-links a:hover{background:#ffffff12}.copyright{border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;text-align:center;font-size:11px;color:#aab8ae}
+#backTop{position:fixed;bottom:20px;left:20px;width:43px;height:43px;border:0;border-radius:50%;background:var(--gold);color:#173e35;font-size:20px;box-shadow:var(--shadow);cursor:pointer;display:none;z-index:10}
+@media(max-width:800px){.mast-note{display:none}.hero{min-height:400px}.hero-content{padding:70px 0}.news-layout{grid-template-columns:1fr}.feature-grid,.heritage-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:540px){.mast{padding:13px 0}.brand h1{font-size:22px}.brand-mark{width:48px;height:48px}.nav a{padding:11px 12px;font-size:12px}.nav .nav-cta{display:none}.hero{min-height:390px}.hero-content{padding:60px 0}.hero p{font-size:13px}.section{padding:39px 0}.section h2{font-size:21px}.section-head{align-items:start}.news-card{grid-template-columns:105px 1fr}.news-card h3{font-size:13px}.news-card .body{padding:10px}.lead-image{height:210px}.feature-grid,.heritage-grid{grid-template-columns:1fr}.feature-card img,.heritage-card img{height:205px}.about-band .container{display:block}.about-band .btn{margin-top:18px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+.skip-link{position:absolute;top:-60px;right:12px;z-index:100;background:#fff;color:var(--green);padding:9px 14px;border-radius:8px;box-shadow:var(--shadow)}
+.skip-link:focus{top:12px}
+:focus-visible{outline:3px solid #d4a84f;outline-offset:3px}
+.nav-wrap{position:sticky;top:0;z-index:20;box-shadow:0 5px 18px #102f2a18}
+.nav{scrollbar-width:thin}
+.btn,.nav a,.social-links a,.more{transition:background-color .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px);background:#d7ad68}
+.social-links a:hover{transform:translateY(-2px)}
+.hero-content{padding-top:clamp(58px,8vw,82px)}
+.news-card,.lead-card,.feature-card,.heritage-card{transition:transform .22s ease,box-shadow .22s ease}
+.news-card:hover,.lead-card:hover,.feature-card:hover,.heritage-card:hover{transform:translateY(-3px);box-shadow:0 16px 38px #20352b1c}
+@media(max-width:540px){.nav-wrap{position:sticky;top:0}.nav{gap:2px}.nav a{flex:0 0 auto}.nav .nav-cta{display:block}.nav{padding-top:2px;padding-bottom:2px}}
+@media(prefers-reduced-motion:reduce){.news-card,.lead-card,.feature-card,.heritage-card,.btn,.social-links a{transition:none}}
+
+
+/* Shushtar knowledge assistant */
+.ai-launch{position:fixed;right:18px;bottom:20px;z-index:40;border:0;border-radius:999px;padding:12px 18px;background:#17483e;color:#fffdf8;box-shadow:0 8px 28px #102f2a38;font-weight:800;cursor:pointer}
+.ai-launch:hover{background:#236557}
+.ai-panel{position:fixed;right:18px;bottom:82px;z-index:41;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 110px));background:#fffdf8;border:1px solid #e9e2d5;border-radius:18px;box-shadow:0 18px 55px #102f2a38;display:none;overflow:hidden}
+.ai-panel.open{display:flex;flex-direction:column}
+.ai-head{background:#17483e;color:#fffdf8;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.ai-head strong{display:block;font-size:15px}.ai-head small{color:#d6e2d8;font-size:11px}
+.ai-close{border:0;background:#ffffff20;color:white;border-radius:8px;width:34px;height:34px;font-size:20px;cursor:pointer}
+.ai-status{padding:8px 14px;background:#f4f0e6;color:#59645d;font-size:11px;border-bottom:1px solid #e9e2d5}
+.ai-messages{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+.ai-msg{max-width:92%;padding:10px 12px;border-radius:13px;font-size:13px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
+.ai-msg.bot{align-self:flex-start;background:#f0eee6;color:#26352e;border-bottom-right-radius:4px}
+.ai-msg.user{align-self:flex-end;background:#e1eee5;color:#17483e;border-bottom-left-radius:4px}
+.ai-msg a{color:#236557;text-decoration:underline}
+.ai-form{padding:12px;border-top:1px solid #e9e2d5;display:flex;gap:8px;background:#fff}
+.ai-form input{min-width:0;flex:1;border:1px solid #ddd6c8;border-radius:10px;padding:10px;font:inherit;font-size:13px;outline:none}
+.ai-form input:focus{border-color:#236557}
+.ai-form button{border:0;border-radius:10px;background:#c49a50;color:#20372f;padding:0 15px;font-weight:800;cursor:pointer}
+.ai-sources{font-size:11px;color:#69756c;margin-top:8px;border-top:1px solid #ddd;padding-top:7px}
+.ai-sources a{display:block;margin:3px 0}
+@media(max-width:540px){.ai-launch{right:12px;bottom:12px}.ai-panel{right:8px;bottom:68px;width:calc(100vw - 16px);height:min(570px,calc(100dvh - 82px))}}
+
+
+/* Persian to Shushtari dictionary */
+.dictionary-section{background:#f8f4ea}
+.dictionary-box{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.dictionary-search{display:flex;gap:9px;margin:14px 0}
+.dictionary-search input{flex:1;min-width:0;border:1px solid #dcd4c5;border-radius:11px;padding:13px 14px;font:inherit;background:#fff}
+.dictionary-search button{border:0;border-radius:11px;background:var(--green);color:white;padding:0 20px;font-weight:800;cursor:pointer}
+.dictionary-hint{font-size:12px;color:var(--muted);margin:0 0 13px}
+.dictionary-result{display:none;background:#edf3eb;border:1px solid #d9e5d9;border-radius:13px;padding:16px;margin:12px 0}
+.dictionary-result.show{display:block}
+.dictionary-result .d-persian{font-size:13px;color:#65746a}
+.dictionary-result .d-shushtari{font-size:27px;font-weight:900;color:var(--green);margin:2px 0}
+.dictionary-result .d-note{font-size:12px;color:#59645d}
+.dictionary-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px;max-height:340px;overflow:auto}
+.dictionary-item{display:flex;justify-content:space-between;gap:10px;text-align:right;border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 11px;cursor:pointer;font:inherit}
+.dictionary-item span:first-child{font-size:12px;color:#59645d}
+.dictionary-item span:last-child{font-size:12px;color:var(--green);font-weight:800}
+ .dictionary-meta{font-size:11px;color:var(--muted);margin-top:12px}.dictionary-sources{margin-top:10px;border-top:1px solid var(--line);padding-top:9px;font-size:11px;color:var(--muted)}.dictionary-sources summary{cursor:pointer;font-weight:800;color:var(--green)}.dictionary-sources a{display:block;color:var(--green2);margin:6px 0;text-decoration:underline}
+@media(max-width:540px){.dictionary-box{padding:15px}.dictionary-search{flex-direction:column}.dictionary-search button{padding:11px}.dictionary-list{grid-template-columns:1fr}}
+
+
+/* 2026 editorial redesign — Shushtar Javan */
+:root{--green:#123f38;--green2:#287565;--cream:#f2eee4;--paper:#fffefa;--gold:#d0a45a;--red:#a6473d;--ink:#202d29;--muted:#737f78;--line:#e4ddcf;--shadow:0 16px 42px #1b382b12}
+body{background:#f2eee4;background-image:radial-gradient(#bba98212 .7px,transparent .7px);background-size:9px 9px}
+.topline{background:#0b2925;letter-spacing:.1px}.masthead{background:linear-gradient(120deg,#fffefa 0%,#f8f3e8 100%)}
+.brand-mark{border-radius:19px 19px 19px 5px;background:linear-gradient(145deg,#0e3a33,#347b68);box-shadow:0 10px 24px #123f3830;font-family:serif;font-size:31px}
+.brand h1{letter-spacing:-1px}.brand small{letter-spacing:.15px}
+.nav-wrap{background:linear-gradient(90deg,#0e342e,#1c5548);border-top:1px solid #ffffff12}.nav a{border-radius:8px;margin:5px 1px;padding:9px 13px}.nav a:hover,.nav a.active{background:#ffffff18;color:#f4d99d}
+.hero{min-height:485px;background:#0c332d}.hero:after{background:linear-gradient(90deg,#082923ed 0%,#0b3028a8 52%,#0b30282b 100%)}.hero-content{max-width:720px;padding-top:90px;padding-bottom:82px}.hero h2{font-size:clamp(34px,5.2vw,58px);letter-spacing:-1.2px;text-shadow:0 4px 25px #0005}.hero p{font-size:16px;line-height:2.1;color:#f1eee5}.eyebrow{background:#ffffff12;border:1px solid #ffffff24;border-radius:99px;padding:5px 13px}.eyebrow:before{display:none}.btn{border-radius:999px;padding:12px 23px;box-shadow:0 8px 22px #0002}
+.ticker{background:#fffaf0}.ticker-label{border-radius:99px}.section{padding:64px 0}.section-head{margin-bottom:27px}.section-kicker{letter-spacing:1.5px}.section h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.5px}.section-head>div:first-child{position:relative}.section-head>div:first-child:after{content:"";display:block;width:54px;height:3px;background:var(--gold);border-radius:3px;margin-top:12px}
+.lead-card,.news-card,.feature-card,.heritage-card{border-radius:19px;border-color:#e7dfd0;box-shadow:0 8px 28px #233d2e0b}.lead-image{height:300px}.lead-body{padding:23px}.lead-body h3{font-size:23px}.news-card{grid-template-columns:135px 1fr}.news-card h3{font-size:15px}.news-card img{min-height:145px}.features{background:linear-gradient(180deg,#e9e4d7,#f1ede3)}.feature-card img,.heritage-card img{filter:saturate(.9)}.feature-card .body,.heritage-card .body{padding:19px}.feature-card h3,.heritage-card h3{font-size:18px}.about-band{background:radial-gradient(circle at 85% 20%,#367d6a 0%,transparent 38%),linear-gradient(110deg,#103a32,#20584b);padding:48px 0}.about-band h2{font-size:26px}
+footer{background:#0a2925}.footer-brand{font-size:26px}.copyright{color:#a9b8ad}
+.dictionary-section{background:linear-gradient(180deg,#e8e4d8,#f6f2e8)}.dictionary-box{border-radius:22px;padding:28px;background:linear-gradient(145deg,#fffefa,#fbf7ed);box-shadow:0 20px 50px #20382b12}.dictionary-search input{border-radius:999px;padding:14px 19px}.dictionary-search button{border-radius:999px;padding:0 25px;background:linear-gradient(120deg,#123f38,#287565)}.dictionary-result{border-radius:17px;background:linear-gradient(120deg,#e8f1e9,#f5f2e7);border-color:#d6e3d6}.dictionary-result .d-shushtari{font-size:31px}.dictionary-item{border-radius:12px;padding:11px 13px;transition:.18s}.dictionary-item:hover{border-color:#b8cdbd;background:#f5f8f1;transform:translateY(-1px)}
+.ai-launch{background:linear-gradient(120deg,#103d35,#2b7664);box-shadow:0 12px 32px #102f2a40;border:1px solid #ffffff22}.ai-panel{border-radius:22px;box-shadow:0 24px 70px #102f2a45}.ai-head{background:linear-gradient(110deg,#103d35,#2b7664);padding:17px}.ai-status{background:#f4f0e6}
+@media(max-width:800px){.section{padding:48px 0}.hero{min-height:440px}.hero-content{padding:75px 0}.lead-image{height:250px}}
+@media(max-width:540px){.hero{min-height:405px}.hero-content{padding:62px 0}.hero h2{font-size:35px}.hero p{font-size:13px}.section{padding:42px 0}.section-head{gap:8px}.news-card{grid-template-columns:108px 1fr}.news-card img{min-height:125px}.lead-body h3{font-size:19px}.dictionary-box{padding:16px}.dictionary-search button{padding:12px}.dictionary-result .d-shushtari{font-size:26px}}
+
+
+/* Expanded historical heritage archive */
+.heritage-section{background:linear-gradient(180deg,#f6f1e6 0%,#eee8d9 100%)}
+.heritage-intro{background:linear-gradient(110deg,#123f38,#287565);color:#fff;padding:22px 26px;border-radius:18px;margin:0 0 24px;box-shadow:0 14px 32px #123f3820}
+.heritage-intro strong{font-size:19px;color:#f2d69e}.heritage-intro p{margin:5px 0 0;color:#e6eee8;font-size:13px;line-height:2}
+.heritage-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.heritage-card{display:flex;flex-direction:column;border-radius:18px;min-width:0}
+.heritage-card img{height:220px;flex:0 0 auto;background:#e3ddcf}
+.heritage-card .body{display:flex;flex-direction:column;flex:1;padding:18px}
+.heritage-type{align-self:flex-start;display:inline-block;background:#e8efe7;color:#286657;border-radius:30px;padding:3px 10px;font-size:10px;font-weight:800;margin-bottom:7px}
+.heritage-card h3{font-size:18px;line-height:1.6}
+.heritage-card p{min-height:0;line-height:2}
+.heritage-card details{margin-top:auto;padding-top:13px}
+.heritage-card details p{margin:10px 0;color:#4f5e55;line-height:2.05}
+.heritage-card details a,.heritage-sources a{color:#246b5a;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.heritage-card .heritage-fact{background:#f5f0e5;border-right:3px solid #c49a50;padding:8px 11px;border-radius:5px;font-weight:700}
+.heritage-research-note{margin-top:25px;padding:17px 20px;border:1px solid #e0d4bd;border-radius:14px;background:#fffaf0;color:#58635b;font-size:13px;line-height:2}
+.heritage-research-note strong{color:#17483e}
+.heritage-sources{font-size:12px;line-height:2.3;color:#657168;margin-top:17px;padding-top:13px;border-top:1px solid #dcd3c2}
+@media(max-width:850px){.heritage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.heritage-grid{grid-template-columns:1fr}.heritage-card img{height:230px}.heritage-intro{padding:18px}.heritage-intro strong{font-size:17px}}
+
+
+
+/* Navigation panels + liquid glass visual system */
+:root{--glass:rgba(255,255,255,.72);--glass-line:rgba(255,255,255,.68);--glass-shadow:0 18px 55px rgba(20,48,40,.14)}
+.brand-mark{width:66px;height:66px;border-radius:50%;background:#111;color:#fff;padding:5px;box-shadow:0 8px 24px #102f2a30}
+.brand-mark svg{width:100%;height:100%;display:block}
+.nav-wrap{background:rgba(12,48,41,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #ffffff24}
+.nav{min-height:66px;gap:9px;overflow:visible;white-space:normal}
+.nav a,.nav-menu-btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 19px;border:1px solid #ffffff25;border-radius:14px;background:#ffffff0d;color:#fff;font:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:.2s}
+.nav a:hover,.nav-menu-btn:hover,.nav-menu-btn[aria-expanded=true]{background:#ffffff25;border-color:#ffffff65;color:#f7dca5;transform:translateY(-1px)}
+.nav a.active{background:#ffffff1b;color:#f7dca5}
+.nav .nav-contact{margin-right:auto;background:linear-gradient(135deg,#e2bd78,#c79748);color:#18382f;border:0}
+.menu-layer{position:relative;z-index:22}
+.menu-panel{position:absolute;top:10px;right:0;left:0;max-width:760px;margin:0 auto;padding:24px 26px;border:1px solid var(--glass-line);border-radius:24px;background:rgba(255,255,255,.86);color:#23352e;box-shadow:var(--glass-shadow);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);animation:menuIn .2s ease}
+.menu-panel[hidden]{display:none}
+.menu-panel h3{margin:0 0 14px;color:#123f38;font-size:20px}
+.menu-panel>a{display:inline-flex;margin:5px;padding:10px 15px;border-radius:13px;background:rgba(20,73,61,.07);border:1px solid rgba(20,73,61,.1);color:#17483e;font-weight:700;font-size:13px}
+.menu-panel>a:hover{background:#dcebe2}
+.menu-panel p{margin:10px 0;color:#34443c;font-size:14px;line-height:2.15}
+.about-panel{max-width:850px}
+.hero,.lead-card,.news-card,.feature-card,.heritage-card,.dictionary-box,.heritage-intro{border-radius:24px}
+.lead-card,.news-card,.feature-card,.heritage-card,.dictionary-box{background:rgba(255,255,255,.76);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.85);box-shadow:0 12px 34px rgba(24,54,43,.08)}
+.section{position:relative}
+.ticker{background:rgba(255,250,240,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.about-band{display:none}
+@keyframes menuIn{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.nav{padding:9px 0;gap:6px}.nav a,.nav-menu-btn{font-size:12px;padding:8px 11px;min-height:42px}.nav .nav-contact{margin-right:0}.menu-panel{top:5px;padding:18px;border-radius:19px}.menu-panel p{font-size:13px}.brand-mark{width:56px;height:56px}}
+@media(prefers-reduced-motion:reduce){.menu-panel{animation:none}}
+ .social-placeholder{display:inline-flex;align-items:center;border:1px dashed #ffffff55;border-radius:8px;padding:7px 12px;color:#c8d2ca;font-size:13px;opacity:.9}
+.brand-mark{padding:0;object-fit:contain;background:transparent;border:0;border-radius:50%;box-shadow:0 8px 24px #102f2a30}
+
+/* Refined Iranian heritage palette and layout corrections */
+:root{--green:#123f46;--green2:#247b78;--cream:#f3ecdc;--paper:#fffaf0;--gold:#c99a3b;--red:#9f3b32;--ink:#263238;--muted:#6f7775;--line:#e2d5bd;--shadow:0 14px 38px #183b3a16}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#f3ecdc;background-image:radial-gradient(#b38a4510 .8px,transparent .8px);background-size:12px 12px}
+.topline{background:#142f3b;color:#f5e8c9}
+.masthead{background:linear-gradient(120deg,#fffaf0,#f0e5cf)}
+.brand h1{color:#123f46}
+.nav-wrap{background:linear-gradient(90deg,#123f46,#1b6664)}
+.nav a:hover,.nav a.active{color:#f3d18b}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#142f3b;min-height:470px}
+.hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-slides img{inset:0}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#102d39ed 0%,#123f46a8 54%,#123f4620 100%)}
+.hero-content{position:relative;z-index:2}
+.hero h2{color:#fff9ed}
+.eyebrow{color:#f2d18c}
+.btn,.dictionary-search button{background:linear-gradient(120deg,#c99a3b,#e0b85e);color:#23343a}
+.section h2{color:#123f46}
+.section-kicker{color:#9f3b32}
+.ticker-label{background:#9f3b32}
+.features{background:linear-gradient(180deg,#e9e0cd,#f3ecdc)}
+.about-section{background:linear-gradient(135deg,#eee3ce,#fbf7ed)}
+.about-layout{display:grid;grid-template-columns:190px minmax(0,1fr);gap:35px;align-items:start;background:#fffaf0;border:1px solid #e2d5bd;border-radius:24px;padding:34px;box-shadow:var(--shadow)}
+.about-mark{min-height:180px;border-radius:18px;background:linear-gradient(145deg,#123f46,#247b78);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f4d99b}
+.about-mark span{font-family:serif;font-size:86px;line-height:1}
+.about-mark small{font-size:13px;margin-top:12px}
+.about-copy h2{font-size:28px;margin:2px 0 16px}
+.about-copy p{margin:0 0 13px;font-size:14px;line-height:2.2;color:#39464a}
+.professions-section{background:#f7f1e5}
+.professions-intro{background:linear-gradient(110deg,#123f46,#247b78);color:#f9f1df;border-radius:16px;padding:18px 22px;margin-bottom:20px;line-height:2;font-size:13px}
+.profession-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.profession-card{position:relative;background:#fffaf0;border:1px solid #e5dac6;border-radius:15px;padding:18px 20px;min-height:138px;box-shadow:0 7px 22px #183b3a0a}
+.profession-card b{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#f1e3c4;color:#9f3b32;font-size:12px}
+.profession-card h3{display:inline-block;margin:0 0 7px 9px;color:#123f46;font-size:17px}
+.profession-card p{margin:4px 0 0;color:#65706e;font-size:12px;line-height:2}
+.professions-note{margin-top:18px;padding:14px 17px;background:#f0e6d2;border-right:4px solid #c99a3b;border-radius:9px;color:#515d5e;font-size:12px;line-height:2}
+.professions-sources{margin-top:15px;font-size:12px;line-height:2.2;color:#6b7471}
+.professions-sources a{color:#247b78;text-decoration:underline;text-underline-offset:3px}
+.ai-history-section{background:linear-gradient(135deg,#e8dfcb,#f6f0e4);padding-top:44px;padding-bottom:44px}
+.ai-history-card{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:26px 30px;background:linear-gradient(110deg,#123f46,#247b78);border-radius:22px;color:#fffaf0;box-shadow:0 16px 40px #123f4625}
+.ai-history-card h2{color:#fff4d9;margin:3px 0 7px;font-size:25px}
+.ai-history-card p{margin:0;max-width:700px;color:#e6eee8;font-size:13px;line-height:2}
+.ai-history-card .section-kicker{color:#f2d18c}
+.ai-launch{position:static;flex:0 0 auto;white-space:nowrap;border:1px solid #f4d99b55;border-radius:999px;padding:13px 20px;background:#d1a34a;color:#20343a;box-shadow:0 8px 22px #102f2a30}
+.ai-launch:hover{background:#e2ba69}
+.ai-panel{z-index:60}
+.menu-panel{max-height:min(70vh,520px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.nav-wrap{z-index:30}
+#about,#professions,#ai-history{scroll-margin-top:90px}
+@media(max-width:700px){.about-layout{grid-template-columns:1fr;padding:20px;gap:16px}.about-mark{min-height:100px;flex-direction:row;gap:12px}.about-mark span{font-size:54px}.profession-grid{grid-template-columns:1fr}.ai-history-card{display:block;padding:22px}.ai-history-card .ai-launch{margin-top:17px;white-space:normal}.about-copy h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Navigation stability fix: preserve the original single-row menu position */
+.nav-wrap{
+  position:sticky;
+  top:0;
+  z-index:30;
+  isolation:isolate;
+  overflow:visible;
+}
+.nav{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  min-height:66px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  white-space:nowrap;
+  scrollbar-width:thin;
+  overscroll-behavior-x:contain;
+}
+.nav>a,.nav>.nav-menu-btn{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.menu-layer{
+  position:absolute;
+  top:100%;
+  right:0;
+  left:0;
+  z-index:31;
+  width:min(1160px,92%);
+  margin:0 auto;
+  pointer-events:none;
+}
+.menu-panel{
+  top:8px;
+  pointer-events:auto;
+}
+@media(max-width:700px){
+  .nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-height:58px;padding:7px 0;gap:6px}
+  .nav>a,.nav>.nav-menu-btn{flex:0 0 auto;white-space:nowrap}
+  .nav .nav-contact{margin-right:0}
+  .menu-layer{width:92%}
+}
+
+
+/* Keep the main navigation in the document flow: no sticky or horizontal movement */
+.nav-wrap{
+  position:relative !important;
+  top:auto !important;
+  overflow:visible !important;
+}
+.nav{
+  position:relative !important;
+  overflow:visible !important;
+  overflow-x:visible !important;
+  overflow-y:visible !important;
+  scroll-behavior:auto !important;
+  overscroll-behavior:auto !important;
+  scrollbar-width:none !important;
+  flex-wrap:nowrap;
+}
+@media(max-width:700px){
+  .nav{
+    flex-wrap:wrap;
+    overflow:visible !important;
+    white-space:normal;
+  }
+  .nav>a,.nav>.nav-menu-btn{
+    flex:0 1 auto;
+    white-space:normal;
+  }
+}
+
+\n/* Breaking news headline card */\n.breaking-news{min-height:100%;display:flex;align-items:center;background:linear-gradient(135deg,#fffefa 0%,#f7f0e4 100%);border-right:5px solid #a6473d}\n.breaking-news .lead-body{padding:clamp(22px,4vw,38px)}\n.breaking-news .lead-body h3{font-size:clamp(22px,3vw,30px);line-height:1.8;margin:14px 0}\n.breaking-news .lead-body p{font-size:15px;line-height:2.2;color:#46554d}\n.breaking-tag{background:#a6473d;color:#fff}\n
+/* زیرنویس خبری با زمینه سفید و نوشته مشکی؛ حرکت از چپ به راست */
+.breaking-ticker{background:#fff;border-bottom:3px solid #b52b2b;color:#111}
+.breaking-ticker .ticker-inner{min-height:48px;gap:0}
+.breaking-ticker .ticker-label{align-self:stretch;display:flex;align-items:center;border-radius:0;background:#b52b2b;color:#fff;padding:0 17px;font-size:13px}
+.breaking-ticker .ticker-track{direction:ltr;min-width:0}
+.breaking-ticker .ticker-marquee{display:flex;width:max-content;white-space:nowrap;animation:breakingMarquee 24s linear infinite!important}
+.breaking-ticker .ticker-marquee span{display:block;flex:none;direction:rtl;text-align:right;padding:0 12px;font-size:14px;line-height:48px;color:#111;font-weight:700}
+@keyframes breakingMarquee{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.breaking-ticker:hover .ticker-marquee{animation-play-state:paused}
+.top-news-section{padding:26px 0 34px;background:linear-gradient(180deg,#f7f2e8 0%,#fffdf8 100%);border-bottom:1px solid #e7dfd0}
+.top-news-section .section-head{margin-bottom:15px}
+.top-news-section .section-kicker{color:#a52e2a}
+.top-news-section h2{color:#8f211f}
+.top-news-section .breaking-news{min-height:190px;border-right:5px solid #a52e2a}
+.top-news-section .breaking-news .lead-body{padding:20px 26px}
+@media(max-width:600px){.breaking-ticker .ticker-label{padding:0 11px;font-size:11px}.breaking-ticker .ticker-marquee span{font-size:12px}.top-news-section{padding:20px 0 25px}.top-news-section .breaking-news .lead-body{padding:17px}}
+
+/* 20-stage Shushtari word puzzle */
+.word-game-section{background:linear-gradient(180deg,#f4efe3,#e8e4d8)}
+.word-game-card{background:#fffefa;border:1px solid #e4ddcf;border-radius:22px;padding:clamp(16px,3vw,28px);box-shadow:0 18px 48px #20382b12}
+.wg-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.wg-badge{background:#e8f0e9;color:#17483e;border-radius:99px;padding:6px 13px;font-size:12px;font-weight:800}
+.wg-loading{padding:30px;text-align:center;color:#68766d}
+.wg-stage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.wg-stage{border:1px solid #e5dfd2;background:#fff;border-radius:14px;padding:14px 7px;display:grid;gap:3px;color:#17483e;cursor:pointer;box-shadow:0 4px 12px #20382b08}
+.wg-stage strong{font-size:22px}.wg-stage small{font-size:10px;color:#77847b}.wg-stage:disabled{opacity:.42;cursor:not-allowed;background:#f1eee7}
+.wg-stage:not(:disabled):hover{border-color:#c49a50;transform:translateY(-2px)}
+.wg-play{max-width:720px;margin:auto;text-align:center}
+.wg-play-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#6c786f;font-size:12px;margin-bottom:18px}
+.wg-clue{background:linear-gradient(130deg,#123f38,#287565);color:#fff;border-radius:18px;padding:22px 15px;margin-bottom:18px}
+.wg-clue small{color:#d9e8df;font-size:12px}.wg-clue h3{font-size:clamp(22px,5vw,31px);margin:5px 0 0;color:#fff}
+.wg-answer{display:flex;direction:rtl;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;min-height:54px;margin:16px 0}
+.wg-slot{width:36px;height:43px;border:1.5px dashed #c8cfc5;border-radius:9px;background:#f7f6f0;display:grid;place-items:center;font-size:20px;font-weight:900;color:#17483e}
+.wg-slot.filled{border-style:solid;border-color:#b9cbbd;background:#eaf2e9}
+.wg-tiles{display:flex;direction:rtl;justify-content:center;gap:8px;flex-wrap:wrap;margin:16px auto;min-height:52px}
+.wg-tile{width:43px;height:47px;border:1px solid #d9d2c4;border-bottom-width:3px;border-radius:11px;background:#fff;color:#17483e;font-size:22px;font-weight:900;cursor:pointer}
+.wg-tile:disabled{opacity:.25;transform:scale(.92);cursor:default}
+.wg-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0}
+.wg-action{border:0;border-radius:99px;padding:9px 16px;background:#e9eee7;color:#17483e;font-size:12px;font-weight:800;cursor:pointer}
+.wg-action.primary{background:#c49a50;color:#20372f}.wg-action:disabled{opacity:.45;cursor:not-allowed}
+.wg-feedback{min-height:31px;font-size:13px;color:#68766d;margin:8px 0}
+.wg-feedback.good{color:#24734e;font-weight:800}.wg-feedback.bad{color:#a6473d;font-weight:700}
+.wg-stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:#68766d;font-size:11px}
+.wg-done{text-align:center;padding:28px 12px}.wg-done-mark{width:70px;height:70px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;background:#e9f2e7;color:#287565;font-size:34px}
+.wg-done h3{font-size:25px;color:#17483e;margin:7px}.wg-done p{color:#68766d;font-size:13px}
+@media(max-width:540px){.wg-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.wg-stage{padding:10px 4px}.wg-stage strong{font-size:19px}.wg-slot{width:30px;height:39px}.wg-tile{width:39px;height:44px}.word-game-card{padding:14px}}
+
+
+/* Polished A Sheikh word game */
+.word-game-section{padding-top:20px;background:#f3efe5}
+.wg-entry{display:flex;align-items:center;gap:18px;margin:22px 0 6px;padding:15px 20px;border:1px solid #e4d7bd;border-radius:20px;background:linear-gradient(110deg,#fffdf7,#f4ead5);box-shadow:0 10px 28px #293a2e0d;transition:.2s}
+.wg-entry:hover{transform:translateY(-2px);box-shadow:0 15px 32px #293a2e18}
+.wg-entry-art{width:112px;min-width:112px;height:92px;border-radius:15px;background:#17483e;display:grid;place-items:center;overflow:hidden}
+.wg-entry-copy{flex:1}.wg-entry-copy small{color:#9b773e;font-size:11px;font-weight:900;letter-spacing:.5px}.wg-entry-copy strong{display:block;color:#17483e;font-size:22px;line-height:1.5}.wg-entry-copy span{display:block;color:#72796f;font-size:12px}
+.wg-entry-arrow{font-size:25px;color:#b58b48}
+.word-game-section .section-head{margin-bottom:20px}
+.word-game-card{max-width:850px;margin:auto;padding:clamp(16px,3vw,28px);border:1px solid #e7dfd0;border-radius:24px;background:#fffefa;box-shadow:0 18px 45px #26382b10}
+.wg-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.wg-badge{padding:7px 13px;border-radius:99px;background:#eaf1e9;color:#245344;font-size:11px;font-weight:900}
+.wg-loading{text-align:center;padding:28px;color:#6d796f}
+.wg-stage-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.wg-stage{display:grid;gap:3px;padding:13px 7px;border:1px solid #e8e1d4;border-radius:15px;background:linear-gradient(160deg,#fff,#f7f4eb);color:#17483e;cursor:pointer;transition:.18s}
+.wg-stage strong{font-size:22px}.wg-stage small{font-size:10px;color:#8a806e}.wg-stage:disabled{opacity:.35;cursor:not-allowed;filter:grayscale(1)}
+.wg-stage:not(:disabled):hover{border-color:#c49a50;transform:translateY(-2px)}
+.wg-play{max-width:650px;margin:auto;text-align:center}
+.wg-play-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:16px;color:#6e7b71;font-size:12px;font-weight:800}
+.wg-game-panel{padding:18px 15px;border-radius:19px;background:linear-gradient(135deg,#123c35,#27695a);color:white}
+.wg-game-panel small{color:#d4e2d7;font-size:12px}
+.wg-remaining{display:inline-block;margin-top:7px;padding:5px 12px;border-radius:99px;background:#ffffff19;color:#fff;font-size:11px}
+.wg-targets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:17px 0}
+.wg-target{display:flex;align-items:center;gap:8px;min-height:52px;padding:8px 10px;border:1px solid #e9e3d7;border-radius:12px;background:#fbfaf5;text-align:right}
+.wg-blanks{display:flex;gap:3px;direction:rtl}
+.wg-blanks i{display:grid;place-items:center;width:17px;height:22px;border-bottom:2px solid #c7b99e;font-style:normal;font-size:12px;font-weight:900;color:#245344}
+.wg-target-label{font-size:10px;color:#8a806e;white-space:nowrap}
+.wg-target small{margin-right:auto;color:#29734f;font-size:10px}
+.wg-target.solved{border-color:#cfe0d0;background:#eff6ed}
+.wg-target.solved .wg-blanks i{border-color:#9fc6a4;color:#1c6746}
+.wg-picked{display:flex;justify-content:center;align-items:center;gap:7px;min-height:52px;margin:12px auto}
+.wg-picked-letter{display:grid;place-items:center;width:39px;height:43px;border:1px solid #d7c49f;border-bottom:3px solid #b18c4d;border-radius:10px;background:#fffaf0;color:#17483e;font-size:21px;font-weight:900}
+.wg-letter-tray{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px auto 16px}
+.wg-letter{width:49px;height:51px;border:1px solid #e1d7c3;border-bottom:4px solid #c7ad7e;border-radius:13px;background:linear-gradient(#fff,#f6efdf);color:#17483e;font-size:24px;font-weight:900;cursor:pointer;transition:.15s}
+.wg-letter:active{transform:translateY(2px);border-bottom-width:2px}
+.wg-letter.used{opacity:.22;transform:scale(.9);pointer-events:none}
+.wg-message{min-height:29px;margin:8px 0;color:#748075;font-size:12px}
+.wg-message.good{color:#26764d;font-weight:900}.wg-message.wrong{color:#a4443a;font-weight:800}
+.wg-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.wg-action{padding:9px 16px;border:0;border-radius:99px;background:#edf0e9;color:#285244;font-size:11px;font-weight:900;cursor:pointer}
+.wg-action.primary{background:#c49a50;color:#20382f}
+.wg-done{text-align:center;padding:28px 10px}.wg-done-mark{display:grid;place-items:center;width:68px;height:68px;margin:auto;border-radius:50%;background:#eaf3e8;color:#27734e;font-size:32px}
+.wg-done h3{color:#17483e;font-size:24px}.wg-done p{color:#6f7b71;font-size:13px}
+@media(max-width:540px){.wg-entry{gap:12px;padding:12px}.wg-entry-art{width:88px;min-width:88px;height:82px}.wg-entry-copy strong{font-size:18px}.wg-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}.wg-stage{padding:10px 4px}.wg-targets{gap:6px}.wg-target{padding:7px 6px;gap:5px}.wg-blanks i{width:14px}.wg-letter{width:44px;height:47px}}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
+<div class="topline"><div class="container"><span>رسانه خبری، فرهنگی و اختصاصی شوشتر</span><span id="today"></span></div></div>
+<header class="masthead"><div class="container mast"><a class="brand" href="#home"><img class="brand-mark" src="assets/shoushtarjavan-logo.svg" alt="نشان اصلی شوشترجوان" width="66" height="66" decoding="async"><span><h1>شوشترجوان</h1><small>روایت امروز، ریشه در تاریخ</small></span></a><div class="mast-note">صدای مردم؛ روایت شهر تاریخی شوشتر</div></div></header>
+<div class="nav-wrap"><nav class="container nav" aria-label="منوی اصلی">
+<a class="active" href="#home">صفحه اصلی</a>
+<button class="nav-menu-btn" type="button" data-menu="newsMenu" aria-expanded="false">رسانه و خبر ▾</button>
+<button class="nav-menu-btn" type="button" data-menu="cultureMenu" aria-expanded="false">فرهنگ و میراث ▾</button>
+<button class="nav-menu-btn" type="button" data-menu="aboutMenu" aria-expanded="false">درباره شوشترجوان ▾</button>
+<button class="nav-menu-btn nav-contact" type="button" data-menu="contactMenu" aria-expanded="false">ارتباط با ما</button>
+</nav>
+<div class="menu-layer container" id="siteMenuLayer">
+<section class="menu-panel" id="newsMenu" hidden><h3>رسانه و خبر</h3><a href="#news">آخرین اخبار و گزارش‌ها</a><a href="#exclusive">تولیدات اختصاصی</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال سوژه و خبر</a></section>
+<section class="menu-panel" id="cultureMenu" hidden><h3>فرهنگ و میراث</h3><a href="#heritage">گنجینه آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#dictionary">واژه‌نامه فارسی به شوشتری</a><a href="#word-game">بازی واژه‌شناس شوشتری</a><a href="#exclusive">مستندها و روایت‌های فرهنگی</a></section>
+<section class="menu-panel about-panel" id="aboutMenu" hidden><h3>درباره ما</h3><p>داستان شکل‌گیری شوشترجوان و مسیر فعالیت رسانه‌ای ما.</p><a href="#about">مطالعه کامل درباره ما ←</a></section>
+<section class="menu-panel" id="contactMenu" hidden><h3>راه‌های ارتباطی</h3><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم و ارسال سوژه</a></section>
+</div></div>
+<main id="home">
+<div id="main-content" tabindex="-1"></div>
+<div class="ticker breaking-ticker" role="region" aria-label="زیرنویس خبر فوری"><div class="ticker-inner"><span class="ticker-label">تیتر یک</span><div class="ticker-track"><div class="ticker-marquee"><span>🔴 انهدام یک فروند پهپاد MQ-9 آمریکایی در آسمان قشم　 •　 به گزارش روابط عمومی ارتش، این پهپاد بامداد امروز توسط پدافند هوایی ارتش رهگیری و منهدم شد　 •　 </span><span aria-hidden="true">🔴 انهدام یک فروند پهپاد MQ-9 آمریکایی در آسمان قشم　 •　 به گزارش روابط عمومی ارتش، این پهپاد بامداد امروز توسط پدافند هوایی ارتش رهگیری و منهدم شد　 •　 </span></div></div></div></div>
+<section class="section top-news-section" id="news"><div class="container"><div class="section-head"><div><span class="section-kicker">NEWSROOM</span><h2>آخرین اخبار شوشتر</h2><p>خبرها و گزارش‌های شهر را از این بخش دنبال کنید.</p></div><a class="more" href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارسال خبر و سوژه ←</a></div>
+<div class="news-layout"><article class="lead-card breaking-news"><div class="lead-body"><span class="tag breaking-tag">🔴 خبر فوری</span><h3>انهدام یک فروند پهپاد MQ-9 آمریکایی در آسمان قشم</h3><p>به گزارش روابط عمومی ارتش، بامداد امروز یک فروند پهپاد MQ-9 متعلق به آمریکا، با آتش سامانه‌های نوین نیروی پدافند هوایی ارتش و تحت شبکه یکپارچه پدافند هوایی کشور، در آسمان قشم مورد اصابت قرار گرفت و منهدم شد.</p><div class="meta">منبع: روابط عمومی ارتش · بازنشر: شوشترجوان</div></div></article>
+<div class="side-news"><article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=500" alt="آبشارهای شوشتر" loading="lazy"><div class="body"><span class="tag">فرهنگ و گردشگری</span><h3>آبشارها و آسیاب‌های آبی؛ گنجینه‌ای در قلب شهر</h3><div class="meta">پرونده معرفی آثار</div></div></article>
+<article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=500" alt="سازه‌های تاریخی" loading="lazy"><div class="body"><span class="tag">تاریخ</span><h3>روایت تاریخ در کوچه‌ها و بناهای کهن شوشتر</h3><div class="meta">یادداشت فرهنگی</div></div></article>
+<article class="news-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=500" alt="میراث شوشتر" loading="lazy"><div class="body"><span class="tag">رسانه مردمی</span><h3>شما از شوشتر بگویید؛ سوژه‌های مردمی</h3><div class="meta">راه ارتباط با تحریریه</div></div></article></div></div>
+<p style="font-size:11px;color:#8b9189;margin-top:15px">توجه: مطالب این نسخه، نمونه‌های نمایشی برای تکمیل قالب هستند و خبر روز محسوب نمی‌شوند.</p></div></section>
+
+<section class="hero"><div class="hero-slides" aria-hidden="true">
+<img class="show" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=1800" alt="" fetchpriority="high">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mizan%20Dam%20Shushtar.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Salasel%20Castle%20Shushtar.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kolah%20Farangi%20Tower%20Shushtar.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jame%20Mosque%20-%20Shuoshtar%20-%20Iran.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sh-Mostofi%20House.jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Imamzadeh%20Abdullah%20Shushtar%20Darafsh%20(26).jpg?width=1800" alt="">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lashgar%20Bridge%20Darafsh%20(3).jpg?width=1800" alt="">
+</div><div class="container hero-content"><span class="eyebrow">شوشتر؛ شهر آب، تاریخ و زندگی</span><h2>شوشتر را<br>از نو روایت کنیم</h2><p>پنجره‌ای برای دنبال‌کردن خبرهای شهر، شناخت میراث تاریخی و دیدن روایت‌ها و تولیدات اختصاصی شوشترجوان.</p><a class="btn" href="#news">مشاهده تازه‌ترین مطالب <span>←</span></a><div class="hero-dots" aria-label="انتخاب تصویرهای آثار تاریخی شوشتر"><button class="on" aria-label="تصویر 1"></button><button aria-label="تصویر 2"></button><button aria-label="تصویر 3"></button><button aria-label="تصویر 4"></button><button aria-label="تصویر 5"></button><button aria-label="تصویر 6"></button><button aria-label="تصویر 7"></button><button aria-label="تصویر 8"></button><button aria-label="تصویر 9"></button><button aria-label="تصویر 10"></button></div></div></section>
+
+<section class="section features" id="exclusive"><div class="container"><div class="section-head"><div><span class="section-kicker">SHOUSHTAR JAVAN ORIGINALS</span><h2>تولیدات اختصاصی شوشترجوان</h2><p>مستند، گزارش تصویری، کلیپ و روایت‌های ویژه از شوشتر.</p></div><a class="more" href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">همکاری با ما ←</a></div><div class="feature-grid">
+<article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=700" alt="مستند میراث شوشتر" loading="lazy"><div class="body"><span class="tag">مستند کوتاه</span><h3>قصه آب در شوشتر</h3><p>روایتی تصویری از سازه‌های آبی و پیوند آن‌ها با زندگی مردم.</p><div class="meta">جایگاه انتشار ویدئو در آینده</div></div></article>
+<article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=700" alt="گزارش تصویری" loading="lazy"><div class="body"><span class="tag">گزارش تصویری</span><h3>شوشتر از نگاه دوربین</h3><p>قاب‌هایی از محله‌ها، بناها، آیین‌ها و زندگی روزمره شهر.</p><div class="meta">جایگاه انتشار گالری در آینده</div></div></article>
+<article class="feature-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=700" alt="روایت محلی" loading="lazy"><div class="body"><span class="tag">روایت محلی</span><h3>خاطره‌های شهر</h3><p>ثبت خاطرات، رسم‌ها و روایت‌های نسل‌های مختلف شوشتر.</p><div class="meta">جایگاه انتشار مجموعه در آینده</div></div></article>
+</div></div></section>
+
+<section class="section ai-history-section" id="ai-history"><div class="container ai-history-card"><div><span class="section-kicker">ASK SHUSHTAR</span><h2>هوش مصنوعی تاریخ شوشتر</h2><p>درباره تاریخ، محله‌ها، سازه‌های آبی، فرهنگ و شخصیت‌های تاریخی شوشتر سؤال بپرس؛ دستیار از دانشنامه اختصاصی سایت برای پیدا کردن پاسخ کمک می‌گیرد.</p></div><button class="ai-launch" id="aiLaunch" type="button" aria-expanded="false" aria-controls="aiPanel">✦ گفت‌وگو با دستیار تاریخ شوشتر</button></div></section>
+<section class="section dictionary-section" id="dictionary"><div class="container">
+ <div class="section-head"><div><span class="section-kicker">SHUSHTARI DICTIONARY</span><h2>فارسی به شوشتری</h2><p>واژهٔ فارسی یا صورت شوشتری را جست‌وجو کن و برابر آن را ببین.</p></div><span class="more" id="dictionaryCountBadge">در حال شمارش واژه‌ها…</span></div>
+ <div class="dictionary-box">
+  <form class="dictionary-search" id="dictionaryForm"><input id="dictionaryInput" type="search" maxlength="80" autocomplete="off" placeholder="مثلاً: اکنون، گنجشک، پیرزن، شکستن…" aria-label="واژه فارسی"><button type="submit">ترجمه به شوشتری</button></form>
+  <p class="dictionary-hint">می‌توانی از فهرست واژه‌ها هم استفاده کنی. جست‌وجو هم از فارسی به شوشتری و هم از شوشتری به فارسی انجام می‌شود؛ شکل‌های نزدیک نوشتاری نیز پشتیبانی می‌شوند.</p>
+  <div class="dictionary-result" id="dictionaryResult" aria-live="polite"></div>
+  <div class="dictionary-list" id="dictionaryList"></div>
+  <div class="dictionary-meta" id="dictionaryMeta">در حال بارگذاری واژه‌نامه…</div>
+ </div>
+</div></section>
+<a class="wg-entry" href="#word-game" aria-label="ورود به بازی آ شیخ">
+ <div class="wg-entry-art" role="img" aria-label="تصویر حروف بازی آ شیخ">
+  <svg viewBox="0 0 150 110" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+   <path d="M0 83 Q40 62 78 82 T150 72 V110 H0Z" fill="#0e342e"/>
+   <g transform="translate(21 15) rotate(-9 25 25)"><rect width="43" height="43" rx="8" fill="#f8edcf"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#17483e">ش</text></g>
+   <g transform="translate(67 8) rotate(8 25 25)"><rect width="43" height="43" rx="8" fill="#d9b66e"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#173d35">و</text></g>
+   <g transform="translate(48 57) rotate(3 25 25)"><rect width="43" height="43" rx="8" fill="#fffaf0"/><text x="21.5" y="30" text-anchor="middle" font-size="27" font-family="Tahoma" font-weight="bold" fill="#17483e">ت</text></g>
+   <circle cx="128" cy="20" r="4" fill="#d9b66e"/><circle cx="15" cy="60" r="3" fill="#d9b66e"/>
+  </svg>
+ </div>
+ <div class="wg-entry-copy"><small>بازی واژه‌سازی شوشتری</small><strong>بازی آ شیخ</strong><span>حروف را بچین، واژه‌های شوشتری را پیدا کن!</span></div>
+ <span class="wg-entry-arrow">←</span>
+</a>
+
+<section class="section word-game-section" id="word-game"><div class="container">
+ <div class="section-head"><div><span class="section-kicker">A SHEIKH · SHUSHTARI WORD GAME</span><h2>بازی آ شیخ</h2><p>در هر مرحله حروف را بچین و واژه‌های واقعی واژه‌نامهٔ شوشتری را پیدا کن.</p></div><span class="more">۲۰ مرحله</span></div>
+ <div class="word-game-card" id="shushtariGame">
+  <div class="wg-top"><span class="wg-badge">چالش واژه‌های شوشتری</span><span class="wg-badge" id="wgStatus">آماده بازی</span></div>
+  <div class="wg-loading" id="wgLoading">در حال بارگذاری واژه‌های شوشتری…</div>
+  <div id="wgStageScreen" hidden><div class="wg-top"><strong>مرحله‌ای را انتخاب کن</strong><span class="wg-badge" id="wgProgress">۰ از ۲۰</span></div><div class="wg-stage-grid" id="wgStages"></div><p class="dictionary-meta" id="wgTotal"></p></div>
+  <div id="wgPlayScreen" class="wg-play" hidden>
+   <div class="wg-play-head"><span id="wgStageLabel"></span><span id="wgPoints">امتیاز ۰</span></div>
+   <div class="wg-game-panel"><small>حروف را بچین و واژه‌های شوشتری را پیدا کن</small><strong class="wg-difficulty" id="wgDifficulty">آسان · شروع یادگیری</strong><div class="wg-remaining" id="wgRemaining">۳ واژه باقی مانده</div></div>
+   <div class="wg-targets" id="wgTargets"></div>
+   <div class="wg-picked" id="wgPicked" aria-label="واژه ساخته‌شده"></div>
+   <div class="wg-letter-tray" id="wgLetterTray" aria-label="حروف بازی"></div>
+   <div class="wg-message" id="wgMessage" aria-live="polite">حروف را انتخاب کن و واژه را بساز.</div>
+   <div class="wg-actions"><button class="wg-action" id="wgUndoBtn" type="button">⌫ حذف حرف</button><button class="wg-action primary" id="wgSubmitBtn" type="button">ثبت واژه</button><button class="wg-action" id="wgHintBtn" type="button">راهنما</button><button class="wg-action" id="wgBackBtn" type="button">مراحل</button></div>
+   <div class="wg-top" style="justify-content:center;margin:14px 0 0"><span class="wg-badge" id="wgHints">راهنما ۲</span></div>
+  </div>
+  <div id="wgDoneScreen" class="wg-done" hidden><div class="wg-done-mark">✓</div><h3 id="wgDoneTitle"></h3><p id="wgDoneText"></p><button class="btn" id="wgNextBtn" type="button">ادامه</button></div>
+ </div>
+</div></section>
+<section class="section heritage-section" id="heritage"><div class="container">
+<div class="section-head"><div><span class="section-kicker">SHUSHTAR HERITAGE ARCHIVE</span><h2>گنجینه آثار تاریخی شوشتر</h2><p>از شاهکار مهندسی آب تا مسجدها، پل‌ها، خانه‌ها و آرامگاه‌های تاریخی؛ هر اثر با معرفی، کارکرد، ویژگی‌های معماری و منبع پژوهشی.</p></div><span class="more">پرونده تصویری و پژوهشی</span></div>
+<div class="heritage-intro"><strong>شوشتر فقط یک مجموعه آبشار و آسیاب نیست.</strong><p>بافت تاریخی شهر، حاصل کنار هم قرار گرفتن سازه‌های آبی، راه‌ها و پل‌ها، دژها، مسجدها، آرامگاه‌ها و خانه‌های تاریخی است. در این پرونده میان اطلاعات مستند، برداشت‌های پژوهشی و روایت‌های نیازمند بررسی تفاوت گذاشته‌ایم.</p></div>
+<div class="heritage-grid">
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System2.jpg?width=900" alt="نمایی از سامانه آبی تاریخی شوشتر" loading="lazy"><div class="body"><span class="heritage-type">میراث جهانی یونسکو</span><h3>سامانه آبی تاریخی شوشتر</h3><p>یک شبکه مهندسی‌شده و به‌هم‌پیوسته از بندها، پل‌بندها، آبراهه‌ها، تونل‌ها، حوضچه‌ها و آسیاب‌ها؛ نه چند بنای جدا از هم.</p><details><summary>پرونده کامل اثر</summary><p>یونسکو شکل کنونی سامانه را عمدتاً متعلق به سده سوم میلادی می‌داند که احتمالاً بر پایه‌هایی قدیمی‌تر از سده پنجم پیش از میلاد شکل گرفته است. دو مسیر اصلی انحراف آب از کارون، گرگر و داریون، در سازمان‌دهی این شبکه نقش داشته‌اند. سامانه در گذشته برای آب‌رسانی شهری، آبیاری، آسیابانی، حمل‌ونقل آبی، پرورش ماهی و حتی دفاع از شهر کارکرد داشته است. اهمیت اثر در یکپارچگی و تنوع کارکردهای آن است.</p><p class="heritage-fact">ثبت جهانی: ۲۰۰۹ میلادی · معیارهای ثبت: (i)، (ii) و (v)</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">پرونده رسمی یونسکو</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mizan%20Dam%20Shushtar.jpg?width=900" alt="بند میزان شوشتر" loading="lazy"><div class="body"><span class="heritage-type">سازه تقسیم آب</span><h3>بند میزان</h3><p>سازه‌ای کلیدی در ورودی شبکه گرگر که در تنظیم و تقسیم آب کارون نقش داشته است.</p><details><summary>پرونده کامل اثر</summary><p>بند میزان در نقطه‌ای راهبردی از سامانه آبی قرار دارد و آب کارون را به مسیرهای اصلی شبکه هدایت می‌کرد. شناخت آن بدون بررسی ارتباطش با رود کارون، نهر گرگر، داریون و دیگر بندها کامل نیست. نام «میزان» نیز با مفهوم اندازه‌گیری و تقسیم متناسب آب پیوند معنایی دارد؛ اما شرح دقیق سازوکار تقسیم در دوره‌های مختلف باید بر اساس نقشه‌ها و گزارش‌های فنی بیان شود.</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">منبع: پرونده یونسکو</a> · <a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">معرفی آثار شوشتر</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System%20Darafsh%20(6).jpg?width=900" alt="نهر گرگر و سازه‌های پیرامون آن" loading="lazy"><div class="body"><span class="heritage-type">آبراهه تاریخی</span><h3>نهر گرگر</h3><p>آبراهه‌ای مصنوعی که بخش مهمی از آب‌رسانی شهر و فعالیت آسیاب‌های آبی را ممکن می‌کرد.</p><details><summary>پرونده کامل اثر</summary><p>گرگر یکی از دو مسیر اصلی انحراف آب کارون در سامانه تاریخی شوشتر است. مسیر آب از مجراها و تونل‌های مرتبط عبور می‌کرد و در بخش‌هایی نیروی لازم برای چرخاندن آسیاب‌ها را فراهم می‌آورد. این آبراهه همچنان در بخش‌هایی جریان دارد و نمونه‌ای روشن از پیوند مهندسی، زندگی شهری و اقتصاد کشاورزی منطقه است.</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">منبع: یونسکو</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar%20Historical%20Hydraulic%20System-Shuhtar-Khozestan-ID2180-%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%20%D8%A2%D8%A8%D8%B4%D8%A7%D8%B1%D9%87%D8%A7%20%D9%88%20%D8%A2%D8%B3%DB%8C%D8%A7%D8%A8%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%DB%8C%20%D8%B4%D9%88%D8%B4%D8%AA%D8%B1.jpg?width=900" alt="آبشارها و آسیاب‌های آبی شوشتر" loading="lazy"><div class="body"><span class="heritage-type">میراث صنعتی</span><h3>آبشارها و آسیاب‌های آبی</h3><p>چشم‌انداز مشهور شوشتر، در واقع بخشی از یک مجموعه صنعتی تاریخی برای بهره‌گیری از انرژی آب است.</p><details><summary>پرونده کامل اثر</summary><p>آب از مسیرهای هدایت‌شده و تونل‌های دست‌کند به محوطه آسیاب‌ها می‌رسید. جریان آب چرخ آسیاب را به حرکت درمی‌آورد و پس از عبور از سازه‌ها به حوضچه پایین‌دست می‌ریخت. بنابراین آبشارهای مصنوعی تنها یک منظره زیبا نیستند؛ ردپای یک سامانه تولیدی و اقتصادی‌اند که با آردکردن غلات و نیازهای روزمره مردم پیوند داشته است.</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">منبع: یونسکو</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Salasel%20Castle%20Shushtar.jpg?width=900" alt="قلعه سلاسل شوشتر" loading="lazy"><div class="body"><span class="heritage-type">دژ و مرکز مدیریت آب</span><h3>قلعه سلاسل</h3><p>دژی تاریخی با جایگاهی فراتر از دفاع نظامی؛ مرکز عملیاتی و مدیریتی سامانه آبی شوشتر.</p><details><summary>پرونده کامل اثر</summary><p>در پرونده میراث جهانی یونسکو از سلاسل به‌عنوان مرکز عملیاتی کل سامانه آبی یاد شده است. موقعیت قلعه و ارتباط آن با مسیرهای آب، اهمیت راهبردی آن را نشان می‌دهد. تاریخ‌گذاری همه بخش‌های موجود بنا یکسان و قطعی نیست؛ دژ در طول زمان تغییر کرده و بخش‌هایی از آن به صورت بقایا و آثار معماری باقی مانده‌اند. برای نسبت دادن هر دیوار یا فضای معماری به دوره‌ای خاص، باید به گزارش‌های باستان‌شناسی استناد کرد.</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">منبع: پرونده یونسکو</a> · <a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">معرفی تاریخی</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Band%20e%20Kaiser%20Shushtar.jpg?width=900" alt="بند قیصر و پل‌بند شادروان" loading="lazy"><div class="body"><span class="heritage-type">پل‌بند ساسانی</span><h3>بند قیصر و پل‌بند شادروان</h3><p>یکی از شاخص‌ترین سازه‌های تاریخی کارون که نقش پل و بند را در یک مجموعه ترکیب می‌کرد.</p><details><summary>پرونده کامل اثر</summary><p>پل‌بند شادروان در اسناد یونسکو با عنوان بند بزرگ شادروان شناخته می‌شود. این سازه با بالا آوردن و پایدار کردن سطح آب، در هدایت آب به مسیرهای دیگر نقش داشته است. منابع تاریخی و پژوهشی از تأثیر فنون مهندسی گوناگون در شکل‌گیری سامانه سخن می‌گویند؛ از جمله تأثیرات مهندسی رومی، اما باید از ساده‌سازی روایت ساخت آن و تبدیل افسانه‌ها به واقعیت قطعی پرهیز کرد.</p><a href="https://whc.unesco.org/document/152341" target="_blank" rel="noopener noreferrer">گزارش ارزیابی فنی یونسکو</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lashgar%20Bridge%20Darafsh%20(3).jpg?width=900" alt="پل‌بند لشکر شوشتر" loading="lazy"><div class="body"><span class="heritage-type">پل و بند تاریخی</span><h3>پل‌بند لشکر</h3><p>سازه‌ای تاریخی در پیوند با آبراهه‌ها و مسیرهای ارتباطی پیرامون شوشتر.</p><details><summary>پرونده کامل اثر</summary><p>پل‌بند لشکر از اجزای شناخته‌شده میراث آبی شوشتر است و در محدوده آبراهه‌های پیرامونی شهر قرار دارد. این سازه‌ها معمولاً تنها برای عبور ساخته نمی‌شدند؛ کنترل تراز آب، ایجاد امکان عبور و تنظیم جریان از کارکردهای مهم پل‌بندها بود. برای تعیین طول، ارتفاع و جزئیات فنی هر بخش باید به نقشه‌برداری و پرونده ثبتی همان سازه رجوع کرد.</p><a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">منبع معرفی پل‌بندهای شوشتر</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kolah%20Farangi%20Tower%20Shushtar.jpg?width=900" alt="برج کلاه‌فرنگی شوشتر" loading="lazy"><div class="body"><span class="heritage-type">برج تاریخی</span><h3>برج کلاه‌فرنگی</h3><p>برجی شاخص در چشم‌انداز تاریخی شهر و در مجاورت شبکه آبی شوشتر.</p><details><summary>پرونده کامل اثر</summary><p>برج کلاه‌فرنگی در روایت‌های معرفی شوشتر با نظارت بر جریان آب ارتباط داده می‌شود. بااین‌حال، درباره کارکرد اولیه، زمان ساخت و جزئیات استفاده از برج باید محتاط بود؛ پرونده یونسکو از برجی برای اندازه‌گیری سطح آب در میان اجزای سامانه یاد می‌کند، اما تطبیق قطعی آن با همه روایت‌های رایج محلی نیازمند اسناد تخصصی است.</p><a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">منبع: یونسکو</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jame%20Mosque%20-%20Shuoshtar%20-%20Iran.jpg?width=900" alt="مسجد جامع شوشتر" loading="lazy"><div class="body"><span class="heritage-type">معماری مذهبی</span><h3>مسجد جامع شوشتر</h3><p>یکی از بناهای مذهبی کهن شهر با شبستان ستون‌دار، کتیبه‌های کوفی و لایه‌های معماری چنددوره‌ای.</p><details><summary>پرونده کامل اثر</summary><p>بر پایه روایت‌های تاریخی، بنای نخست مسجد در سده سوم هجری آغاز شده و در دوره‌های بعد تکمیل و بازسازی شده است؛ بنابراین شکل امروز آن حاصل یک دوره واحد نیست. شبستان ستون‌دار، حیاط، مناره و کتیبه‌های تاریخی از ویژگی‌های مهم آن‌اند. پژوهش‌های کتیبه‌شناختی به نوشته‌های کوفی، از جمله بخش‌هایی از سوره یس، پرداخته‌اند. تاریخ دقیق هر بخش باید از خود کتیبه‌ها و مطالعات معماری استخراج شود.</p><a href="https://www.tasnimnews.ir/en/news/2019/01/26/1929550/the-great-mosque-of-shushtar-iran" target="_blank" rel="noopener noreferrer">گزارش مسجد جامع در تسنیم</a> · <a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">پژوهش معماری شوشتر</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Imamzadeh%20Abdullah%20Shushtar%20Darafsh%20(26).jpg?width=900" alt="آرامگاه امامزاده عبدالله شوشتر" loading="lazy"><div class="body"><span class="heritage-type">آرامگاه تاریخی</span><h3>آرامگاه امامزاده عبدالله</h3><p>بنایی شاخص بر بلندی جنوب شهر، با گنبد پلکانی و تزیینات و کتیبه‌های تاریخی.</p><details><summary>پرونده کامل اثر</summary><p>این آرامگاه از نمونه‌های مهم معماری آرامگاهی شوشتر است. پژوهش منتشرشده در نشریه معماری و شهرسازی ایران، تحولات کالبدی بنا را در گذار از دوره سلجوقی ـ خوارزمشاهی به دوره ایلخانی بررسی می‌کند و به ساختار گنبد، تزیینات و کتیبه‌ها توجه دارد. این پژوهش نشان می‌دهد بنا در طول زمان شکل گرفته و دگرگون شده است؛ ازاین‌رو نباید تمام اجزای فعلی را به یک دوره نسبت داد.</p><a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">مقاله پژوهشی درباره معماری آرامگاه</a> · <a href="https://commons.wikimedia.org/wiki/Category:Imamzadeh_Abdullah_(Shushtar)" target="_blank" rel="noopener noreferrer">گالری عکس و اطلاعات مجوز تصاویر</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sh-Mostofi%20House.jpg?width=900" alt="خانه تاریخی مستوفی شوشتر" loading="lazy"><div class="body"><span class="heritage-type">خانه تاریخی قاجاری</span><h3>خانه مستوفی</h3><p>خانه‌ای تاریخی با حیاط و ایوان، بخش‌های اندرونی و بیرونی و چشم‌انداز به شاخه شطیط کارون.</p><details><summary>پرونده کامل اثر</summary><p>خانه مستوفی به اواخر دوره قاجار نسبت داده می‌شود و به محمدعلی مستوفی، بازرگان شوشتری، تعلق داشته است. سازمان فضایی خانه شامل اندرونی، بیرونی، فضاهای خدماتی، هشتی و اتاق‌ها بوده؛ تقسیم‌بندی‌ای که شیوه زندگی و حریم خصوصی در خانه‌های سنتی را بازتاب می‌دهد. این خانه در معرفی‌های گردشگری به‌عنوان محل موزه مردم‌شناسی شوشتر نیز شناخته شده است.</p><a href="https://www.toiran.com/en/city-shushtar/historical_sites/Mostofi-House/5737" target="_blank" rel="noopener noreferrer">پرونده خانه مستوفی</a> · <a href="https://commons.wikimedia.org/wiki/Category:Mostowfi_House_(Shushtar)" target="_blank" rel="noopener noreferrer">عکس‌ها و مجوزهای ویکی‌مدیا</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Emamzadeh%20Abdollah.jpg?width=900" alt="نمای آرامگاه امامزاده عبدالله" loading="lazy"><div class="body"><span class="heritage-type">میراث مذهبی</span><h3>معماری آرامگاه‌ها و بقاع تاریخی</h3><p>بناهای آرامگاهی شوشتر، بخشی مهم از حافظه مذهبی و تاریخ معماری شهر را تشکیل می‌دهند.</p><details><summary>پرونده کامل موضوع</summary><p>شوشتر دارای مجموعه‌ای از آرامگاه‌ها و بقاع تاریخی است که در دوره‌های گوناگون ساخته یا بازسازی شده‌اند. این بناها برای شناخت گنبدسازی، کتیبه‌نگاری، آجرکاری، گچ‌بری و تحول معماری مذهبی جنوب ایران اهمیت دارند. هر آرامگاه باید به‌صورت مستقل و بر پایه کتیبه‌ها، شواهد معماری و پژوهش‌های باستان‌شناسی معرفی شود؛ انتساب‌های نسب‌شناختی و روایت‌های محلی نیز باید با ذکر منبع نقل شوند.</p><a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">پژوهش درباره معماری آرامگاهی شوشتر</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IMG%207877.jpg?width=900" alt="ایوان و رواق خانه تاریخی مستوفی" loading="lazy"><div class="body"><span class="heritage-type">معماری مسکونی</span><h3>خانه‌های تاریخی و بافت کهن</h3><p>خانه‌های تاریخی شوشتر با ایوان‌ها، حیاط‌ها، آجرکاری و سازمان فضایی متناسب با اقلیم گرم منطقه شناخته می‌شوند.</p><details><summary>پرونده کامل موضوع</summary><p>خانه‌های سنتی شوشتر را باید در پیوند با اقلیم، آب، سایه، حریم خانوادگی و شبکه کوچه‌های بافت قدیم مطالعه کرد. حیاط مرکزی، فضاهای نیمه‌باز، ایوان و تقسیم اندرونی و بیرونی در نمونه‌هایی چون خانه مستوفی قابل مشاهده است. برای معرفی هر خانه دیگر، نام مالک، تاریخ ساخت، شماره ثبت و ویژگی‌های معماری باید از پرونده ثبتی یا پژوهش معتبر استخراج شود.</p><a href="https://www.toiran.com/en/city-shushtar/historical_sites/Mostofi-House/5737" target="_blank" rel="noopener noreferrer">نمونه مستند: خانه مستوفی</a></details></div></article>
+<article class="heritage-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Afzal%20Caravanserai%20Shushtar.jpg?width=900" alt="سرای افضل شوشتر" loading="lazy"><div class="body"><span class="heritage-type">کاروانسرا و تجارت</span><h3>سرای افضل</h3><p>نمونه‌ای از معماری تجاری و خدماتی شوشتر در دوره قاجار و پیوند شهر با دادوستد.</p><details><summary>پرونده کامل اثر</summary><p>سرای افضل در فهرست آثار تاریخی معرفی‌شده برای شوشتر آمده و در منابع گردشگری به دوره قاجار نسبت داده می‌شود. سراها و کاروانسراهای شهری محل دادوستد، نگهداری کالا و رفت‌وآمد بازرگانان بودند و در اقتصاد شهر نقشی فراتر از یک بنای اقامتی داشتند. برای تعیین تاریخ دقیق ساخت، بانی و کاربری هر بخش باید به پرونده ثبتی اثر رجوع کرد.</p><a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">فهرست آثار تاریخی شوشتر</a></details></div></article>
+</div>
+<div class="heritage-research-note"><strong>یادداشت پژوهشی:</strong> فهرست آثار تاریخی شوشتر به این چند نمونه محدود نیست. در پژوهش‌های مربوط به بافت تاریخی شهر از صدها اثر، از جمله سازه‌های آبی، خانه‌ها، مسجدها و آرامگاه‌ها یاد شده است. این بخش به‌تدریج با پرونده‌های مستقل، عکس‌های دارای منبع و اطلاعات ثبتی تکمیل می‌شود. تاریخ‌گذاری و کارکردهایی که هنوز سند کافی ندارند، با احتیاط بیان شده‌اند.</div>
+<div class="heritage-sources"><strong>منابع پایه:</strong> <a href="https://whc.unesco.org/en/list/1315/" target="_blank" rel="noopener noreferrer">مرکز میراث جهانی یونسکو</a> · <a href="https://www.icid-ciid.org/award/his_details/115" target="_blank" rel="noopener noreferrer">کمیسیون بین‌المللی آبیاری و زهکشی</a> · <a href="https://www.toiran.com/en/city-shushtar/historical_sites" target="_blank" rel="noopener noreferrer">فهرست آثار شوشتر در ToIran</a> · <a href="https://www.isau.ir/article_118159.html?lang=en" target="_blank" rel="noopener noreferrer">نشریه معماری و شهرسازی ایران</a> · <a href="https://www.tasnimnews.ir/en/news/2019/01/26/1929550/the-great-mosque-of-shushtar-iran" target="_blank" rel="noopener noreferrer">گزارش مسجد جامع شوشتر</a></div>
+</div></section>
+<section class="section professions-section" id="professions"><div class="container"><div class="section-head"><div><span class="section-kicker">SHUSHTAR'S TRADITIONAL OCCUPATIONS</span><h2>مشاغل اصیل شوشتری</h2><p>نگاهی به حرفه‌هایی که در گذشته بخشی از زندگی و اقتصاد شوشتر را می‌ساختند.</p></div><span class="more">۱۰ حرفه و پیشه</span></div><div class="professions-intro">شوشتر در گذشته تنها به سازه‌های آبی‌اش شناخته نمی‌شد؛ بازارها، کارگاه‌ها و پیشه‌وران آن نیز در رونق شهر نقش داشتند. فهرست زیر بر پایه گزارش‌های محلی و معرفی صنایع‌دستی و مشاغل قدیمی شهر گردآوری شده است.</div><div class="profession-grid">
+<article class="profession-card"><b>۰۱</b><h3>آسیابانی</h3><p>گرداندن آسیاب‌های آبی و تبدیل غلات به آرد؛ حرفه‌ای پیوندخورده با شبکه تاریخی آب شوشتر.</p></article>
+<article class="profession-card"><b>۰۲</b><h3>عصاری</h3><p>استخراج روغن از دانه‌ها و مواد گیاهی با ابزارهای سنتی و دستگاه‌های فشاری.</p></article>
+<article class="profession-card"><b>۰۳</b><h3>حجاری و سنگ‌تراشی</h3><p>تراش و آماده‌سازی سنگ برای ساخت‌وساز، تزئین بناها و تولید قطعات موردنیاز شهر.</p></article>
+<article class="profession-card"><b>۰۴</b><h3>دیبابافی و ابریشم‌بافی</h3><p>بافت پارچه‌های ظریف و ارزشمند؛ دیبا و پرند شوشتری از بافته‌های نام‌آشنای منطقه بوده‌اند.</p></article>
+<article class="profession-card"><b>۰۵</b><h3>احرامی‌بافی</h3><p>بافت دست‌بافته‌های هندسی از الیاف پشم و پنبه؛ هنری که شوشتر امروز نیز با آن شناخته می‌شود.</p></article>
+<article class="profession-card"><b>۰۶</b><h3>موج‌بافی و ملحفه‌بافی</h3><p>تولید پارچه‌ها و رواندازهای سنتی در کارگاه‌های بافندگی و خانه‌های پیشه‌وران.</p></article>
+<article class="profession-card"><b>۰۷</b><h3>چوقابافی</h3><p>بافت پارچه و پوشاک سنتی، از جمله چوقا؛ با پیوندهایی به پوشش محلی و منطقه‌ای.</p></article>
+<article class="profession-card"><b>۰۸</b><h3>زرگری و طلاسازی</h3><p>ساخت و تعمیر زیورآلات و مصنوعات فلزی ظریف برای بازار و خانواده‌های شهر.</p></article>
+<article class="profession-card"><b>۰۹</b><h3>آهنگری و چلنگری</h3><p>ساخت ابزار، یراق و قطعات فلزی موردنیاز کشاورزی، ساختمان و زندگی روزمره.</p></article>
+<article class="profession-card"><b>۱۰</b><h3>سفالگری</h3><p>ساخت ظروف و ابزارهای سفالی با استفاده از خاک و فنون شکل‌دهی و پخت سنتی.</p></article>
+</div><div class="professions-note">یادداشت: این فهرست گزیده‌ای از مشاغل گزارش‌شده در شوشتر است، نه رتبه‌بندی میزان رواج آن‌ها. در منابع محلی از حرفه‌های دیگری مانند مشک‌دوزی، نمدمالی، گیوه‌دوزی، سازسازی و کپوبافی نیز نام برده شده است.</div><div class="professions-sources"><strong>برای مطالعه بیشتر:</strong> <a href="https://shoushtar.ir/2021/09/20/%D8%AA%D8%B9%D8%A7%D9%85%D9%84-%D8%AA%D9%86%DA%AF%D8%A7%D8%AA%D9%86%DA%AF-%D9%85%DB%8C%D8%B1%D8%A7%D8%AB-%D9%81%D8%B1%D9%87%D9%86%DA%AF%DB%8C-%D9%88-%D8%B4%D9%87%D8%B1%D8%AF%D8%A7%D8%B1%DB%8C-%D9%85/" target="_blank" rel="noopener noreferrer">شهرداری شوشتر؛ مشاغل قدیمی شهر</a> · <a href="https://www.tasnimnews.ir/fa/news/1396/05/25/1489482/%D9%85%D9%86%D8%A7%D8%B8%D8%B1-%D8%A8%DB%8C-%D9%86%D8%B8%DB%8C%D8%B1-%D8%B4%D9%88%D8%B4%D8%AA%D8%B1-%D8%AD%D8%A7%D8%B5%D9%84-%D8%AA%D9%84%D9%81%DB%8C%D9%82-%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA-%D9%88-%D8%AF%D8%A7%D9%86%D8%B4-%D8%AB%D8%B1%DB%8C%D8%A7%DB%8C%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C%D8%A7%D9%86-%D9%81%DB%8C%D9%84%D9%85/" target="_blank" rel="noopener noreferrer">تسنیم؛ صنایع دستی و بافته‌های شوشتر</a> · <a href="https://parandngo.blogfa.com/" target="_blank" rel="noopener noreferrer">مؤسسه میراث‌داران پرند شوشتر</a></div></div></section>
+<section class="section about-section" id="about"><div class="container about-layout"><div class="about-mark"><span>ش</span><small>شوشترجوان</small></div><div class="about-copy"><span class="section-kicker">OUR STORY</span><h2>درباره شوشترجوان</h2><p>سلام! ما پیش از راه‌اندازی رسانهٔ شوشترجوان، چند دوست بودیم. بعد از جنگ رمضان و اتفاقاتی که پیش آمد، وقتی ضعف پوشش رسانه‌ای در شهر خودمان را دیدیم، تصمیم گرفتیم خودمان دست به کار شویم؛ و این‌گونه شوشترجوان متولد شد.</p><p>این مسیر هیچ‌وقت آسان نبوده است؛ فراز و فرودهای زیادی داشته، دارد و خواهد داشت. اما آنچه برای ما اهمیت دارد، همراهی رفقایی است که هرکدام در این مسیر نقش خودشان را ایفا کرده‌اند.</p><p>چند ماه بعد تصمیم گرفتیم مجموعه‌مان را گسترش دهیم. امروز در آپارات و اینستاگرام نیز فعالیت می‌کنیم؛ فعالیت ما در این دو بستر بیشتر فرهنگی و تولیدمحتوامحور است و در آن‌ها فعالیت خبری نداریم.</p><p>و امروز، ۱۶ آبان ۱۴۰۵، این وب‌سایت را راه‌اندازی کرده‌ایم تا هویت رسانه‌ای شوشترجوان را کامل‌تر کنیم.</p><p>هدف ما ایجاد رسانه‌ای مردمی و فرهنگی است؛ رسانه‌ای برای جبران خلأهای رسانه‌ای شهرستان شوشتر و پرداختن به موضوعات فرهنگی و رسانه‌ای ایران. امیدواریم این مجموعه در پناه آقا صاحب‌الزمان (عج) هر روز پخته‌تر و کامل‌تر شود و در آینده به رسانه‌ای معتبر در سطح بین‌المللی تبدیل شود.</p></div></div></section>
+</main>
+<footer id="social"><div class="container"><div class="footer-grid"><div><div class="footer-brand">شوشترجوان</div><p>رسانه مردمی شوشترجوان<br>روایت امروز، ریشه در تاریخ</p><p>برای ارسال سوژه، عکس، خبر و پیشنهاد با ما در شبکه‌های اجتماعی در ارتباط باشید.</p></div><div class="footer-col"><h3>دسترسی سریع</h3><a href="#news">آخرین اخبار</a><a href="#exclusive">تولیدات اختصاصی</a><a href="#heritage">آثار تاریخی شوشتر</a><a href="#professions">مشاغل اصیل شوشتری</a><a href="#ai-history">هوش مصنوعی تاریخ شوشتر</a><a href="#about">درباره شوشترجوان</a></div><div class="footer-col" id="contact"><h3>شبکه‌های اجتماعی و ارتباط با ما</h3><div class="social-links"><a href="https://eitaa.com/Shoushtarjavan1" target="_blank" rel="noopener noreferrer">کانال شوشترجوان در ایتا</a><span class="social-placeholder" aria-label="نشانی اینستاگرام به‌زودی">اینستاگرام · به‌زودی</span><span class="social-placeholder" aria-label="نشانی آپارات به‌زودی">آپارات · به‌زودی</span><a href="https://eitaa.com/MOBINSAN" target="_blank" rel="noopener noreferrer">ارتباط مستقیم با ما</a></div><p style="font-size:12px;color:#d0d8d1;margin-top:12px">برای ارسال خبر، سوژه، عکس و پیشنهاد از طریق شناسه ارتباطی ایتا پیام بدهید: <bdi dir="ltr">@MOBINSAN</bdi></p></div></div><div class="copyright">© <span id="year"></span> شوشترجوان · تمامی حقوق محفوظ است</div></div></footer>
+
+<section class="ai-panel" id="aiPanel" role="dialog" aria-label="گفت‌وگو با هوش مصنوعی تاریخ شوشتر" aria-modal="false">
+  <div class="ai-head"><div><strong>دستیار هوشمند شوشترجوان</strong><small id="aiStatus">دستیار هوشمند · اتصال آنلاین هنگام ارسال آزمایش می‌شود</small></div><button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button></div>
+
+  <div class="ai-privacy" style="padding:7px 12px;font-size:11px;line-height:1.7;color:#806b4c;background:#fff8e9;border-bottom:1px solid #eadfc9">پرسش، بخشی از دانشنامه مرتبط و ردّ گفت‌وگو برای تولید پاسخ به سرویس Vireonix ارسال می‌شود. طبق شرایط این سرویس، داده‌ها و گفت‌وگوها ممکن است ذخیره، تحلیل و برای آموزش و بهبود مدل استفاده شوند و مجوز استفاده گسترده‌ای به سرویس داده می‌شود. اطلاعات شخصی، محرمانه یا حساس وارد نکنید.</div>\n  <div class="ai-messages" id="aiMessages"><div class="ai-msg bot">سلام! هر سؤالی داری بپرس؛ از موضوعات عمومی و علمی تا تاریخ و فرهنگ شوشتر. پاسخ‌های مربوط به شوشتر با کمک دانشنامه اختصاصی سایت تکمیل می‌شوند.</div></div>
+  <form class="ai-form" id="aiForm"><input id="aiInput" maxlength="1200" autocomplete="off" placeholder="هر سؤالی به ذهنت می‌رسد بپرس..." aria-label="پرسش شما"><button type="submit">ارسال</button></form>
+</section>
+
+<button id="backTop" aria-label="بازگشت به بالا">↑</button>
+<script>
+
+/* Accessible, exclusive navigation panels */
+(()=>{const buttons=[...document.querySelectorAll('.nav-menu-btn')],panels=[...document.querySelectorAll('.menu-panel')];
+function closeAll(){panels.forEach(p=>p.hidden=true);buttons.forEach(b=>b.setAttribute('aria-expanded','false'))}
+buttons.forEach(b=>b.addEventListener('click',()=>{const panel=document.getElementById(b.dataset.menu),wasOpen=panel&&!panel.hidden;closeAll();if(panel&&!wasOpen){panel.hidden=false;b.setAttribute('aria-expanded','true')}}));
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-wrap')&&!e.target.closest('#siteMenuLayer'))closeAll()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+panels.forEach(p=>p.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeAll)));
+})();
+
+const slides=[...document.querySelectorAll('.hero-slides img')],dots=[...document.querySelectorAll('.hero-dots button')];
+let current=0,timer=null;
+function showSlide(i){
+ if(!slides.length)return;
+ slides[current]?.classList.remove('show');dots[current]?.classList.remove('on');
+ current=((i%slides.length)+slides.length)%slides.length;
+ slides[current]?.classList.add('show');dots[current]?.classList.add('on');
+}
+function startCarousel(){
+ if(slides.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ timer=window.setInterval(()=>showSlide(current+1),6000);
+}
+dots.forEach((d,i)=>d.addEventListener('click',()=>{if(timer)clearInterval(timer);showSlide(i);startCarousel()}));
+startCarousel();
+const topBtn=document.getElementById('backTop');
+let scrollTick=false;
+window.addEventListener('scroll',()=>{if(scrollTick)return;scrollTick=true;requestAnimationFrame(()=>{topBtn.style.display=window.scrollY>450?'grid':'none';scrollTick=false})},{passive:true});
+topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+try{document.getElementById('today').textContent=new Intl.DateTimeFormat('fa-IR',{dateStyle:'full'}).format(new Date())}catch(e){document.getElementById('today').textContent='شوشترجوان';}
+
+
+
+/* Shushtari dictionary: load, search both directions, and render safely */
+(()=>{
+ const form=document.getElementById('dictionaryForm');
+ const input=document.getElementById('dictionaryInput');
+ const result=document.getElementById('dictionaryResult');
+ const list=document.getElementById('dictionaryList');
+ const meta=document.getElementById('dictionaryMeta');
+ const badge=document.getElementById('dictionaryCountBadge');
+ if(!form||!input||!result||!list||!meta||!badge)return;
+ let entries=[];
+ let bookPages=[];
+ const norm=value=>String(value||'').toLocaleLowerCase('fa')
+  .replace(/[\u064b-\u065f\u0670\u0640]/g,'')
+  .replace(/[يى]/g,'ی').replace(/ك/g,'ک')
+  .replace(/[ۀة]/g,'ه').replace(/[ؤ]/g,'و')
+  .replace(/[أإ]/g,'ا').replace(/[‌ـ]/g,' ')
+  .replace(/[^\p{L}\p{N}\s]/gu,' ')
+  .replace(/\s+/g,' ').trim();
+ const showResult=entry=>{
+  result.replaceChildren();
+  const add=(cls,text)=>{const el=document.createElement('div');el.className=cls;el.textContent=text;result.appendChild(el)};
+  add('d-persian','فارسی: '+entry.persian);
+  add('d-shushtari',entry.shushtari);
+  if(entry.category)add('d-note','دسته: '+entry.category);
+  if(entry.note&&norm(entry.note)!==norm(entry.persian))add('d-note','یادداشت: '+entry.note);
+  result.classList.add('show');
+ };
+ const renderList=items=>{
+  list.replaceChildren();
+  items.forEach(entry=>{
+   const button=document.createElement('button');button.type='button';button.className='dictionary-item';
+   const a=document.createElement('span'),b=document.createElement('span');
+   a.textContent=entry.persian;b.textContent=entry.shushtari;
+   button.append(a,b);button.addEventListener('click',()=>{input.value=entry.persian;showResult(entry);meta.textContent='مدخل انتخاب‌شده از واژه‌نامه';});
+   list.appendChild(button);
+  });
+ };
+ const search=()=>{
+  const q=norm(input.value);
+  if(!q){result.classList.remove('show');result.replaceChildren();renderList(entries);meta.textContent='برای جست‌وجو، یک واژه فارسی یا شوشتری وارد کن.';return;}
+  const found=entries.map(entry=>{
+   const fa=norm(entry.persian),sh=norm(entry.shushtari),note=norm(entry.note),cat=norm(entry.category);
+   let score=0;
+   if(fa===q||sh===q)score=100;
+   else if(fa.startsWith(q)||sh.startsWith(q))score=65;
+   else if(fa.includes(q)||sh.includes(q))score=45;
+   else if(note.includes(q)||cat.includes(q))score=12;
+   return {entry,score};
+  }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.entry.persian.localeCompare(b.entry.persian,'fa'));
+  if(found.length){showResult(found[0].entry);renderList(found.slice(0,40).map(x=>x.entry));meta.textContent=found.length+' نتیجه پیدا شد؛ برای دیدن هر مدخل روی آن بزن.';}
+  else{
+   const hits=bookPages.map(p=>({page:p.page,text:String(p.text||''),at:norm(p.text||'').indexOf(q)})).filter(x=>x.at>=0).slice(0,5);
+   result.replaceChildren();list.replaceChildren();
+   if(hits.length){
+    const warn=document.createElement('div');warn.className='d-note';warn.textContent='این واژه در متن اسکن‌شدهٔ کتاب پیدا شد؛ متن زیر با OCR استخراج شده و برای املای دقیق باید با تصویر صفحه مقابله شود.';result.appendChild(warn);
+    hits.forEach(hit=>{
+     const card=document.createElement('div');card.className='d-note';card.style.marginTop='10px';
+     const label=document.createElement('strong');label.textContent='صفحه '+hit.page+' کتاب: ';
+     const snippet=document.createElement('span');snippet.textContent=hit.text.slice(Math.max(0,hit.at-140),Math.min(hit.text.length,hit.at+260)).replace(/\\s+/g,' ');
+     card.append(label,snippet);result.appendChild(card);
+    });
+    result.classList.add('show');meta.textContent=hits.length+' اشاره در متن کتاب پیدا شد؛ این‌ها مدخل تأییدشده نیستند.';
+   }else{
+    const msg=document.createElement('div');msg.className='d-note';msg.textContent='این واژه در مدخل‌های تأییدشده و متن OCR فعلی پیدا نشد. املای دیگری را امتحان کن.';result.appendChild(msg);result.classList.add('show');meta.textContent='نتیجه‌ای پیدا نشد.';
+   }
+  }
+ };
+ form.addEventListener('submit',e=>{e.preventDefault();search();});
+ input.addEventListener('input',()=>{if(!input.value.trim()){result.classList.remove('show');result.replaceChildren();renderList(entries);meta.textContent=entries.length+' مدخل در واژه‌نامه ثبت شده است.';}});
+ fetch('./data/shushtari-dictionary.json',{cache:'no-cache'})
+  .then(response=>{if(!response.ok)throw new Error('HTTP '+response.status);return response.json();})
+  .then(data=>{
+   if(!data||!Array.isArray(data.entries))throw new Error('ساختار فایل واژه‌نامه معتبر نیست');
+   entries=data.entries.filter(x=>x&&x.persian&&x.shushtari);
+   badge.textContent=entries.length.toLocaleString('fa-IR')+' واژه';
+   meta.textContent=entries.length.toLocaleString('fa-IR')+' مدخل بارگذاری شد. جست‌وجو از هر دو زبان پشتیبانی می‌شود.';
+   renderList(entries);
+   if(input.value.trim())search();
+  })
+  .catch(error=>{
+   badge.textContent='واژه‌نامه در دسترس نیست';
+   meta.textContent='بارگذاری واژه‌نامه با مشکل روبه‌رو شد. صفحه را تازه‌سازی کن.';
+   console.error('Shushtari dictionary load error:',error);
+  });
+ fetch('./data/shushtari-book-ocr.json',{cache:'no-cache'})
+  .then(response=>response.ok?response.json():null)
+  .then(data=>{if(data&&Array.isArray(data.pages)){bookPages=data.pages;meta.textContent=entries.length.toLocaleString('fa-IR')+' مدخل تأییدشده؛ متن کتاب نیز در '+bookPages.length.toLocaleString('fa-IR')+' صفحه قابل جست‌وجو است.';if(input.value.trim())search();}})
+  .catch(error=>console.warn('Shushtari book OCR unavailable:',error));
+})();
+ 
+
+/* ShushtarJavan offline knowledge assistant — retrieval and evidence-based answer composition */
+const aiPanel=document.getElementById('aiPanel'), aiLaunch=document.getElementById('aiLaunch');
+const aiMessages=document.getElementById('aiMessages'), aiInput=document.getElementById('aiInput');
+let shushtarDocs=null;
+let aiDocsPromise=null;
+let aiApiUrl='https://vireonix.ai/v1/chat/completions';
+let aiHistory=[];
+const aiStatus=document.getElementById('aiStatus');
+const aiConfigPromise=fetch('./data/ai-config.json').then(r=>r.ok?r.json():{}).then(c=>{
+ if(typeof c.endpoint==='string'&&c.endpoint.startsWith('https://')){
+  aiApiUrl=c.endpoint.replace(/\/$/,'');
+  if(!shushtarDocs)aiStatus.textContent='سرویس بیرونی پیکربندی شده است';
+ }else{
+  if(!shushtarDocs)aiStatus.textContent='در حال آماده‌سازی دانشنامه و واژه‌نامه…';
+ }
+}).catch(()=>{if(aiStatus&&!shushtarDocs)aiStatus.textContent='دانشنامه آفلاین در دسترس است';});
+const AI_ALIASES={
+ 'آب':['کارون','بند میزان','گرگر','داریون','شادروان','تونل','آسیاب','آبراهه','آبیاری'],
+ 'آسیاب آبی':['آسیاب','چرخ آسیاب','آبشارها','سیکا','تونل'],
+ 'میراث':['میراث جهانی','میراث ملموس','میراث ناملموس','یونسکو','ثبت جهانی'],
+ 'تاریخ شفاهی':['خاطره شفاهی','راوی','اعتبارسنجی','فرهنگ عامه'],
+ 'گویش شوشتری':['واژه','تلفظ','گویشور','واژه‌نامه','زبان محلی'],
+ 'بافت قدیمی':['محله','گذر','تاریخ شهری','جغرافیای شهری'],
+ 'پل':['شادروان','پل بند','بند میزان','سازه آبی'],
+ 'کشاورزی':['میان‌آب','آبیاری','دشت','باغداری'],
+ 'تقسیم آب':['بند میزان','انحراف و تقسیم آب','مدیریت آب','نهر گرگر'],
+ 'فرهنگ':['آداب','رسم','بچه‌برک','دده‌زنان','گویش','خاطره شفاهی'],
+ 'فرهنگ شوشتر':['فرهنگ عامه','گویش شوشتری','آداب و رسوم','خاطرات محلی','بازی‌های کودکانه','خوراک محلی'],
+ 'فرهنگ عامه':['بچه‌برک','دده‌زنان','روایت شفاهی','ضرب‌المثل','لالایی'],
+ 'بچه برک':['بچه‌برک','ترساندن کودکان','خواباندن بچه'],
+ 'دده زنان':['دده‌زنان','بند میزان','شستن رخت‌ولباس'],
+ 'گویش':['گویش شوشتری','واژه‌های محلی','اصطلاحات شوشتری'],
+ 'رسم و رسوم':['آیین محلی','آداب خانوادگی','فرهنگ عامه'],
+ 'محله':['نام محله‌ها','محله‌های قدیمی','گذرهای شوشتر'],
+ 'سازه های ابی':['سازه آبی','آبشار','آسیاب','بند میزان','گرگر','داریون'],
+ 'آبشار':['آبشارها','آسیاب','سیکا','گرگر'],
+ 'اسیاب':['آسیاب','آسیاب‌های آبی','سیکا'],
+ 'قلعه':['قلعه سلاسل','سلاسل'],
+ 'سلاسل':['قلعه سلاسل','مرکز مدیریتی'],
+ 'میزان':['بند میزان','تقسیم آب'],
+ 'شادروان':['بند شادروان','پل‌بند شادروان'],
+ 'گرگر':['نهر گرگر','آبراهه مصنوعی'],
+ 'داریون':['نهر داریون','آبراهه تاریخی'],
+ 'میان اب':['میان‌آب','دشت حاصلخیز'],
+ 'ثبت جهانی':['یونسکو','۲۰۰۹','میراث جهانی'],
+ 'یونسکو':['ثبت جهانی','سامانه آبی تاریخی'],
+ 'مسجد جامع':['مسجد جامع شوشتر','جامع تستر','کتیبه کوفی','شبستان'],
+ 'امامزاده عبدالله':['آرامگاه امامزاده عبدالله','گنبد مضرس','معماری آرامگاهی'],
+ 'خانه مستوفی':['مستوفی','خانه قاجاری','اندرونی','بیرونی'],
+ 'سرای افضل':['کاروانسرا','سرا','تجارت','قاجار'],
+ 'پل لشکر':['پل بند لشکر','لشگر','پل','بند'],
+ 'بند خاک':['داریون','رغّات','تقسیم آب','سیلاب'],
+ 'بافت تاریخی':['خانه تاریخی','مسجد','آرامگاه','محله قدیمی']
+};
+function aiNorm(s){return String(s||'').toLowerCase().replace(/[\u0640\u064B-\u065F\u0670]/g,'').replace(/[يى]/g,'ی').replace(/ك/g,'ک').replace(/[ۀة]/g,'ه').replace(/[‌ـ]/g,' ').replace(/[^\p{L}\p{N}\s]/gu,' ').replace(/\s+/g,' ').trim()}
+function aiTokens(s){return aiNorm(s).split(' ').filter(w=>w.length>1)}
+function aiAddMessage(text,kind='bot',sources=[]){
+ const el=document.createElement('div');el.className='ai-msg '+kind;el.textContent=text;
+ if(sources.length){const box=document.createElement('div');box.className='ai-sources';box.textContent='منابع و اسناد:';sources.forEach(s=>{if(!s.url)return;const a=document.createElement('a');a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=s.label||s.title||'منبع';box.appendChild(a)});el.appendChild(box)}
+ aiMessages.appendChild(el);aiMessages.scrollTop=aiMessages.scrollHeight;return el;
+}
+async function aiLoadDocs(){
+ if(shushtarDocs)return shushtarDocs;
+ if(aiDocsPromise)return aiDocsPromise;
+ aiDocsPromise=(async()=>{
+  shushtarDocs={documents:[],stats:{totalDocuments:0}};
+  try{
+   const res=await fetch('./data/assistant-corpus.json',{cache:'no-cache'});
+   if(!res.ok)throw new Error('HTTP '+res.status);
+   const corpus=await res.json();
+   if(!corpus||!Array.isArray(corpus.documents))throw new Error('ساختار پیکره معتبر نیست');
+   shushtarDocs=corpus;
+  }catch(err){console.warn('Assistant corpus unavailable:',err);}
+  try{
+   const dictionaryRes=await fetch('./data/shushtari-dictionary.json',{cache:'no-cache'});
+   if(dictionaryRes.ok){
+    const dictionaryData=await dictionaryRes.json();
+    const dictionaryEntries=Array.isArray(dictionaryData.entries)?dictionaryData.entries:[];
+    const known=new Set(shushtarDocs.documents.map(d=>d.id));
+    const dictionaryDocs=dictionaryEntries.map((entry,index)=>({
+     id:'shushtari-dictionary-'+(entry.id||index+1),
+     title:String(entry.persian||entry.shushtari||'مدخل واژه‌نامه'),
+     category:entry.category||'واژه شوشتری',
+     keywords:[entry.persian||'',entry.shushtari||'',entry.category||'',entry.note||''],
+     persian:entry.persian||'',
+     shushtari:entry.shushtari||'',
+     content:'معادل فارسی: '+(entry.persian||'ثبت نشده')+'؛ صورت شوشتری: '+(entry.shushtari||'ثبت نشده')+'؛ دسته: '+(entry.category||'نامشخص')+'؛ یادداشت: '+(entry.note||'ندارد'),
+     sourceType:'واژه‌نامه',
+     sources:[{title:'واژه‌نامه فارسی به گویش شوشتری؛ مدخل ثبت‌شده در پایگاه واژه‌شناس شوشترجوان'}]
+    })).filter(d=>!known.has(d.id));
+    shushtarDocs.documents.push(...dictionaryDocs);
+    shushtarDocs.dictionarySources=[{title:'واژه‌نامه‌ای از گویش شوشتری، گردآوری محمدباقر نیرومند (نسخه اسکن‌شده ارسالی کاربر)'}];
+   }
+  }catch(err){console.warn('Shushtari dictionary unavailable:',err);}
+  try{
+   const bookRes=await fetch('./data/shushtari-book-ocr.json',{cache:'no-cache'});
+   if(bookRes.ok){
+    const book=await bookRes.json();
+    const known=new Set(shushtarDocs.documents.map(d=>d.id));
+    const bookDocs=(Array.isArray(book.pages)?book.pages:[]).filter(p=>p.text&&p.text.trim()).map(p=>{
+     const words=[...new Set(String(p.text).match(/[آ-یءئؤإأۀ‌]{2,}/g)||[])].slice(0,180);
+     return {
+      id:'shushtari-book-page-'+p.page,
+      title:'واژه‌نامه گویش شوشتری، صفحه '+p.page,
+      category:'منبع کتاب واژگان شوشتری',
+      keywords:['محمدباقر نیرومند','واژه‌نامه شوشتری','گویش شوشتری',...words],
+      content:String(p.text).slice(0,6000),
+      sourceType:'واژه‌نامه',
+      sourcePage:p.page,
+      sources:[{title:'واژه‌نامه‌ای از گویش شوشتری، گردآوری محمدباقر نیرومند؛ صفحه '+p.page}]
+     };
+    }).filter(d=>!known.has(d.id));
+    shushtarDocs.documents.push(...bookDocs);
+    shushtarDocs.bookPageCount=bookDocs.length;
+   }
+  }catch(err){console.warn('Shushtari scanned book OCR unavailable:',err);}
+  try{
+   const monumentRes=await fetch('./data/shushtar-monuments.json',{cache:'no-cache'});
+   if(monumentRes.ok){
+    const monumentData=await monumentRes.json();
+    if(Array.isArray(monumentData.documents)){
+     const known=new Set(shushtarDocs.documents.map(d=>d.id));
+     shushtarDocs.documents.push(...monumentData.documents.filter(d=>!known.has(d.id)));
+    }
+   }
+  }catch(err){console.warn('Monument dossiers unavailable:',err);}
+  shushtarDocs.stats=shushtarDocs.stats||{};
+  shushtarDocs.stats.totalDocuments=shushtarDocs.documents.length;
+  if(aiStatus)aiStatus.textContent=shushtarDocs.documents.length
+   ?'دانشنامه آماده · '+shushtarDocs.documents.length.toLocaleString('fa-IR')+' سند؛ اتصال آنلاین هنگام پرسش آزمایش می‌شود'
+   :'دانشنامه محلی بارگذاری نشد؛ دستیار آنلاین همچنان قابل آزمایش است';
+  return shushtarDocs;
+ })();
+ return aiDocsPromise;
+}
+
+function aiExpandTerms(q){
+ const terms=aiTokens(q), expanded=new Set(terms), normalized=aiNorm(q);
+ for(const [key,vals] of Object.entries(AI_ALIASES)){
+  const keyNorm=aiNorm(key), keyTerms=aiTokens(key);
+  if(normalized.includes(keyNorm)||keyTerms.length>1&&keyTerms.every(t=>terms.includes(t)))
+   vals.forEach(v=>aiTokens(v).forEach(t=>expanded.add(t)));
+ }
+ return [...expanded];
+}
+function aiRetrieve(q){
+ const stop=new Set(['چی','چیه','چه','چگونه','چطور','درباره','برای','است','هست','بود','شده','می','از','به','در','را','این','آن','های','یک','رو','و','قدیما','قدیم','چطوری','کردن','کردند','میکردن','میکردند','میکنند','شود','شدن','معنی','مفهوم','بگو','توضیح','دارد','داره']);
+ const direct=aiTokens(q).filter(t=>!stop.has(t));
+ if(!direct.length)return [];
+ const expanded=aiExpandTerms(q).filter(t=>t.length>1);
+ return (shushtarDocs?.documents||[]).map(d=>{
+  const fields={
+   title:new Set(aiTokens(d.title)),
+   category:new Set(aiTokens(d.category)),
+   keywords:new Set(aiTokens([...(Array.isArray(d.keywords)?d.keywords:[]),d.persian||'',d.shushtari||''].join(' '))),
+   content:new Set(aiTokens(d.content))
+  };
+  let score=0;
+  for(const t of direct){if(fields.title.has(t))score+=10;if(fields.keywords.has(t))score+=8;if(fields.category.has(t))score+=3;if(fields.content.has(t))score+=1}
+  for(const t of expanded){if(!direct.includes(t)){if(fields.title.has(t))score+=2;if(fields.keywords.has(t))score+=2}}
+  if(d.sourceType==='واژه‌نامه'&&direct.some(t=>fields.title.has(t)||fields.keywords.has(t)))score+=8;
+  return {doc:d,score};
+ }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,6);
+}
+
+function aiOpen(){aiPanel.classList.add('open');aiLaunch.setAttribute('aria-expanded','true');setTimeout(()=>aiInput.focus(),80)}
+function aiClosePanel(){aiPanel.classList.remove('open');aiLaunch.setAttribute('aria-expanded','false')}
+aiLaunch.addEventListener('click',()=>aiPanel.classList.contains('open')?aiClosePanel():aiOpen());
+document.getElementById('aiClose').addEventListener('click',aiClosePanel);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')aiClosePanel()});
+async function aiSearchWeb(q){
+ try{
+  const url='https://fa.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent(q)+'&gsrlimit=3&prop=extracts&exintro=1&explaintext=1&format=json&origin=*';
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
+  let res;
+  try{res=await fetch(url,{signal:controller.signal});}
+  finally{clearTimeout(timer);}
+  if(!res.ok)return [];
+  const data=await res.json();const pages=Object.values(data.query?.pages||{});
+  return pages.filter(p=>p.extract).slice(0,3).map(p=>({title:p.title,content:p.extract.slice(0,1400),url:'https://fa.wikipedia.org/wiki/'+encodeURIComponent(p.title)}));
+ }catch(e){console.warn('Web lookup unavailable:',e);return []}
+}
+async function aiAnswer(q){
+ try{
+  await aiLoadDocs();
+   await aiConfigPromise;
+  const matches=aiRetrieve(q);
+  const webResults=await aiSearchWeb(q);
+  const localContext=matches.slice(0,6).map((x,i)=>{
+   const d=x.doc;return '[سند '+(i+1)+'] عنوان: '+(d.title||'بدون عنوان')+'؛ نوع: '+(d.sourceType||'دانشنامه')+'؛ محتوا: '+String(d.content||'').slice(0,2200);
+  }).join('\n\n');
+  const webContext=webResults.map((x,i)=>'[نتیجه وب '+(i+1)+'] '+x.title+'\n'+x.content).join('\n\n');
+  const systemPrompt='تو دستیار هوشمند رسمی شوشترجوان هستی. به فارسی روان و طبیعی پاسخ بده و لحن محاوره‌ای محترمانه کاربر را بفهم. پرسش را مستقیم جواب بده؛ اگر لازم است از چند سند ترکیب و نتیجه‌گیری کن. اطلاعات دانشنامه شوشترجوان و نتایج جست‌وجوی وب در پیام کاربر به‌عنوان منابع زمینه‌ای آمده‌اند. هیچ واقعیت تاریخی، تاریخ، نام، نقل‌قول یا منبعی را جعل نکن. اگر منابع کافی نیستند، روشن بگو چه چیزی قطعی نیست و از حدس‌زدن خودداری کن. اگر منابع با هم تعارض دارند، تعارض را توضیح بده. در موضوعات تاریخی، میان واقعیت مستند، روایت مشهور و احتمال تمایز بگذار. برای پرسش‌های غیرمرتبط با شوشتر نیز پاسخ عمومی بده. پاسخ را منظم و نه بیش از حد طولانی بنویس. در پایان پاسخ‌های تاریخی/محلی، در صورت استفاده از منابع، نام منبع یا عنوان سند را ذکر کن.';
+  const context='پرسش کاربر: '+q+'\n\nاسناد دانشنامه اختصاصی شوشترجوان:\n'+(localContext||'سند محلی مرتبطی پیدا نشد.')+'\n\nنتایج جست‌وجوی زنده وب از ویکی‌پدیای فارسی (در صورت وجود):\n'+(webContext||'نتیجه وبی در دسترس نبود.');
+  const messages=[{role:'system',content:systemPrompt},...aiHistory.slice(-8),{role:'user',content:context}];
+  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),35000);
+  const response=await fetch(aiApiUrl,{
+   method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({model:'auto',messages,temperature:0.35,max_tokens:900,stream:false}),
+   signal:controller.signal
+  });
+  clearTimeout(timer);
+  if(!response.ok){
+   const detail=await response.text().catch(()=> '');
+   throw new Error('سرویس هوش مصنوعی پاسخ '+response.status+' داد. '+detail.slice(0,180));
+  }
+  const data=await response.json();
+  const answer=data.choices?.[0]?.message?.content?.trim();
+  if(!answer)throw new Error('پاسخ معتبری از مدل دریافت نشد.');
+  aiHistory.push({role:'user',content:q},{role:'assistant',content:answer});
+  if(aiHistory.length>12)aiHistory=aiHistory.slice(-12);
+  const localSources=matches.flatMap(x=>x.doc.sources||[]);
+  if(matches.some(x=>x.doc.sourceType==='واژه‌نامه'))localSources.push(...(shushtarDocs.dictionarySources||[]));
+  const sources=[...new Map(localSources.filter(s=>s&&s.url).map(s=>[s.url,{url:s.url,label:s.label||s.title||'دانشنامه شوشترجوان'}])).values()];
+  webResults.forEach(x=>sources.push({url:x.url,label:'ویکی‌پدیا: '+x.title}));
+  if(aiStatus)aiStatus.textContent='اتصال آنلاین برقرار است · پاسخ از مدل هوش مصنوعی دریافت شد';
+  return {text:answer,sources:sources.slice(0,6)};
+ }catch(err){
+  console.error('Online assistant error:',err);
+  const raw=String(err&&err.message||err||'خطای ناشناخته');
+  const message=err.name==='AbortError'?'مهلت پاسخ‌گویی سرویس تمام شد (۳۵ ثانیه).':
+   (err instanceof TypeError||/failed to fetch|load failed|networkerror/i.test(raw)
+    ?'مرورگر نتوانست به سرویس آنلاین وصل شود. احتمال محدودیت شبکه یا CORS وجود دارد. جزئیات فنی: '+raw.slice(0,100)
+    :'سرویس آنلاین خطا داد: '+raw.slice(0,180));
+  if(aiStatus)aiStatus.textContent='اتصال آنلاین ناموفق بود؛ پاسخ محلی در صورت وجود نمایش داده می‌شود';
+  const local=typeof shushtarDocs!=='undefined'&&shushtarDocs?aiRetrieve(q):[];
+  if(local.length){
+   const best=local[0].doc;
+   const related=local.slice(1,4).map(x=>'• '+x.doc.title);
+   const text='پاسخ هوشمند آنلاین در دسترس نبود؛ این پاسخ از دانشنامه محلی سایت تهیه شده است.\n\n'+String(best.content||'')+(related.length?'\n\nمطالب مرتبط:\n'+related.join('\n'):'')+'\n\n'+message;
+   const sources=[...new Map(local.flatMap(x=>x.doc.sources||[]).filter(s=>s&&s.url).map(s=>[s.url,s])).values()].slice(0,5);
+   return {text,sources};
+  }
+  return {text:message+'\n\nدر حال حاضر پاسخ مستندی در دانشنامه محلی برای این پرسش پیدا نشد. کمی بعد دوباره تلاش کن.',sources:[]};
+ }
+}
+
+aiLoadDocs().catch(err=>{if(aiStatus)aiStatus.textContent='بارگذاری دانشنامه با مشکل روبه‌رو شد';console.error(err)});
+const aiForm=document.getElementById('aiForm');
+let aiRequestBusy=false;
+aiForm.addEventListener('submit',async e=>{
+ e.preventDefault();
+ const q=aiInput.value.trim();
+ if(!q||aiRequestBusy)return;
+ aiRequestBusy=true;
+ const submit=aiForm.querySelector('button[type="submit"]');
+ if(submit){submit.disabled=true;submit.textContent='در حال پاسخ…';}
+ aiAddMessage(q,'user');aiInput.value='';
+ const pending=aiAddMessage('در حال جست‌وجوی دانشنامه و وب و آزمایش اتصال هوش مصنوعی…','bot');
+ try{
+  const answer=await aiAnswer(q);
+  pending.remove();aiAddMessage(answer.text,'bot',answer.sources);
+ }catch(err){
+  pending.remove();
+  aiAddMessage('در پردازش پرسش خطای پیش‌بینی‌نشده رخ داد: '+String(err.message||err),'bot');
+  console.error('Assistant submit error:',err);
+ }finally{
+  aiRequestBusy=false;
+  if(submit){submit.disabled=false;submit.textContent='ارسال';}
+ }
+});
+</script>
+<script src="./shushtari-word-game.js?v=4" defer></script>
+<script src="./site-guide.js?v=3" defer></script>
+</body>
+</html>
