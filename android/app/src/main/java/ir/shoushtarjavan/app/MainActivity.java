@@ -5,7 +5,9 @@ import android.os.*;
 import android.content.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
-import android.net.Uri;\nimport android.net.ConnectivityManager;\nimport android.net.NetworkInfo;
+import android.net.Uri;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.view.*;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.*;
@@ -26,7 +28,9 @@ public class MainActivity extends Activity {
     private Typeface iranFont;
     private JSONArray words=new JSONArray(), articles=new JSONArray();
     private android.content.SharedPreferences prefs;
-    private String pendingAnchor=null, currentPage="home";\n    private static final String LOCAL_HOME="https://appassets.androidplatform.net/assets/site/index.html";\n    private boolean usingLocalSite=false;
+    private String pendingAnchor=null, currentPage="home";
+    private static final String LOCAL_HOME="https://appassets.androidplatform.net/assets/site/index.html";
+    private boolean usingLocalSite=false;
     private int textScale=100;
 
     @Override public void onCreate(Bundle state){
