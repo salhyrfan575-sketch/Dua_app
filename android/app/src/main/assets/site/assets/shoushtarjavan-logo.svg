@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">نشان شوشترجوان</title><desc id="desc">نشان دایره‌ای شوشترجوان با پل تاریخی، ماه و پرندگان</desc>
+<circle cx="256" cy="256" r="244" fill="#080b0a" stroke="#fff" stroke-width="13"/>
+<circle cx="159" cy="139" r="76" fill="#f3d45d"/>
+<path d="M108 138q22-28 43 0q18-20 38 0q-25-7-40 9q-20-13-41-9" fill="#080b0a"/>
+<path d="M247 74q15 29 37 26q-18 17-38-2" fill="#fff"/>
+<path d="M360 88q17-9 31 2q-15 2-24 12q-8-7-7-14" fill="#fff"/>
+<path d="M48 239H464" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<path d="M61 235Q256 38 451 235" fill="none" stroke="#fff" stroke-width="8"/>
+<path d="M83 235L83 202L106 181L129 163L152 147L175 134L198 123L221 115L244 110L267 110L290 115L313 123L336 134L359 147L382 163L405 181L428 202L428 235" fill="none" stroke="#fff" stroke-width="6"/>
+<path d="M83 235V255M120 235V255M157 235V255M194 235V255M231 235V255M268 235V255M305 235V255M342 235V255M379 235V255M416 235V255" stroke="#fff" stroke-width="5"/>
+<path d="M42 265H470" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+<text x="256" y="348" text-anchor="middle" fill="#fff" font-family="Vazirmatn,Tahoma,sans-serif" font-size="72" font-weight="900">شوشتر</text>
+<text x="256" y="427" text-anchor="middle" fill="#fff" font-family="Vazirmatn,Tahoma,sans-serif" font-size="68" font-weight="900">جوان</text>
+</svg>
