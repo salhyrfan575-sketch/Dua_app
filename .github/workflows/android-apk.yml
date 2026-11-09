@@ -31,6 +31,16 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
+      - name: Download licensed Shushtar heritage photographs
+        run: |
+          mkdir -p android/app/src/main/assets/images
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar.jpg" -o android/app/src/main/assets/images/shushtar_main.jpg
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar_Historical_Hydraulic_System2.jpg" -o android/app/src/main/assets/images/hydraulic_system.jpg
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Salasel_Castle_20.jpg" -o android/app/src/main/assets/images/salasel_castle.jpg
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Kohal_Farangi_Shushtar_May_2016.jpg" -o android/app/src/main/assets/images/kolah_farangi.jpg
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar_bande_mizan.jpg" -o android/app/src/main/assets/images/mizan_dam.jpg
+          curl -fL --retry 3 -A "ShoushtarJavanAndroid/3.2" "https://commons.wikimedia.org/wiki/Special:FilePath/Shushtar_ancient_hydraulic_system.jpg" -o android/app/src/main/assets/images/ancient_system.jpg
+          printf '%s\\n' 'Photographs bundled from Wikimedia Commons. Licenses and authors: Shushtar.jpg — Baharloueih, CC BY-SA 4.0; Shushtar Historical Hydraulic System2.jpg — Mahmoodrezamo, CC BY-SA; Salasel Castle 20.jpg — Mmojtabaa, CC BY-SA; Kohal Farangi Shushtar May 2016.jpg — Wikimedia Commons contributor, verify file page; Shushtar bande mizan.jpg — Kheirollahnezhad, CC BY-SA 4.0; Shushtar ancient hydraulic system.jpg — Masooden, CC BY-SA. See the linked Commons file pages in the app credits.' > android/app/src/main/assets/images/ATTRIBUTION.txt
       - name: Build debug APK
         working-directory: android
         run: gradle --no-daemon assembleDebug
